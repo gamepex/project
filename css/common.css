@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/* 1번. 배경 남색 #141e41
+2번. 메인타이틀 파란색#6389ff 연두색#caca64 흰색#f9f9f9
+3번. 본문 #f1f1e6
+4번. 서브타이틀/본문 강조색 #6389ff
+5번. footer 배경색 #2d2e32 */
+
+/* hg: highlight, ygrn: yellogreen */
+.hg-blue {color:#6389ff;}
+.hg-ygrn {color:#caca64;}
+
+@media screen and (min-width:1060px) {
+    #trigger {display: none;}
+
+    header {
+        position: fixed; left: 0; top: 0;
+        width: 100%; height: 60px;
+    }
+
+    nav {
+        position: relative;
+        display: flex; justify-content: space-between; align-items: center;
+        width: 1300px; height: 100%;margin: 0 auto;
+        background: #000;
+    }
+
+    nav a { color: #f9f9f9;}
+    #main-menu, .top-menu {display: flex;}
+    #main-menu { position: absolute; left: 250px; top: 22px;}
+
+    #main-menu > li > a {
+        padding: 0 45px;
+        font-size: 16px; text-transform: uppercase;}
+
+    .top-menu {
+        display: flex;
+        position: absolute; right: 15px; top: 15px;
+    }
+
+    .top-menu a {
+        padding-left: 25px;
+        font-size: 30px;
+    }
+
+    /* =====dropdown menu===== */
+    #main-menu > li {position:relative;}
+    .sub-menu {position:absolute;}
+    .sub-menu a {
+        width:100%;height:80px; font-size:14px; text-align:center;
+        line-height:78px;
+        background:rgba(29, 41, 80, 0.85);
+        transition:all 0.2s ease-in;
+    }
+    #main-menu > li > a:hover {color: #6389ff;}
+    
+    #main-menu .sub-menu a {width:120px;}
+    .sub-menu a:hover{text-shadow:2px 2px 2px rgba(0, 0, 0, 0.8); color:#caca64; background:rgba(249, 249, 249, 0.6); box-shadow:3px 3px 3px rgba(0,0, 0, 0.3) inset;}
+
+    
+
+    h2 {font-size: 72px;}
+
+
+
+    
+    .banner {
+        display: flex; justify-content: center; align-items: center;
+        position:relative;
+        height: 600px;
+        color:#f9f9f9; text-transform: uppercase;
+    }
+    .banner a {position:absolute; z-index:-100;
+       margin-top: 60px;}
+}

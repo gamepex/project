@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* 1번. 배경 남색 #141e41
+2번. 메인타이틀 파란색#6389ff 연두색#caca64 흰색#f9f9f9
+3번. 본문 #f1f1e6
+4번. 서브타이틀/본문 강조색 #6389ff
+5번. footer 배경색 #2d2e32 */
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/*메인 타이틀 500-600 사용*/
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+/*font-family: "Tektur", sans-serif;*/
+
+/* nav bar, 서브 타이틀 */
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* p(한/영) 400기준 */
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+    * {margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Paperozi'; font-size: 16px; color: #f1f1e6; background: #141e41; }
+    h2 {font-family: "Tektur", sans-serif;}
+    nav, h3 {font-family: 'JalnanGothic';}
+    ul {list-style:none;}
+    a {display:block; color:#222; text-decoration:none; border: 0; outline: 0;}
+    img {border: 0; outline: 0;}
+    /* border: 0; outline: 0; 넣은 이유 모름. 출처- Space Travel */ 
+    span {display:block;}

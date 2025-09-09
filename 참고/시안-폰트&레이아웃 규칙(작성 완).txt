@@ -1,0 +1,213 @@
+1400/태블릿/폰 px
+
+※9월2일 추가사항※
+본문 제목, 버튼 몇개 있는 편이 좋음
+본문타이틀 Paperlogy 그대로, 34px/24px/20px
+버튼은 권한별님 시안에 있는 버튼 복붙하기
+ 
+아코디온 메뉴: margin: 20px      bg color:#242e65    button  color:#151f53
+<<<<<모든 측정은 분홍색 선이 생길 때 기준>>>>>
+
+
+
+=====FHD(1400)=====
+★★★ w: 1300px / 모든 레이아웃 구성은 해당 범위 내 ★★★
+
+[HEADER]
+h: 63px
+<nav> margin: 22px 0 / font: Jalnan Gothic TTF / 16px / color: #f9f9f9 ++PS5-(#6389ff)
+<logo> margin: 22px 0 / font: Shrikhand / 32px 
+<top m> icon: 26px(temporary) - 여백 안 맞음
+
+
+[BANNER]
+<Main T English>
+margin-top: 325px (from the header top)
+font: Tektur Bold / 72px / color: #f9f9f9 / uppercase 
+각 어절 첫 글자 파란색(#6389ff) 강조, 2번째 어절 전체 연두색(#caca64) 강조
+아래 여백: 20px
+
+<Main T Korean>
+font: Paperlogy 4 reg / 22px / color: #f9f9f9
+두번째 어절 단어 파란색(#6389ff) 강조, 4번째 어절내 단어 연두색(#caca64) 강조
+^^(적용시, 전부 조사 제외)
+아래 여백: 185px
+
+
+[SECTION]
+w: 1300px
+<Sub T English>
+margin-top: 100px
+E font: Jalnan Gothic TTF / 48px / color: #f9f9f9 / uppercase 
+첫번째 어절 첫 글자 파란색(#6389ff) 강조, 2번째 어절 첫 글자 연두색(#caca64) 강조
+
+<Sub T Korean>
+margin-top: 15px
+font: Paperlogy 4 reg / 16px / color: #f9f9f9
+아래 여백: 50px
+
+<Article>
+<p> font: Paperlogy 4 reg / 16px / color: #f1f1e6
+
+
+[FOOTER] - 좌측정렬
+w: 1300px h:493px(굳이 입력x) 200px(bottom)
+
+<p>
+font: Paperlogy 4 reg / 16px / color: #f9f9f9 / 행간: 24px
+<p-이용약관>
+margin-top: 100px
+<p-회사정보>
+margin: 50px 0;
+<p-저작권>
+margin-bottom: 200px
+
+<icon> - 우측정렬
+size: 30*30px each
+margin: 188px(상) 0(우) 275px(하) 1150px(좌)
+
+
+
+
+
+=====TABLET(1024*1370)===== 최소 사이즈(mini):768*1024
+★★★ w: 690px / 750px(둘 중 의견추합 필요)
+모든 레이아웃 구성은 해당 범위 내 ★★★
+
+[HEADER]
+w: 750px h: 67px
+<logo> margin: 23px auto / font: Shrikhand / 32px 
+<trigger> box: 24*2px each / h: 18px / padding: 6px 0;
+
+<tap main-menu>
+w: 800px (75%) / h: 70px
+font-size: 30px / padding: 22px 0; /
+
+<tap sub-menu>
+w: 800px (75%) / h: 60px
+font-size: 26px / padding: 14px 0; /
+ 
+<close trigger> box: 24*2px each
+<icon> 34*34px
+ 
+
+[BANNER]
+w: 750px h: 652px(상관x)
+<Main T English>
+margin-top: 325px (from the header top)
+font: Tektur Bold / 58px / color: #f9f9f9 / uppercase 
+각 어절 첫 글자 파란색(#6389ff) 강조, 2번째 어절 전체 연두색(#caca64) 강조
+행간: 50px / 아래 여백: 20px
+
+<Main T Korean>
+font: Paperlogy 4 reg / 18px / color: #f9f9f9
+두번째 어절 단어 파란색(#6389ff) 강조, 4번째 어절내 단어 연두색(#caca64) 강조
+^^(적용시, 전부 조사 제외)
+아래 여백: 200px
+
+
+[SECTION]
+w: 750px
+<Sub T English>
+margin-top: 70px
+E font: Jalnan Gothic TTF / 36px / color: #f9f9f9 / uppercase 
+첫번째 어절 첫 글자 파란색(#6389ff) 강조, 2번째 어절 첫 글자 연두색(#caca64) 강조
+
+<Sub T Korean>
+margin-top: 15px
+font: Paperlogy 4 reg / 15px / color: #f9f9f9
+아래 여백: 35px
+
+<Article>
+<p> font: Paperlogy 4 reg / 16px / color: #f1f1e6
+
+
+[FOOTER] - 중앙정렬
+w: 750px h:360px(굳이 입력x) padding: 50px 0 100px;
+
+<p>
+font: Paperlogy 4 reg / 15px / color: #f9f9f9 / 행간: 24px
+
+<p-회사정보>
+margin: 30px 0;
+
+<icon>
+size(링크 걸고): 34*34px each
+margin: 50px(상) 0(우) 275px(하) 중앙정렬
+아이콘간의 여백: 27px;
+
+
+
+
+
+=====SMART PHONE(375*667)===== 최대 사이즈(S20): 412*915
+★★★ w: 350px / 모든 레이아웃 구성은 해당 범위 내 ★★★
+
+[HEADER]
+w: 350px h: 67px
+<logo> margin: 23px auto / font: Shrikhand / 32px 
+<trigger> box: 24*2px each / h: 18px / padding: 6px 0;
+
+<tap main-menu>
+w: 300px (75%) / h: 70px
+font-size: 26px / padding: 23px 0; /
+
+<tap sub-menu>
+w: 300px (75%) / h: 60px
+font-size: 22px / padding: 16px 0; /
+ 
+<close trigger> box: 24*2px each
+<icon> 32*32px
+ 
+
+[BANNER]
+w: 350px h: 915px(상관x)
+<Main T English>
+margin-top: 370px (from the header top)
+font: Tektur Bold / 54px / color: #f9f9f9 / uppercase 
+각 어절 첫 글자 파란색(#6389ff) 강조, 2번째 어절 전체 연두색(#caca64) 강조
+행간: 50px / 아래 여백: 20px
+
+<Main T Korean>
+font: Paperlogy 4 reg / 16px / color: #f9f9f9
+두번째 어절 단어 파란색(#6389ff) 강조, 4번째 어절내 단어 연두색(#caca64) 강조
+^^(적용시, 전부 조사 제외)
+아래 여백: 373px
+
+
+[SECTION]
+w: 350px
+
+<Sub T English>
+margin-top: 50px
+E font: Jalnan Gothic TTF / 30px / color: #f9f9f9 / uppercase 
+첫번째 어절 첫 글자 파란색(#6389ff) 강조, 2번째 어절 첫 글자 연두색(#caca64) 강조
+행간: 36px
+
+<Sub T Korean>
+margin-top: 15px
+font: Paperlogy 4 reg / 15px / color: #f9f9f9
+아래 여백: 25px
+
+<Article>
+w: 350px
+<p> font: Paperlogy 4 reg / 15px / color: #f1f1e6
+
+
+[FOOTER] - 중앙정렬
+w: 350px h:750px(굳이 입력x) padding: 30px 0 60px;
+
+<p>
+font: Paperlogy 4 reg / 15px / color: #f9f9f9 / 행간: 10px
+
+<slide bar>
+white(#f3f3f3): 100*2px / blue(#6389ff): 50*2px / margin: 15px 0 20px
+ 
+<p-저작권>
+margin: 20px 0 60px;
+
+<icon>
+size(링크 걸고): 34*34px each
+margin-bottom: 60px 중앙정렬
+아이콘간의 여백: 27px;
+
