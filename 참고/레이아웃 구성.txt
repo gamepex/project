@@ -1,0 +1,56 @@
+벤치마킹/롤모델 홈페이지
+- 블리자드
+- 삼성전자
+- paperlogy font
+
+파비콘: 조이스틱 모양
+
+서체  .TTF 파일 위주 사용
+- 로고: Shrikhand(구글폰트)
+	
+
+- 메인 타이틀: Tektur Bold(구글폰트)
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+	</style>
+
+	.tektur-<uniquifier> { /*500-600 사용*/
+	  font-family: "Tektur", sans-serif;
+	  font-optical-sizing: auto;
+	  font-weight: <weight>;
+	  font-style: normal;
+	  font-variation-settings:
+	    "wdth" 100;
+	}
+- 서브 타이틀: 잘난고딕(눈누)
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+- 본문(한/영): Paperlogy-4Regular(눈누)
+@font-face {
+    font-family: 'Paperozi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+메인 색상:
+
+1번. 배경 남색 #141e41
+2번. 메인타이틀 파란색#6389ff 연두색#caca64 흰색#f9f9f9
+3번. 본문 #f1f1e6
+4번. 서브타이틀/본문 강조색 #6389ff
+5번. nav bar(투명도 60%-임의)&footer #2d2e32
+
+로고 - 흰색 + EX(노란색)
+
+
+메인 타이틀 
+- 본문보다 3배 정도 커야 함
+- 명사형으로 서술
+- 여백 지정: 가독성 향상
+위쪽의 여백: 아래의 여백 = 6:4
