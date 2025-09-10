@@ -30,11 +30,11 @@
 
 
     * {margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Paperozi'; font-size: 16px; color: #f1f1e6; background: #141e41; }
-    h2 {font-family: "Tektur", sans-serif;}
+    body { font-family: 'Paperozi'; font-size: 16px; color: #f1f1e6; background: #3e436b; }
+    h2 {font-family: "Tektur", sans-serif; }
     nav, h3 {font-family: 'JalnanGothic';}
     ul {list-style:none;}
-    a {display:block; color:#222; text-decoration:none; border: 0; outline: 0;}
+    a {display:block; color:#f9f9f9; text-decoration:none; border: 0; outline: 0;}
     img {border: 0; outline: 0;}
     /* border: 0; outline: 0; 넣은 이유 모름. 출처- Space Travel */ 
     span {display:block;}
