@@ -1,2 +1,8 @@
 https://github.com/gamepex/project
 초대 원하실 때 말씀해주세요
+
+lrecb60@gmail.com(이정환)
+
+
+git config --global user.email "abcdefg123@naver.com"
+git config --global user.name "깃허브유저이름"
