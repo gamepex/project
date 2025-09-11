@@ -31,10 +31,15 @@
 
     * {margin:0; padding:0; box-sizing:border-box; }
     body { font-family: 'Paperozi'; font-size: 16px; color: #f1f1e6; background: #3e436b; }
+    /* 메인타이틀이랑 서브타이틀 내 사용된 영어 다 대문자로 쓰기 위해서 title이라는 이름을 하나 더 공통적으로 줬습니다.  
+    main-title title
+    sub-title title
+    위와 같이 title 이름만 추가해주세요-한별
+    */
+    h2, h3, h4 h5, h6, .title p{text-transform:uppercase;}
     h2 {font-family: "Tektur", sans-serif; }
     nav, h3 {font-family: 'JalnanGothic';}
     ul {list-style:none;}
     a {display:block; color:#f9f9f9; text-decoration:none; border: 0; outline: 0;}
     img {border: 0; outline: 0;}
     /* border: 0; outline: 0; 넣은 이유 모름. 출처- Space Travel */ 
-    span {display:block;}

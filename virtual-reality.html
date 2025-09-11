@@ -7,33 +7,76 @@
     <link rel="shortcut icon" href="assets/Favicon_Apex.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <style>
-            h3 { font-size: 48px; text-transform: uppercase; text-align: center; }
-            article { margin-top: 100px; }
-            article h3 span { display: inline; }
-            h4 { margin-top: 15px; font-family: 'Paperozi'; font-size: 22px; text-align: center;  }
-            .vr-content-1 { display: flex; }
-            .vr-video { width: 900px; height: 500px; margin-left: 310px; margin-top: 50px; }
-            .vr-video video { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
-            .vr-description-1 { width: 300px; height: 200px; margin-left: 62px; margin-top: 110px; }
-            h5 { font-family: 'Paperozi'; font-size: 34px; }
-            .vr-description-1 p { margin-top: 40px; width: 276px; }
-            
-            .vr-img-vrchat { width: 750px; height: 250px; background: url(assets/vr/vr-img-vrchat.jpg) no-repeat center center; background-size: cover; }
+    <link rel="stylesheet" href="css/virtual-reality.css">
+    <script src="/js/jquery_1.12.4.min.js"></script>
+    <script src="/js/dropdown.js"></script>
 
-            .vr-content-2 { display: flex; margin-top: 50px; margin-left: 310px;  }
-            .vr-description-2 { margin-top: 57px; margin-left:123px; }
-            .vr-description-2 p { margin-top: 40px; margin-left: -20px;  width: 380px;  text-align: center; }
-
-            .vr-img-beat { width: 750px; height: 250px; background: url(assets/vr/vr-img-beat.jpg) no-repeat center center; background-size: cover; }
-
-            .vr-content-3 { display: flex; margin-top: 50px; margin-right: 310px;  }
-            .vr-description-3 { margin-top: 57px; }
-            .vr-description-3 p { margin-top: 40px; width: 380px;  text-align: center; }
-        
-    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="assets/Logo.png" alt="게임펙스 로고"></a>
+            <a href="#" id="trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <ul id="main-menu">
+                <li>
+                    <a href="#">ps5</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">게임기 소개</a></li>
+                        <li><a href="#">악세사리</a></li>
+                        <li><a href="#">대여 신청</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">xbox</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">게임기 소개</a></li>
+                        <li><a href="#">악세사리</a></li>
+                        <li><a href="#">대여 신청</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">nintendo</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">게임기 소개</a></li>
+                        <li><a href="#">악세사리</a></li>
+                        <li><a href="#">대여 신청</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">vr</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">게임기 소개</a></li>
+                        <li><a href="#">악세사리</a></li>
+                        <li><a href="#">대여 신청</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">steam deck</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">게임기 소개</a></li>
+                        <li><a href="#">악세사리</a></li>
+                        <li><a href="#">대여 신청</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="top-menu">
+                <li><a href="#"><i class="bi bi-person-check"></i></a></li>
+                <li><a href="#"><i class="bi bi-person-add"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner bg1">
+        <div  class="main-title">
+            <h2><span class="hg-blue">r</span>eality <span class="hg-ygrn">never </span><span class="hg-blue">b</span>efore</h2>
+            <p><span class="hg-blue">지금</span>까지 없던 <span class="hg-ygrn">현실</span>을 만나보세요</p>
+        </div>
+     
+    </div>
+    
      <section id="main">
         <article>
             <h3><span class="hg-blue">w</span>hy <span class="hg-ygrn">q</span>uest?</h3>
@@ -52,8 +95,8 @@
             </div>
         </article>
         <article>
-            <h3><span class="hg-blue">w</span>hy <span class="hg-ygrn">q</span>uest?</h3>
-            <h4>퀘스트3를 선택해야 하는 이유</h4>
+            <h3><span class="hg-ygrn">t</span>itles <span class="hg-blue">y</span>ou <span class="hg-ygrn">m</span>ust <span class="hg-blue">p</span>lay</h3>
+            <h4>필수 타이틀</h4>
             <div class="vr-content-2">
                 <div class="vr-img-vrchat"></div>
                 <div class="vr-description-2">
@@ -71,10 +114,45 @@
 당신은 이제, 검으로 연주하는 음악가입니다.</p>
                 </div>
                 <div class="vr-img-beat"></div>
+            </div>
+            
+            <div class="vr-img-long_bar"></div>
+            <div class="vr-content-4">
+                <p>메타퀘스트3로 영화관 그 이상의 몰입을 경험하세요. 초대형 가상 스크린에서 생생한 영화 감상, Virtual Desktop으로  현실 같은 PC 환경까지
+그대로 구현됩니다. 180°/360° VR 영상으로 아름다운 여행지와 팝 아티스트의 공연을 바로 눈앞에서 즐기세요 — 가장 가까운 거리에서, 가장 생생하게.</p>
+            </div>
+        </article>
 
+        <article>
+            <h3><span class="hg-blue">f</span>requently <span class="hg-ygrn">a</span>sked</h3>
+            <h4>자주 묻는 질문</h4>
+
+
+            <div class="vr-rollings">
+                <div class="vr-content-5">
+                    <div class="vr-img-lulu"></div>
+                    <h5>구성품은 어떻게 제공되나요?</h5>
+                    <p>메타퀘스트3 본체와 Touch Plus 컨트롤러, 유선 연결을 위한 케이블과 전용 충전기가 제공됩니다.<br>
+    그리고 안경 착용자를 위한 렌즈 가이드가 제공됩니다. 추가로 필요한 액세서리는 대여가 가능합니다.</p>
+                </div>
+                <!-- <div class="vr-content-6">
+                    <div class="vr-img-lulu"></div>
+                    <h5>구성품은 어떻게 제공되나요?</h5>
+                    <p>메타퀘스트3 본체와 Touch Plus 컨트롤러, 유선 연결을 위한 케이블과 전용 충전기가 제공됩니다.<br>
+    그리고 안경 착용자를 위한 렌즈 가이드가 제공됩니다. 추가로 필요한 액세서리는 대여가 가능합니다.</p>
+                </div>
+                <div class="vr-content-7">
+                    <div class="vr-img-lulu"></div>
+                    <h5>구성품은 어떻게 제공되나요?</h5>
+                    <p>메타퀘스트3 본체와 Touch Plus 컨트롤러, 유선 연결을 위한 케이블과 전용 충전기가 제공됩니다.<br>
+    그리고 안경 착용자를 위한 렌즈 가이드가 제공됩니다. 추가로 필요한 액세서리는 대여가 가능합니다.</p>
+                </div> -->
             </div>
 
         </article>
+
+      
+        
     </section>
 </body>
 </html>

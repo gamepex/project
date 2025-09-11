@@ -1,3 +1,20 @@
 @charset  "utf-8";
 
 .bg1{ background:url("/ps5-img/ps5\(1400\).jpg")no-repeat center center;}
+.contents{position:relative;width:1300px;  top:50px; margin:60px auto 100px auto;}
+ #tap1 ,#tap2 , #tap3{
+    position:relative;  top:10px;
+    padding-right:15px;
+    width:195px; height:80px;
+    border:0 ;outline:0;
+    border-radius:10px;
+    background:#151f53;
+    cursor: pointer;
+    color: #f9f9f9;
+}
+.contents p {margin:0 auto; background:#fc0;}
+#tap2{left:50px;} #tap3{left:500px;}
+.container{
+     height:450px; 
+    background:#151f53;
+}

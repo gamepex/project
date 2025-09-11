@@ -9,4 +9,8 @@ $(function(){
        $(this).find('.sub-menu').stop().slideUp();
        $('header').removeClass('active')
      });
+
+     $('#tap1').click(()=>{
+         
+     });
 });
