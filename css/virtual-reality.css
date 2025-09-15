@@ -37,3 +37,6 @@ h5 { font-family: 'Paperozi'; font-size: 34px; }
 
 .vr-content-5 h5 { margin-top: 50px;  text-align: center;}
 .vr-content-5 p { text-align: center; margin-top:  40px; }
+
+.vr-content-5 { transition: all 0.4s ease-in; }
+.vr-content-5:hover { transform: translateX(-1010px); }
