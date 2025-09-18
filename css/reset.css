@@ -11,7 +11,6 @@
 /*메인 타이틀 500-600 사용*/
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
 /*font-family: "Tektur", sans-serif;*/
-
 /* nav bar, 서브 타이틀 */
 @font-face {
     font-family: 'JalnanGothic';
@@ -19,7 +18,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 /* p(한/영) 400기준 */
 @font-face {
     font-family: 'Paperozi';
@@ -29,16 +27,26 @@
 }
 
 
-    * {margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Paperozi'; font-size: 16px; color: #f1f1e6; background: #3e436b; }
-    /* 메인타이틀이랑 서브타이틀 내 사용된 영어 다 대문자로 쓰기 위해서 title이라는 이름을 하나 더 공통적으로 줬습니다.  
-    main-title title
-    sub-title title
-    위와 같이 title 이름만 추가해주세요-한별
-    */
-    h2, h3, h4 h5, h6, .title p, a{text-transform:uppercase;}
-    h2 {font-family: "Tektur", sans-serif; }
-    nav, h3 {font-family: 'JalnanGothic';}
-    ul {list-style:none;}
-    a {display:block; color:#f9f9f9; text-decoration:none; border: 0; outline: 0;}
-    img { border: 0; outline: 0; } /* img 기본 윤곽 방지 */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Paperozi'; font-size: 16px; color: #f1f1e6; background: #3e436b; }
+/* 메인타이틀이랑 서브타이틀 내 사용된 영어 다 대문자로 쓰기 위해서 title이라는 이름을 하나 더 공통적으로 줬습니다.  
+main-title title
+sub-title title
+위와 같이 title 이름만 추가해주세요-한별
+*/
+h2, h3, h4, h5, h6, .title p, a { text-transform:uppercase; }
+h2 { font-family: "Tektur", sans-serif; }
+h3 { font-family: 'JalnanGothic'; }
+h4 { font-weight:500; }
+ul { list-style:none; }
+a { display:block; color:#f6f6f6; text-decoration:none; border: 0; outline: 0; }
+img { border: 0; outline: 0; } /* img 기본 윤곽 방지 */
+
+
+@media screen and (min-width:1050px) {
+    body { font-size:16px; }
+}
+
+@media screen and (max-width:1049px) {
+    body { font-size:15px; }
+}

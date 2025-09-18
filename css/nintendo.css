@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* 
+NS-CSS 적용사항 수정할것*/
+.ns-bg1 {
+    background: url("../ns-imgs/16.jpg") center center;
+}
+
+/* .ns-text1 p { margin-top: 40px; width: 276px; } 
+
+
+/*   @@@@@@@@@@@@@@@ 
+
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+/* 
+
+.bbox40 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 40%;
+    z-index: -1;
+}
+
+.b-box1 {
+    width: 1920px;
+    height: 600px;
+}
+
+.b-box2 {
+    left: -125px;
+    top: -35px;
+    width: 1309px;
+    height: 500px;
+    transform: rotate(58deg);
+}
+
+.b-box3 {
+    left: -10px;
+    top: -15px;
+    width: 1950px;
+    height: 700px;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(-35deg);
+}
+
+.b-box4 {
+    left: 485px;
+    top: -35px;
+    width: 1930px;
+    height: 500px;
+    transform: rotate(60deg);
+}  */

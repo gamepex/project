@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,65 +69,146 @@
             </ul>
         </nav>
     </header>
+
+    <!-- 배너는 배너안에서만 쓰는 클래스명을 줘야 한다. 아래 본문 내용에도 영향을 미치는 클래스 명을 주면 안된다. 공통 스타일시트 적용할 부분이기 때문에.  -->
     <div class="banner">
-        <div class="main-title title">
-            <div class="xb-b-box1 xb-bbox30"></div>
-            <div class="xb-b-box2 xb-bbox30"></div>
-            <div class="xb-b-box3 xb-bbox30"></div>
-            <div class="xb-b-box4 xb-bbox30"></div>
-            <h2><span class="hg-blue">n</span>ext <span class="hg-ygrn">gen</span> <span class="hg-blue">s</span>tarts <span class="hg-blue">h</span>ere</h2>
-            <p>새로운 <span class="hg-blue">세대</span>를 지금 <span class="hg-ygrn">여기</span>서 만나보세요</p>
-        </div>
-        <div class="xb-bg-video">
-            <video class="xb-content" autoplay loop muted playsinline poster preload="auto">
-                <source src="assets/XBOX/배너 동영상.mp4"/>
-                <source src="assets/XBOX/배너 동영상2.mp4"/>
-                <source src="assets/XBOX/배너 동영상3.mp4"/>
-            </video>
-        </div>
+        <div class="xb-b-box1 xb-bbox30"></div>
+        <div class="xb-b-box2 xb-bbox30"></div>
+        <div class="xb-b-box3 xb-bbox30"></div>
+        <div class="xb-b-box4 xb-bbox30"></div>
+        <h2><span class="hg-blue">n</span>ext <span class="hg-ygrn">gen</span> <span class="hg-blue">s</span>tarts <span class="hg-blue">h</span>ere</h2>
+        <p>새로운 <span class="hg-blue">세대</span>를 지금 <span class="hg-ygrn">여기</span>서 만나보세요</p>
+        
+        <video class="xb-content" >
+            <source src="assets/XBOX/banner-video.mp4"/>
+            <!-- autoplay loop muted preload="auto" -->
+            <!-- <source src="assets/XBOX/배너 동영상2.mp4"/>
+            <source src="assets/XBOX/배너 동영상3.mp4"/> -->
+        </video>
     </div>
 
-    <section>
-        <div class="sub-box xb-sub1"> 
-            <div class="sub-title title">
-                <h3><span class="hg-blue">c</span>onsole <span class="hg-ygrn">c</span>omparison</h3>
-                <p>series x/s 콘솔 비교</p>
-            </div>
-            <div class="xb-ser-x">
-                <div class="xb-ser-x-bg"></div>
-                <div class="xb-bbox30"></div>
-                <div class="xb-ser-x-blue-b"></div>
-                <div class="xb-ser-x-blck-b">
-                    <h4></h4>
-                    <h4></h4>
-                    <div class="xb-ygrn-bar"></div>
-                    <h5></h5>
-                    <a class="more-btn" href="#">more</a>
-                    <p></p>
-                </div>
+    <div class="sub-title-box title">
+        <h3><span class="hg-blue">c</span>onsole <span class="hg-ygrn">c</span>omparison</h3>
+        <p>series x/s 콘솔 비교</p>
+    </div>
+<!-- ===================본문영역================== -->
+    <!-- wid100% -->
+    <div class="xb-fullbox xb-full-box1">
+        
+        <!-- 1300 넘어가는 영역의 배경 채우는 용 -->
+        <div class="xb-exbox xb-extra-1"></div>
+        <!-- 1300 -->
+        <div class="xb-fitbox xb-fit-1">
+
+            <div class="xb-ser-x-bg"></div>
+
+            <div class="xb-ser-x-blue-b"></div>
+            <div class="xb-ser-blck-b">
+                <h4>xbox</h4>
+                <h4>series x</h4>
+                <div class="xb-ygrn-bar"></div>
+                <h5>jump in</h5>
+                <a class="more-btn" href="#">more</a>
+                <p>이용 가능 여부는 대여점에 따라 다를 수 있습니다.</p>
             </div>
         </div>
-        <div class="sub-box xb/sub2">
+        
+    </div>
+        
+    
+
+    <div class="xb-sub1">
+        
+            
+                
+            
+        </div>
+
+
+
+
+
+        <!-- <div class="xb-ser-s">
+            <div class="xb-ser-s-bg"></div>
+            <div class="xb-bbox30"></div>
+            <div class="xb-ser-s-ygrn-b"></div>
+            <div class="xb-ser-blck-b">
+                <h4>xbox</h4>
+                <h4>series s</h4>
+                <div class="xb-ygrn-bar"></div>
+                <h5>reasonable</h5>
+                <a class="more-btn" href="#">more</a>
+                <p>이용 가능 여부는 대여점에 따라 다를 수 있습니다.</p>
+            </div>
+        </div>
+    </div> -->
+        <!-- <div class="sub-title-box xb-sub2">
             <div class="sub-title title">
                 <h3>try <span class="hg-blue">d</span>iverse <span class="hg-ygrn">a</span>cc</h3>
                 <p>지금 다양한 xbox 컨트롤러를 체험하고, 게임의 수준을 한 단계 끌어올리세요</p>
             </div>
+            <div class="xb-bbox30"><p>controllers</p></div>
+            <div class="xb-bbox30"><p>console wraps</p></div>
+            <div class="xb-bbox30"><p>stands & charging</p></div>
+            <div class="xb-bbox30"><p>headsets</p></div>
+            <div class="xb-bbox30"><p>storage</p></div>
         </div>
-        <div class="sub-box xb/sub3">
+        <div class="sub-title-box xb-sub3">
             <div class="sub-title title">
                 <h3><span class="hg-blue">h</span>ow to<span class="hg-ygrn"> r</span>ental</h3>
                 <p>온·오프라인 대여방법</p>
             </div>
-        </div>    
-        <div class="sub-box xb/sub4">
-            <div class="sub-title title">
-                <h3><span class="hg-blue">s</span>tore <span class="hg-ygrn">l</span>ocation</h3>
-                <p>찾아오시는 길</p>
+            <div class="xb-dtd-box">
+                <div class="xb-cd xb-cd-bg1"><div class="xb-bbox30"><p>사전 예약</p><a class="more-btn" href="#">more</a></div></div>
+                <div class="xb-cd xb-cd-bg2"><div class="xb-bbox30"></div><p>현장 대여</p><a class="more-btn" href="#">more</a></div>
+                <div class="xb-cd xb-cd-bg3"><div class="xb-bbox30"><p>이용 안내</p><a class="more-btn" href="#">more</a></div></div>
+                <div>
+                    <h4>dtd rental</h4>
+                    <h5>방문 대여</h5>
+                    <div class="xb-ygrn-bar"></div>
+                    <p>온라인에서</p>
+                    <p>사전 예약 물품을</p>
+                    <p>직접 방문 수령하거나</p>
+                    <p>현장에서</p>
+                    <p>직접 대여해 보세요!</p>
+                 </div>
             </div>
-        </div>
+            <div class="sub-title-box xb-sub4">
+                <div class="xb-ellip-bg"></div>
+                <div class="xb-ellip xb-sm1"></div>
+                <div class="xb-ellip-bg"></div>
+                <div class="xb-ellip-bg"></div>
+                <div class="sub-title title">
+                    <h3><span class="hg-blue">s</span>tore <span class="hg-ygrn">l</span>ocation</h3>
+                    <p>찾아오시는 길</p>
+                </div>
+            </div>
+            <div class="xb-del-box">
+                <div>
+                    <h4>delivery</h4>
+                    <h5>택배 서비스</h5>
+                    <div class="xb-ygrn-bar"></div>
+                    <p>온라인으로</p>
+                    <p>예약하고</p>
+                    <p>택배 서비스로</p>
+                    <p>가정에서</p>
+                    <p>편리하게 받아보세요!</p>
+                 </div>
+                <div class="xb-cd xb-cd-bg4"><div class="xb-bbox30"><p>신청 방법</p><a class="more-btn" href="#">more</a></div></div>
+                <div class="xb-cd xb-cd-bg5"><div class="xb-bbox30"></div><p>반납 방법</p><a class="more-btn" href="#">more</a></div>
+                <div class="xb-cd xb-cd-bg6"><div class="xb-bbox30"><p>유의 사항</p><a class="more-btn" href="#">more</a></div></div>
+            </div>
+        </div>     -->
+    <footer>
+        <ul>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">서비스이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+        </ul>
 
-
-    </section>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+
+.at-bn-bg { background:url('../assets/steamdeck/at-bn-bg.jpg') no-repeat; background-size:cover; }
+
+
+.at-adv-container { display:flex; justify-content:space-between; }
+.at-adv-wrap { width:400px; background:#1f2235; }
+.at-adv-bg { height:450px; }
+.adv-bg1 { background:url(../assets/steamdeck/ad/ad1.jpg) no-repeat center center; background-size:cover; }
+.adv-bg2 { background:url(../assets/steamdeck/ad/ad2.jpg) no-repeat center center; background-size:cover; }
+.adv-bg3 { background:url(../assets/steamdeck/ad/ad3.jpg) no-repeat center center; background-size:cover; }
+h4 { padding-top:50px; font-size:34px; text-align:center; }
+.at-adv-btn { margin:255px auto 0; }
+.at-adv-contents { padding:40px 50px; text-align:center; }
+
+

@@ -12,21 +12,16 @@
 
 @media screen and (min-width:1060px) {
     #trigger {display: none;}
-    h2 {font-size: 72px;}
-    h3{font-size:48px}
 
-    header {position:fixed; left: 0; top:0; width: 100%; height: 60px; }
+    header {position:fixed; left:0; top:0; width:100%; height:60px; }
     header::after{content:''; position:absolute; width:100%; top:0;}
     nav {   
         display: flex; justify-content: space-between; align-items: center;
         width: 1300px; height: 100%;margin: 0 auto;
     }
     #main-menu, .top-menu {display: flex;}
-    #main-menu > li > a {
-        padding:0 45px;
-        font-size: 16px; text-transform: uppercase; 
-    }
-    .top-menu a {padding-left: 25px; font-size: 26px}
+    #main-menu > li > a {padding:0 45px; text-transform: uppercase; }
+    .top-menu a {padding-left: 10px; font-size: 26px}
     /* =====dropdown menu===== */
     #main-menu > li {position:relative; z-index:9;}
     .sub-menu{ position:absolute; display:none; width:100%; padding-top:20px; z-index:9;}
@@ -36,25 +31,29 @@
     header.active::after{ left:0; top:0; width:100%; height:250px; background:rgb(18, 26, 56,0.7)}
     /* ========================== */
 
-    .banner {
-        display: flex; justify-content: center; align-items: center;
-        height: 600px;
-        text-transform: uppercase; color:#f9f9f9;
-    }
-    .sub-box{
-        display:flex; justify-content:center; align-items:center;
-        width:100%; margin-top:100px;
-     }
-    
-    .main-title p{margin-top:20px; text-align: center; font-size: 22px;}
-    .sub-title p{ margin:15px 0 50px; text-align: center;}
+    .banner { height:600px; color:#f6f6f6; }
+    h2 { padding-top:325px; font-size: 72px; text-align:center; }
+    .banner p { text-align:center; }
 
+    section { width:1300px; margin:0 auto; }
+
+    .sub-title-box { padding:100px 0 50px; text-align: center; }
+    h3 { font-size:48px; }
+
+    
+    .main-title p{margin-top:20px; font-size: 22px;}
+    .sub-title p{margin-top:15px; text-align: center;}  /*본문 박스에 top 50 주기*/
     /* ======자세히 보기 버튼==== 한별 추가 */
-    .more-btn {
-        position:absolute;
-        width:200px; height:60px;
-        font-size:18px; color:#6389ff; text-align:center; line-height:58px;
-        background:#f9f9f9;
-        border-radius:30px;
+    .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  하버했을때 마우스커서 추가
+        참고사항: 스마트폰 크기 :width100 height 50*/ 
+        width:150px; height:60px;
+        font-size:16px; color:#6389ff; text-align:center; line-height:60px;
+        background:#fff; border-radius:30px;
+        box-shadow:inset 0 0 0 2px rgb(0,0,0,0.8); cursor:pointer;
+        transition:all 0.4s;
+    }
+    .more-btn:hover{ /*버튼 하버*/
+        box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
+        background:#6389ff; color:#f1f1e6;
     }
 }
