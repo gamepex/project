@@ -1,16 +1,9 @@
 @charset "utf-8";
 
-/* 1번. 배경 남색 #141e41
-2번. 메인타이틀 파란색#6389ff 연두색#caca64 흰색#f9f9f9
-3번. 본문 #f1f1e6
-4번. 서브타이틀/본문 강조색 #6389ff
-5번. footer 배경색 #2d2e32 */
-
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-
-/*메인 타이틀 500-600 사용*/
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
 /*font-family: "Tektur", sans-serif;*/
+
 /* nav bar, 서브 타이틀 */
 @font-face {
     font-family: 'JalnanGothic';
@@ -18,6 +11,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 /* p(한/영) 400기준 */
 @font-face {
     font-family: 'Paperozi';
@@ -26,17 +20,22 @@
     font-display: swap;
 }
 
+/* 강조색 */
+/* hg: highlight, ygrn: yellogreen */
+.hg-blue {color:#6389ff;}
+.hg-ygrn {color:#caca64;}
 
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Paperozi'; font-size: 16px; color: #f1f1e6; background: #3e436b; }
+body { font-family: 'Paperozi'; font-size: 16px; color: #f1f1e6; background: #141e41; }
+
 /* 메인타이틀이랑 서브타이틀 내 사용된 영어 다 대문자로 쓰기 위해서 title이라는 이름을 하나 더 공통적으로 줬습니다.  
 main-title title
 sub-title title
 위와 같이 title 이름만 추가해주세요-한별
 */
 h2, h3, h4, h5, h6, .title p, a { text-transform:uppercase; }
-h2 { font-family: "Tektur", sans-serif; }
-h3 { font-family: 'JalnanGothic'; }
+h2 { font-family: "Tektur", sans-serif; color: #f9f9f9; }
+#main-menu > li, h3 { font-family: 'JalnanGothic'; }
 h4 { font-weight:500; }
 ul { list-style:none; }
 a { display:block; color:#f6f6f6; text-decoration:none; border: 0; outline: 0; }
