@@ -1,10 +1,10 @@
-@media screen and (min-width:1350px){
+@media screen and (min-width:1370px){
     .banner{background:url('/assets/playstation/imgs/banner.jpg');}
-    .tabs-wrap {
+    .ps-tabs-wrap {
         position:relative; 
         width: 100%; height:510px;}
-    .tabs-wrap input {display:none;}
-    .tabs-wrap label{
+    .ps-tabs-wrap input {display:none;}
+    .ps-tabs-wrap label{
         position:absolute; 
         width:150px; height:60px;
         color:#f1f1e6;
@@ -13,83 +13,88 @@
         background:#151f53;
         border-radius:10px 10px 0 0;
     }
-    .tabs-wrap .tab1{left:20px;}
-    .tabs-wrap .tab2{left:180px;}
-    .tabs-wrap .tab3{left:340px;}
+    .ps-tabs-wrap .tab1{left:20px;}
+    .ps-tabs-wrap .tab2{left:180px;}
+    .ps-tabs-wrap .tab3{left:340px;}
     input:checked +label{ background:#242e65;}
 
-    .tabs-contents{
+    .ps-tabs-contents{
         position: relative; top: 60px;
         width:100%; height:450px;
         background:#242e65;
+        border-radius:5px;
         overflow:hidden;
     }
 
-    .tab-contents1,.tab-contents2,.tab-contents3{
+    .ps-contents1-bg, .ps-contents2-bg, .ps-contents3-bg{
         position:absolute; ; top:0;
         width:735px; height:410px;
         margin:20px;
         transition:all 0.4s ease-in;
     }
-     .tabs-contents .more-btn{position: absolute; }
-    .tab-contents1{
+     .ps-tabs-contents .more-btn{position: absolute; }
+    .ps-contents1-bg{
         background:url('/assets/playstation/imgs/Adaptive.jpg')no-repeat center center;
         background-size:cover;
     }
-    .tab-contents2{ 
+      .ps-contents2-bg{ 
         background:url('/assets/playstation/imgs/Haptic.png')no-repeat center center;
         background-size:cover;}
-    .tab-contents3{
+      .ps-contents3-bg{
         background:url('/assets/playstation/imgs/3Daudio.png')no-repeat center center;
         background-size:cover;
     }
 
-    .tab-textwrap1,.tab-textwrap2,.tab-textwrap3{
+    .ps-tab-textwrap1, .ps-tab-textwrap2, .ps-tab-textwrap3{
         position:absolute; 
         top:60px;
         width:440px;
         transition:all 0.4s ease-in;
     }
-    .tabs-contents  p{padding:60px 0 120px;}
+    .ps-tabs-contents  p{padding:60px 0 120px;}
 
-    .tab-contents1,.tab-contents2, .tab-contents3{left:-760px;}
-    .tab-textwrap1,.tab-textwrap2, .tab-textwrap3{right:-700px;}
+    .ps-contents1-bg, .ps-contents2-bg, .ps-contents3-bg{left:-760px;}
+    .ps-tab-textwrap1, .ps-tab-textwrap2,  .ps-tab-textwrap3{right:-700px;}
 
-    #tab1:checked ~ .tabs-contents .tab-textwrap1,
-    #tab2:checked ~ .tabs-contents .tab-textwrap2,
-    #tab3:checked ~ .tabs-contents .tab-textwrap3{right:55px;} /*텍스트*/
+    #tab1:checked ~ .ps-tabs-contents .ps-tab-textwrap1,
+    #tab2:checked ~ .ps-tabs-contents  .ps-tab-textwrap2,
+    #tab3:checked ~ .ps-tabs-contents  .ps-tab-textwrap3{right:55px;} /*텍스트*/
 
-    #tab1:checked ~ .tabs-contents .tab-contents1,
-    #tab2:checked ~ .tabs-contents .tab-contents2,
-    #tab3:checked ~ .tabs-contents .tab-contents3{left:0;} /*이미지*/
+    #tab1:checked ~ .ps-tabs-contents .ps-contents1-bg,
+    #tab2:checked ~ .ps-tabs-contents .ps-contents2-bg,
+    #tab3:checked ~ .ps-tabs-contents .ps-contents3-bg{left:0;} /*이미지*/
 
 
  
     /*===============section2==================*/
-    .ps-contents2{position:relative; width:100%;  height:840px;}
-    .ps-imgwrap{display:flex;}
-    .ps-content2-img-1{ width:300px; height:250px; margin-right:20px; background:url('/assets/playstation/imgs/img1.jpg');  }
-    .ps-content2-img-1-2{ width:410px; height:250px; background:url('/assets/playstation/imgs/img2.jpg'); }
-    .ps-textwrap{
+    .eg-contents2{position:relative; width:100%;  height:840px;}
+    .eg-contents2{display:flex;}
+    .eg-contents2-img-1{ width:300px; height:250px; margin-right:20px; background:url('/assets/playstation/imgs/img1.jpg');  }
+    .eg-contents2-img-1-2{
+        position:absolute; left:320px; top:0;
+         width:410px; height:250px; 
+         background:url('/assets/playstation/imgs/img2.jpg');
+         }
+    .eg-textwrap{
         position: absolute;
         width:475px;
         right:45px; top:0;
         text-align:left;
     }
-    .ps-textwrap  > p {padding-top:30px;}
-    .ps-contents2 >  p {
+    .eg-textwrap  > p {padding-top:30px;}
+    .eg-contents2 >  p {
         position: absolute;
         left:140px; bottom:85px;
         width:360px;
         text-align:right;
     }
-    .ps-content2-img2{
+    .eg-contents2-img2{
         position:absolute;
         right:0; bottom:0;
         width:750px; height:685px;
         background:url('/assets/playstation/imgs/img3.jpg');
     }
-    .ps-content2-img3{
+    .eg-contents2-img3{
         position:absolute;
         left:0; bottom:170px;
         width:730px; height:400px;
@@ -100,7 +105,7 @@
     .slide{ width:350px; height:660px; margin:50px auto 0; border:1px solid #f1f1e6;}
 
     /* -==============section3================== */
-    .ps-contents3{
+    .ur-contents{
         position:relative;
         display:flex; justify-content:space-between; align-items:center;
         width:100%;
@@ -123,19 +128,343 @@
     .scaling, .mance, .tracing{ position:absolute; left:50px;  top:210px;width:300px;}
     .more-btn{margin:0 auto;}
     article p {padding:30px 0 60px;}
-    .dark-bg{
+    .ur-dark-bg{
         position:absolute; ; left: 0; margin-top:50px;
          width: 100% ; height:500px;
         background:rgb(0, 0, 0,0.5);
     }
-    footer{
-        height:493px;
-        background:#313236 ;
+    footer{background:#313236 ;}
+    .ft-wrap{
+        width:1300px; 
+        margin:100px auto 0;
+        padding:100px 0 200px;
     }
-    .ft-wrap{width:1300px; margin:0 auto;}
-    .text-wrap{display: flex; padding-right:35px;}
+    .text-wrap{display: flex;}
+    .text-wrap > p {padding-right:35px;}
+    .text-wrap2{margin:50px 0;}
 }
 
-@media screen and (min-width:1060px){
 
+@media screen and (min-width:1050px) and (max-width:1349px){
+    .banner{background:url('/assets/playstation/imgs/banner.jpg');}
+    .ps-tabs-wrap {
+        position:relative; 
+        width: 100%; height:510px;}
+        .ps-tabs-wrap input {display:none;}
+        .ps-tabs-wrap label{
+        position:absolute; 
+        width:150px; height:60px;
+        color:#f1f1e6;
+        text-align:center;  line-height:60px;
+        text-transform:uppercase;
+        background:#151f53;
+        border-radius:10px 10px 0 0;
+    }
+    .ps-tabs-wrap .tab1{left:20px;}
+    .ps-tabs-wrap .tab2{left:180px;}
+    .ps-tabs-wrap .tab3{left:340px;}
+    input:checked +label{ background:#242e65;}
+
+    .ps-tabs-contents{
+        position: relative; top: 60px;
+        width:100%; height:450px;
+        background:#242e65;
+         border-radius:5px;
+        overflow:hidden;
+    }
+    .ps-contents1-bg, .ps-contents2-bg, .ps-contents3-bg{
+        position:absolute;  top:20px;
+        width:960px; height:410px;
+        transition:all 0.4s ease-in;
+    }
+    .ps-contents1-bg::before, .ps-contents2-bg::before, .ps-contents3-bg::before{
+        content:'';
+        position:absolute;
+        width:960px; height:410px;
+        transition:all 0.4s ease-in;
+        background:rgb(0, 0, 0,0.5);
+    }
+    .ps-contents1-bg{
+        background:url('/assets/playstation/imgs/Adaptive.jpg')no-repeat center center;
+        background-size:cover;}
+    .ps-contents2-bg{ 
+        background:url('/assets/playstation/imgs/Haptic.png')no-repeat center center;
+        background-size:cover;}
+     .ps-contents3-bg{
+        background:url('/assets/playstation/imgs/3Daudio.png')no-repeat center center;
+        background-size:cover;}
+
+    .ps-tab-textwrap1, .ps-tab-textwrap2, .ps-tab-textwrap3{
+        position:absolute; top:60px;
+        width:400px;
+        text-align:center;
+        transition:all 0.4s ease-in;
+    }
+    .ps-tabs-contents  p{padding:40px 0 80px;}
+
+    .ps-contents1-bg,  .ps-contents2-bg,   .ps-contents3-bg{left:-1050px;}
+    .ps-tab-textwrap1, .ps-tab-textwrap2,  .ps-tab-textwrap3{right:-1050px;}
+
+    #tab1:checked ~ .ps-tabs-contents .ps-tab-textwrap1,
+    #tab2:checked ~ .ps-tabs-contents  .ps-tab-textwrap2,
+    #tab3:checked ~ .ps-tabs-contents  .ps-tab-textwrap3{right:280px;} /*텍스트*/
+
+    #tab1:checked ~ .ps-tabs-contents .ps-contents1-bg,
+    #tab2:checked ~ .ps-tabs-contents .ps-contents2-bg,
+    #tab3:checked ~ .ps-tabs-contents  .ps-contents3-bg{left:20px;} /*이미지*/
+
+
+    /*===============section2==================*/
+    .eg-contents2{position:relative; width:100%;  height:780px;}
+    .eg-contents2{ display:flex;}
+    .eg-contents2-img-1{ width:300px; height:250px; margin-right:20px; background:url('/assets/playstation/imgs/img1.jpg');  }
+    .eg-contents2-img-1-2{
+        position:absolute; left:320px; top:0;
+         width:410px; height:250px;
+          background:url('/assets/playstation/imgs/img2.jpg'); 
+        }
+    .eg-textwrap{
+        position: absolute;
+        left:250px; top:185px;
+        width:300px;
+        text-align:left;
+        z-index:8;
+    }
+    .eg-textwrap  > p {padding-top:30px;}
+    .eg-contents2 >  p {
+        position: absolute;
+        left:400px; bottom:150px;
+        width:240px;
+        text-align:right;
+    }
+    .eg-contents2-img2{
+        position:absolute;
+        right:0; bottom:0;
+        width:800px; height:640px;
+        background:url('/')no-repeat center center;
+        background-size:cover;
+    }
+    .eg-contents2-img2::before{
+        content:'';
+        position:absolute;
+        width:800px; height:640px;
+        background:rgb(0,0,0,0.4);
+    }
+    .eg-contents2-img3{
+        position:absolute;
+        left:50px; bottom:0;
+        width:650px; height:300px;
+        background:url('/imgs/img-4.jpeg')no-repeat center center;
+        background-size:cover;
+        transform:scaleX(-1);
+    }
+    .eg-contents2-img3::before{
+        content:'';
+        position:absolute;
+        width:650px; height:300px;
+        background:rgb(0,0,0,0.4);
+    }
+    .slide{ width:350px; height:660px; margin:50px auto 0; border:1px solid #f1f1e6;}
+
+    /* -==============section3================== */
+    .ur-contents{
+        position:relative;
+        width:100%; height:1250px;
+    }
+    article{  
+        position:absolute;
+        width:450px; height:600px;
+        text-align:center;
+        border-radius:20px;
+    }
+    article::before{
+        content: '';
+        position: absolute; left:0; top:0;
+        width:450px; height:600px;
+        border-radius:20px;
+        background: rgb(0, 0, 0,0.7);
+    }
+    article:first-child {
+        left:25px;
+        background:url('/assets/playstation/imgs/scaling.jpg')no-repeat  -200px; background-size:cover;
+    }
+    article:nth-child(2){
+        right:25px;
+        background:url('/assets/playstation/imgs/mance.jpg')no-repeat  -200px; background-size:cover;
+    }
+    article:last-child{
+        bottom:0; left:275px;
+        background:url('/assets/playstation/imgs/tracing.jpg')no-repeat; background-size:cover;
+    }
+    .scaling, .mance, .tracing{  position:absolute; left:85px;  top:210px; width:310px;} /*텍스트 내용*/
+    .more-btn{margin:0 auto;}
+    article p {padding:30px 0 60px;}
+    .ur-dark-bg{
+        position:absolute; ; left: 0; margin-top:50px;
+        width: 100% ; height:1150px;
+        background:rgb(0, 0, 0,0.5);
+    }
 }
+/*  ===================  media  ========================*/
+
+@media screen and (min-width:750px) and (max-width:1049px){
+        .banner{background:url('/assets/playstation/imgs/banner.jpg');}
+    .ps-tabs-wrap {
+        position:relative; 
+        width: 100%; height:450px;}
+    .ps-tabs-wrap input {display:none;}
+    .ps-tabs-wrap label{
+        position:absolute; 
+        width:150px; height:60px;
+        color:#f1f1e6;
+        text-align:center;  line-height:60px;
+        text-transform:uppercase;
+        background:#151f53;
+         border-radius:5px;
+        border-radius:10px 10px 0 0;
+    }
+    .ps-tabs-wrap .tab1{left:20px;}
+    .ps-tabs-wrap .tab2{left:190px;}
+    .ps-tabs-wrap .tab3{left:360px;}
+    input:checked +label{ background:#242e65;}
+
+    .ps-tabs-contents{
+        position: relative; top: 60px;
+        width:100%; height:450px;
+        background:#242e65;
+        overflow:hidden;
+    }
+    .ps-contents1-bg, .ps-contents2-bg, .ps-contents3-bg{
+        position:absolute; top:25px;
+        width:700px; height:400px;
+        transition:all 0.4s ease-in;
+    }
+    .ps-contents1-bg::before, .ps-contents2-bg::before,  .ps-contents3-bg::before{
+        content:'';
+        position:absolute; 
+        width:700px; height:400px;
+        transition:all 0.4s ease-in;
+        background:rgb(0, 0, 0,0.5);
+    }
+    .ps-contents1-bg{
+        background:url('/assets/playstation/imgs/Adaptive.jpg')no-repeat center center;
+        background-size:cover;}
+     .ps-contents2-bg{ 
+        background:url('/assets/playstation/imgs/Haptic.png')no-repeat center center;
+        background-size:cover;}
+     .ps-contents3-bg{
+        background:url('/assets/playstation/imgs/3Daudio.png')no-repeat center center;
+        background-size:cover;}
+
+    .ps-tab-textwrap1, .ps-tab-textwrap2, .ps-tab-textwrap3{
+        position:absolute; left:0; top:50px;
+        width:420px;
+        text-align:center;
+        transition:all 0.4s ease-in;
+    }
+    .ps-tabs-contents  p{padding:60px 0 120px;}
+
+    .ps-contents1-bg, .ps-contents2-bg, .ps-contents3-bg{left:-1050px;}
+    .ps-tab-textwrap1, .ps-tab-textwrap2,  .ps-tab-textwrap3{left:-1050px;}
+
+    #tab1:checked ~ .ps-tabs-contents .ps-tab-textwrap1,
+    #tab2:checked ~ .ps-tabs-contents .ps-tab-textwrap2,
+    #tab3:checked ~ .ps-tabs-contents .ps-tab-textwrap3{left:160px;} /*텍스트*/
+
+    #tab1:checked ~ .ps-tabs-contents .ps-contents1-bg,
+    #tab2:checked ~ .ps-tabs-contents  .ps-contents2-bg,
+    #tab3:checked ~ .ps-tabs-contents   .ps-contents3-bg{left:25px;} /*이미지*/
+
+
+ 
+    /*===============section2==================*/
+    .eg-contents2{position:relative; width:100%;  height:860px;}
+    .eg-imgwrap{position:relative; display:flex;}
+    .eg-contents2-img-1{ width:300px; height:250px; margin-right:20px; background:url('/assets/playstation/imgs/img1.jpg');  }
+    .eg-contents2-img-1-2{  
+        position:absolute; right:0; top:0;
+        width:410px; height:250px; 
+         background:url('/assets/playstation/imgs/img2.jpg'); 
+        }
+    .eg-textwrap{
+        position: absolute;
+        left:250px; top:185px;
+        width:300px;
+        text-align:left;
+        z-index:8;
+    }
+    .eg-textwrap  > p {padding-top:30px;}
+    .eg-contents2 >  p {
+        position: absolute;
+        left:400px; bottom:150px;
+        width:240px;
+        text-align:right;
+    }
+    .eg-contents2-img2{
+        position:absolute;
+        right:0; bottom:0;
+        width:800px; height:640px;
+        background:url('/imgs/returnal-2.png')no-repeat center center;
+        background-size:cover;
+    }
+    .eg-contents2-img2::before{
+        content:'';
+        position:absolute;
+        width:800px; height:640px;
+        background:rgb(0,0,0,0.4);
+    }
+    .eg-contents2-img3{
+        position:absolute;
+        left:50px; bottom:0;
+        width:650px; height:300px;
+        background:url('/imgs/img-4.jpeg')no-repeat center center;
+        background-size:cover;
+        transform:scaleX(-1);
+    }
+    .eg-contents2-img3::before{
+        content:'';
+        position:absolute;
+        width:650px; height:300px;
+        background:rgb(0,0,0,0.4);
+    }
+    .slide{ width:350px; height:660px; margin:50px auto 0; border:1px solid #f1f1e6;}
+
+    /* -==============section3================== */
+    .ur-contents{
+        position:relative;
+        width:100%; height:1250px;
+    }
+    article{  
+        position:absolute;
+        width:450px; height:600px;
+        text-align:center;
+        border-radius:20px;
+    }
+    article::before{
+        content: '';
+        position: absolute; left:0; top:0;
+        width:450px; height:600px;
+        border-radius:20px;
+        background: rgb(0, 0, 0,0.7);
+    }
+    article:first-child {
+        left:25px;
+        background:url('/assets/playstation/imgs/scaling.jpg')no-repeat  -200px; background-size:cover;
+    }
+    article:nth-child(2){
+        right:25px;
+        background:url('/assets/playstation/imgs/mance.jpg')no-repeat  -200px; background-size:cover;
+    }
+    article:last-child{
+        bottom:0; left:275px;
+        background:url('/assets/playstation/imgs/tracing.jpg')no-repeat; background-size:cover;
+    }
+    .scaling, .mance, .tracing{  position:absolute; left:85px;  top:210px; width:300px; } /*텍스트 내용*/
+    .more-btn{margin:0 auto;}
+    article p {padding:30px 0 60px;}
+    .ur-dark-bg{
+        position:absolute; ; left: 0; margin-top:50px;
+        width: 100% ; height:1150px;
+        background:rgb(0, 0, 0,0.5);
+    }
+} 

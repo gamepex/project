@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media screen and (min-width:1060px) {
+@media screen and (min-width:1370px) {
     #trigger {display: none;}
 
     header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
@@ -23,16 +23,14 @@
 
     .banner { height:600px; color:#f6f6f6; }
     h2 { padding-top:325px; font-size: 72px; text-align:center; }
-    .banner p { text-align:center; }
-
-    section { width:1300px; margin:0 auto; }
-
-    .sub-title { padding:100px 0 50px; text-align: center; } /*sub-title 로 수정 */
+    .banner p { font-size: 22px; text-align:center;}
     h3 { font-size:48px; }
-    h4{font-size:34px;}
+    h4  {font-size:34px; }
+
+    /* .banner p { margin-top:20px; font-size: 22px; } */
+    .sub-title { padding:100px 0 50px; text-align: center; } /*sub-title 로 수정 */
+     .sub-title p{ text-align: center;}  /*본문 박스에 top 50 주기*/
     
-    .main-title p{margin-top:20px; font-size: 22px;}
-    .sub-title p{margin-top:15px; text-align: center;}  /*본문 박스에 top 50 주기*/
     /* ======자세히 보기 버튼==== 한별 추가 */
     .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
         width:150px; height:60px;
@@ -44,4 +42,161 @@
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }
+    section { width:1300px; margin:0 auto; }
+}
+
+
+
+@media screen and (min-width:1050px) and (max-width: 1369px) {
+    #trigger {display: none;}
+
+    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
+    header::after{content:''; position:absolute; width:100%; top:0;}
+    nav {   
+        display: flex; justify-content:space-between; align-items: center;
+        width: 1000px; height: 100%;margin: 0 auto;
+    }
+    #main-menu, .top-menu {display: flex;}
+    #main-menu > li > a {padding:0 35px; text-transform: uppercase; }
+    .top-menu a {padding-left: 10px; font-size: 26px}
+    /* =====dropdown menu===== */
+    #main-menu > li {position:relative; z-index:9;}
+    .sub-menu{ position:absolute; display:none; width:100%; padding-top:20px; z-index:9;}
+    .sub-menu > li > a{  text-align:center;  line-height:50px; }
+    #main-menu > li > a:hover {color: #6389ff;}
+    .sub-menu > li:hover {background:#6389ff; }
+    header.active::after{ left:0; top:0; width:100%; height:250px; background:rgb(18, 26, 56,0.7)}
+    /* ========================== */
+
+    .banner { height:600px; color:#f6f6f6; }
+    h2 { padding-top:325px; font-size: 72px; text-align:center; }
+    .banner p { text-align:center; }
+
+    section { width:1000px; margin:0 auto; }
+
+    .sub-title { padding:100px 0 50px; text-align: center; } /*sub-title 로 수정 */
+    h3 { font-size:48px; }
+    h4{font-size:34px;}
+    
+    .banner p { margin-top:20px; font-size: 22px; }
+    /* .main-title p{margin-top:20px; font-size: 22px;} */
+    .sub-title p{margin-top:15px; text-align: center;}  /* 본문 박스에 top 50 주기 */
+    /* ======자세히 보기 버튼==== 한별 추가 */
+    .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
+        width:150px; height:60px;
+        font-size:16px; color:#6389ff; text-align:center; line-height:60px;
+        background:#fff; border-radius:30px;
+        transition:all 0.4s;
+    }
+    .more-btn:hover{ /*버튼 하버*/
+        box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
+        background:#6389ff; color:#f1f1e6;
+    }
+    footer{background:#313236 ;} /*수정하셔도 됩니다.*/
+    .ft-wrap{
+        width:1000px; 
+        margin:100px auto 0;
+        padding:100px 0 200px;
+    }
+    .text-wrap{display: flex;}
+    .text-wrap a {padding-right:34px;}
+    .text-wrap2{margin:50px 0;}
+}
+
+
+@media screen and (min-width:750px) and (max-width:1049px){
+    #main-menu, .top-menu{display: none;}
+    nav{ height:100%; }  
+     .logo {position:absolute; left:30px; top:18px; }
+     
+    #trigger {
+        position:absolute; right:30px; top:18px;
+        width:30px; height:20px;
+    }
+    #trigger span {
+        position:absolute; left:0; width:100%; height:2px;
+        background:#f2f5d4;
+        transition:all 0.4s ease-in;
+    }
+    #trigger span:nth-child(1) { top:0; }
+    #trigger span:nth-child(2) { top:9px; background:#caca64; }
+    #trigger span:nth-child(3) { bottom:0; }
+    
+    #main-menu {
+         position:absolute; left:-1100px; top:50px;
+         width:50%; height:100vh;
+         padding-top:150px; 
+         text-align:center; 
+         background:rgba(10,70,150,0.9);opacity:0;
+        transition: all 0.4s ease-in;
+        }
+    #main-menu > li > a { padding:20px; font-size:24px;    }
+    #main-menu > li > a:hover { color:rgb(250, 30, 100); }
+
+    #trigger.active span:nth-child(1) { width:85%; transform:translateY(9px) rotate(-135deg); }
+    #trigger.active span:nth-child(2) { opacity:0; }
+    #trigger.active span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
+    #main-menu.active{left:0; opacity:1;}     
+    
+    .sub-menu{ 
+        display:none; padding:10px 0;
+        background:rgba(240, 168, 191, 0.8);
+        box-shadow:0 0 25px rgba(0,0,0,0.7)inset;
+    }
+    .sub-menu a{padding:10px 0;font-size:20px;}
+    /* ========================== */
+     #trigger.active span:nth-child(1) { width:85%; transform:translateY(9px) rotate(-135deg); }
+    #trigger.active span:nth-child(2) { opacity:0; }
+    #trigger.active span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
+    #main-menu.active{left:0; opacity:1;}
+
+
+    .top-menu {  position:absolute; left:30px; top:3px; }
+    .top-menu a{ padding-right:15px; font-size:30px; }
+    /* ============================ */
+    .banner { height:650px; color:#f6f6f6; }
+    h2 { padding-top:325px; font-size: 72px; text-align:center; }
+    .banner p { text-align:center; }
+
+    section { width:750px; margin:0 auto; }
+
+    .sub-title { padding:100px 0 50px; text-align: center; } /*sub-title 로 수정 */
+    h3 { font-size:48px; }
+    h4{ font-size:34px; }
+       #trigger {
+        position:absolute; right:30px; top:18px;
+        width:30px; height:20px;
+    }
+    #trigger span {
+        position:absolute; left:0; width:100%; height:2px;
+        background:#f2f5d4;
+        transition:all 0.4s ease-in;
+    }
+    #trigger span:nth-child(1) { top:0; }
+    #trigger span:nth-child(2) { top:9px; background:#f5b6de; }
+    #trigger span:nth-child(3) { bottom:0; }
+
+    .banner p { margin-top:20px; font-size: 22px; }
+    /* .main-title p{margin-top:20px; font-size: 22px;} */
+    .sub-title p{margin-top:15px; text-align: center;}  /* 본문 박스에 top 50 주기 */
+    /* ======자세히 보기 버튼==== 한별 추가 */
+    .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
+        width:150px; height:60px;
+        font-size:16px; color:#6389ff; text-align:center; line-height:60px;
+        background:#fff; border-radius:30px;
+        transition:all 0.4s;
+    }
+    .more-btn:hover{ /*버튼 하버*/
+        box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
+        background:#6389ff; color:#f1f1e6;
+    }
+    footer{background:#313236 ;} /*수정하셔도 됩니다.*/
+    .ft-wrap{
+        width:1000px; 
+        margin:100px auto 0;
+        padding:100px 0 200px;
+    }
+    .text-wrap{display: flex;}
+    .text-wrap a {padding-right:34px;}
+    .text-wrap2{margin:50px 0;}
 }
