@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLAYSTATION</title>
     <link rel="shortcut icon" href="assets/common/favicon_apex.png">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <script src="/js/jquery_1.12.4.min.js"></script>
-    <script src="/js/dropdown.js"></script>
-    <script src="/JS/scroll.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery_1.12.4.min.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/trigger.js"></script>
 </head>
 
 <body>
@@ -24,11 +26,22 @@
             <ul id="main-menu">
                 <li>
                     <a href="#">ps5</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">게임기 소개</a></li>
-                        <li><a href="#">악세사리</a></li>
-                        <li><a href="#">대여 신청</a></li>
-                    </ul>
+                    <div class="sub-menu">
+                        <div class="sub-menu-wrap">
+                            <div class="ps-menu-title">
+                                <h6>playstation</h6>
+                            </div>
+                            <ul class="ps-menu">
+                                <li><a href="#">게임기 소개</a></li>
+                                <li><a href="#">악세사리</a></li>
+                                <li><a href="#">대여 신청</a></li>
+                            </ul>
+                            <ul class="ps-menu">
+                                <li><a href="#">게임기 소개</a></li>
+                                <li><a href="#">악세사리</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="#">xbox</a>
@@ -70,120 +83,121 @@
         </nav>
     </header>
 
-    <link rel="stylesheet" href="/css/playstation.css">
+    <link rel="stylesheet" href="css/playstation.css">
 
-    <div class="banner">
-        <h2><span class="hg-blue">E</span>XCLU <span class="hg-ygrn">BLOCK</span> <span class="hg-blue">B</span>USTER</h2>
+    <div class="banner bn-ps-bg">
+        <h2><span class="hg-blue">E</span>XCLU <span class="hg-ygrn">BLOCK</span> <span class="hg-blue">B</span>USTER
+        </h2>
         <p>PS5만의 <span class="hg-blue">빠져들수</span> 밖에 없는 <span class="hg-ygrn">독보적</span>인 재미</p>
     </div>
-    
-    <!---------------section 1--------------->
+
     <section>
         <div class="sub-title">
-                <h3><span class="hg-blue">D</span>UEL <span class="hg-ygrn">S</span>ENSE <span class="hg-blue">C</span>ONTROLLER</h3>
-                <p>두개의 센서로 게임 플레이에 따른 색다른 조작감</p>
+            <h3><span class="hg-blue">D</span>UEL <span class="hg-ygrn">S</span>ENSE <span
+                    class="hg-blue">C</span>ONTROLLER</h3>
+            <p>두개의 센서로 게임 플레이에 따른 색다른 조작감</p>
         </div>
-        <div class="ps-tabs-wrap"><!--탭버튼-->
-                <input id="tab1" type="radio" name="tabs-btn" checked>
-                <label for="tab1" class="tab1">적응형 트리거</label>
-                <input id="tab2" type="radio" name="tabs-btn">
-                <label for="tab2" class="tab2">햅틱 피드백</label>
-                <input id="tab3" type="radio" name="tabs-btn">
-                <label for="tab3" class="tab3">3D 오디오</label>         
-            <!--탭내용-->
-            
-            <div class="ps-tabs-contents">
-                <div class="ps-contents1-bg"></div>
-                <div class="ps-tab-textwrap1"> 
+        <div class="ps-duel-tabs-wrap"><!--탭버튼-->
+            <input id="tab1" type="radio" name="tabs-btn" checked>
+            <label for="tab1" class="tab1">적응형 트리거</label>
+            <input id="tab2" type="radio" name="tabs-btn">
+            <label for="tab2" class="tab2">햅틱 피드백</label>
+            <input id="tab3" type="radio" name="tabs-btn">
+            <label for="tab3" class="tab3">3D 오디오</label>
+            <div class="ps-duel-tab-contents"> <!--탭내용-->
+                <div class="ps-duel-img-bg1"></div>
+                <div class="ps-duel-text1">
                     <h4>적응형 트리거</h4>
                     <p>버튼의 저항감을 조절하여 게임 내 다양한 액션에 따른 현실감을 높여줍니다 활을 당길 때
-                    팽팽함이나 자동차 운전 시 엑셀 페달을 밟는 느낌 등 을 실제로 조작하는 것처럼 느낄 수 있습니다</p>
+                        팽팽함이나 자동차 운전 시 엑셀 페달을 밟는 느낌 등 을 실제로 조작하는 것처럼 느낄 수 있습니다</p>
                     <a href="" class="more-btn">MORE</a>
                 </div>
-                <div class="ps-contents2-bg"></div>
-                <div class="ps-tab-textwrap2">
+                <div class="ps-duel-img-bg2"></div>
+                <div class="ps-duel-text2">
                     <h4>햅틱 피드백</h4>
                     <p>버튼의 저항감을 조절하여 게임 내 다양한 액션에 따른 현실감을 높여줍니다 활을 당길 때
-                    팽팽함이나 자동차 운전 시 엑셀 페달을 밟는 느낌 등 을 실제로 조작하는 것처럼 느낄 수 있습니다</p>
+                        팽팽함이나 자동차 운전 시 엑셀 페달을 밟는 느낌 등 을 실제로 조작하는 것처럼 느낄 수 있습니다</p>
                     <a href="" class="more-btn">MORE</a>
                 </div>
-                <div class="ps-contents3-bg"></div>
-                <div class="ps-tab-textwrap3">
+                <div class="ps-duel-img-bg3"></div>
+                <div class="ps-duel-text3">
                     <h4>3D 오디오</h4>
                     <p>버튼의 저항감을 조절하여 게임 내 다양한 액션에 따른 현실감을 높여줍니다 활을 당길 때
-                    팽팽함이나 자동차 운전 시 엑셀 페달을 밟는 느낌 등 을 실제로 조작하는 것처럼 느낄 수 있습니다</p>
+                        팽팽함이나 자동차 운전 시 엑셀 페달을 밟는 느낌 등 을 실제로 조작하는 것처럼 느낄 수 있습니다</p>
                     <a href="" class="more-btn">MORE</a>
                 </div>
             </div>
         </div>
 
-        <!---------------section 2--------------->
-        <div class="sub-title">          
-                <h3><span class="hg-blue">E</span>XCLUSIVE <span class="hg-ygrn">G</span>AMES</h3>
-                <p>몰입감 넘치는 스토리와 액션 게임들을 만나보세요</p> 
+        <div class="sub-title">
+            <h3><span class="hg-blue">E</span>XCLUSIVE <span class="hg-ygrn">G</span>AMES</h3>
+            <p>몰입감 넘치는 스토리와 액션 게임들을 만나보세요</p>
         </div>
-        <div class="eg-contents2">
-            <div class="eg-imgwrap">
-                    <div class="eg-contents2-img-1"></div>
-                    <div class="eg-contents2-img-1-2"></div>
+        <div class="ps-exclu-contents">
+            <div class="ps-exclu-img-wrap">
+                <div class="ps-exclu-img-1"></div>
+                <div class="ps-exclu-img-1-2"></div>
             </div>
-            <div class="eg-textwrap">
-                    <h4>PS5의 독점작</h4>
-                    <p>독점작 게임들은 뛰어난 그래픽 풍부한 스토리텔링 등 단순 액션이 아닌 영화처럼 몰입감있는 서사를 느낄수 있습니다. </p>
-            </div>    
-            <div class="eg-contents2-img2"></div>
-            <div class="eg-contents2-img3"></div>
-            <p>캐릭터의 감정 변화, 인간관계, 철학적인 주제 등 깊이있는 이야기로다양한 게임들을 만나보세요</p>
+            <div class="ps-exclu-text-wrap">
+                <h4>PS5의 독점작</h4>
+                <p>독점작 게임들은 뛰어난 그래픽 풍부한 스토리텔링 등 단순 액션이 아닌 영화처럼 몰입감있는<span class="ps-exclu-gap1"> 서사를 느낄수 있습니다.</span>
+                </p>
+            </div>
+            <div class="ps-exclu-img-2"></div>
+            <div class="ps-exclu-img-3"></div>
+            <p>캐릭터의 감정 변화, 인간관계, 철학적인 주제 등 깊이있는 <span class="ps-exclu-gap2">이야기로다양한</span>게임들을 만나보세요</p>
         </div>
-        
-        <!------------------section 3---------------------->
+
         <div class="sub-title">
             <h3><span class="hg-blue">U</span>PSCAILNG & <span class="hg-ygrn">R</span>AYTRACING</h3>
-            <p>업스케일링과 레이트레이싱 효과로 더욱  현실감있게 플레이</p>
+            <p>다양한 이펙트로 더욱  현실감있게 플레이</p>
         </div>
-        <div class="ur-dark-bg"></div>
-        <div class="ur-contents"> 
+        <div class="ps-effect-dark-bg"></div>
+        <div class="ps-effect-contents">
             <article>
-                <div class="scaling">
+                <div class="ps-effect-scaling">
                     <h4>업스케일링</h4>
                     <p>업스케일링 효과는 AI 인공지능으로 이미지의 픽셀을 분석하고, 기존 이미지에 없던 디테....</p>
                     <a href="#" class="more-btn">MORE</a>
-                </div>     
+                </div>
             </article>
             <article>
-                <div class="mance">
+                <div class="ps-effect-mance">
                     <h4>향상된 성능</h4>
                     <p>GPU 성능이 크게 향상되고 60fps 또는최대 120fps를제공합니다.CPU는 기존과....</p>
                     <a href="#" class="more-btn">MORE</a>
-                </div>    
+                </div>
             </article>
             <article>
-                <div class="tracing">
+                <div class="ps-effect-tracing">
                     <h4>레이 트레이싱</h4>
                     <p> 빛의 물리적인 움직임을 모방하여 현실적인 그래픽을 구현하는기술입니다. 빛이 물체와....</p>
                     <a href="#" class="more-btn">MORE</a>
                 </div>
-            </article> 
+            </article>
         </div>
     </section>
 
     <footer>
         <div class="ft-wrap">
-            <div class="text-wrap">
-                <a href="#">이용약관</a>
-               <a href="#">개인정보처리방침</a>
-                <a href="#">고객센터</a>
-                <a href="#">서비스이용약관</a>
-            </div>
-            <div class="text-wrap2">
-                <p>(주)게임펙스  |  대표 :  박홍준</p>
-                <p>주소 :  경기 성남시 분당구 돌마로 73 (금곡동), 7층  13618</p>
-                <p>사업자등록번호 : 123-45-67890  |  통신판매업신고번호 : 2020-광주북구-0408</p>
-            </div>
+            <div>
+                <div class="text-wrap">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">고객센터</a>
+                    <a href="#">서비스이용약관</a>
+                </div>
+                <div class="text-wrap2">
+                    <p>(주)게임펙스 | 대표 : 박홍준</p>
+                    <p>주소 : 경기 성남시 분당구 돌마로 73 (금곡동), 7층 13618</p>
+                    <p>사업자등록번호 : 123-45-67890 | 통신판매업신고번호 : 2020-광주북구-0408</p>
+                </div>
                 <p>copyright® GamePEX</p>
-            
+            </div>
+            <div class="ft-icon"></div>
         </div>
-        <div class="ft-icon"></div>
+        
     </footer>
 </body>
+
 </html>

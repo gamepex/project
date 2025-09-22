@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-h5 {text-transform:capitalize;}
 .banner {position: relative; overflow:hidden;}
+h5 {font-size:24px; text-transform:uppercase;}
 .xb-content {
     position:absolute; top:0; left:0;
     width:100%; height:100%;
@@ -10,43 +10,33 @@ h5 {text-transform:capitalize;}
 
 /* 배너 검은색 불투명 박스 공통 스타일 지정 */
 .xb-bbox30 {position:absolute; left:0; top:0;
-background:#000; opacity:30%; z-index:-1;}
+background:#000; opacity:20%; z-index:-1;}
 
-.xb-b-box1 { width:100%; height:600px; }
-.xb-b-box2 { left:-125px; top:-35px; width:1309px; height:500px; 
+.xb-b-box1 { width:100%; height:600px;}
+.xb-b-box2 { left:-125px; top:-35px; width:1309px; height:500px;
 transform: rotate(58deg);}
-.xb-b-box3 {left:-10px; top:-15px; width:1950px; height:700px; background:rgba(255,255,255,0.4);
+.xb-b-box3 {left:-10px; top:-15px; width:1950px; height:700px; 
 transform: rotate(-35deg);}
+/* background:rgba(255,255,255,0.4); */
 .xb-b-box4 { left:485px; top:-35px; width:1930px; height:500px;
 transform: rotate(60deg);}
-/* =========================== */
+
+
+
+/* ===== 서브 1 시리즈 x ===== */
 
 /* wid100% */
 .xb-fullbox {
-    position:relative; left:0; top:0;
-    width:100%; height:500px;
+    position:relative; left:0; top:0; width:100%;
 }
-
-/* 1300 넘어가는 영역의 배경 채우는 용*/
-.xb-exbox {
-    position:absolute; left:0; top:0;
-    width:50%; height:100%;
-    background:url(../assets/XBOX/imgs/xb-series-x.jpg) no-repeat;
-    box-shadow: 500px 1300px 0 0 rgba(0,0,0,0.3) inset;
-}
-/* 1300 - 전체 페이지에 적용될 예정*/
-.xb-fitbox {
-    position:absolute; left:0; top:0;
-    width:1300px; height:100%;
-    margin:0 310px;
-    background: blue;
-}
-
+.xb-fullbox-serx, .xb-fullbox-sers {height:500px;}
+/* 배경사진 따로 원하는 부분  */
 .xb-ser-x-bg{
     position:absolute; left:0; top:0;
     width:60%; height:100%;
-    background:url(../assets/XBOX/imgs/xb-series-x.jpg) no-repeat;
-    box-shadow: 500px 1300px 0 0 rgba(0,0,0,0.3) inset;
+    background:url(../assets/xbox/imgs/xb-series-x.jpg) no-repeat right center;
+    background-size:cover;
+    box-shadow: 500px 10000px 0 0 rgba(0,0,0,0.3) inset;
     border-radius: 0 0 100px 0;
 }
 
@@ -54,7 +44,7 @@ transform: rotate(60deg);}
     position:absolute; left:60%; top:0;
     width:410px; height:425px;
     margin:0 0 75px 75px;
-    border-radius:30px;
+    border-radius:20px;
     background:#6389ff;
 }
 .xb-ser-blck-b {
@@ -62,12 +52,201 @@ transform: rotate(60deg);}
     width:410px; height:425px;
     margin:25px 25px 50px 50px;
     text-align:center; line-height:98%;
-    border-radius:30px;
+    border-radius:20px;
     background:rgba(0, 0, 0, 0.65);
 }
 
-.xb-ser-blck-b + h4 {
-    position:absolute; left:0; top:0;
-    width:300px;
-    margin: 80px ; 
+.xb-ser-blck-b h4 {
+    position:absolute; left:0; top:20%;
+    width:100%; 
 }
+.xb-ser-blck-b h4 + h4 {
+    position:absolute; left:0; top:27%;
+    width:100%;
+}
+.xb-ygrn-bar {
+    position:absolute; left:38%; top:40%;
+    width:100px; height:10px;
+    background:#d3d369;
+    border-radius:4px 0 4px 0;
+    transform: skew(-30deg);
+}
+.xb-ser-blck-b > h5 { /*공유폴더에 옮기고 꺾쇠 없애도 capitalize 적용되는지 확인 필요*/
+    position:absolute; left:0; top:54%;
+    width:100%; text-transform:capitalize;
+}
+.xb-ser-blck-b > a { position:absolute; left:32%; top:68%;}
+
+.xb-ser-blck-b p {
+    position:absolute; left:0; top:85%;
+    width:100%; font-size:10px;
+}
+
+
+/* ===== 서브1 시리즈s ===== */
+
+.xb-fullbox-sers{margin-top:50px;}
+/* 배경사진 따로 원하는 부분  */
+.xb-ser-s-bg{
+    position:absolute; left:40%; top:0;
+    width:60%; height:100%;
+    margin-left:50px;
+    background:url(../assets/xbox/imgs/xb-series-s.jpg) no-repeat left center;
+    background-size:cover;
+    box-shadow: 500px 10000px 0 0 rgba(0,0,0,0.3) inset;
+    border-radius: 100px 0 0 0;
+}
+
+.xb-sers-ygb {
+    left:14%; top:0;
+    margin:75px 75px 0px 0px;
+    background:#d3d369;
+}
+
+.xb-sers-bb{
+    left:14%; top:0;
+    margin:50px 50px 25px 25px;
+}
+
+
+/* ====== 서브2 ===== */
+.xb-acc-slide {
+    display:flex; justify-content:space-between;
+    align-items:center;
+}
+.xb-acc-slide li{ flex-wrap:nowrap;
+    width:400px; height:300px; margin:0 25px; padding:0 50px;
+    font-size:34px; text-align:center; line-height:300px;
+    border-radius:20px;
+    box-shadow: 500px 200px 0 0 rgba(0,0,0,0.6) inset;
+}
+.xb-acc-slide li:first-child {
+    background:url(../assets/xbox/imgs/accessories/controllers.jpg) no-repeat center center; background-size:cover;
+}
+.xb-acc-slide li:nth-child(2) {
+    background:url(../assets/xbox/imgs/accessories/console-wraps.jpg) no-repeat center center; background-size:cover;
+}
+.xb-acc-slide li:nth-child(3){
+    background:url(../assets/xbox/imgs/accessories/xb-charger.jpg) no-repeat center center; background-size:cover;
+}
+.xb-acc-slide li:nth-child(4){
+    background:url(../assets/xbox/imgs/accessories/headsets.jpg) no-repeat center center; background-size:cover;
+}
+.xb-acc-slide li:last-child{
+    background:url(../assets/xbox/imgs/accessories/storage.jpg) no-repeat center center; background-size:cover;
+}
+.xb-acc-slide li:nth-child(2) a, .xb-acc-slide li:nth-child(3) a  {
+    line-height:100%;
+    padding-top:55%;
+}
+
+
+/* ===== 서브3 DTD 박스===== */
+
+.xb-dtd-bg {
+    position:absolute; left:0; top:0;
+    width:85%; height:500px;
+    background:rgba(99, 137, 255, 0.5);
+    border-radius: 0 0 100px 0;
+}
+.xb-rent-cd > li {
+    position:absolute; left:0; top:0;
+    width:300px; height:400px; margin:50px 25px;
+    text-align:center; line-height:398px;
+    border-radius:20px;
+    box-shadow: 500px 200px 0 0 rgba(0,0,0,0.5) inset;
+}
+.xb-dtd-menu li:first-child {
+    position:absolute; left:16%; top:0;
+    background:url(../assets/xbox/imgs/how-to-rental/xb-dtd-cd-1.png) no-repeat center center;
+    background-size:cover;
+}
+.xb-dtd-menu li:nth-child(2) {
+    position:absolute; left:34.5%; top:0;
+    background:url(../assets/xbox/imgs/how-to-rental/xb-dtd-cd-2.png) no-repeat center center;
+    background-size:cover;
+}
+.xb-dtd-menu li:last-child {
+    position:absolute; left:53%; top:0;
+    background:url(../assets/xbox/imgs/how-to-rental/xb-dtd-cd-3.jpg) no-repeat center center;
+    background-size:cover;
+}
+.xb-rent-cd li a { position:absolute; left:25%; top:77%;}
+
+.xb-rent-arti {
+    position:absolute; left:0; top:50px;
+    width:200px; height:200px;
+    text-align:center;
+}
+.xb-dtd-art1, .xb-dtd-art2 {left:71%; margin:0 50px 0 25px;}
+
+
+
+/* ===== 서브 3 DELI 박스 =====*/
+
+.xb-fullbox-deli { position:relative; left:0; top:1000px;} /* top: dtd 박스 높이 500+ 서브4 박스 높이 500 + 여백 150 */
+
+.xb-deli-bg {
+    position:absolute; left:16%; top:0;
+    width:85%; height:550px;
+    background:rgba(211, 211, 105, 0.5);
+    border-radius:100px 0 0 0;
+}
+
+.xb-deli-art1, .xb-deli-art2 {left:16%; margin:0 25px 0 50px;} /*카드와의 사이에 여백이 애매하게 머네*/
+
+.xb-deli-menu li:first-child {
+    position:absolute; left:31.6%; top:0;
+    background:url(../assets/xbox/imgs/how-to-rental/xb-deli-cd-1.jpg) no-repeat center center;
+    background-size:cover;
+}
+.xb-deli-menu li:nth-child(2) {
+    position:absolute; left:50%; top:0;
+    background:url(../assets/xbox/imgs/how-to-rental/xb-deli-cd-2.jpg) no-repeat center center;
+    background-size:cover;
+}
+.xb-deli-menu li:last-child {
+    position:absolute; left:68.2%; top:0;
+    background:url(../assets/xbox/imgs/how-to-rental/xb-deli-cd-3.jpg) no-repeat center center;
+    background-size:cover;
+}
+
+/* ===== 서브 3 카드 공통 적용 ===== */
+.xb-dtd-art1 h4, .xb-deli-art1 h4 {margin-top:50px;}
+.xb-dtd-art1 h5, .xb-deli-art1 h5 {margin:20px;}
+.xb-dtd-art2, .xb-deli-art2 {margin-top:200px;}
+.xb-dtd-art2 p:nth-child(3), .xb-deli-art2 p:nth-child(3) {margin-top:35px;}
+.xb-dtd-art1 .xb-ygrn-bar, .xb-deli-art1 .xb-ygrn-bar { /*녹색 바 상단 여백을 얼마나 줄 지는 공통 스타일시트 적용시키고 나서 확정 짓기*/
+    position:absolute; left:0; top:0;
+    margin:160px 50px 0;
+} 
+
+
+/* 서브 4 */
+.xb-fullbox-location {
+    top:500px; height:340px;
+    margin:100px 0 50px;
+}
+.xb-ellip-bg {
+    position:relative; left:41.4%; top:0;
+    width:340px; height:340px;
+    border: 3px solid #d3d369;
+    border-radius:50%;
+}
+.xb-sm-ellip {
+    position:absolute; left:0; top:0;
+    width:45px; height:45px;
+    background:#6389ff;
+    box-shadow:50px 50px 0 0 rgba(0,0,0,0.3) inset;
+    border-radius:50%;
+}
+.xb-sm-ellip p {display:none;}
+.xb-sm-ellip-lo1 {left:3.23%; top:13.2%;}
+.xb-sm-ellip-lo2 {left:90%; top:23%;}
+.xb-sm-ellip-lo3 {left:43%; top:93%; z-index:1;} /* 우선순위를 부여하지 않으면 효과를 줄 수 없음 */
+.xb-fullbox-location h3, .xb-fullbox-location h3+p {
+    position:absolute; left:0; top:145px;
+    width:100%; height:100%;
+    line-height:100%;
+}
+.xb-fullbox-location h3+p {margin-top:60px;}

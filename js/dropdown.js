@@ -1,8 +1,8 @@
 $(function(){
 
-   $('#main-menu >li ').mouseenter(function(){
+   $('#main-menu > li ').mouseenter(function(){
       $(this).find('.sub-menu').stop().slideDown();
-      $('header').addClass('active')
+      $('header').addClass('active');
     });
 
        $('#main-menu >li ').mouseleave(function(){
