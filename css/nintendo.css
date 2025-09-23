@@ -57,4 +57,30 @@
     .ns-lp-bg5:hover { background:url('../assets/ns/ns-lp-dt-bg5-1.jpg') no-repeat center center; }
     .ns-lp-bg6:hover { background:url('../assets/ns/ns-lp-dt-bg6-1.jpg') no-repeat center center; }
 
+    /*========== Charactres ==========*/
+    .ns-ch-wrap { display:flex; flex-wrap:wrap; }
+    .ns-ch-bg {
+        width: 50%; height:350px; margin-right:0px; padding-top:0px;
+        transition:all 0.3s ease-in;
+    }
+    .ns-ch-bg1 { width:225px; background:url('../assets/ns/ns-ch-dt-bg1.jpg') no-repeat center center; }
+    .ns-ch-bg2 { width:598px; background:url('../assets/ns/ns-ch-dt-bg2.jpg') no-repeat center center; }
+    .ns-ch-bg3 { width:457px; background:url('../assets/ns/ns-ch-dt-bg3.jpg') no-repeat center center; }
+    .ns-ch-bg4 { width:456px; margin-top:5px; background:url('../assets/ns/ns-ch-dt-bg4.jpg') no-repeat center center; }
+    .ns-ch-bg5 { width:598px; margin-top:5px; background:url('../assets/ns/ns-ch-dt-bg5.jpg') no-repeat center center; }
+    .ns-ch-bg6 { width:226px; margin-top:5px; background:url('../assets/ns/ns-ch-dt-bg6.jpg') no-repeat center center; }
+    .ns-ch-bg .more-btn { margin:0 auto; opacity:0; transition:all 0.3s ease-in 0.2s; }
+    .ns-ch-bg:hover .more-btn { opacity:1; }   /* <<===    이미지와 연동되는게 맞는지 확인하기         */
+
+    .ns-ch-bg1:hover { background:url('../assets/ns/ns-ch-dt-bg1-1.jpg') no-repeat center center; }
+/* MARIO  만  자세히 보기 버튼 만들기.  추가 항목은 추후 결정예정
+     .ns-ch-bg2:hover { background:url('../assets/ns/ns-ch-dt-bg2-1.jpg') no-repeat center center; }
+    .ns-ch-bg3:hover { background:url('../assets/ns/ns-ch-dt-bg3-1.jpg') no-repeat center center; }
+    .ns-ch-bg4:hover { background:url('../assets/ns/ns-ch-dt-bg4-1.jpg') no-repeat center center; }
+    .ns-ch-bg5:hover { background:url('../assets/ns/ns-ch-dt-bg5-1.jpg') no-repeat center center; }
+    .ns-ch-bg6:hover { background:url('../assets/ns/ns-ch-dt-bg6-1.jpg') no-repeat center center; } */
+
+
+
+
 }

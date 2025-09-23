@@ -26,24 +26,21 @@ transform: rotate(60deg);}
 /* ===== 서브 1 시리즈 x ===== */
 
 /* wid100% */
-.xb-fullbox {
-    position:relative; left:0; top:0; width:100%;
-}
-.xb-fullbox-serx, .xb-fullbox-sers {height:500px;}
+.xb-fullbox { position:relative; width:100%; }
+.xb-fullbox-serx, .xb-fullbox-sers { height:500px; }
 /* 배경사진 따로 원하는 부분  */
 .xb-ser-x-bg{
     position:absolute; left:0; top:0;
     width:60%; height:100%;
-    background:url(../assets/xbox/imgs/xb-series-x.jpg) no-repeat right center;
-    background-size:cover;
-    box-shadow: 500px 10000px 0 0 rgba(0,0,0,0.3) inset;
+    background:#a1a1a1 url('../assets/xbox/xb-cs-dt-bg1.jpg') no-repeat right center;
+    /*box-shadow: 500px 10000px 0 0 rgba(0,0,0,0.6) inset;*/
     border-radius: 0 0 100px 0;
 }
 
 .xb-ser-x-blue-b {
-    position:absolute; left:60%; top:0;
+    position:absolute; left:62.5%; top:0;
     width:410px; height:425px;
-    margin:0 0 75px 75px;
+    
     border-radius:20px;
     background:#6389ff;
 }
@@ -88,7 +85,7 @@ transform: rotate(60deg);}
 .xb-fullbox-sers{margin-top:50px;}
 /* 배경사진 따로 원하는 부분  */
 .xb-ser-s-bg{
-    position:absolute; left:40%; top:0;
+    position:absolute; right:0; top:0;
     width:60%; height:100%;
     margin-left:50px;
     background:url(../assets/xbox/imgs/xb-series-s.jpg) no-repeat left center;
@@ -98,8 +95,7 @@ transform: rotate(60deg);}
 }
 
 .xb-sers-ygb {
-    left:14%; top:0;
-    margin:75px 75px 0px 0px;
+    right:22.5%; top:0;
     background:#d3d369;
 }
 
@@ -110,13 +106,11 @@ transform: rotate(60deg);}
 
 
 /* ====== 서브2 ===== */
-.xb-acc-slide {
-    display:flex; justify-content:space-between;
-    align-items:center;
-}
-.xb-acc-slide li{ flex-wrap:nowrap;
+.xb-acc-slide { display:flex; justify-content:center; flex-wrap:wrap; height:300px; overflow:hidden; }
+.xb-acc-slide li {
+    display:flex; justify-content:center; align-items:center;
     width:400px; height:300px; margin:0 25px; padding:0 50px;
-    font-size:34px; text-align:center; line-height:300px;
+    font-size:34px; text-align:center; line-height:36px;
     border-radius:20px;
     box-shadow: 500px 200px 0 0 rgba(0,0,0,0.6) inset;
 }
@@ -134,10 +128,6 @@ transform: rotate(60deg);}
 }
 .xb-acc-slide li:last-child{
     background:url(../assets/xbox/imgs/accessories/storage.jpg) no-repeat center center; background-size:cover;
-}
-.xb-acc-slide li:nth-child(2) a, .xb-acc-slide li:nth-child(3) a  {
-    line-height:100%;
-    padding-top:55%;
 }
 
 

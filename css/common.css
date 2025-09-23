@@ -4,6 +4,7 @@
     #trigger {display: none;}
 
     header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
+    header.dark { background: rgba(0, 0, 0, 0.8); }
     nav {   
         display: flex; justify-content:space-between; align-items: center;
         width: 1300px; height: 100%;margin: 0 auto;
