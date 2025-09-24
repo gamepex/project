@@ -36,9 +36,10 @@ h2 { font-family: "Tektur", sans-serif; color: #f9f9f9;  }
 #main-menu > li, h3 { font-family: 'JalnanGothic'; }
 h4 { font-family: "Gowun Dodum", sans-serif; font-size: 34px; font-weight: 400; line-height: 42px; }
 ul { list-style:none; }
-a { display:block; color:#f6f6f6; text-decoration:none; border: 0; outline: 0; }
-img { border: 0; outline: 0; } /* img 기본 윤곽 방지 */
+a, img { border: 0; outline: 0; }
+a { display:block; color:#f6f6f6; text-decoration:none; }
 p { line-height: 24px; }
+/* span { display: block; } */
 
 
 @media screen and (min-width:1050px) {

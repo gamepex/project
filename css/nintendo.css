@@ -5,75 +5,181 @@
 
     /*========== banner ==========*/
     .bn-ns-bg {
-        background:url('../assets/ns/bn-ns-bg.jpg') no-repeat center center;
-        background-size:cover;
+        background: url('../assets/ns/bn-ns-bg.jpg') no-repeat center center;
+        background-size: cover;
     }
 
     /*========== Who we are !!! ==========*/
-    .ns-wwa-wrap { display:flex; }
+    .ns-wwa-wrap {
+        display: flex;
+    }
+
     .ns-wwa-bg1 {
-        width:900px; height:500px;
-        background:url('../assets/ns/ns-wwa-dt-bg1.png') no-repeat center center;
-        background-size:cover;
+        width: 900px;
+        height: 500px;
+        background: url('../assets/ns/ns-wwa-dt-bg1.png') no-repeat center center;
+        background-size: cover;
     }
+
     .ns-wwa-contents {
-        width:350px; height:500px; margin-left:50px; padding-top:200px;
-        text-align:center; background:rgba(0,0,0,0.5); border-radius:20px;
+        width: 350px;
+        height: 500px;
+        margin-left: 50px;
+        padding-top: 200px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
     }
-    .ns-wwa-contents .more-btn { margin:45px auto 0; }
+
+    .ns-wwa-contents .more-btn {
+        margin: 45px auto 0;
+    }
+
     .ns-wwa-bg2 {
-        width:350px; height:500px; margin-top:25px;
-        background:url('../assets/ns/ns-wwa-dt-bg2.png') no-repeat center center;
-        background-size:cover;
+        width: 350px;
+        height: 500px;
+        margin-top: 25px;
+        background: url('../assets/ns/ns-wwa-dt-bg2.png') no-repeat center center;
+        background-size: cover;
     }
+
     .ns-wwa-bg3 {
-        width:900px; height:500px; margin:25px 0 0 50px;
-        background:url('../assets/ns/ns-wwa-dt-bg3.png') no-repeat center center;
-        background-size:cover;
+        width: 900px;
+        height: 500px;
+        margin: 25px 0 0 50px;
+        background: url('../assets/ns/ns-wwa-dt-bg3.png') no-repeat center center;
+        background-size: cover;
     }
-    .ns-wwa-txt { padding-top:50px; text-align:center; }
+
+    .ns-wwa-txt {
+        padding-top: 50px;
+        text-align: center;
+    }
 
 
 
     /*========== Line - up product ==========*/
-    .ns-lp-wrap { display:flex; flex-wrap:wrap; }
-    .ns-lp-bg {
-        height:450px; margin-right:10px; padding-top:340px;
-        transition:all 0.3s ease-in;
+    .ns-lp-wrap {
+        display: flex;
+        flex-wrap: wrap;
     }
-    .ns-lp-bg3, .ns-lp-bg6 { margin-right:0; }
-    .ns-lp-bg1 { width:225px; background:url('../assets/ns/ns-lp-dt-bg1.jpg') no-repeat center center; }
-    .ns-lp-bg2 { width:598px; background:url('../assets/ns/ns-lp-dt-bg2.jpg') no-repeat center center; }
-    .ns-lp-bg3 { width:457px; background:url('../assets/ns/ns-lp-dt-bg3.jpg') no-repeat center center; }
-    .ns-lp-bg4 { width:456px; margin-top:5px; background:url('../assets/ns/ns-lp-dt-bg4.jpg') no-repeat center center; }
-    .ns-lp-bg5 { width:598px; margin-top:5px; background:url('../assets/ns/ns-lp-dt-bg5.jpg') no-repeat center center; }
-    .ns-lp-bg6 { width:226px; margin-top:5px; background:url('../assets/ns/ns-lp-dt-bg6.jpg') no-repeat center center; }
-    .ns-lp-bg .more-btn { margin:0 auto; opacity:0; transition:all 0.3s ease-in 0.2s; }
-    .ns-lp-bg:hover .more-btn { opacity:1; }
-    .ns-lp-bg1:hover { background:url('../assets/ns/ns-lp-dt-bg1-1.jpg') no-repeat center center; }
-    .ns-lp-bg2:hover { background:url('../assets/ns/ns-lp-dt-bg2-1.jpg') no-repeat center center; }
-    .ns-lp-bg3:hover { background:url('../assets/ns/ns-lp-dt-bg3-1.jpg') no-repeat center center; }
-    .ns-lp-bg4:hover { background:url('../assets/ns/ns-lp-dt-bg4-1.jpg') no-repeat center center; }
-    .ns-lp-bg5:hover { background:url('../assets/ns/ns-lp-dt-bg5-1.jpg') no-repeat center center; }
-    .ns-lp-bg6:hover { background:url('../assets/ns/ns-lp-dt-bg6-1.jpg') no-repeat center center; }
+
+    .ns-lp-bg {
+        height: 450px;
+        margin-right: 10px;
+        padding-top: 340px;
+        transition: all 0.3s ease-in;
+    }
+
+    .ns-lp-bg3,
+    .ns-lp-bg6 {
+        margin-right: 0;
+
+    }
+
+    .ns-lp-bg1 {
+        width: 225px;
+        background: url('../assets/ns/ns-lp-dt-bg1.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg2 {
+        width: 598px;
+        background: url('../assets/ns/ns-lp-dt-bg2.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg3 {
+        width: 457px;
+        background: url('../assets/ns/ns-lp-dt-bg3.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg4 {
+        width: 456px;
+        margin-top: 5px;
+        background: url('../assets/ns/ns-lp-dt-bg4.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg5 {
+        width: 598px;
+        margin-top: 5px;
+        background: url('../assets/ns/ns-lp-dt-bg5.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg6 {
+        width: 226px;
+        margin-top: 5px;
+        background: url('../assets/ns/ns-lp-dt-bg6.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg .more-btn {
+        margin: 0 auto;
+        opacity: 0;
+        transition: all 0.3s ease-in 0.2s;
+    }
+
+    .ns-lp-bg:hover .more-btn {
+        opacity: 1;
+    }
+
+    .ns-lp-bg1:hover {
+        background: url('../assets/ns/ns-lp-dt-bg1-1.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg2:hover {
+        background: url('../assets/ns/ns-lp-dt-bg2-1.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg3:hover {
+        background: url('../assets/ns/ns-lp-dt-bg3-1.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg4:hover {
+        background: url('../assets/ns/ns-lp-dt-bg4-1.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg5:hover {
+        background: url('../assets/ns/ns-lp-dt-bg5-1.jpg') no-repeat center center;
+    }
+
+    .ns-lp-bg6:hover {
+        background: url('../assets/ns/ns-lp-dt-bg6-1.jpg') no-repeat center center;
+    }
 
     /*========== Charactres ==========*/
-    .ns-ch-wrap { display:flex; flex-wrap:wrap; }
-    .ns-ch-bg {
-        width: 50%; height:350px; margin-right:0px; padding-top:0px;
-        transition:all 0.3s ease-in;
+    .ns-ch-wrap {
+        display: flex;
+        flex-wrap: wrap;
     }
-    .ns-ch-bg1 { width:225px; background:url('../assets/ns/ns-ch-dt-bg1.jpg') no-repeat center center; }
-    .ns-ch-bg2 { width:598px; background:url('../assets/ns/ns-ch-dt-bg2.jpg') no-repeat center center; }
-    .ns-ch-bg3 { width:457px; background:url('../assets/ns/ns-ch-dt-bg3.jpg') no-repeat center center; }
-    .ns-ch-bg4 { width:456px; margin-top:5px; background:url('../assets/ns/ns-ch-dt-bg4.jpg') no-repeat center center; }
-    .ns-ch-bg5 { width:598px; margin-top:5px; background:url('../assets/ns/ns-ch-dt-bg5.jpg') no-repeat center center; }
-    .ns-ch-bg6 { width:226px; margin-top:5px; background:url('../assets/ns/ns-ch-dt-bg6.jpg') no-repeat center center; }
-    .ns-ch-bg .more-btn { margin:0 auto; opacity:0; transition:all 0.3s ease-in 0.2s; }
-    .ns-ch-bg:hover .more-btn { opacity:1; }   /* <<===    이미지와 연동되는게 맞는지 확인하기         */
 
-    .ns-ch-bg1:hover { background:url('../assets/ns/ns-ch-dt-bg1-1.jpg') no-repeat center center; }
-/* MARIO  만  자세히 보기 버튼 만들기.  추가 항목은 추후 결정예정
+    .ns-ch-bg {
+        width: 50%;
+        height: 350px;
+    }
+
+    .ns-ch-bg1 {background: url('../assets/ns/ns-ch-dt-bg1.jpg') no-repeat;}
+    .ns-ch-bg2 {background: url('../assets/ns/ns-ch-dt-bg2.jpg') no-repeat;}
+    .ns-ch-bg3 {background: url('../assets/ns/ns-ch-dt-bg3.jpg') no-repeat;}
+    .ns-ch-bg4 {background: url('../assets/ns/ns-ch-dt-bg4.jpg') no-repeat;}
+    .ns-ch-bg5 {background: url('../assets/ns/ns-ch-dt-bg5.jpg') no-repeat;}
+    .ns-ch-bg6 {background: url('../assets/ns/ns-ch-dt-bg6.jpg') no-repeat;}
+
+    .ns-ch-bg1 h4,.ns-ch-bg3 h4,.ns-ch-bg5 h4 {
+        margin-left: 450px; margin-top: 140px; text-align:center;}
+    .ns-ch-bg1 .more-btn,.ns-ch-bg3 .more-btn,.ns-ch-bg5 .more-btn {
+        margin-left: 450px; margin-top: 30px;}
+
+    .ns-ch-bg2 h4,.ns-ch-bg4 h4,.ns-ch-bg6 h4 {
+        margin-left: 50px;margin-top: 140px;}
+    .ns-ch-bg2 .more-btn,.ns-ch-bg4 .more-btn,.ns-ch-bg6 .more-btn {
+        margin-left: 50px;margin-top: 30px;}
+
+
+    /* <<===    이미지와 연동되는게 맞는지 확인하기         */
+
+    .ns-ch-bg1:hover {
+        background: url('../assets/ns/ns-ch-dt-bg1-1.jpg') no-repeat center center;
+    }
+
+    /* MARIO  만  자세히 보기 버튼 만들기.  추가 항목은 추후 결정예정
      .ns-ch-bg2:hover { background:url('../assets/ns/ns-ch-dt-bg2-1.jpg') no-repeat center center; }
     .ns-ch-bg3:hover { background:url('../assets/ns/ns-ch-dt-bg3-1.jpg') no-repeat center center; }
     .ns-ch-bg4:hover { background:url('../assets/ns/ns-ch-dt-bg4-1.jpg') no-repeat center center; }

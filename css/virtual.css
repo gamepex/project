@@ -1,47 +1,85 @@
 @charset "utf-8";
 
-.banner{ background:url("../assets/vr/vr-img-banner.jpg") no-repeat center center; }
-
 section h3 span { display: inline; }
 
-
-.vr-why { display: flex; }
-.vr-why-video { width: 900px; height: 500px; }
 .vr-why-video video { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
-.vr-why-script { width: 300px; height: 200px; margin-left: 62px; margin-top: 110px; line-height: 34px; }
-.vr-why-script h4+p { margin-top: 40px; }
-.vr-why-script .more-btn { margin-top: 20px; }
 
-
-.vr-vrchat, .vr-beat { display: flex; }
-.vr-img-vrchat, .vr-img-beat { width: 750px; height: 250px; background-size: cover; border-radius: 10px; }
-.vr-vrchat-script, .vr-beat-script { margin-top: 30px; margin-left:123px; }
-.vr-vrchat-script p:first-of-type, .vr-beat-script p:first-of-type { margin-top: 40px; }
-
-.vr-img-vrchat {  background: url(../assets/vr/vr-img-vrchat.jpg) no-repeat center center; }
-.vr-vrchat-script p { margin-left: -20px;  width: 390px;  text-align: center; }
-
-.vr-img-beat { background: url(../assets/vr/vr-img-beat.jpg) no-repeat center center; }
-.vr-beat { justify-content: flex-end; margin-top: 50px; }
-.vr-beat-script p { width: 300px; margin-left: 40px;  text-align: center; }
-
-.vr-img-long_bar { width: 240px; height: 2px; margin: 50px auto 0; background: url(../assets/vr/vr-img-long_bar.jpg) no-repeat center center;  background-size: cover;}
-
-
-.vr-etc { display: flex; align-items: center; width: 1050px; height: 80px; background: #737892; margin:50px auto 0; border-radius: 10px; text-align: center; }
+.vr-img-vrchat, .vr-img-beat { background-size: cover; }
 
 
 .vr-carousel-wrap { position: relative; width: 100%; height: 600px; overflow: hidden; cursor: grab; }
 .vr-carousel-track {
-    display: flex; position: absolute; left: -600px; top: 0; gap: 50px;
+    display: flex; position: absolute; top: 0; gap: 50px;
     /* 글자 드래그 막기 */
-    -webkit-user-select:none;
-    user-select:none;
+    -webkit-user-select:none; user-select:none;
 }
 .vr-carousel-track article { width: 1000px; text-align: center;}
 .vr-carousel-track div { width: 100%; height: 300px; margin: 50px auto 0; border-radius: 10px; }
-.vr-img-glasses{ background: url(../assets/vr/vr-img-glasses.jpg); }
-.vr-img-hardware{ background: url(../assets/vr/vr-img-hardware.jpg); }
-.vr-img-games{ background: url(../assets/vr/vr-img-games.jpg); }
+.vr-img-glasses{ background: url(../assets/vr/vr-img-glasses-1080.jpg); }
+.vr-img-hardware{ background: url(../assets/vr/vr-img-hardware-1080.jpg); }
+.vr-img-games{ background: url(../assets/vr/vr-img-games-1080.jpg); }
 .vr-carousel-wrap h4 { margin-top: 50px; }
 .vr-carousel-wrap p:first-of-type { margin-top: 40px; }
+
+@media screen and (min-width:1400px) {
+    .banner{ background:url("../assets/vr/vr-img-banner-1080.jpg") no-repeat center center; }
+
+    .vr-why { display: flex; }
+    .vr-why-video { width: 900px; height: 500px; }
+    .vr-why-script { width: 300px; height: 200px; margin-left: 62px; margin-top: 110px; line-height: 34px; } /* line-height 왜넣었지? */
+    .vr-why-script h4+p { margin-top: 40px; }
+    .vr-why-script span { display: block; }
+    .vr-why-script .more-btn { margin-top: 20px; }
+
+    .vr-vrchat, .vr-beat { display: flex; }
+    .vr-beat { flex-direction: row-reverse; }
+    .vr-img-vrchat, .vr-img-beat { width: 750px; height: 250px; border-radius: 10px; }
+    .vr-vrchat-script, .vr-beat-script { margin-top: 30px; margin-left:123px; }
+    .vr-vrchat-script p:first-of-type, .vr-beat-script p:first-of-type { margin-top: 40px; }
+    .vr-img-vrchat { background: url(../assets/vr/vr-img-vrchat-1080.jpg) no-repeat center center; }
+    .vr-vrchat-script p { margin-left: -20px;  width: 390px;  text-align: center; }
+    .vr-img-beat { background: url(../assets/vr/vr-img-beat-1080.jpg) no-repeat center center; }
+    .vr-beat { margin-top: 50px; }
+    .vr-beat-script p { width: 300px; margin-left: 40px;  text-align: center; }
+    .vr-img-long_bar { width: 240px; height: 2px; margin: 50px auto 0; background: url(../assets/vr/vr-img-long_bar-1080.jpg) no-repeat center center;  background-size: cover;}
+    .vr-etc { display: flex; align-items: center; width: 1050px; height: 80px; background: #737892; margin:50px auto 0; border-radius: 10px; text-align: center; }
+    
+}
+@media screen and (max-width: 1399px) {
+    /* hd 영역 */
+    body { background-color: rgb(67, 66, 66)}
+}
+@media screen and (max-width:1049px){
+    .banner{ background:url("../assets/vr/vr-img-banner-720.jpg") no-repeat center center; }
+    .line-break { display: block; }
+
+    .vr-why-video { width: 750px; height: 415px; }
+    .vr-why-script { margin-top: 35px; text-align: center; }
+    .vr-why-script h4 { display: inline; }
+    .vr-why-script h4+p, .vr-why-script .more-btn { margin-top: 20px; }
+
+    .vr-games { display: flex; text-align: center; }
+    .vr-img-vrchat, .vr-img-beat { width: 350px; height: 400px; border-radius: 10px; }
+    .vr-vrchat-script, .vr-beat-script { margin-top: 30px; }
+    .vr-vrchat-script p, .vr-beat-script p { margin: 0 auto; }
+    .vr-vrchat-script p:first-of-type, .vr-beat-script p:first-of-type { margin-top: 40px; }
+    .vr-img-vrchat { background: url(../assets/vr/vr-img-vrchat-720.jpg) no-repeat center center; }
+    .vr-vrchat-script p { width: 390px; }
+    .vr-img-beat { background: url(../assets/vr/vr-img-beat-720.jpg) no-repeat center center; }
+    .vr-beat-script p { width: 280px; text-align: center; }
+    .vr-etc { display: none; }
+
+
+    body { background-color: black; }
+}
+@media screen and (max-width:749px){
+    .vr-why-video { width: 350px; height: 300px; }
+
+
+    .vr-why-script .more-btn { margin-top: 15px; }
+
+
+
+
+    body { background-color: #141e41; }
+}
