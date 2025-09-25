@@ -1,3 +1,13 @@
+const h2 = document.querySelector('h2')
+function ne_splitter() {
+    if (!h2.innerHTML.includes('ne<br>') && window.innerWidth <= 1049 && window.innerWidth >= 750) h2.innerHTML = h2.innerHTML.replace('ne', 'ne<br>');
+    else if (h2.innerHTML.includes('ne<br>') && window.innerWidth > 1049 || window.innerWidth < 750) h2.innerHTML = h2.innerHTML.replace('ne<br>', 'ne');
+}
+window.addEventListener('load', ne_splitter);
+window.addEventListener('resize', ne_splitter);
+
+//window//window//window//window//window//window//window//window//window//window
+
 const wrap  = document.querySelector('.vr-carousel-wrap')
 const track = document.querySelector('.vr-carousel-track')
 

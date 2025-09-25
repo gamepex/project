@@ -10,7 +10,7 @@
                             <div class="sub-menu-title">
                                 <h6>playstation</h6>
                             </div>
-                                <ul class="menu-info">
+                                <ul class="sub-menu-info">
                                     <li><a href="#">게임기 소개 </a> </li>
                                     <li><a href="#">악세사리</a></li>
                                     <li><a href="#">대여 신청</a></li>

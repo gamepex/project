@@ -155,22 +155,61 @@
         height: 350px;
     }
 
-    .ns-ch-bg1 {background: url('../assets/ns/ns-ch-dt-bg1.jpg') no-repeat;}
-    .ns-ch-bg2 {background: url('../assets/ns/ns-ch-dt-bg2.jpg') no-repeat;}
-    .ns-ch-bg3 {background: url('../assets/ns/ns-ch-dt-bg3.jpg') no-repeat;}
-    .ns-ch-bg4 {background: url('../assets/ns/ns-ch-dt-bg4.jpg') no-repeat;}
-    .ns-ch-bg5 {background: url('../assets/ns/ns-ch-dt-bg5.jpg') no-repeat;}
-    .ns-ch-bg6 {background: url('../assets/ns/ns-ch-dt-bg6.jpg') no-repeat;}
+    .ns-ch-bg1 {
+        background: url('../assets/ns/ns-ch-dt-bg1.jpg') no-repeat;
+    }
 
-    .ns-ch-bg1 h4,.ns-ch-bg3 h4,.ns-ch-bg5 h4 {
-        margin-left: 450px; margin-top: 140px; text-align:center;}
-    .ns-ch-bg1 .more-btn,.ns-ch-bg3 .more-btn,.ns-ch-bg5 .more-btn {
-        margin-left: 450px; margin-top: 30px;}
+    .ns-ch-bg2 {
+        background: url('../assets/ns/ns-ch-dt-bg2.jpg') no-repeat;
+    }
 
-    .ns-ch-bg2 h4,.ns-ch-bg4 h4,.ns-ch-bg6 h4 {
-        margin-left: 50px;margin-top: 140px;}
-    .ns-ch-bg2 .more-btn,.ns-ch-bg4 .more-btn,.ns-ch-bg6 .more-btn {
-        margin-left: 50px;margin-top: 30px;}
+    .ns-ch-bg3 {
+        background: url('../assets/ns/ns-ch-dt-bg3.jpg') no-repeat;
+    }
+
+    .ns-ch-bg4 {
+        background: url('../assets/ns/ns-ch-dt-bg4.jpg') no-repeat;
+    }
+
+    .ns-ch-bg5 {
+        background: url('../assets/ns/ns-ch-dt-bg5.jpg') no-repeat;
+    }
+
+    .ns-ch-bg6 {
+        background: url('../assets/ns/ns-ch-dt-bg6.jpg') no-repeat;
+    }
+
+    .ns-ch-bg1 h4,
+    .ns-ch-bg3 h4,
+    .ns-ch-bg5 h4 {
+        width: 150px;
+        margin-left: 450px;
+        margin-top: 140px;
+        text-align: center;
+    }
+
+    .ns-ch-bg1 .more-btn,
+    .ns-ch-bg3 .more-btn,
+    .ns-ch-bg5 .more-btn {
+        margin-left: 450px;
+        margin-top: 30px;
+    }
+
+    .ns-ch-bg2 h4,
+    .ns-ch-bg4 h4,
+    .ns-ch-bg6 h4 {
+        width: 150px;
+        margin-left: 50px;
+        margin-top: 140px;
+        text-align: center;
+    }
+
+    .ns-ch-bg2 .more-btn,
+    .ns-ch-bg4 .more-btn,
+    .ns-ch-bg6 .more-btn {
+        margin-left: 50px;
+        margin-top: 30px;
+    }
 
 
     /* <<===    이미지와 연동되는게 맞는지 확인하기         */
@@ -185,8 +224,9 @@
     .ns-ch-bg4:hover { background:url('../assets/ns/ns-ch-dt-bg4-1.jpg') no-repeat center center; }
     .ns-ch-bg5:hover { background:url('../assets/ns/ns-ch-dt-bg5-1.jpg') no-repeat center center; }
     .ns-ch-bg6:hover { background:url('../assets/ns/ns-ch-dt-bg6-1.jpg') no-repeat center center; } */
+}
 
-
-
+@media screen and (min-width:1050px) and (max-width: 1399px) {
+    /*  1400 px FHD 대비 75% size  적용예정 */
 
 }

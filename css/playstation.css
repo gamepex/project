@@ -48,8 +48,8 @@
 
     .ps-duel-text1, .ps-duel-text2, .ps-duel-text3{
         position:absolute; 
-        top:60px;
-        width:440px;
+        top:40px;
+        width:450px;
         transition:all 0.4s ease-in;
     }
     .ps-duel-tab-contents  p{padding:60px 0 120px;}
@@ -59,7 +59,7 @@
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
     #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-text2,
-    #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-text3{right:55px;} /*텍스트*/
+    #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-text3{right:40px;} /*텍스트*/
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-img-bg1,
     #tab2:checked ~ .ps-duel-tab-contents .ps-duel-img-bg2,
@@ -125,7 +125,7 @@
         width:400px; height:600px;
         border-radius:20px;
         background: rgb(0, 0, 0,0.8);
-        transition:all 0.4s ease-in;
+        transition:all 0.3s ease-in;
     }
     .ps-effect-shadow:hover{background: rgb(0, 0, 0,0.3);}
     article:first-child {background:url('../assets/ps/imgs/scaling.jpg')no-repeat  -200px; background-size:cover;}
@@ -152,7 +152,7 @@
 
 
 @media screen and (min-width:1050px) and (max-width:1399px){
-    .banner{background:url('../assets/ps/imgs/ps-banner-dt-bg.jpg');}
+    .bn-ps-bg{background:url('../assets/ps/imgs/ps-banner-dt-bg.jpg');}
     .ps-duel-tabs-wrap {
         position:relative; 
         width: 100%; height:510px;}
@@ -180,14 +180,8 @@
     }
     .ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{
         position:absolute;  top:20px;
-        width:960px; height:410px;
+        width:560px; height:410px;
         transition:all 0.4s ease-in;
-    }
-    .ps-effect-shadow{
-        position:absolute;
-        width:960px; height:410px;
-        transition:all 0.4s ease-in;
-        background:rgb(0, 0, 0,0.5);
     }
     .ps-duel-img-bg1{
         background:url('../assets/ps/imgs/Adaptive.jpg')no-repeat center center;
@@ -201,7 +195,7 @@
 
     .ps-duel-text1, .ps-duel-text2, .ps-duel-text3{
         position:absolute; top:60px;
-        width:400px;
+        width:340px;
         text-align:center;
         transition:all 0.4s ease-in;
     }
@@ -212,7 +206,7 @@
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
     #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-text2,
-    #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-text3{right:280px;} /*텍스트*/
+    #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-text3{right:35px;} /*텍스트*/
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-img-bg1,
     #tab2:checked ~ .ps-duel-tab-contents .ps-duel-img-bg2,
@@ -288,6 +282,7 @@
         width:450px; height:600px;
         border-radius:20px;
         background: rgb(0, 0, 0,0.7);
+         transition:all 0.3s ease-in;
     }
     .ps-effect-shadow:hover{background: rgb(0, 0, 0,0.3);}
     article:first-child {
@@ -314,10 +309,11 @@
 /*  ===================  media  ========================*/
 
 @media screen and (min-width:750px) and (max-width:1049px){
-    .banner{background:url('../assets/ps/imgs/ps-banner-td-bg.jpg');}
+    .bn-ps-bg{background:url('../assets/ps/imgs/ps-banner-td-bg.jpg');}
     .ps-duel-tabs-wrap {
-        position:relative; 
-        width: 100%; height:510px;}
+        position:relative;
+        width: 100%; height:510px;
+    }
     .ps-duel-tabs-wrap input {display:none;}
     .ps-duel-tabs-wrap label{
         position:absolute; 
@@ -385,7 +381,7 @@
 
     /*===============section2==================*/
     .ps-exclu-contents{position:relative; width:100%;  height:770px;}
-    .ps-exclu-img-wrap{ display:flex;}
+    .ps-exclu-img-wrap{ display:flex; }
     .ps-exclu-img-1{
         width:240px; height:175px;
         margin-right:20px;
@@ -443,6 +439,7 @@
         width:350px; height:600px;
         border-radius:20px;
         background: rgb(0, 0, 0,0.7);
+         transition:all 0.3s ease-in;
     }
     .ps-effect-shadow:hover{background: rgb(0, 0, 0,0.3);}
     article:first-child {
@@ -472,7 +469,7 @@
 
 
 @media screen and (max-width:749px){
-    .banner{background:url('../assets/ps/imgs/ps-banner-sm-bg.jpg');}
+   .bn-ps-bg{background:url('../assets/ps/imgs/ps-banner-sm-bg.jpg');}
     h2{width:210px; margin:0 auto; line-height:50px; text-align:center;}
     .ps-duel-tabs-wrap {
         position:relative; 
@@ -600,6 +597,7 @@
         width:350px; height:450px;
         border-radius:20px;
         background: rgb(0, 0, 0,0.7);
+         transition:all 0.3s ease-in;
     }
     .ps-effect-shadow:hover{background: rgb(0, 0, 0,0.3);}
     article:first-child {

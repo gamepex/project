@@ -19,22 +19,21 @@
     .sub-menu-wrap{ display:flex; justify-content: center;  width:1300px; height:300px; margin:0 auto; padding-right:150px; background:rgba(20, 30, 65,0.4); }
     .sub-menu-title{ width:300px; height:100px;margin:50px 20px; font-size:40px; text-align:center; line-height:100px;
     border-radius:50px; background:rgba(4, 9, 26, 0.4);;}
-    .menu-info{  width:300px; height:300px; padding:40px 50px; text-align:center; line-height:60px;
+    .sub-menu-info{  width:300px; height:300px; padding:40px 50px; text-align:center; line-height:60px;
      background: rgb(13, 22, 54,0.3);}
-    .menu-info >li > a {transition: all 0.2s ease-in;}
+    .sub-menu-info >li > a {transition: all 0.2s ease-in;}
     #main-menu > li > a:hover {color: #6389ff;}
-    .menu-info > li > a:hover{border-radius:50px; box-shadow:0 0 0 30px rgb(99, 137, 255,0.6) inset;}
+    .sub-menu-info > li > a:hover{border-radius:50px; box-shadow:0 0 0 30px rgb(99, 137, 255,0.6) inset;}
 
     /* ========================== */
-    .banner { height:600px; color:#f6f6f6; }
-    h2 { padding-top:325px; font-size: 72px; text-align:center; }
-    .banner p { font-size: 22px; text-align:center; }
-    h3 { font-size:48px; }
+    .banner { height:600px; color:#f6f6f6;text-align:center; }
+    h2 { padding-top:325px; font-size: 72px; }
+    .banner p { font-size: 22px;}
+    h3 { font-size:48px; font-weight:500;}
     h4  {font-size:34px; }
 
     /* .banner p { margin-top:20px; font-size: 22px; } */
     .sub-title { padding:100px 0 50px; text-align: center; } /*sub-title 로 수정 */
-     .sub-title p{ text-align: center;} 
     
     /* ======자세히 보기 버튼==== 한별 추가 */
     .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
@@ -55,6 +54,10 @@
 
 @media screen and (min-width:1050px) and (max-width: 1399px) {
     #trigger {display: none;}
+    h2 { padding-top:325px; font-size: 68px;} 
+    h3 { font-size:46px; font-weight:500;}
+    h4{font-size:32px;}
+    /* 1000픽셀 내 화면구현 해야 하니 폰트 크기 좀 줄였습니다. -한별 */
 
     header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
     header::after{content:''; position:absolute; width:100%; top:0;}
@@ -67,24 +70,23 @@
     .top-menu a {padding-left: 10px; font-size: 26px}
 
     /* =====dropdown menu===== */
-    #main-menu > li {position:relative; z-index:9;}
-    .sub-menu{ position:absolute; display:none; width:100%; padding-top:20px; z-index:9;}
-    .sub-menu > li > a{  text-align:center;  line-height:50px; }
+   #main-menu > li {position:relative; z-index:9;}
+    .sub-menu{ display:none; position:fixed;  left:0; top:45px; width:100%;  height:300px; background:rgba(20, 30, 65,0.4); }
+    .sub-menu-wrap{ display:flex; justify-content: center;  width:1000px; height:300px; margin:0 auto; padding-right:150px; background:rgba(20, 30, 65,0.4); }
+    .sub-menu-title{ width:300px; height:100px;margin:50px 20px; font-size:40px; text-align:center; line-height:100px;
+    border-radius:50px; background:rgba(4, 9, 26, 0.4);;}
+    .sub-menu-info{  width:300px; height:300px; padding:20px 50px; text-align:center; line-height:60px;
+     background: rgb(13, 22, 54,0.3);}
+    .sub-menu-info >li > a {transition: all 0.2s ease-in;}
     #main-menu > li > a:hover {color: #6389ff;}
-    .sub-menu > li:hover {background:#6389ff; }
-    header.active::after{ left:0; top:0; width:100%; height:250px; background:rgb(18, 26, 56,0.7)}
+    .sub-menu-info > li > a:hover{border-radius:50px; box-shadow:0 0 0 30px rgb(99, 137, 255,0.6) inset;}
     /* ====================== */
-    h2 { padding-top:325px; font-size: 72px; text-align:center; }
-    h3 { font-size:48px; }
-    h4{font-size:34px;}
-
-    .banner { height:600px; color:#f6f6f6; }
-    .banner p { margin-top:20px; font-size: 22px;text-align:center;  }
+    .banner { height:600px; color:#f6f6f6;text-align:center; }
+    .banner p { font-size: 22px; }
  
     .sub-title { padding:80px 0 40px; text-align: center; } /*sub-title 로 수정 */
     section { width:1000px; margin:0 auto; }
 
-    .sub-title p{margin-top:15px; text-align: center;} 
     /* ======자세히 보기 버튼==== 한별 추가 */
     .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
         width:150px; height:60px;
@@ -102,13 +104,13 @@
         margin:100px auto 0;
         padding:100px 0 200px;
     }
-    .text-wrap{display: flex;}
-    .text-wrap a {padding-right:34px;}
-    .text-wrap2{margin:50px 0;}
 }
 
 
 @media screen and (min-width:750px) and (max-width:1049px){
+    h2 { padding-top:325px; font-size: 58px;}
+    h3 { font-size:36px; }
+    h4{ font-size:24px; }
     .top-menu{display:none;}
     nav{ height:100%; }  
     .logo {position:absolute; left:30px; top:18px; }
@@ -129,11 +131,11 @@
     
     #main-menu {
          position:absolute; right:0;
-         width:50%; height:100%;
+         width:85%; height:100%;
          padding-top:150px; 
-         text-align:center; 
-         background:rgba(10,70,150,0.9);
-        transition: all 0.4s ease-in; opacity:0;
+         text-align:left; 
+         background:rgba(15, 24, 54,0.9);
+        transition: all 0.2s ease-in; opacity:0;
         }
     #main-menu > li > a { padding:20px; font-size:24px;    }
     #main-menu > li > a:hover { color:rgb(250, 30, 100); }
@@ -141,27 +143,27 @@
     #trigger.tabmenu span:nth-child(1) { width:85%; transform:translateY(9px) rotate(-135deg); }
     #trigger.tabmenu span:nth-child(2) { opacity:0; }
     #trigger.tabmenu span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
-    #main-menu.tabmenu{right:0; opacity:1;}     
-      /* ============================ */
+    #main-menu.tabmenu{right:0; opacity:1; z-index:2;}     
+
     .sub-menu{ 
-        display:none; padding:10px 0;
-        background:rgba(240, 168, 191, 0.8);
-        box-shadow:0 0 25px rgba(0,0,0,0.7)inset;
+        display:none; padding:10px 40px;
+        background:rgba(11, 20, 49, 0.4);
+        box-shadow:0 0 20px rgba(0,0,0,0.4)inset;
     }
-    .sub-menu a{padding:10px 0;font-size:20px;}
+    .sub-menu-wrap{display:flex; padding:30px 0;}
+    .sub-menu-title{display:none;}
+    .sub-menu-info a{padding:10px 50px;font-size:20px;  text-align:center; transition:all 0.3s }
     .top-menu {  position:absolute; left:30px; top:3px; }
     .top-menu a{ padding-right:15px; font-size:30px; }
-    .banner { height:650px; color:#f6f6f6; }
-    .banner p {font-size: 18px;  text-align:center; }
+    .banner { height:650px; color:#f6f6f6; text-align:center;  }
+    .banner p {font-size: 18px;}
+    .sub-title { padding:70px 0 35px; text-align: center; } /*sub-title 로 수정 */
 
+    .sub-menu-info a:hover{border-radius:50px; box-shadow:0 0 0 30px rgb(99, 137, 255,0.6) inset;}
+    /* ====================================== */
+    
     section { width:750px; margin:0 auto; }
 
-    .sub-title { padding:70px 0 35px; text-align: center; } /*sub-title 로 수정 */
-    h2 { padding-top:325px; font-size: 58px; text-align:center; }
-    h3 { font-size:36px; }
-    h4{ font-size:24px; }
-
-    .sub-title p{ text-align: center;} 
     /* ======자세히 보기 버튼==== 한별 추가 */
     .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
         width:150px; height:60px;
@@ -182,7 +184,12 @@
 /* ------------------------------------------ */
 @media screen and (max-width:749px){
     p{font-size:15px;}
-       .top-menu{display:none;}
+    .banner p {  font-size: 16px; }
+    h2 { padding-top:325px; font-size: 54px;  line-height:50px;}
+    h3 { font-size:30px; }
+    h4{ font-size:20px; }
+     .top-menu{display:none;}
+
     nav{ height:100%; }  
     .logo {position:absolute; left:30px; top:18px; }
      
@@ -224,18 +231,11 @@
     .sub-menu a{padding:10px 0;font-size:20px;}
     .top-menu {  position:absolute; left:30px; top:3px; }
     .top-menu a{ padding-right:15px; font-size:30px; }
-    .banner { height:920px; color:#f6f6f6; }
-    .banner p { text-align:center; }
+    .banner { height:920px; color:#f6f6f6;  text-align:center;}
 
     section { width:350px; margin:0 auto; }
 
     .sub-title { padding:50px 0 25px; text-align: center; } /*sub-title 로 수정 */
-     h2 { padding-top:325px; font-size: 54px; text-align:center; }
-    h3 { font-size:30px; }
-    h4{ font-size:20px; }
-
-    .banner p {  font-size: 16px; }
-    .sub-title p{ text-align: center;} 
     /* ======자세히 보기 버튼==== 한별 추가 */
     .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
         width:150px; height:60px;
@@ -251,5 +251,4 @@
     .ft-wrap{ width:550px; margin:100px auto;  text-align: center;}
     .text-wrap{display: flex;width:450px; margin:0 auto;  }
     .text-wrap a {padding:50px 15px 0;}
-    .text-wrap2{margin:50px 0;}
 }

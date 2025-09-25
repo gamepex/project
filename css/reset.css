@@ -32,7 +32,7 @@ sub-title title
 위와 같이 title 이름만 추가해주세요-한별
 */
 h2, h3, h4, h5, h6, .title p, a { text-transform:uppercase; }
-h2 { font-family: "Tektur", sans-serif; color: #f9f9f9;  }
+h2 { font-family: "Tektur", sans-serif; color: #f9f9f9; }
 #main-menu > li, h3 { font-family: 'JalnanGothic'; }
 h4 { font-family: "Gowun Dodum", sans-serif; font-size: 34px; font-weight: 400; line-height: 42px; }
 ul { list-style:none; }
