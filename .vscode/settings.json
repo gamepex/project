@@ -2,6 +2,7 @@
   "files.exclude": {
     "**/.gitignore": true,
     "**/README.md": true,
-    "**/.vscode": true
+    "**/.vscode": true,
+    "js/jquery_1.12.4.min.js": true
   }
 }

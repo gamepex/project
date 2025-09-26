@@ -110,7 +110,7 @@
 @media screen and (min-width:750px) and (max-width:1049px){
     h2 { padding-top:325px; font-size: 58px;}
     h3 { font-size:36px; }
-    h4{ font-size:24px; }
+    h4{ font-size:28px; }
     .top-menu{display:none;}
     nav{ height:100%; }  
     .logo {position:absolute; left:30px; top:18px; }
@@ -134,11 +134,11 @@
          width:85%; height:100%;
          padding-top:150px; 
          text-align:left; 
-         background:rgba(15, 24, 54,0.9);
-        transition: all 0.2s ease-in; opacity:0;
+         background:rgba(15, 24, 54,0.9); opacity:0;
+        transition: all 0.2s ease-in;
         }
     #main-menu > li > a { padding:20px; font-size:24px;    }
-    #main-menu > li > a:hover { color:rgb(250, 30, 100); }
+    #main-menu > li > a:hover { color: rgb(99, 137, 255);}
 
     #trigger.tabmenu span:nth-child(1) { width:85%; transform:translateY(9px) rotate(-135deg); }
     #trigger.tabmenu span:nth-child(2) { opacity:0; }
@@ -146,13 +146,14 @@
     #main-menu.tabmenu{right:0; opacity:1; z-index:2;}     
 
     .sub-menu{ 
-        display:none; padding:10px 40px;
+        display:none;  height:250px; padding:40px 30px;
         background:rgba(11, 20, 49, 0.4);
         box-shadow:0 0 20px rgba(0,0,0,0.4)inset;
     }
-    .sub-menu-wrap{display:flex; padding:30px 0;}
+    .sub-menu-info-wrap{display:flex;width:400px; }
     .sub-menu-title{display:none;}
-    .sub-menu-info a{padding:10px 50px;font-size:20px;  text-align:center; transition:all 0.3s }
+    .sub-menu-info a{padding:15px 40px;font-size:20px;  text-align:center; transition:all 0.3s }
+
     .top-menu {  position:absolute; left:30px; top:3px; }
     .top-menu a{ padding-right:15px; font-size:30px; }
     .banner { height:650px; color:#f6f6f6; text-align:center;  }
@@ -165,9 +166,9 @@
     section { width:750px; margin:0 auto; }
 
     /* ======자세히 보기 버튼==== 한별 추가 */
-    .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
-        width:150px; height:60px;
-        font-size:16px; color:#6389ff; text-align:center; line-height:60px;
+    .more-btn {  /*수정사항: widt 120 변경 */ 
+        width:120px; height:50px; 
+        font-size:16px; color:#6389ff; text-align:center; line-height:50px;
         background:#fff; border-radius:30px;
         transition:all 0.4s;
     }
@@ -182,19 +183,16 @@
     .text-wrap2{margin:50px 0;}
 }
 /* ------------------------------------------ */
-@media screen and (max-width:749px){
-    p{font-size:15px;}
-    .banner p {  font-size: 16px; }
-    h2 { padding-top:325px; font-size: 54px;  line-height:50px;}
-    h3 { font-size:30px; }
-    h4{ font-size:20px; }
-     .top-menu{display:none;}
+@media screen and (max-width:749px) {
+    h3 { font-size:30px; font-weight:500; }
+    h4 { font-size:22px; }
+    .top-menu{display:none;}
 
-    nav{ height:100%; }  
-    .logo {position:absolute; left:30px; top:18px; }
+    nav{ height:100%;}
+    .logo {position:absolute; left:40%; top:18px; }
      
     #trigger {
-        position:absolute; right:30px; top:18px;
+        position:absolute; left:30px; top:18px;
         width:30px; height:20px;
         z-index:9;
     }
@@ -208,38 +206,42 @@
     #trigger span:nth-child(3) { bottom:0; }
     
     #main-menu {
-         position:absolute; right:0;
-         width:50%; height:100vh;
+         position:absolute;left:0;
+         width:0; height:100vh;
          padding-top:150px; 
          text-align:center; 
-         background:rgba(10,70,150,0.9);opacity:0;
+        background:rgba(15, 24, 54,0.9);opacity:0;
         transition: all 0.4s ease-in;
         }
     #main-menu > li > a { padding:20px; font-size:24px;    }
-    #main-menu > li > a:hover { color:rgb(250, 30, 100); }
+    #main-menu > li > a:hover { color: rgb(99, 137, 255); }
 
     #trigger.tabmenu span:nth-child(1) { width:85%; transform:translateY(9px) rotate(-135deg); }
     #trigger.tabmenu span:nth-child(2) { opacity:0; }
     #trigger.tabmenu span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
-    #main-menu.tabmenu{right:0; opacity:1;}     
-      /* ============================ */
-    .sub-menu{ 
-        display:none; padding:10px 0;
-        background:rgba(240, 168, 191, 0.8);
-        box-shadow:0 0 25px rgba(0,0,0,0.7)inset;
+    #main-menu.tabmenu{left:0;  width:100%; opacity:1;}     
+    
+     .sub-menu{ 
+        height:250px; padding:30px 0;
+        background:rgba(11, 20, 49, 0.4);
+        box-shadow:0 0 20px rgba(0,0,0,0.4)inset;
     }
-    .sub-menu a{padding:10px 0;font-size:20px;}
-    .top-menu {  position:absolute; left:30px; top:3px; }
-    .top-menu a{ padding-right:15px; font-size:30px; }
-    .banner { height:920px; color:#f6f6f6;  text-align:center;}
+    .sub-menu-wrap{display:flex; justify-content:center; align-items: center;  margin:0 auto;}
+    .sub-menu-info-wrap{display:flex;  justify-content:center;  }
+    .sub-menu-title{display:none;}
+    .sub-menu-info a{padding:20px 30px;font-size:20px;  text-align:center;  transition:all 0.3s }
 
+    .banner { display: flex; justify-content: center; align-items: center; height:100vh; color:#f6f6f6;  text-align:center; }
+    h2 { font-size: 54px;  line-height:50px; }
+    .banner p {  font-size: 16px; }
+    
     section { width:350px; margin:0 auto; }
 
     .sub-title { padding:50px 0 25px; text-align: center; } /*sub-title 로 수정 */
     /* ======자세히 보기 버튼==== 한별 추가 */
     .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
-        width:150px; height:60px;
-        font-size:16px; color:#6389ff; text-align:center; line-height:60px;
+        width:100px; height:50px;
+        font-size:16px; color:#6389ff; text-align:center; line-height:50px;
         background:#fff; border-radius:30px;
         transition:all 0.4s;
     }
@@ -247,8 +249,8 @@
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }
-      footer{height:490px; background:#313236; } /*수정하셔도 됩니다.*/
-    .ft-wrap{ width:550px; margin:100px auto;  text-align: center;}
-    .text-wrap{display: flex;width:450px; margin:0 auto;  }
+    footer{height:490px; background:#313236; } /*수정하셔도 됩니다.*/
+    .ft-wrap{ width:100%; margin:100px auto;  text-align: center;}
+    .text-wrap{display: flex;width:450px;  }
     .text-wrap a {padding:50px 15px 0;}
 }

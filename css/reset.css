@@ -38,12 +38,12 @@ h4 { font-family: "Gowun Dodum", sans-serif; font-size: 34px; font-weight: 400; 
 ul { list-style:none; }
 a, img { border: 0; outline: 0; }
 a { display:block; color:#f6f6f6; text-decoration:none; }
-p { line-height: 24px; }
 /* span { display: block; } */
 
 
 @media screen and (min-width:1050px) {
     body { font-size:16px; }
+    p { line-height: 24px; }
 }
 
 @media screen and (max-width:1049px) {

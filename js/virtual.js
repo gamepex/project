@@ -1,12 +1,10 @@
 const h2 = document.querySelector('h2')
 function ne_splitter() {
     if (!h2.innerHTML.includes('ne<br>') && window.innerWidth <= 1049 && window.innerWidth >= 750) h2.innerHTML = h2.innerHTML.replace('ne', 'ne<br>');
-    else if (h2.innerHTML.includes('ne<br>') && window.innerWidth > 1049 || window.innerWidth < 750) h2.innerHTML = h2.innerHTML.replace('ne<br>', 'ne');
+    else if (h2.innerHTML.includes('ne<br>') && (window.innerWidth > 1049 || window.innerWidth < 750)) h2.innerHTML = h2.innerHTML.replace('ne<br>', 'ne');
 }
 window.addEventListener('load', ne_splitter);
 window.addEventListener('resize', ne_splitter);
-
-//window//window//window//window//window//window//window//window//window//window
 
 const wrap  = document.querySelector('.vr-carousel-wrap')
 const track = document.querySelector('.vr-carousel-track')
@@ -32,20 +30,21 @@ wrap.addEventListener('mousemove', e => {
     const diffX = e.clientX - startX
     /* 보이는 너비 - 전체 너비 */
     const min = wrap.clientWidth - track.scrollWidth
-    const max = track.scrollWidth - wrap.clientwidth
     let left = startLeft + diffX
 
-    if (left > 0) {
-        left = 0
-    } else if (left < min) {
-        left = min
-    }
+    if (left > 0) left = 0
+    else if (left < min) left = min
     
-  track.style.left = left + 'px'
-  e.preventDefault()
+    track.style.left = left + 'px'
+    e.preventDefault()
 })
 
 wrap.addEventListener('mouseup', () => {
+    wrap.style.cursor = 'grab'
+    pressed = false
+})
+
+wrap.addEventListener('mouseleave', () => {
     wrap.style.cursor = 'grab'
     pressed = false
 })

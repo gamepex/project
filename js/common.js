@@ -1,21 +1,11 @@
-// dropdown.js, trigger.js, scroll.js 같은 공통 부분은 여기다 통합하는 게 좋지 않을까요?
-
 /* dropdown */
 $(function(){
-
-   $('#main-menu > li ').mouseenter(function(){
-      $(this).find('.sub-menu').stop().slideDown();
-      $('header').addClass('active');
-    });
-
-       $('#main-menu >li ').mouseleave(function(){
-       $(this).find('.sub-menu').stop().slideUp();
-       $('header').removeClass('active')
-     });
-
-     $('#tap1').click(()=>{
-         
-     });
+$('#main-menu > li ').mouseenter(function(){
+    $(this).find('.sub-menu').stop().slideDown();
+});
+$('#main-menu >li ').mouseleave(function(){
+    $(this).find('.sub-menu').stop().slideUp();
+});
 });
 
 /* trigger */

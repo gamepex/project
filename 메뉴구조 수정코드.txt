@@ -1,7 +1,5 @@
 메뉴구조 아이디어 공유 부탁드립니다.
 
-박홍준 : https://www.samsung.com/ 처럼 제품별 사진 하나쯤 넣고 hover action 넣는 것도 괜찮을 듯싶습니다.
-  
   <ul id="main-menu">
                 <li>
                     <a href="playstation.html">ps5</a>
