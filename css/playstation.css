@@ -69,16 +69,17 @@
     article:first-child {background:url('../assets/ps/imgs/scaling.jpg')no-repeat  -200px; background-size:cover;}
     article:nth-child(2){background:url('../assets/ps/imgs/mance.jpg')no-repeat  -200px; background-size:cover;}
     article:last-child{background:url('../assets/ps/imgs/tracing.jpg')no-repeat; background-size:cover;}
-    .ps-effect-scaling, .ps-effect-mance, .ps-effect-tracing{ position:absolute; left:50px;  top:1800px;width:300px;}
+    .ps-effect-scaling, .ps-effect-mance, .ps-effect-tracing{ position:absolute; left:50px;  top:180px;width:300px;}
 
     .more-btn{margin:0 auto;}
     .ps-effect-dark-bg{position:absolute; ; left: 0; margin-top:50px; width: 100% ; height:500px; background:rgb(0, 0, 0,0.5);}
 
-    footer{background:#313236 ;}
-    .ft-wrap{width:1300px;  margin:100px auto 0;padding:100px 0 200px;}
-    .text-wrap{display: flex;}
-    .text-wrap > p {padding-right:35px;}
-    .text-wrap2{margin:50px 0;}
+    footer{margin-top:100px; background:#313236 ;}
+    .ft-wraps{display:flex;  width:1300px; margin:0 auto; padding:50px 0}
+    .ft-info-wrap{display: flex;}
+    .ft-info-wrap a { padding-right:34px;}
+    .ft-wrap p:nth-child(2){ padding-top:50px;}
+    .ft-wrap p:nth-child(4){padding-bottom:50px;}
 }
 
 
@@ -304,6 +305,4 @@
     .more-btn{margin:0 auto;}
     article p {padding:35px 0 70px;}
     .ur-dark-bg{position:absolute; ; left: 0; margin-top:50px; width: 100% ; height:1150px;background:rgb(0, 0, 0,0.5);}
-
-
 }
