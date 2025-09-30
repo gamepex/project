@@ -21,7 +21,7 @@ $('#trigger').click(function(e){
 $(function(){
     $(window).scroll(function(){
         var value=$(window).scrollTop();
-        if(value >=300){
+        if(value >=270){
             $('header').addClass('dark')
         }else{
             $('header').removeClass('dark')

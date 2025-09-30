@@ -33,8 +33,10 @@ sub-title title
 */
 h2, h3, h4, h5, h6, .title p, a { text-transform:uppercase; }
 h2 { font-family: "Tektur", sans-serif; color: #f9f9f9; }
+h5 { font-family: 'JalnanGothic'; font-weight: 400;}
+h6 { font-family: "Tektur", sans-serif; font-weight:600;} /*드랍다운 메뉴에 사용되는 h6 입니다.*/
 #main-menu > li, h3 { font-family: 'JalnanGothic'; }
-h4 { font-family: "Gowun Dodum", sans-serif; font-size: 34px; font-weight: 400; line-height: 42px; }
+h4 { font-family: "Gowun Dodum", sans-serif; font-size:34px; font-weight:400; line-height:42px; }
 ul { list-style:none; }
 a, img { border: 0; outline: 0; }
 a { display:block; color:#f6f6f6; text-decoration:none; }

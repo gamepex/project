@@ -73,13 +73,6 @@
 
     .more-btn{margin:0 auto;}
     .ps-effect-dark-bg{position:absolute; ; left: 0; margin-top:50px; width: 100% ; height:500px; background:rgb(0, 0, 0,0.5);}
-
-    footer{margin-top:100px; background:#313236 ;}
-    .ft-wraps{display:flex;  width:1300px; margin:0 auto; padding:50px 0}
-    .ft-info-wrap{display: flex;}
-    .ft-info-wrap a { padding-right:34px;}
-    .ft-wrap p:nth-child(2){ padding-top:50px;}
-    .ft-wrap p:nth-child(4){padding-bottom:50px;}
 }
 
 
