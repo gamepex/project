@@ -4,7 +4,7 @@
     #trigger {display: none;}
 
     header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
-    header.dark{background:rgba(20, 30, 65,0.8);}   /*scroll.js 추가 */
+    header.dark{background:rgba(10, 17, 39, 0.9);}   /*scroll.js 추가 */
     nav {   
         display: flex; justify-content:space-between; align-items: center;
         width: 1300px; height: 100%;margin: 0 auto;
@@ -52,13 +52,16 @@
     }
     section { width:1300px; margin:0 auto; }  
     
-      footer{width:100%; margin-top:100px; background:#313236 ;} 
-    .ft-wrap{display:flex; justify-content:space-between; align-items: center; width:1300px; margin:0 auto; padding:100px 0 200px;}
+    footer{margin-top:100px; background:#313236;} 
+    .ft-wrap{
+        display:flex; justify-content:space-between;
+        width:1300px; margin:0 auto; padding:100px 0 200px;}
     .ft-menu, .ft-sns{display: flex;}
-    .ft-menu a { padding-right:34px;}
-    .ft-info-wrap p:nth-child(2){ padding-top:50px;}
-    .ft-info-wrap p:nth-child(4){padding-bottom:50px;}
-    .ft-sns a{font-size: 30px; padding-left:30px;;}
+    .ft-menu a {padding:0 17px;}
+    .ft-menu a:first-child {padding-left:0;}
+    .ft-comname {padding:50px 0;}
+    .ft-sns {padding:90px 0;}
+    .ft-sns a{font-size:30px; padding-left:30px;}
 }
 
 
@@ -69,10 +72,9 @@
     h2 { padding-top:325px; font-size: 68px;} 
     h3 { font-size:46px; font-weight:500;}
     h4{font-size:32px;}
-    /* 1000픽셀 내 화면구현 해야 하니 폰트 크기 좀 줄였습니다. -한별 */
 
     header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
-    header::after{content:''; position:absolute; width:100%; top:0;}
+    header.dark{background:rgba(10, 17, 39, 0.9);}
     nav {   
         display: flex; justify-content:space-between; align-items: center;
         width: 1000px; height: 100%;margin: 0 auto;
@@ -109,13 +111,14 @@
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }
-  footer{width:100%; margin-top:100px; background:#313236 ;} 
-    .ft-wrap{display:flex; justify-content:space-between; align-items: center; width:1000px; margin:0 auto; padding:100px 0 200px;}
-    .ft-menu, .ft-sns{display: flex;}
-    .ft-menu a { padding-right:34px;}
-    .ft-info-wrap p:nth-child(2){ padding-top:50px;}
-    .ft-info-wrap p:nth-child(4){padding-bottom:50px;}
-    .ft-sns a{font-size: 30px; padding-left:30px;;}
+    footer{margin-top:80px; background:#313236 ;} 
+    .ft-wrap{display:flex; justify-content:space-between; width:1000px; margin:0 auto; padding:80px 0 160px;}
+    .ft-menu, .ft-sns{display:flex;}
+    .ft-menu a {padding:0 14px;}
+    .ft-menu a:first-child {padding-left:0;}
+    .ft-comname {padding:40px 0;}
+    .ft-sns {padding:70px 0;}
+    .ft-sns a{font-size:30px; padding-left:30px;}
 }
 
 
@@ -123,9 +126,10 @@
     h2 { padding-top:325px; font-size: 58px;}
     h3 { font-size:36px; }
     h4{ font-size:28px; }
-    .top-menu{display:none;}
-    nav{ height:100%; }  
-    .logo {position:absolute; left:30px; top:18px; }
+    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
+    header.dark{background:rgba(10, 17, 39, 0.9);}
+    nav{position:fixed;width:100%; height:100%; z-index:9; }  
+    .logo {position:absolute; left:30px; top:18px;  }
      
     #trigger {
         position:absolute; right:30px; top:18px;
@@ -136,14 +140,15 @@
         position:absolute;  width:100%; height:2px;
         background:#f2f5d4;
         transition:all 0.4s ease-in;
+         z-index:9;
     }
     #trigger span:nth-child(1) { top:0; }
     #trigger span:nth-child(2) { top:9px; background:#caca64; }
     #trigger span:nth-child(3) { bottom:0; }
     
     #main-menu {
-         position:absolute; right:0;
-         width:10%; height:100%;
+         position:absolute; right:-55%;
+        width:50%; height:100%;
          padding-top:150px; 
          text-align:center; 
          background:rgba(15, 24, 54,0.9); opacity:0;
@@ -155,15 +160,17 @@
     #trigger.tabmenu span:nth-child(1) { width:85%; transform:translateY(9px) rotate(-135deg); }
     #trigger.tabmenu span:nth-child(2) { opacity:0; }
     #trigger.tabmenu span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
-    #main-menu.tabmenu{ right:0; width:80%; opacity:1; z-index:2;}     
-    
+    #main-menu.tabmenu{ right:0; width:80%; opacity:1;}     
+     .top-menu.tabmenu{right:67%;  opacity: 1;}
+
     .sub-menu{ display:none; background:rgba(11, 20, 49, 0.9);box-shadow:0 0 20px rgba(0,0,0,0.3)inset; }
     .sub-menu-info-wrap{display:flex; justify-content: center;  width:100%;  padding:30px;  }
     .sub-menu-title{display:none;}
     .sub-menu-info a{padding:15px 40px;font-size:20px;  text-align:center; transition:all 0.3s }
 
-    .top-menu {  position:absolute; left:30px; top:3px; }
-    .top-menu a{ padding-right:15px; font-size:30px; }
+    .top-menu {display: flex;  position:absolute; right:-50%; top:3px; opacity:0; transition:all 0.4s ease-in;}
+    .top-menu a{ padding-left:15px; font-size:30px; }
+    
     .banner { height:650px; color:#f6f6f6; text-align:center;  }
     .banner p {font-size: 18px;}
     .sub-title { padding:70px 0 35px; text-align: center; } /*sub-title 로 수정 */
@@ -182,21 +189,26 @@
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }
-    footer{ height:490px; background:#313236; } /*수정하셔도 됩니다.*/
-    .ft-wrap{ width:100%; margin-top:100px;  text-align: center;}
-    .ft-info-wrap{display: flex;width:450px; margin:0 auto; }
-    .text-wrap a {padding:50px 15px 0;}
-    .text-wrap2{margin:50px 0;}
+    /* =====레이아웃 수정 - 한별====== */
+    footer{height:415px; background:#313236;}
+    .ft-wrap{text-align:center; padding-top:50px;}
+    .ft-menu, .ft-sns{display:flex; justify-content:center; width:750px; margin:0 auto;}
+    .ft-menu a {padding:0 10px;}
+    .ft-comname {padding:30px 0;}
+    .ft-sns {padding:50px 0 100px;}
+    .ft-sns a{font-size:34px; padding-left:27px;}
 }
+
+
+
 /* ------------------------------------------ */
 @media screen and (max-width:749px) {
     h3 { font-size:30px; font-weight:500; }
     h4 { font-size:22px; }
-    .top-menu{display:none;}
-
-    nav{ height:100%;}
-    .logo {position:absolute; left:40%; top:18px; }
-     
+    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
+    header.dark{background:rgba(10, 17, 39, 0.9);}
+    nav{width:100%; height:100%; z-index:9; }
+    .logo { position:absolute; left:40%; top:18px;}
     #trigger {
         position:absolute; left:30px; top:18px;
         width:30px; height:20px;
@@ -212,8 +224,8 @@
     #trigger span:nth-child(3) { bottom:0; }
     
     #main-menu {
-         position:absolute;left:0;
-         width:0; height:100vh;
+         position:absolute;left:-400px;
+        width:50%; height:100vh;
          padding-top:150px; 
          text-align:center; 
         background:rgba(15, 24, 54);opacity:0;
@@ -226,16 +238,19 @@
     #trigger.tabmenu span:nth-child(2) { opacity:0; }
     #trigger.tabmenu span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
     #main-menu.tabmenu{left:0;  width:100%; opacity:1;}     
-    
+     .top-menu.tabmenu{right:30px; opacity:1;}
      .sub-menu{ 
         display:none;
         height:250px; padding:30px 0;
         background:rgba(11, 20, 49, 0.4);
-        box-shadow:0 0 20px rgba(0,0,0,0.6)inset;
+        box-shadow:0 0 20px rgba(0,0,0,0.3)inset;
     }
     .sub-menu-info-wrap{display:flex;  justify-content:center;}
     .sub-menu-title{display:none;}
-    .sub-menu-info a{padding:20px 30px;font-size:20px;  text-align:center;  transition:all 0.3s }
+    .sub-menu-info a{padding:20px 30px;font-size:18px;  text-align:center;  transition:all 0.3s }
+
+    .top-menu {display: flex;  position:absolute; right:0; top:0; opacity:0; transition:all 0.3s ease-in;}
+    .top-menu a{ padding-left:15px; font-size:30px; }
 
     .banner { display: flex; justify-content: center; align-items: center; height:100vh; color:#f6f6f6;  text-align:center; }
     h2 { font-size: 54px;  line-height:50px; }
@@ -255,8 +270,13 @@
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }
-    footer{height:490px; background:#313236; } /*수정하셔도 됩니다.*/
-    .ft-wrap{ width:100%; margin:100px auto;  text-align: center;}
-    .text-wrap{display: flex;width:450px;  }
-    .text-wrap a {padding:50px 15px 0;}
+
+    footer{height:420px; background:#313236; font-size:14px;}
+    .ft-wrap{text-align:center; padding-top:30px;}
+    .ft-info-wrap {display:flex; justify-content:center; flex-wrap:wrap; overflow:hidden;}
+    .ft-menu, .ft-sns{display:flex; justify-content:center; margin:0 auto;}
+    .ft-menu a {padding:0 5px;}
+    .ft-comname {width:340px; margin:0 auto; padding:25px 0;}
+    .ft-sns {padding:60px 0;}
+    .ft-sns a{font-size:34px; padding-left:27px;}
 }

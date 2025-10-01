@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,71 +13,15 @@
     <script src="js/trigger.js"></script>
     <script src="js/nintendo.js"></script>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo"><img src="assets/common/logo.png" alt="게임펙스 로고"></a>
-            <a href="#" id="trigger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-            <ul id="main-menu">
-                <li>
-                    <a href="#">ps5</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">게임기 소개</a></li>
-                        <li><a href="#">악세사리</a></li>
-                        <li><a href="#">대여 신청</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">xbox</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">게임기 소개</a></li>
-                        <li><a href="#">악세사리</a></li>
-                        <li><a href="#">대여 신청</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">nintendo</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">게임기 소개</a></li>
-                        <li><a href="#">악세사리</a></li>
-                        <li><a href="#">대여 신청</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">vr</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">게임기 소개</a></li>
-                        <li><a href="#">악세사리</a></li>
-                        <li><a href="#">대여 신청</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">steam deck</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">게임기 소개</a></li>
-                        <li><a href="#">악세사리</a></li>
-                        <li><a href="#">대여 신청</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="top-menu">
-                <li><a href="#"><i class="bi bi-person-check"></i></a></li>
-                <li><a href="#"><i class="bi bi-person-add"></i></a></li>
-            </ul>
-        </nav>
-    </header>
 
     <link rel="stylesheet" href="css/nintendo.css">
 
     <div class="banner bn-ns-bg">
-        <h2><span class="hg-blue">M</span>oment <span class="hg-ygrn">&</span> <span class="hg-blue">T</span>ogether
-        </h2>
-        <p><span class="hg-blue">가족 & 친구</span>와 함께하는 <span class="hg-ygrn">닌텐도 스위치</span></p>
+        <div>
+            <h2><span class="hg-blue">M</span>oment <span class="hg-ygrn">&</span> <span class="hg-blue">T</span>ogether</h2>
+            <p><span class="hg-blue">가족 & 친구</span>와 함께하는 <span class="hg-ygrn">닌텐도 스위치</span></p>
+        </div>
     </div>
 
     <section>
@@ -89,8 +32,14 @@
         <div class="ns-wwa-wrap">
             <div class="ns-wwa-bg1"></div>
             <div class="ns-wwa-contents">
-                <p>“닌텐도 스위치 2”는 플레이<br>장면에 맞추어 형태를 바꾸는 게임기.<br>지금까지와 동일하게<br>TV 모드, 테이블 모드, 휴대 모드<br>언제, 어디서든 게임을<br>즐길
-                    수 있습니다.</p>
+                <p>
+                    “닌텐도 스위치 2”는 플레이<br>
+                    장면에 맞추어 형태를 바꾸는 게임기.<br>
+                    지금까지와 동일하게<br>
+                    TV 모드, 테이블 모드, 휴대 모드<br>
+                    언제, 어디서든 게임을<br>
+                    즐길 수 있습니다.
+                </p>
                 <a href="#" class="more-btn">MORE</a>
             </div>
         </div>
@@ -122,7 +71,6 @@
             <p>개성있는 게임 캐릭터들 </p>
         </div>
         <div id="ns-ch" class="ns-ch-wrap">
-            <!-- css 에서 캐릭터버튼 추가내용확인 필요함 -->
             <div class="ns-ch-bg ns-ch-bg1">
                 <h4>마리오</h4>
                 <a href="#" id="mario-btn" class="more-btn">MORE</a>
@@ -153,6 +101,7 @@
     <div id="mario" class="ns-ch-more-container">
         <div class="ns-ch-more-wrap">
             <div class="ns-ch-more-bg ns-ch-more-bg1"></div>
+            <div class="ns-ch-more-dark"></div>
             <div class="ns-ch-more-info">
                 <h5>mario</h5>
                 <p>
@@ -175,6 +124,7 @@
     <div id="luigi" class="ns-ch-more-container">
         <div class="ns-ch-more-wrap">
             <div class="ns-ch-more-bg ns-ch-more-bg2"></div>
+            <div class="ns-ch-more-dark"></div>
             <div class="ns-ch-more-info">
                 <h5>luigi</h5>
                 <p>
@@ -195,6 +145,7 @@
     <div id="peach" class="ns-ch-more-container">
         <div class="ns-ch-more-wrap">
             <div class="ns-ch-more-bg ns-ch-more-bg3"></div>
+            <div class="ns-ch-more-dark"></div>
             <div class="ns-ch-more-info">
                 <h5>peach</h5>
                 <p>
@@ -215,6 +166,7 @@
     <div id="kinopio" class="ns-ch-more-container">
         <div class="ns-ch-more-wrap">
             <div class="ns-ch-more-bg ns-ch-more-bg4"></div>
+            <div class="ns-ch-more-dark"></div>
             <div class="ns-ch-more-info">
                 <h5>kinopio</h5>
                 <p>
@@ -234,6 +186,7 @@
     <div id="daisy" class="ns-ch-more-container">
         <div class="ns-ch-more-wrap">
             <div class="ns-ch-more-bg ns-ch-more-bg5"></div>
+            <div class="ns-ch-more-dark"></div>
             <div class="ns-ch-more-info">
                 <h5>daisy</h5>
                 <p>
@@ -252,6 +205,7 @@
     <div id="rosalina" class="ns-ch-more-container">
         <div class="ns-ch-more-wrap">
             <div class="ns-ch-more-bg ns-ch-more-bg6"></div>
+            <div class="ns-ch-more-dark"></div>
             <div class="ns-ch-more-info">
                 <h5>rosalina</h5>
                 <p>
@@ -267,24 +221,5 @@
             </div>
         </div>
     </div>
-
-    <footer>
-        <div class="ft-wrap">
-            <ul class="text-wrap">
-                <a href="#">이용약관</a>
-                <a href="#">개인정보처리방침</a>
-                <a href="#">고객센터</a>
-                <a href="#">서비스이용약관</a>
-            </ul>
-            <div class="text-wrap2">
-                <p>(주)게임펙스 | 대표 : 박홍준</p>
-                <p>주소 : 경기 성남시 분당구 돌마로 73 (금곡동), 7층 13618</p>
-                <p>사업자등록번호 : 123-45-67890 | 통신판매업신고번호 : 2020-광주북구-0408</p>
-            </div>
-            <p>Copyright © 2025 GamePEX. All Rights Reserved.</p>
-        </div>
-        <div class="ft-icon"></div>
-    </footer>
 </body>
-
 </html>
