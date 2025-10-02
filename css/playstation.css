@@ -131,15 +131,15 @@
 
     /* -==============section3================== */
     .ps-effect-contents{position:relative;width:100%; height:1250px;}
-    article{   position:absolute; width:450px; height:600px; text-align:center; border-radius:20px;}
+    article{position:absolute; width:450px; height:600px; text-align:center; border-radius:20px;}
     .ps-effect-shadow{
-        position: absolute; left:0; top:0;
+        position: absolute; 
         width:450px; height:600px;
         border-radius:20px;
         background: rgb(0, 0, 0,0.7);
          transition:all 0.3s ease-in;
     }
-    .ps-effect-shadow:hover{background: rgb(0, 0, 0,0.3);}
+    article:hover{ background: rgb(0, 0, 0,0.3);}
     article:first-child {left:25px; background:url('../assets/ps/imgs/scaling.jpg')no-repeat  -200px; background-size:cover;}
     article:nth-child(2){right:25px;background:url('../assets/ps/imgs/mance.jpg')no-repeat  -200px; background-size:cover; }
     article:last-child{bottom:0; left:275px; background:url('../assets/ps/imgs/tracing.jpg')no-repeat; background-size:cover;}
@@ -170,7 +170,7 @@
     .ps-duel-tabs-wrap .tab3{left:340px;}
     input:checked +label{ background:#324274;}
 
-    .ps-duel-tab-contents{position: relative; top: 60px;width:100%; height:450px; background:#324274; border-radius:5px 5px 0 0;overflow:hidden;}
+    .ps-duel-tab-contents{position: relative; top: 60px;width:100%; height:450px; background:#324274; border-radius:5px 5px 0 0; overflow:hidden;}
      .ps-duel-tab-contents  p{padding:60px 0 120px;}
 
     .ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{position:absolute; top:25px;width:700px; height:400px;transition:all 0.4s ease-in;}

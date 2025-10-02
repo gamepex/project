@@ -88,18 +88,18 @@
                 </div>
                     <div class="sub-menu-info-wrap">
                         <ul class="sub-menu-info">
-                                <li><a href="#">게임기 소개 </a> </li>
-                                <li><a href="#">악세사리</a></li>
-                                <li><a href="#">대여 신청</a></li>
+                            <li><a href="#">Quest 3</a></li>
+                            <li><a href="#">Quest 3S</a></li>
+                            <li><a href="#">주변기기</a></li>
                         </ul> 
                         <ul class="sub-menu-info">
-                            <li><a href="#">게임기 소개 </a> </li>
-                            <li><a href="#">악세사리</a></li>
-                            <li><a href="#">대여 신청</a></li>
-                    </ul> 
+                            <li><a href="#">PICO 4</a></li>
+                            <li><a href="#">PICO 3</a></li>
+                            <li><a href="#">주변기기</a></li>
+                        </ul> 
                         <ul class="sub-menu-info">
-                                <li><a href="#">게임기 소개</a></li>
-                                <li><a href="#">악세사리</a></li>
+                            <li><a href="#">Vive</a></li>
+                            <li><a href="#">주변기기</a></li>
                         </ul> 
                 </div>    
             </div>
@@ -114,17 +114,17 @@
                 </div>
                 <div class="sub-menu-info-wrap">
                     <ul class="sub-menu-info">
-                        <li><a href="#">Quest 3</a></li>
-                        <li><a href="#">Quest 3S</a></li>
+                        <li><a href="#">게임기 소개 </a> </li>
                         <li><a href="#">악세사리</a></li>
+                        <li><a href="#">대여 신청</a></li>
                     </ul> 
                     <ul class="sub-menu-info">
-                        <li><a href="#">PICO 4</a></li>
-                        <li><a href="#">PICO 3</a></li>
+                        <li><a href="#">게임기 소개 </a> </li>
                         <li><a href="#">악세사리</a></li>
+                        <li><a href="#">대여 신청</a></li>
                     </ul> 
                     <ul class="sub-menu-info">
-                        <li><a href="#">Vive</a></li>
+                        <li><a href="#">게임기 소개</a></li>
                         <li><a href="#">악세사리</a></li>
                     </ul> 
                 </div>    
