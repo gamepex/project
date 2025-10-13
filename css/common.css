@@ -1,22 +1,24 @@
 @charset "utf-8";
 
+    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
+    header.dark{background:rgba(5, 11, 31, 0.97);} 
+    header:hover{background:rgba(7, 12, 29,0.97);}
+
+
 @media screen and (min-width:1400px) {
     #trigger {display: none;}
-
-    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
-    header.dark{background:rgba(10, 17, 39, 0.9);}   /*scroll.js 추가 */
     nav {   
         display: flex; justify-content:space-between; align-items: center;
         width: 1300px; height: 100%;margin: 0 auto;
     }
     #main-menu, .top-menu {display: flex;}
-    #main-menu > li > a {padding:0 45px; text-transform: uppercase; }
+    #main-menu > li > a {padding:18px 45px; text-transform: uppercase; }
     .top-menu a {padding-left:10px; font-size: 26px}
     
     /* =====dropdown menu===== */
    
-     .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(20, 30, 65,0.8); }
-     .sub-menu-wrap{ display:flex;  width:1300px; height:300px; margin:0 auto; background:rgba(20, 30, 65,0.7); }
+     .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(10, 24, 53, 0.8); }
+     .sub-menu-wrap{ display:flex;  width:1300px; height:300px; margin:0 auto; background:rgba(17, 26, 68, 0.9); }
      .sub-menu-title{display:flex; justify-content: center; align-items:center; width:350px; height:100%;font-size:62px;  background:rgba(0,0,0, 0.4);}
     .sub-menu-info-wrap{
          display:flex; justify-content: center; 
@@ -28,9 +30,9 @@
     .sub-menu-info >li > a {transition: all 0.3s ease-in;}
     #main-menu > li > a:hover {color: #6389ff;}
     .sub-menu-info > li > a:hover{color: #6389ff; border-radius:10px; box-shadow:0 0 0 30px rgba(22, 40, 94, 0.3) inset;}
-
+    
     /* ========================== */
-    .banner { height:600px; color:#f6f6f6;text-align:center; }
+    .banner { height:600px; color:#f6f6f6; text-align:center; }
     h2 { padding-top:325px; font-size: 72px; }
     .banner p { font-size: 22px;}
     h3 { font-size:48px; font-weight:500;}
@@ -72,9 +74,6 @@
     h2 { padding-top:325px; font-size: 68px;} 
     h3 { font-size:46px; font-weight:500;}
     h4{font-size:32px;}
-
-    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
-    header.dark{background:rgba(10, 17, 39, 0.9);}
     nav {   
         display: flex; justify-content:space-between; align-items: center;
         width: 1000px; height: 100%;margin: 0 auto;
@@ -126,15 +125,13 @@
     h2 { padding-top:325px; font-size: 58px;}
     h3 { font-size:36px; }
     h4{ font-size:28px; }
-    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
-    header.dark{background:rgba(10, 17, 39, 0.9);}
-    nav{width:100%; height:100%;  z-index:9; }
+    nav{ height:100%;}
     .logo {position:absolute; left:30px; top:18px;  }
      
     #trigger {
         position:absolute; right:30px; top:18px;
         width:30px; height:20px;
-        z-index:9;
+        z-index:99;
     }
     #trigger span {
         position:absolute;  width:100%; height:2px;
@@ -147,11 +144,11 @@
     
     #main-menu {
          position:absolute; right:0; top:0;
-        width:50%; height:100%;
+        width:0; height:100vh;
          padding-top:150px; 
          text-align:center; 
          background:rgba(15, 24, 54,0.9); opacity:0;
-        transition: all 0.4s ease-in; z-index: 5;
+        transition: all 0.4s ease-in; z-index:95;
         }
     #main-menu > li > a { padding:20px; font-size:24px;  pointer-events: none; }
     #main-menu > li > a:hover { color: rgb(99, 137, 255);}
@@ -167,7 +164,7 @@
     .sub-menu-title{display:none;}
     .sub-menu-info a{padding:15px 40px;font-size:18px;  text-align:center; transition:all 0.3s }
 
-    .top-menu {display: flex;  position:absolute; right:-50%; top:3px; opacity:0; transition:all 0.4s ease-in;}
+    .top-menu {display: flex;  position:absolute; right:-50%; top:3px; opacity:0; transition:all 0.4s ease-in; z-index:99;}
     .top-menu a{ padding-left:15px; font-size:30px; }
     
     .banner { height:650px; color:#f6f6f6; text-align:center;  }
@@ -204,8 +201,6 @@
 @media screen and (max-width:749px) {
     h3 { font-size:30px; font-weight:500; }
     h4 { font-size:22px; }
-    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
-    header.dark{background:rgba(10, 17, 39, 0.9);}
     nav{width:100%; height:100%;  z-index:9; }
     .logo {position:absolute; left:50%; top:15px;  transform:translate(-50%, 0); z-index: 2;}
     #trigger {
@@ -244,7 +239,7 @@
         background:rgba(11, 20, 49, 0.4);
         box-shadow:0 0 20px rgba(0,0,0,0.3)inset;
     }
-    .sub-menu-info-wrap{display:flex;  justify-content:center;}
+    .sub-menu-info-wrap{display:flex;  justify-content:center; }
     .sub-menu-title{display:none;}
     .sub-menu-info a{padding:20px 30px;font-size:18px;  text-align:center;  transition:all 0.3s }
 
