@@ -1,31 +1,13 @@
 @charset "utf-8";
 
-.banner {position: relative; overflow:hidden;}
+.banner {position:relative; overflow:hidden;}
 
 h5 {font-size:24px; text-transform:uppercase;}
-
-.xb-content {
-    position:absolute; top:0; left:0;
-    width:100%; height:100%;
-    object-fit:cover; z-index:-999;
-}
-
-/* 배너 검은색 불투명 박스 공통 스타일 지정 */
-.xb-bbox30 {position:absolute; left:0; top:0;
-background:#000; opacity:30%; z-index:-1;}
-
-.xb-b-box1 { width:100%; height:600px;}
-.xb-b-box2 { left:-125px; top:-35px; width:1309px; height:500px;
-transform: rotate(58deg);}
-.xb-b-box3 {left:-10px; top:-15px; width:1950px; height:700px; background:rgba(255,255,255,0.4);
-transform: rotate(-35deg);}
-.xb-b-box4 { left:485px; top:-35px; width:1930px; height:500px;
-transform: rotate(60deg);}
 
 
 @media screen and (min-width:1400px) {
 /* ===== 서브 1 시리즈 x ===== */
-.xb-cs-wrap1 { position:relative; width:100%; height:500px;}
+.xb-con-container { position:relative; width:100%; height:500px;}
 
 .xb-cs-bg1{
     position:absolute; left:0; top:0;
@@ -69,7 +51,7 @@ transform: rotate(60deg);}
 
 
 /* ===== 서브1 시리즈s ===== */
-.xb-cs-wrap2 {position:relative; width:100%; height:500px; margin-top:50px;}
+.xb-con-container2 {position:relative; width:100%; height:500px; margin-top:50px;}
 
 .xb-cs-bg2{
     position:absolute; right:0;
@@ -105,7 +87,7 @@ transform: rotate(60deg);}
 
 
 /* ====== 서브2 ===== */
-.xb-acc-wrap {position:relative;}
+.xb-acc-container {position:relative;}
 .xb-acc-slide {display:flex; justify-content:center; flex-wrap:wrap; overflow:hidden; height:300px;}
 
 .xb-acc-slide li {
@@ -132,16 +114,14 @@ transform: rotate(60deg);}
 
 
 /* ===== 서브3 DTD 박스===== */
-.xb-rent-wrap1 {position:relative; width:100%; height:500px;}
-
+.xb-rent-container {width:100%; height:500px;}
+.xb-rent-wrap {flex-wrap:wrap;}
 .xb-rent-bg1 {
-    position:absolute;
     width:84%; height:500px;
     background:rgba(99, 137, 255, 0.5);
     border-radius:0 0 100px 0;
 }
-.xb-rent-cd > li {
-    position:absolute;
+.xb-rent-cd > div {
     width:300px; height:400px; margin:0 25px;
     text-align:center; line-height:398px;
     border-radius:30px;
@@ -198,7 +178,7 @@ transform: rotate(60deg);}
 
 
 /* ===== 서브 3 DELI 박스 =====*/
-.xb-rent-wrap2 {position:relative; width:100%; height:500px;}
+.xb-rent-container2 {position:relative; width:100%; height:500px;}
 
 .xb-rent-bg2 {
     position:absolute; right:0;
@@ -307,7 +287,7 @@ transform: rotate(60deg);}
 @media screen and (min-width:1050px) and (max-width: 1399px) {
 h5 {font-size:24px; text-transform:uppercase;}
 
-.xb-cs-wrap1 { position:relative; width:100%; height:500px;}
+.xb-con-container { position:relative; width:100%; height:500px;}
 
 .xb-cs-bg1{
     position:absolute; left:0; top:0;
@@ -350,7 +330,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 
 
 /* ===== 서브1 시리즈s ===== */
-.xb-cs-wrap2 {position:relative; width:100%; height:500px; margin-top:40px;}
+.xb-con-container2 {position:relative; width:100%; height:500px; margin-top:40px;}
 
 .xb-cs-bg2{
     position:absolute; right:0;
@@ -385,7 +365,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 
 
 /* ====== 서브2 ===== */
-.xb-acc-wrap {position:relative;}
+.xb-acc-container {position:relative;}
 .xb-acc-slide {display:flex; justify-content:center; flex-wrap:wrap; overflow:hidden; height:300px;}
 
 .xb-acc-slide li {
@@ -411,7 +391,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 }
 
 /* ===== 서브3 DTD 박스===== */
-.xb-rent-wrap1 {position:relative; width:100%; height:660px;}
+.xb-rent-container {position:relative; width:100%; height:660px;}
 
 .xb-rent-bg1 {
     position:absolute;
@@ -476,7 +456,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 
 
 /* ===== 서브 3 DELI 박스 =====*/
-.xb-rent-wrap2 {position:relative; width:100%; height:700px;}
+.xb-rent-container2 {position:relative; width:100%; height:700px;}
 
 .xb-rent-bg2 {
     position:absolute; right:0;
@@ -585,7 +565,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 h2 {flex-wrap:wrap; padding:325px 150px 0; line-height:100%; text-align:center;}
 h5 {font-size:16px; text-transform:uppercase;}
 
-.xb-cs-wrap1 { position:relative; width:100%; height:495px;}
+.xb-con-container { position:relative; width:100%; height:495px;}
 
 .xb-cs-bg1{
     position:absolute;
@@ -627,7 +607,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 
 
 /* ===== 서브1 시리즈s ===== */
-.xb-cs-wrap2 {position:relative; width:100%; height:495px; margin-top:25px;}
+.xb-con-container2 {position:relative; width:100%; height:495px; margin-top:25px;}
 
 .xb-cs-bg2{
     position:absolute; right:0;
@@ -661,7 +641,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 
 
 /* ====== 서브2 ===== */
-.xb-acc-wrap {position:relative;}
+.xb-acc-container {position:relative;}
 .xb-acc-slide {display:flex; justify-content:center; flex-wrap:wrap; overflow:hidden; height:300px;}
 
 .xb-acc-slide li {
@@ -687,7 +667,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 }
 
 /* ===== 서브3 DTD 박스===== */
-.xb-rent-wrap1 {position:relative; width:100%; height:905px;}
+.xb-rent-container {position:relative; width:100%; height:905px;}
 
 .xb-rent-bg1 {
     position:absolute;
@@ -750,7 +730,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 
 
 /* ===== 서브 3 DELI 박스 =====*/
-.xb-rent-wrap2 {position:relative; width:100%; height:1005px;}
+.xb-rent-container2 {position:relative; width:100%; height:1005px;}
 
 .xb-rent-bg2 {
     position:absolute; right:0;
@@ -855,27 +835,12 @@ h5 {font-size:16px; text-transform:uppercase;}
     object-fit:cover; z-index:-999;
 }
 
-/* 배너 검은색 불투명 박스 공통 스타일 지정 */
-.xb-bbox30 {position:absolute; left:0; top:0;
-background:#000; opacity:30%; z-index:-1;}
-
-.xb-b-box1 { width:100%; height:800px;}
-.xb-b-box2 { left:-125px; top:-35px; width:1309px; height:500px;
-transform: rotate(58deg);}
-.xb-b-box3 {left:-10px; top:-15px; width:1950px; height:700px; background:rgba(255,255,255,0.4);
-transform: rotate(-35deg);}
-.xb-b-box4 { left:485px; top:-35px; width:1930px; height:500px;
-transform: rotate(60deg);}
-
-
-
-
 
 @media screen and (max-width:749px){
 /* 검토 */
 h5 {font-size:16px; text-transform:uppercase;}
 
-.xb-cs-wrap1 { position:relative; width:100%; height:380px;}
+.xb-con-container { position:relative; width:100%; height:380px;}
 
 .xb-cs-bg1{
     position:absolute;
@@ -920,7 +885,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 
 /* ===== 서브1 시리즈s ===== */
 .xb-sub-con h3 {width:250px; margin:0 auto;}
-.xb-cs-wrap2 {position:relative; width:100%; height:380px; margin-top:25px;}
+.xb-con-container2 {position:relative; width:100%; height:380px; margin-top:25px;}
 
 .xb-cs-bg2{
     position:absolute; right:0;
@@ -958,7 +923,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 
 /* ====== 서브2 ===== */
 .xb-sub-acc p {width:250px; margin:0 auto;}
-.xb-acc-wrap {position:relative;}
+.xb-acc-container {position:relative;}
 .xb-acc-slide {display:flex; justify-content:center; flex-wrap:wrap; overflow:hidden; height:300px;}
 
 .xb-acc-slide li {
@@ -984,7 +949,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 }
 
 /* ===== 서브3 DTD 박스===== */
-.xb-rent-wrap1 {position:relative; 
+.xb-rent-container {position:relative; 
     width:100%; height:1460px;}
 
 .xb-rent-bg1 {
@@ -1053,7 +1018,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 
 
 /* ===== 서브 3 DELI 박스 =====*/
-.xb-rent-wrap2 {position:relative; width:100%; height:1560px;}
+.xb-rent-container2 {position:relative; width:100%; height:1560px;}
 /*  top:1280px;  */
 
 .xb-rent-bg2 {
@@ -1161,16 +1126,4 @@ h5 {font-size:16px; text-transform:uppercase;}
     width:100%; height:100%;
     object-fit:cover; z-index:-999;
 }
-
-/* 배너 검은색 불투명 박스 공통 스타일 지정 */
-.xb-bbox30 {position:absolute; left:0; top:0;
-background:#000; opacity:30%; z-index:-1;}
-
-.xb-b-box1 { width:100%; height:800px;}
-.xb-b-box2 { left:-125px; top:-35px; width:1309px; height:500px;
-transform: rotate(58deg);}
-.xb-b-box3 {left:-10px; top:-15px; width:1950px; height:700px; background:rgba(255,255,255,0.4);
-transform: rotate(-35deg);}
-.xb-b-box4 { left:485px; top:-35px; width:1930px; height:500px;
-transform: rotate(60deg);}
 }

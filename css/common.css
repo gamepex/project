@@ -1,8 +1,15 @@
 @charset "utf-8";
 
-    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; }
-    header.dark{background:rgba(5, 11, 31, 0.97);} 
-    header:hover{background:rgba(7, 12, 29,0.97);}
+    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; transition:all 0.2s ease-in; }
+    header.dark{background:rgba(3, 8, 37, 0.97);} 
+    header:hover{background:rgba(3, 8, 37, 0.97);}
+
+    .banner {position:relative; overflow:hidden; color:#f6f6f6; text-align:center;}
+    .content {
+    position:absolute; top:0; left:0;
+    width:100%; height:100%;
+    object-fit:cover; z-index:-999;
+    }
 
 
 @media screen and (min-width:1400px) {
@@ -17,7 +24,7 @@
     
     /* =====dropdown menu===== */
    
-     .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(10, 24, 53, 0.8); }
+     .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.9); }
      .sub-menu-wrap{ display:flex;  width:1300px; height:300px; margin:0 auto; background:rgba(17, 26, 68, 0.9); }
      .sub-menu-title{display:flex; justify-content: center; align-items:center; width:350px; height:100%;font-size:62px;  background:rgba(0,0,0, 0.4);}
     .sub-menu-info-wrap{
@@ -32,7 +39,15 @@
     .sub-menu-info > li > a:hover{color: #6389ff; border-radius:10px; box-shadow:0 0 0 30px rgba(22, 40, 94, 0.3) inset;}
     
     /* ========================== */
-    .banner { height:600px; color:#f6f6f6; text-align:center; }
+    .banner {height:600px;}
+
+    .bbox30 {position:absolute; left:0; top:0;
+    background:#000; opacity:30%; z-index:-1;}
+    .b-box1 { width:100%; height:600px;}
+    .b-box2 { left:-125px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
+    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35deg);}
+    .b-box4 { left:485px; top:-35px; width:1930px; height:500px; transform:rotate(60deg);}
+
     h2 { padding-top:325px; font-size: 72px; }
     .banner p { font-size: 22px;}
     h3 { font-size:48px; font-weight:500;}
@@ -83,7 +98,7 @@
     .top-menu a {padding-left: 10px; font-size: 26px}
 
     /* =====dropdown menu===== */
-    .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(20, 30, 65,0.8); }
+    .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.9);  }
     .sub-menu-wrap{ display:flex;  width:1000px; height:300px; margin:0 auto; background:rgba(20, 30, 65,0.7); }
     .sub-menu-title{display:flex; justify-content: center; align-items:center; width:300px; height:100%;font-size:58px;  background:rgba(0,0,0, 0.4);}
     .sub-menu-info-wrap{ display:flex; justify-content: center; width:700px; height:300px;  background: rgb(13, 22, 54,0.3);box-shadow:0 0 30px rgba(0,0,0, 0.3) inset;}
@@ -93,8 +108,15 @@
     #main-menu > li > a:hover {color: #6389ff;}
     .sub-menu-info > li > a:hover{color: #6389ff; border-radius:10px; box-shadow:0 0 0 30px rgba(22, 40, 94, 0.3) inset;}
     /* ====================== */
-    .banner { height:600px; color:#f6f6f6;text-align:center; }
+    .banner { height:600px;}
     .banner p { font-size: 22px; }
+
+    .bbox30 {position:absolute; left:0; top:0;
+    background:#000; opacity:30%; z-index:-1;}
+    .b-box1 { width:100%; height:600px;}
+    .b-box2 { left:-125px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
+    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35deg);}
+    .b-box4 { left:485px; top:-35px; width:1930px; height:500px; transform:rotate(60deg);}
  
     .sub-title { padding:80px 0 40px; text-align: center; } /*sub-title 로 수정 */
     section { width:1000px; margin:0 auto; }
@@ -147,7 +169,7 @@
         width:0; height:100vh;
          padding-top:150px; 
          text-align:center; 
-         background:rgba(15, 24, 54,0.9); opacity:0;
+         background:rgba(15, 24, 54); opacity:0;
         transition: all 0.4s ease-in; z-index:95;
         }
     #main-menu > li > a { padding:20px; font-size:24px;  pointer-events: none; }
@@ -167,15 +189,22 @@
     .top-menu {display: flex;  position:absolute; right:-50%; top:3px; opacity:0; transition:all 0.4s ease-in; z-index:99;}
     .top-menu a{ padding-left:15px; font-size:30px; }
     
-    .banner { height:650px; color:#f6f6f6; text-align:center;  }
+    .banner { height:650px;}
     .banner p {font-size: 18px;}
-    .sub-title { padding:70px 0 35px; text-align: center; } /*sub-title 로 수정 */
+
+    .bbox30 {position:absolute; left:0; top:0;
+    background:#000; opacity:30%; z-index:-1;}
+    .b-box1 { width:100%; height:600px;}
+    .b-box2 { left:-125px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
+    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35deg);}
+    .b-box4 { left:485px; top:-35px; width:1930px; height:500px; transform:rotate(60deg);}
+
+    .sub-title { padding:70px 0 35px; text-align: center; }
     /* ====================================== */
     
     section { width:750px; margin:0 auto; }
 
-    /* ======자세히 보기 버튼==== 한별 추가 */
-    .more-btn {  /*수정사항: widt 120 변경 */ 
+    .more-btn { 
         width:120px; height:50px; 
         font-size:16px; color:#6389ff; text-align:center; line-height:50px;
         background:#fff; border-radius:30px;
@@ -185,8 +214,8 @@
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }
-    /* =====레이아웃 수정 - 한별====== */
-    footer{height:415px; background:#313236;}
+
+    footer{height:415px; margin-top:50px; background:#313236;}
     .ft-wrap{text-align:center; padding-top:50px;}
     .ft-menu, .ft-sns{display:flex; justify-content:center; width:750px; margin:0 auto;}
     .ft-menu a {padding:0 10px;}
@@ -206,7 +235,7 @@
     #trigger {
         position:absolute; left:30px; top:18px;
         width:30px; height:20px;
-        z-index:9;
+        z-index:99;
     }
     #trigger span {
         position:absolute;  width:100%; height:2px;
@@ -223,7 +252,7 @@
          padding-top:150px; 
          text-align:center; 
         background:rgba(15, 24, 54);opacity:0;
-        transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in; z-index:95;
         }
     #main-menu > li > a { padding:20px; font-size:24px; pointer-events: none; }
     #main-menu > li > a:hover { color: rgb(99, 137, 255); }
@@ -235,20 +264,28 @@
      .top-menu.tabmenu{right:30px; opacity:1;}
      .sub-menu{ 
         display:none;
-        height:250px; padding:30px 0;
+        height:300px; padding:30px 0;
         background:rgba(11, 20, 49, 0.4);
         box-shadow:0 0 20px rgba(0,0,0,0.3)inset;
     }
-    .sub-menu-info-wrap{display:flex;  justify-content:center; }
+    .sub-menu-info-wrap{display:flex;  justify-content:center; flex-wrap: wrap;}
+     .sub-menu-info:last-child{display: flex;}
     .sub-menu-title{display:none;}
-    .sub-menu-info a{padding:20px 30px;font-size:18px;  text-align:center;  transition:all 0.3s }
+    .sub-menu-info a{width:200px; padding:20px 30px; font-size:18px;  text-align:center;  transition:all 0.3s }
 
     .top-menu {display: flex;  position:absolute; right:0; top:0; opacity:0; transition:all 0.3s ease-in;}
     .top-menu a{ padding-left:15px; font-size:30px; }
 
-    .banner { display: flex; justify-content: center; align-items: center; height:100vh; color:#f6f6f6;  text-align:center; }
-    h2 { font-size: 54px;  line-height:50px; }
+    .banner { display: flex; justify-content: center; align-items: center; height:100vh;}
+    h2 { font-size: 54px; line-height:50px; }
     .banner p {  font-size: 16px; }
+
+    .bbox30 {position:absolute; left:0; top:0;
+    background:#000; opacity:30%; z-index:-1;}
+    .b-box1 { width:100%; height:600px;}
+    .b-box2 { left:-125px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
+    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35deg);}
+    .b-box4 { left:485px; top:-35px; width:1930px; height:500px; transform:rotate(60deg);}
     
     section { width:350px; margin:0 auto; }
 
@@ -265,8 +302,8 @@
         background:#6389ff; color:#f1f1e6;
     }
 
-    footer{height:420px; background:#313236; font-size:14px;}
-    .ft-wrap{text-align:center; padding-top:30px;}
+    footer{height:420px; margin-top:50px; background:#313236; font-size:14px;}
+    .ft-wrap{text-align:center; padding-top:50px;}
     .ft-info-wrap {display:flex; justify-content:center; flex-wrap:wrap; overflow:hidden;}
     .ft-menu, .ft-sns{display:flex; justify-content:center; margin:0 auto;}
     .ft-menu a {padding:0 5px;}

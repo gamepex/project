@@ -29,5 +29,25 @@ footer의 회사정보 스타일 적용 문제로 div로 이름 부여해서 묶
 -----------9월 26일---------------------9월 26일---------------------9월 26일----------
 
 
+z-index 95 아래로 사용 해주시기 바랍니다.
+
+
+
+[10월 13일 수정사항]
+
+- 개인 html에 banner 바로 밑에 div 박스 4개 복사해서 붙여넣기 해주세요
+	(태블릿과 모바일버전은 수정 예정)
+- 초기 화면 구성은 동일하게 설정하고, 나중에 tranform:rotate 이용해서 각자 시안에 맞게 다시 배치하면 될 것 같습니다. 
+
+<div class="banner">
+        <div class="b-box1 bbox30"></div>
+        <div class="b-box2 bbox30"></div>
+        <div class="b-box3 bbox30"></div>
+        <div class="b-box4 bbox30"></div>
+        <div class="main-title">
+
+++ video 삽입하실 때, 클래스명 content 지정 부탁드립니다.
+
+
 
 

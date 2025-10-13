@@ -14,8 +14,6 @@ section h3 span { display: inline; }
 }
 
 @media screen and (min-width:1400px) {
-    .banner{ background:url("../assets/vr/vr-img-banner-fhd.jpg") no-repeat center center; }
-
     .vr-why { display: flex; align-items: center; }
     .vr-why-video { width: 900px; height: 500px; }
     .vr-why-script { width: 300px; margin-left: 62px; line-height: 34px; } /* line-height 왜넣었지? */
@@ -46,8 +44,6 @@ section h3 span { display: inline; }
     
 }
 @media screen and (min-width:1050px) and (max-width:1399px) {
-    .banner{ background:url("../assets/vr/vr-img-banner-fhd.jpg") no-repeat center center; }
-
     .vr-why { display: flex; align-items: center; }
     .vr-why-video { width: 900px; height: 500px; }
     .vr-why-script { width: 372px; margin-left: 40px; line-height: 30px; } /* line-height 왜넣었지? */
@@ -80,7 +76,6 @@ section h3 span { display: inline; }
     body { background-color: rgb(67, 66, 66)}
 }
 @media screen and (min-width:750px) and (max-width:1049px){
-    .banner{ background:url("../assets/vr/vr-img-banner-tab.jpg") no-repeat center center; }
     .line-break { display: block; }
 
     .vr-why-video { width: 750px; height: 415px; }
@@ -115,7 +110,6 @@ section h3 span { display: inline; }
 }
 @media screen and (max-width:749px) {
     main { text-align: center; }
-    .banner{ background:url("../assets/vr/vr-img-banner-ph.jpg") no-repeat center center; }
     h2 { width: 380px; }
     h4 { display: inline-block; margin-top: 20px; line-height: 24px; }
 
