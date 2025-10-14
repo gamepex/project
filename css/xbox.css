@@ -4,6 +4,12 @@
 
 h5 {font-size:24px; text-transform:uppercase;}
 
+.xb-ygrn-bar {
+    width:100px; height:10px;
+    background:#d3d369;
+    border-radius:4px 0 4px 0;
+    transform:skew(-30deg);
+}
 
 @media screen and (min-width:1400px) {
 /* ===== 서브 1 시리즈 x ===== */
@@ -12,7 +18,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-cs-bg1{
     position:absolute; left:0; top:0;
     width:60%; height:100%;
-    background:#a1a1a1 url(../assets/xbox/imgs/dt/xb-cs-dt-bg1.jpg) no-repeat right center;
+    background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-dt-bg1.jpg) no-repeat right center;
     border-radius:0 0 100px 0;
 }
 .xb-cs-back-b {
@@ -31,13 +37,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-cs-front-b h4 {
     position:absolute; left:32%; top:9%; width:150px; 
 }
-.xb-ygrn-bar {
-    position:absolute; left:38%; top:36%;
-    width:100px; height:10px;
-    background:#d3d369;
-    border-radius:4px 0 4px 0;
-    transform:skew(-30deg);
-}
+.xb-con-ygrn-bar1 {position:absolute; left:38%; top:36%;}
 .xb-cs-front-b h5 {
     position:absolute; left:0; top:48%;
     width:100%; text-transform:capitalize;
@@ -56,7 +56,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-cs-bg2{
     position:absolute; right:0;
     width:60%; height:100%;
-    background:#a1a1a1 url(../assets/xbox/imgs/dt/xb-cs-dt-bg2.jpg) no-repeat left center;
+    background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-dt-bg2.jpg) no-repeat left center;
     border-radius:100px 0 0 0;
 }
 .xb-cs-back-b2 {
@@ -78,6 +78,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-cs-front-b2 h5 {
     position:absolute; right:0; top:48%; width:100%; text-transform:capitalize;
 }
+.xb-con-ygrn-bar2 {position:absolute; right:38%; top:36%;}
 .xb-cs-front-b2 a {position:absolute; left:32%; top:68%;}
 
 .xb-cs-front-b2 p {
@@ -97,127 +98,111 @@ h5 {font-size:24px; text-transform:uppercase;}
     border-radius:30px;
 }
 .xb-acc-slide li:first-child {
-    background:url(../assets/xbox/imgs/dt/xb-acc-controllers.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-controllers.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(2) {
-    background:url(../assets/xbox/imgs/dt/xb-acc-consolewraps.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-consolewraps.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(3){
-    background:url(../assets/xbox/imgs/dt/xb-acc-chager.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-chager.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(4){
-    background:url(../assets/xbox/imgs/dt/xb-acc-headsets.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-headsets.jpg) no-repeat center center;
 }
 .xb-acc-slide li:last-child{
-    background:url(../assets/xbox/imgs/dt/xb-acc-storage.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-storage.jpg) no-repeat center center;
 }
 
 
 /* ===== 서브3 DTD 박스===== */
 .xb-rent-container {width:100%; height:500px;}
-.xb-rent-wrap {flex-wrap:wrap;}
-.xb-rent-bg1 {
-    width:84%; height:500px;
+.xb-rent-wrap {
+    display:flex; justify-content:center; text-align:center;
+    width:84%; height:100%;
     background:rgba(99, 137, 255, 0.5);
     border-radius:0 0 100px 0;
+} 
+
+.xb-rent-arti {width:200px; height:200px; text-align:center;}
+.xb-rent-arti h4 {
+    flex-wrap:wrap; width:186px; margin:85px auto 0; line-height:36px;
 }
-.xb-rent-cd > div {
-    width:300px; height:400px; margin:0 25px;
+.xb-rent-arti h5 {margin:25px auto;}
+.xb-rent-ygrn-bar1 {margin:0 auto;}
+
+.xb-rent-bg {
+    width:300px; height:400px; margin:50px 25px;
     text-align:center; line-height:398px;
-    border-radius:30px;
+    border-radius:30px; transition:all 0.4s ease-out;
 }
-.xb-rent-dtd-menu li:first-child {
-    position:absolute; left:16%; top:50px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+.xb-rent-bg1 {
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center; 
 }
-.xb-rent-dtd-menu li:nth-child(2) {
-    position:absolute; left:34.5%; top:50px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
+.xb-rent-bg2 {
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
 }
-.xb-rent-dtd-menu li:last-child {
-    position:absolute; left:53%; top:50px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
+.xb-rent-bg3 {
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
     border-radius:30px 30px 100px 30px;
 }
-.xb-rent-cd li a { position:absolute; left:25%; top:77%;}
+.xb-rent-bg > a {margin:0 auto;}
 
-.xb-rent-arti {
-    position:absolute; top:50px;
-    width:200px; height:200px;
-    text-align:center;
-}
-.xb-dtd-art1 h4{
-    flex-wrap:wrap; margin:25px 5px 0; text-align:center; line-height:36px;
-}
-.xb-dtd-art1, .xb-dtd-art2 {left:72.3%; margin:0 50px 0 0;}
 
-.xb-rent-dtd-menu li:first-child:hover {
-    transform: scale(108%);
-    color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+.xb-rent-bg1:hover {
+    color:#6389ff; background:url(../img/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+    box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;transform: scale(104%);
+}
+.xb-rent-bg2:hover {
+    color:#6389ff; background:url(../img/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
+    transform: scale(104%);
 }
-.xb-rent-dtd-menu li:first-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
-
-.xb-rent-dtd-menu li:nth-child(2):hover {
-    transform: scale(108%);
-    color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
+.xb-rent-bg3:hover {
+    color:#6389ff; background:url(../img/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
+    transform: scale(104%);
 }
-.xb-rent-dtd-menu li:nth-child(2):hover a {display:block; color:#f6f6f6; background: #6389ff;}
-
-.xb-rent-dtd-menu li:last-child:hover {
-    transform: scale(108%);
-    color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
-    box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
-}
-.xb-rent-dtd-menu li:last-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
-
 
 
 /* ===== 서브 3 DELI 박스 =====*/
 .xb-rent-container2 {position:relative; width:100%; height:500px;}
 
-.xb-rent-bg2 {
+/* .xb-rent-bg2 {
     position:absolute; right:0;
     width:84%; height:600px;
     background:rgba(211, 211, 105, 0.5);
     border-radius:100px 0 0 0;
-}
+} */
 .xb-deli-art1, .xb-deli-art2 {right:72%;} 
+.xb-rent-ygrn-bar2 {margin:0 auto;}
 
-.xb-rent-deli-menu li:first-child {
-    position:absolute; right:52.7%; top:50px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
+.xb-rent-bg4 {
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
     border-radius:100px 30px 30px 30px;
 }
-.xb-rent-deli-menu li:nth-child(2) {
-    position:absolute; right:34.4%; top:50px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
+.xb-rent-bg5 {
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
 }
-.xb-rent-deli-menu li:last-child {
-    position:absolute; right:16.2%; top:50px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
+.xb-rent-bg6 {
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
 }
 .xb-deli-art1 h4 {margin-top:50px;}
 
 /* ===== 서브 3 DTD/Deli 카드 공통 적용 ===== */
 
-.xb-dtd-art1 h5, .xb-deli-art1 h5 {margin:20px 0;}
+/* .xb-dtd-art1 h5, .xb-deli-art1 h5 {margin:20px 0;}
 .xb-dtd-art2, .xb-deli-art2 {margin-top:200px;}
 .xb-dtd-art2 p:nth-child(3), .xb-deli-art2 p:nth-child(3) {margin-top:25px;}
 .xb-dtd-art1 .xb-ygrn-bar, .xb-deli-art1 .xb-ygrn-bar {
     position:absolute; left:0; top:0;
     margin:170px 50px 0;
-}
+} */
 
 
 .xb-rent-deli-menu li:first-child:hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:first-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -225,14 +210,14 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-rent-deli-menu li:nth-child(2):hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:nth-child(2):hover a {display:block; color:#f6f6f6; background: #6389ff;}
 
 .xb-rent-deli-menu li:last-child:hover{
     transform: scale(108%); color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:last-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -292,7 +277,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-cs-bg1{
     position:absolute; left:0; top:0;
     width:56%; height:100%;
-    background:#a1a1a1 url(../assets/xbox/imgs/dt/xb-cs-tb-bg1.jpg) no-repeat right center;
+    background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-tb-bg1.jpg) no-repeat right center;
     border-radius:0 0 100px 0;
 }
 .xb-cs-back-b {
@@ -335,7 +320,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-cs-bg2{
     position:absolute; right:0;
     width:56%; height:100%;
-    background:#a1a1a1 url(../assets/xbox/imgs/dt/xb-cs-dt-bg2.jpg) no-repeat left center;
+    background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-dt-bg2.jpg) no-repeat left center;
     border-radius:100px 0 0 0;
 }
 .xb-cs-back-b2 {
@@ -375,19 +360,19 @@ h5 {font-size:24px; text-transform:uppercase;}
     border-radius:30px;
 }
 .xb-acc-slide li:first-child {
-    background:url(../assets/xbox/imgs/dt/xb-acc-controllers.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-controllers.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(2) {
-    background:url(../assets/xbox/imgs/dt/xb-acc-consolewraps.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-consolewraps.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(3){
-    background:url(../assets/xbox/imgs/dt/xb-acc-chager.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-chager.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(4){
-    background:url(../assets/xbox/imgs/dt/xb-acc-headsets.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-headsets.jpg) no-repeat center center;
 }
 .xb-acc-slide li:last-child{
-    background:url(../assets/xbox/imgs/dt/xb-acc-storage.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-storage.jpg) no-repeat center center;
 }
 
 /* ===== 서브3 DTD 박스===== */
@@ -407,15 +392,15 @@ h5 {font-size:24px; text-transform:uppercase;}
 }
 .xb-rent-dtd-menu li:first-child {
     position:absolute; left:2%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
 }
 .xb-rent-dtd-menu li:nth-child(2) {
     position:absolute; left:35%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
 }
 .xb-rent-dtd-menu li:last-child {
     position:absolute; left:68%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
     border-radius:30px 30px 100px 30px;
 }
 .xb-rent-cd li a {position:absolute; left:26%; top:77%;}
@@ -432,7 +417,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:first-child:hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:first-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -440,7 +425,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:nth-child(2):hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:nth-child(2):hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -448,7 +433,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:last-child:hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:last-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -467,16 +452,16 @@ h5 {font-size:24px; text-transform:uppercase;}
 
 .xb-rent-deli-menu li:first-child {
     position:absolute; right:68%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
     border-radius:100px 30px 30px 30px;
 }
 .xb-rent-deli-menu li:nth-child(2) {
     position:absolute; right:35%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
 }
 .xb-rent-deli-menu li:last-child {
     position:absolute; right:2%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
 }
 
 .xb-deli-art1 {position:absolute; left:0%;}
@@ -497,7 +482,7 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-rent-deli-menu li:first-child:hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:first-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -505,14 +490,14 @@ h5 {font-size:24px; text-transform:uppercase;}
 .xb-rent-deli-menu li:nth-child(2):hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:nth-child(2):hover a {display:block; color:#f6f6f6; background: #6389ff;}
 
 .xb-rent-deli-menu li:last-child:hover{
     transform: scale(108%); color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:last-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -570,7 +555,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-cs-bg1{
     position:absolute;
     width:100%; height:100%;
-    background:#a1a1a1 url(../assets/xbox/imgs/dt/xb-cs-tb-bg1.jpg) no-repeat right center;
+    background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-tb-bg1.jpg) no-repeat right center;
     border-radius:0 0 100px 0;
 }
 .xb-cs-back-b {
@@ -612,7 +597,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-cs-bg2{
     position:absolute; right:0;
     width:100%; height:100%;
-    background:#a1a1a1 url(../assets/xbox/imgs/dt/xb-cs-dt-bg2.jpg) no-repeat left center;
+    background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-dt-bg2.jpg) no-repeat left center;
     border-radius:100px 0 0 0;
 }
 .xb-cs-back-b2 {
@@ -651,19 +636,19 @@ h5 {font-size:16px; text-transform:uppercase;}
     border-radius:30px;
 }
 .xb-acc-slide li:first-child {
-    background:url(../assets/xbox/imgs/dt/xb-acc-controllers.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-controllers.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(2) {
-    background:url(../assets/xbox/imgs/dt/xb-acc-consolewraps.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-consolewraps.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(3){
-    background:url(../assets/xbox/imgs/dt/xb-acc-chager.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-chager.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(4){
-    background:url(../assets/xbox/imgs/dt/xb-acc-headsets.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-headsets.jpg) no-repeat center center;
 }
 .xb-acc-slide li:last-child{
-    background:url(../assets/xbox/imgs/dt/xb-acc-storage.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-storage.jpg) no-repeat center center;
 }
 
 /* ===== 서브3 DTD 박스===== */
@@ -683,15 +668,15 @@ h5 {font-size:16px; text-transform:uppercase;}
 }
 .xb-rent-dtd-menu li:first-child {
     position:absolute; left:17.5px; top:35px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
 }
 .xb-rent-dtd-menu li:nth-child(2) {
     position:absolute; left:8%; top:52%; margin-bottom:35px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
 }
 .xb-rent-dtd-menu li:last-child {
     position:absolute; left:53%; top:52%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
     border-radius:30px 30px 100px 30px;
 }
 .xb-rent-cd li a { position:absolute; left:30%; top:77%;}
@@ -706,7 +691,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:first-child:hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:first-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -714,7 +699,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:nth-child(2):hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:nth-child(2):hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -722,7 +707,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:last-child:hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:last-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -742,16 +727,16 @@ h5 {font-size:16px; text-transform:uppercase;}
 
 .xb-rent-deli-menu li:first-child {
     position:absolute; right:0%; top:35px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
     border-radius:100px 30px 30px 30px;
 }
 .xb-rent-deli-menu li:nth-child(2) {
     position:absolute; right:51.5%; top:46.8%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
 }
 .xb-rent-deli-menu li:last-child {
     position:absolute; right:5%; top:46.8%;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
 }
 
 /* ===== 서브 3 DTD/Deli 카드 공통 적용 ===== */
@@ -766,7 +751,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-deli-menu li:first-child:hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:first-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -774,14 +759,14 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-deli-menu li:nth-child(2):hover {
     transform: scale(108%);
     color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:nth-child(2):hover a {display:block; color:#f6f6f6; background: #6389ff;}
 
 .xb-rent-deli-menu li:last-child:hover{
     transform: scale(108%); color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:last-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -845,7 +830,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-cs-bg1{
     position:absolute;
     width:100%; height:100%;
-    background:#a1a1a1 url(../assets/xbox/imgs/dt/xb-cs-tb-bg1.jpg) no-repeat right center;
+    background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-tb-bg1.jpg) no-repeat right center;
     border-radius:0 0 100px 0;
 }
 .xb-cs-back-b {
@@ -890,7 +875,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-cs-bg2{
     position:absolute; right:0;
     width:100%; height:100%;
-    background:#a1a1a1 url(../assets/xbox/imgs/dt/xb-cs-tb-bg2.jpg) no-repeat left center;
+    background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-tb-bg2.jpg) no-repeat left center;
     border-radius:100px 0 0 0;
 }
 .xb-cs-back-b2 {
@@ -933,19 +918,19 @@ h5 {font-size:16px; text-transform:uppercase;}
     border-radius:30px;
 }
 .xb-acc-slide li:first-child {
-    background:url(../assets/xbox/imgs/dt/xb-acc-controllers.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-controllers.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(2) {
-    background:url(../assets/xbox/imgs/dt/xb-acc-consolewraps.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-consolewraps.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(3){
-    background:url(../assets/xbox/imgs/dt/xb-acc-chager.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-chager.jpg) no-repeat center center;
 }
 .xb-acc-slide li:nth-child(4){
-    background:url(../assets/xbox/imgs/dt/xb-acc-headsets.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-headsets.jpg) no-repeat center center;
 }
 .xb-acc-slide li:last-child{
-    background:url(../assets/xbox/imgs/dt/xb-acc-storage.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-acc-storage.jpg) no-repeat center center;
 }
 
 /* ===== 서브3 DTD 박스===== */
@@ -969,15 +954,15 @@ h5 {font-size:16px; text-transform:uppercase;}
 }
 .xb-rent-dtd-menu li:first-child {
     top:185px; width:300px; height:400px; margin:0 auto;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
 }
 .xb-rent-dtd-menu li:nth-child(2) {
     top:610px; margin:0 auto;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
 }
 .xb-rent-dtd-menu li:last-child {
     top:1035px; margin:0 auto;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
     border-radius:30px 30px 100px 30px;
 }
 .xb-rent-cd li a { display:none; position:absolute; left:34%; top:77%;}
@@ -995,7 +980,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:first-child:hover {
     transform: scale(108%);
     font-size:28px; color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-1.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:first-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -1003,7 +988,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:nth-child(2):hover {
     transform: scale(108%);
     font-size:28px; color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-2.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:nth-child(2):hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -1011,7 +996,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-dtd-menu li:last-child:hover {
     transform: scale(108%);
     font-size:28px; color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-dtd-3.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-dtd-menu li:last-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -1032,16 +1017,16 @@ h5 {font-size:16px; text-transform:uppercase;}
 
 .xb-rent-deli-menu li:first-child {
     position:absolute; top:185px; width:100%; margin:0 auto;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
     border-radius:100px 30px 30px 30px;
 }
 .xb-rent-deli-menu li:nth-child(2) {
     position:absolute; top:610px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-2.jpg) no-repeat center center;
 }
 .xb-rent-deli-menu li:last-child {
     position:absolute; top:1035px;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
 }
 .xb-dtd-art1 h4, .xb-deli-art1 h4 {line-height:30px;}
 .xb-dtd-art1 h5, .xb-deli-art1 h5 {margin:20px;}
@@ -1055,7 +1040,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-deli-menu li:first-child:hover {
     transform:scale(108%);
     font-size:28px; color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-1.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:first-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -1063,7 +1048,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-deli-menu li:nth-child(2):hover {
     transform: scale(108%);
     font-size:28px; color:#6389ff;
-    background:url(../assets/xbox/imgs/dt//xb-rent-deli-2.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt//xb-rent-deli-2.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:nth-child(2):hover a {display:block; color:#f6f6f6; background: #6389ff;}
@@ -1071,7 +1056,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-deli-menu li:last-child:hover{
     transform: scale(108%);
     font-size:28px; color:#6389ff;
-    background:url(../assets/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
+    background:url(../img/xbox/imgs/dt/xb-rent-deli-3.jpg) no-repeat center center;
     box-shadow:500px 500px 3px rgba(255,255,255,0.6) inset;
 }
 .xb-rent-deli-menu li:last-child:hover a {display:block; color:#f6f6f6; background: #6389ff;}

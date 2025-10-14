@@ -26,19 +26,19 @@ section h3 span { display: inline; }
     .vr-img-vrchat, .vr-img-beat { width: 750px; height: 250px; border-radius: 10px; }
     .vr-vrchat-script, .vr-beat-script { width: 550px; text-align: center; }
     .vr-vrchat-script p:first-of-type, .vr-beat-script p:first-of-type { margin-top: 40px; }
-    .vr-img-vrchat { background: url(../assets/vr/vr-img-vrchat-fhd.jpg) no-repeat center center; }
-    .vr-img-beat { background: url(../assets/vr/vr-img-beat-fhd.jpg) no-repeat center center; }
+    .vr-img-vrchat { background: url(../img/vr/vr-img-vrchat-fhd.jpg) no-repeat center center; }
+    .vr-img-beat { background: url(../img/vr/vr-img-beat-fhd.jpg) no-repeat center center; }
     .vr-beat { margin-top: 50px; }
     .vr-beat-script p { width: 300px; margin: 0 auto; }
-    .vr-img-long_bar { width: 240px; height: 2px; margin: 50px auto 0; background: url(../assets/vr/vr-img-long_bar-fhd.jpg) no-repeat center center;  background-size: cover;}
+    .vr-img-long_bar { width: 240px; height: 2px; margin: 50px auto 0; background: url(../img/vr/vr-img-long_bar-fhd.jpg) no-repeat center center;  background-size: cover;}
     .vr-etc { display: flex; align-items: center; width: 1050px; height: 80px; background: #737892; margin:50px auto 0; border-radius: 10px; text-align: center; }
 
     .vr-carousel-wrap { height: 600px; }
     .vr-carousel-track article { width: 1000px; text-align: center;}
     .vr-carousel-track div { width: 100%; height: 300px; margin: 50px auto 0; border-radius: 10px; }
-    .vr-img-glasses{ background: url(../assets/vr/vr-img-glasses-fhd.jpg); }
-    .vr-img-hardware{ background: url(../assets/vr/vr-img-hardware-fhd.jpg); }
-    .vr-img-games{ background: url(../assets/vr/vr-img-games-fhd.jpg); }
+    .vr-img-glasses{ background: url(../img/vr/vr-img-glasses-fhd.jpg); }
+    .vr-img-hardware{ background: url(../img/vr/vr-img-hardware-fhd.jpg); }
+    .vr-img-games{ background: url(../img/vr/vr-img-games-fhd.jpg); }
     .vr-carousel-wrap h4 { margin-top: 50px; }
     .vr-carousel-wrap p:first-of-type { margin-top: 40px; }
     
@@ -56,19 +56,19 @@ section h3 span { display: inline; }
     .vr-img-vrchat, .vr-img-beat { width: 550px; height: 250px; border-radius: 10px; }
     .vr-vrchat-script, .vr-beat-script { width: 450px; text-align: center; }
     .vr-vrchat-script p:first-of-type, .vr-beat-script p:first-of-type { margin-top: 30px; }
-    .vr-img-vrchat { background: url(../assets/vr/vr-img-vrchat-fhd.jpg) no-repeat center center; }
-    .vr-img-beat { background: url(../assets/vr/vr-img-beat-fhd.jpg) no-repeat center center; }
+    .vr-img-vrchat { background: url(../img/vr/vr-img-vrchat-fhd.jpg) no-repeat center center; }
+    .vr-img-beat { background: url(../img/vr/vr-img-beat-fhd.jpg) no-repeat center center; }
     .vr-beat { margin-top: 50px; }
     .vr-beat-script p { width: 300px; margin: 0 auto; }
-    .vr-img-long_bar { width: 240px; height: 2px; margin: 50px auto 0; background: url(../assets/vr/vr-img-long_bar-fhd.jpg) no-repeat center center;  background-size: cover;}
+    .vr-img-long_bar { width: 240px; height: 2px; margin: 50px auto 0; background: url(../img/vr/vr-img-long_bar-fhd.jpg) no-repeat center center;  background-size: cover;}
     .vr-etc { display: flex; align-items: center; width: 1000px; height: 80px; background: #737892; margin:50px auto 0; border-radius: 10px; text-align: center; }
 
     .vr-carousel-wrap { height: 600px; }
     .vr-carousel-track article { width: 1000px; text-align: center;}
     .vr-carousel-track div { width: 100%; height: 300px; margin: 50px auto 0; border-radius: 10px; }
-    .vr-img-glasses{ background: url(../assets/vr/vr-img-glasses-fhd.jpg); }
-    .vr-img-hardware{ background: url(../assets/vr/vr-img-hardware-fhd.jpg); }
-    .vr-img-games{ background: url(../assets/vr/vr-img-games-fhd.jpg); }
+    .vr-img-glasses{ background: url(../img/vr/vr-img-glasses-fhd.jpg); }
+    .vr-img-hardware{ background: url(../img/vr/vr-img-hardware-fhd.jpg); }
+    .vr-img-games{ background: url(../img/vr/vr-img-games-fhd.jpg); }
     .vr-carousel-wrap h4 { margin-top: 50px; }
     .vr-carousel-wrap p:first-of-type { margin-top: 40px; }
 
@@ -84,23 +84,23 @@ section h3 span { display: inline; }
     .vr-why-script h4+p { margin-top: 20px; }
     .vr-why-script .more-btn { margin: 20px auto 0; }
 
-    .vr-games { display: flex; text-align: center; }
+    .vr-games { display: flex; justify-content: space-between; text-align: center; }
     .vr-img-vrchat, .vr-img-beat { width: 350px; height: 400px; border-radius: 10px; }
     .vr-vrchat-script, .vr-beat-script { margin-top: 30px; }
     .vr-vrchat-script p, .vr-beat-script p { margin: 0 auto; }
     .vr-vrchat-script p:first-of-type, .vr-beat-script p:first-of-type { margin-top: 30px; }
-    .vr-img-vrchat { background: url(../assets/vr/vr-img-vrchat-mob.jpg) no-repeat center center; }
+    .vr-img-vrchat { background: url(../img/vr/vr-img-vrchat-mob.jpg) no-repeat center center; }
     .vr-vrchat-script p { width: 350px; }
-    .vr-img-beat { background: url(../assets/vr/vr-img-beat-mob.jpg) no-repeat center center; }
+    .vr-img-beat { background: url(../img/vr/vr-img-beat-mob.jpg) no-repeat center center; }
     .vr-beat-script p { width: 280px; text-align: center; }
     .vr-etc { display: none; }
 
     .vr-carousel-wrap { height: 850px; }
     .vr-carousel-track article { width: 320px; text-align: center;}
     .vr-carousel-track div { width: 100%; height: 400px; margin: 50px auto 0; border-radius: 10px; }
-    .vr-img-glasses{ background: url(../assets/vr/vr-img-glasses-mob.jpg); }
-    .vr-img-hardware{ background: url(../assets/vr/vr-img-hardware-mob.jpg); }
-    .vr-img-games{ background: url(../assets/vr/vr-img-games-mob.jpg); }
+    .vr-img-glasses{ background: url(../img/vr/vr-img-glasses-mob.jpg); }
+    .vr-img-hardware{ background: url(../img/vr/vr-img-hardware-mob.jpg); }
+    .vr-img-games{ background: url(../img/vr/vr-img-games-mob.jpg); }
     .vr-carousel-wrap h4 { font-size: 20px; margin-top: 50px; }
     .vr-carousel-wrap p:first-of-type { margin-top: 40px; }
     .vr-carousel-wrap p span { display: block; }
@@ -115,7 +115,7 @@ section h3 span { display: inline; }
 
     .vr-why { width: 350px; }
     .vr-why-video { height: 300px; }
-    .vr-why-script { height: 300px;  background: rgba(13, 18, 48, 0.92); border-radius: 10px; }
+    .vr-why-script { height: 250px; background: rgba(13, 18, 48, 0.92); border-radius: 10px; }
     .vr-why-script span { display: block; }
     .vr-why-script h4+p { margin-top: 15px; }
     .vr-why-script .more-btn { margin: 15px auto 0; }
@@ -124,17 +124,17 @@ section h3 span { display: inline; }
     .vr-games { display: block; width: 350px; } /* 이게 왜 block으로 줄바꿈이 되는 것인지 모르겠음 */
     
     .vr-img-vrchat, .vr-img-beat {  height: 400px; border-radius: 10px; }
-    .vr-vrchat-script, .vr-beat-script { height: 200px; background: rgba(13, 18, 48, 0.92); border-radius: 10px; }
+    .vr-vrchat-script, .vr-beat-script { height: 180px; background: rgba(13, 18, 48, 0.92); border-radius: 10px; }
     .vr-vrchat-script p:first-of-type, .vr-beat-script p:first-of-type { margin-top: 15px; }
-    .vr-img-vrchat { background: url(../assets/vr/vr-img-vrchat-mob.jpg) no-repeat center center; }
-    .vr-img-beat { background: url(../assets/vr/vr-img-beat-mob.jpg) no-repeat center center; }
+    .vr-img-vrchat { background: url(../img/vr/vr-img-vrchat-mob.jpg) no-repeat center center; }
+    .vr-img-beat { background: url(../img/vr/vr-img-beat-mob.jpg) no-repeat center center; }
     .vr-beat { margin-top: 50px; }
     .vr-etc { display: none; }
 
     .vr-carousel-wrap { height: 750px; }
-    .vr-img-glasses{ background: url(../assets/vr/vr-img-glasses-mob.jpg); }
-    .vr-img-hardware{ background: url(../assets/vr/vr-img-hardware-mob.jpg); }
-    .vr-img-games{ background: url(../assets/vr/vr-img-games-mob.jpg); }
+    .vr-img-glasses{ background: url(../img/vr/vr-img-glasses-mob.jpg); }
+    .vr-img-hardware{ background: url(../img/vr/vr-img-hardware-mob.jpg); }
+    .vr-img-games{ background: url(../img/vr/vr-img-games-mob.jpg); }
     .vr-carousel-track article { width: 320px; }
     .vr-carousel-track div:first-child{ width: 100%; height: 400px; margin: 50px auto 0; border-radius: 10px; }
     .vr-carousel-track div:nth-child(2) { height: 200px; background: rgba(13, 18, 48, 0.92); border-radius: 10px; }

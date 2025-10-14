@@ -1,3 +1,16 @@
+$(function(){
+    $(window).scroll(function(){
+        var value=$(window).scrollTop();
+        if(value >=350){
+            document.querySelector('.content').pause();
+            document.querySelector(".vr-why-video video").play();
+        }else{
+            document.querySelector('.content').play();
+            document.querySelector(".vr-why-video video").pause();
+        }
+    });
+});
+
 const h2 = document.querySelector('h2')
 function ne_splitter() {
     if (!h2.innerHTML.includes('ne<br>') && window.innerWidth <= 1049 && window.innerWidth >= 750) h2.innerHTML = h2.innerHTML.replace('ne', 'ne<br>');

@@ -264,16 +264,16 @@
      .top-menu.tabmenu{right:30px; opacity:1;}
      .sub-menu{ 
         display:none;
-        height:300px; padding:30px 0;
+        height:260px; padding:10px 0;
         background:rgba(11, 20, 49, 0.4);
         box-shadow:0 0 20px rgba(0,0,0,0.3)inset;
     }
     .sub-menu-info-wrap{display:flex;  justify-content:center; flex-wrap: wrap;}
-     .sub-menu-info:last-child{display: flex;}
+    .sub-menu-info:last-child{display: flex;}
     .sub-menu-title{display:none;}
-    .sub-menu-info a{width:200px; padding:20px 30px; font-size:18px;  text-align:center;  transition:all 0.3s }
+    .sub-menu-info a{width:175px; padding:20px 35px; font-size:18px;  text-align:center;  transition:all 0.3s }
 
-    .top-menu {display: flex;  position:absolute; right:0; top:0; opacity:0; transition:all 0.3s ease-in;}
+    .top-menu {display: flex;  position:absolute; right:0; top:0; opacity:0; z-index:99; transition:all 0.3s ease-in;}
     .top-menu a{ padding-left:15px; font-size:30px; }
 
     .banner { display: flex; justify-content: center; align-items: center; height:100vh;}
