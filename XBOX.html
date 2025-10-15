@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XBOX</title>
-    <link rel="shortcut icon" href="assets/common/favicon_apex.png">
+    <link rel="shortcut icon" href="img/common/favicon_apex.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/xbox.css">
@@ -15,7 +15,8 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo"><img src="assets/common/logo.png" alt="게임펙스 로고"></a>
+            <a href="index.html" class="logo"><img src="img/common/logo.png" alt="게임펙스 로고"></a>
+            <!-- <h1>g<span class="hg-blue">-</span>p<span class="hg-ygrn">ex</span></h1> -->
             <a href="#" id="trigger">
                 <span></span>
                 <span></span>
@@ -55,16 +56,15 @@
                             <div class="sub-menu-title">
                                 <h6>xbox</h6>
                             </div>
-                             <div class="sub-menu-info-wrap">
+                            <div class="sub-menu-info-wrap">
                                 <ul class="sub-menu-info">
-                                        <li><a href="#">콘솔 비교</a> </li>
+                                        <li><a href="#">콘솔 비교</a></li>
                                         <li><a href="#">series x</a></li>
                                         <li><a href="#">series s</a></li>
                                 </ul> 
                                 <ul class="sub-menu-info">
                                         <li><a href="#">악세사리</a> </li>
                                         <li><a href="#">세일&특가</a></li>
-                                        <li><a href="#">faq</a></li>
                                 </ul> 
                                 <ul class="sub-menu-info">
                                         <li><a href="#">방문 대여</a></li>
@@ -163,6 +163,9 @@
 
     <!-- 배너는 배너안에서만 쓰는 클래스명을 줘야 한다. 아래 본문 내용에도 영향을 미치는 클래스 명을 주면 안된다. 공통 스타일시트 적용할 부분이기 때문에.  -->
     <div class="banner">
+        <video class="content" autoplay loop muted preload="auto">
+            <source src="video/xbox/bn_vid.mp4"/>
+        </video>
         <div class="b-box1 bbox30"></div>
         <div class="b-box2 bbox30"></div>
         <div class="b-box3 bbox30"></div>
@@ -171,10 +174,6 @@
         <h2><span class="hg-blue">n</span>ext <span class="hg-ygrn">gen</span> <span class="hg-blue">s</span>tarts <span class="hg-blue">h</span>ere</h2>
         <p>새로운 <span class="hg-blue">세대</span>를 지금 <span class="hg-ygrn">여기</span>서 만나보세요</p>
         </div>
-
-        <video class="content" autoplay loop muted preload="auto">
-            <source src="assets/xbox/imgs/dt/xb-bn-vid.mp4"/>
-        </video>
     </div>
 
    <!-- 서브 1 -->
@@ -190,7 +189,7 @@
             <h4>xbox series x</h4>
             <div class="xb-ygrn-bar xb-con-ygrn-bar1"></div>
             <h5>jump in</h5>
-            <a class="more-btn" href="#">more</a>
+            <a href="#" class="more-btn">more</a>
             <p>이용 가능 여부는 대여점에 따라 다를 수 있습니다.</p>
         </div>
     </div>
@@ -202,7 +201,7 @@
             <h4>xbox series s</h4>
             <div class="xb-ygrn-bar xb-con-ygrn-bar2"></div>
             <h5>reasonable</h5>
-            <a class="more-btn" href="#">more</a>
+            <a href="#" class="more-btn">more</a>
             <p>이용 가능 여부는 대여점에 따라 다를 수 있습니다.</p>
         </div>
     </div>
@@ -229,39 +228,37 @@
     </div>
     <!-- DTD 박스 -->
     <div class="xb-rent-container">
-        <div class="xb-rent-wrap">
-            <div>
-                <div class="xb-rent-arti">
-                    <h4>dtd rental</h4>
-                    <h5>방문 대여</h5>
-                    <div class="xb-ygrn-bar xb-rent-ygrn-bar1"></div>
-                </div>
-                <div class="xb-rent-arti xb-dtd-art2">
-                    <p>온라인에서</p>
-                    <p>사전 예약 물품을</p>
-                    <p>직접 방문 수령하거나</p>
-                    <p>현장에서</p>
-                    <p>직접 대여해 보세요!</p>
-                </div>
+        <div>
+            <div class="xb-rent-arti">
+                <h4>dtd rental</h4>
+                <h5>방문 대여</h5>
+                <div class="xb-ygrn-bar xb-rent-ygrn-bar1"></div>
             </div>
-            <div class="xb-rent-bg xb-rent-bg1">
-                <h5>사전 예약</h5>
-                <a class="more-btn" href="#">more</a>
+            <div class="xb-rent-arti xb-dtd-art2">
+                <p>온라인에서</p>
+                <p>사전 예약 물품을</p>
+                <p>직접 방문 수령하거나</p>
+                <p>현장에서</p>
+                <p>직접 대여해 보세요!</p>
             </div>
-            <div class="xb-rent-bg xb-rent-bg2">
-                <h5>현장 대여</h5>
-                <a class="more-btn" href="#">more</a>
-            </div>
-            <div class="xb-rent-bg xb-rent-bg3">
-                <h5>이용 안내</h5>
-                <a class="more-btn" href="#">more</a>
-            </div>
+        </div>
+        <div class="xb-rent-bg xb-rent-bg1">
+            <h5>사전 예약</h5>
+            <a href="#" class="more-btn xb-rent-btn" >more</a>
+        </div>
+        <div class="xb-rent-bg xb-rent-bg2">
+            <h5>현장 대여</h5>
+            <a href="#" class="more-btn xb-rent-btn">more</a>
+        </div>
+        <div class="xb-rent-bg xb-rent-bg3">
+            <h5>이용 안내</h5>
+            <a href="#" class="more-btn xb-rent-btn">more</a>
         </div>
     </div>
 
 
         <!-- 서브 4 -->
-    <div class="xb-loca-wrap">
+    <div class="xb-loca-container">
         <div class="xb-loca-bg">
             <div class="xb-loca-sm-ellip xb-loca-sm1"><a href="#">성남모란역점</a></div>
             <div class="xb-loca-sm-ellip xb-loca-sm2"><a href="#">분당미금역점</a></div>
@@ -276,31 +273,32 @@
 
    <!-- DELI 박스 -->
     <div class="xb-rent-container2">
-        <div class="xb-rent-bg2"></div>
-        <div class="xb-rent-arti xb-deli-art1">
-            <h4>delivery</h4>
-            <h5>택배 서비스</h5>
-            <div class="xb-ygrn-bar xb-rent-ygrn-bar2"></div>
-        </div>
-        <div class="xb-rent-arti xb-deli-art2">
-            <p>온라인으로</p>
-            <p>예약하고</p>
-            <p>택배 서비스로</p>
-            <p>가정에서</p>
-            <p>편리하게 받아보세요!</p>
-        </div>
-        <div class="xb-rent-bg xb-rent-bg4">
-            <h5>신청 방법</h5>
-            <a class="more-btn" href="#">more</a>
-        </div>
-        <div class="xb-rent-bg xb-rent-bg5">
-            <h5>반납 방법</h5>
-            <a class="more-btn" href="#">more</a>
-        </div>
-        <div class="xb-rent-bg xb-rent-bg6">
-            <h5>유의 사항</h5>
-            <a class="more-btn" href="#">more</a>
-        </div>
+            <div>
+                <div class="xb-rent-arti xb-deli-art1">
+                    <h4>delivery</h4>
+                    <h5>택배 서비스</h5>
+                    <div class="xb-ygrn-bar xb-rent-ygrn-bar2"></div>
+                </div>
+                <div class="xb-rent-arti xb-deli-art2">
+                    <p>온라인으로</p>
+                    <p>예약하고</p>
+                    <p>택배 서비스로</p>
+                    <p>가정에서</p>
+                    <p>편리하게 받아보세요!</p>
+                </div>
+            </div>
+            <div class="xb-rent-bg xb-rent-bg4">
+                <h5>신청 방법</h5>
+                <a href="#" class="more-btn xb-rent-btn">more</a>
+            </div>
+            <div class="xb-rent-bg xb-rent-bg5">
+                <h5>반납 방법</h5>
+                <a href="#" class="more-btn xb-rent-btn">more</a>
+            </div>
+            <div class="xb-rent-bg xb-rent-bg6">
+                <h5>유의 사항</h5>
+                <a href="#" class="more-btn xb-rent-btn">more</a>
+            </div>
     </div>
 
     <footer>

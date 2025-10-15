@@ -10,6 +10,8 @@
     width:100%; height:100%;
     object-fit:cover; z-index:-999;
     }
+    .bbox30 {position:absolute; left:0; top:0;
+    background:#000; opacity:30%; z-index:-1;}
 
 
 @media screen and (min-width:1400px) {
@@ -26,7 +28,7 @@
    
      .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.9); }
      .sub-menu-wrap{ display:flex;  width:1300px; height:300px; margin:0 auto; background:rgba(17, 26, 68, 0.9); }
-     .sub-menu-title{display:flex; justify-content: center; align-items:center; width:350px; height:100%;font-size:62px;  background:rgba(0,0,0, 0.4);}
+     .sub-menu-title{display:flex; justify-content: center; align-items:center; width:350px; font-size:62px;  background:rgba(0,0,0, 0.4);}
     .sub-menu-info-wrap{
          display:flex; justify-content: center; 
         width:950px; height:300px; 
@@ -41,12 +43,10 @@
     /* ========================== */
     .banner {height:600px;}
 
-    .bbox30 {position:absolute; left:0; top:0;
-    background:#000; opacity:30%; z-index:-1;}
     .b-box1 { width:100%; height:600px;}
-    .b-box2 { left:-125px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
-    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35deg);}
-    .b-box4 { left:485px; top:-35px; width:1930px; height:500px; transform:rotate(60deg);}
+    .b-box2 { left:-205px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
+    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-36deg);}
+    .b-box4 {left:410px; top:-35px; width:1930px; height:700px; transform:rotate(-67deg);}
 
     h2 { padding-top:325px; font-size: 72px; }
     .banner p { font-size: 22px;}
@@ -111,13 +111,11 @@
     .banner { height:600px;}
     .banner p { font-size: 22px; }
 
-    .bbox30 {position:absolute; left:0; top:0;
-    background:#000; opacity:30%; z-index:-1;}
     .b-box1 { width:100%; height:600px;}
-    .b-box2 { left:-125px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
-    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35deg);}
-    .b-box4 { left:485px; top:-35px; width:1930px; height:500px; transform:rotate(60deg);}
- 
+    .b-box2 { left:-620px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
+    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35.5deg);}
+    .b-box4 {left:75px; top:-35px; width:1930px; height:450px; transform:rotate(-58deg);}
+
     .sub-title { padding:80px 0 40px; text-align: center; } /*sub-title 로 수정 */
     section { width:1000px; margin:0 auto; }
 
@@ -192,13 +190,10 @@
     .banner { height:650px;}
     .banner p {font-size: 18px;}
 
-    .bbox30 {position:absolute; left:0; top:0;
-    background:#000; opacity:30%; z-index:-1;}
-    .b-box1 { width:100%; height:600px;}
-    .b-box2 { left:-125px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
-    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35deg);}
-    .b-box4 { left:485px; top:-35px; width:1930px; height:500px; transform:rotate(60deg);}
-
+    .b-box1 { width:100%; height:650px;}
+    .b-box2 { left:-675px; top:-15px; width:1309px; height:510px; transform:rotate(57deg);}
+    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-38.5deg);}
+    .b-box4 {left:-19px; top:-35px; width:1930px; height:450px; transform:rotate(-70deg);}
     .sub-title { padding:70px 0 35px; text-align: center; }
     /* ====================================== */
     
@@ -280,12 +275,11 @@
     h2 { font-size: 54px; line-height:50px; }
     .banner p {  font-size: 16px; }
 
-    .bbox30 {position:absolute; left:0; top:0;
-    background:#000; opacity:30%; z-index:-1;}
-    .b-box1 { width:100%; height:600px;}
-    .b-box2 { left:-125px; top:-35px; width:1309px; height:500px; transform:rotate(58deg);}
-    .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35deg);}
-    .b-box4 { left:485px; top:-35px; width:1930px; height:500px; transform:rotate(60deg);}
+    
+    .b-box1 { width:100%; height:100vh;}
+    .b-box2 { left:-590px; top:300px; width:1309px; height:510px; transform:rotate(70deg);}
+    .b-box3 {left:-345px; top:-15px; width:1950px; height:800px; transform:rotate(-61deg);}
+    .b-box4 {left:-415px; top:15px; width:1930px; height:400px; transform:rotate(-80deg);}
     
     section { width:350px; margin:0 auto; }
 
