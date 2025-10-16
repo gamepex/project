@@ -9,10 +9,10 @@
 	.ps-slide li:nth-child(4)> .ps-slide-bg {border-radius:10px; background:url('../img/ps/s2.jpeg') no-repeat center center; background-size:cover;}
 	.ps-slide li:nth-child(5)> .ps-slide-bg{border-radius:10px; background:url('../img/ps/s1.jpg') no-repeat center center; background-size:cover; }
 
-@media screen and (min-width:1400px){
+     
+@media screen and (min-width:1400px){  
 .ps-slide{margin-top:50px;}
 h5 {font-size:24px; text-transform:uppercase;}
-
 .ps-duel-tabs-wrap {position:relative; height:510px;}
 .ps-duel-tabs-wrap input {display:none;}
 .ps-duel-tabs-wrap label{
@@ -86,7 +86,6 @@ input:checked +label{ background:#324274;}
 
 @media screen and (min-width:1050px) and (max-width:1399px){
     .ps-slide{margin-top:40px;}
-
     .ps-duel-tabs-wrap {position:relative; height:510px;}
      .ps-duel-tabs-wrap input {display:none;}
      .ps-duel-tabs-wrap label{

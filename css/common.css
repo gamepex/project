@@ -12,8 +12,9 @@
     }
     .bbox30 {position:absolute; left:0; top:0;
     background:#000; opacity:30%; z-index:-1;}
-
-
+    .sub-menu-ps-bg{ position:relative;  width:100%; height: 100%; border-radius:10px; background:url("../img/ps/ps5-console-bg2.jpg")no-repeat right center; background-size: cover;}
+   .sub-menu-ns-bg{ position:relative;  width:100%; height: 100%; border-radius:10px; background:url("../img/common/ns-hero_pic_oled.png")no-repeat right center; background-size: cover;}
+   
 @media screen and (min-width:1400px) {
     #trigger {display: none;}
     nav {   
@@ -23,23 +24,26 @@
     #main-menu, .top-menu {display: flex;}
     #main-menu > li > a {padding:18px 45px; text-transform: uppercase; }
     .top-menu a {padding-left:10px; font-size: 26px}
-    
     /* =====dropdown menu===== */
    
-     .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.9); }
-     .sub-menu-wrap{ display:flex;  width:1300px; height:300px; margin:0 auto; background:rgba(17, 26, 68, 0.9); }
-     .sub-menu-title{display:flex; justify-content: center; align-items:center; width:350px; font-size:62px;  background:rgba(0,0,0, 0.4);}
+    .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.85); }
+    .sub-menu-wrap{ display:flex;  width:1300px; height:300px; margin:0 auto; background:rgba(17, 26, 68, 0.75); }
+
+    .sub-menu-title{position:relative;  width:350px; font-size:62px;  border-radius:10px; background:rgba(0,0,0, 0.4);}
+    .sub-menu-title > div::before{content:""; position:absolute; left:0; top:0;width:100%; height:100%; background:rgb(0, 0, 0,0.5)}
+    .sub-menu-title > h6{position:absolute;  left:40px;  top:40%; width:280px; text-align:center;}
+
     .sub-menu-info-wrap{
          display:flex; justify-content: center; 
         width:950px; height:300px; 
         background: rgb(13, 22, 54,0.3);
         box-shadow:0 0 30px rgba(0,0,0, 0.4) inset;
     }
-    .sub-menu-info{width:33%; padding:55px 0px;  text-align:center; line-height:60px; }
-    .sub-menu-info >li > a {transition: all 0.3s ease-in;}
+    .sub-menu-info{ padding:55px 60px;  text-align:center; line-height:60px; }
+    .sub-menu-info >li > a {width:190px; transition: all 0.3s ease-in;}
+
     #main-menu > li > a:hover {color: #6389ff;}
-    .sub-menu-info > li > a:hover{color: #6389ff; border-radius:10px; box-shadow:0 0 0 30px rgba(22, 40, 94, 0.3) inset;}
-    
+    .sub-menu-info > li > a:hover{ color: #6389ff;  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.75); border-radius:10px;}
     /* ========================== */
     .banner {height:600px;}
 
@@ -93,20 +97,24 @@
         display: flex; justify-content:space-between; align-items: center;
         width: 1000px; height: 100%;margin: 0 auto;
     }
-    #main-menu, .top-menu {display: flex;}
+    #main-menu, .top-menu {display: flex; }
     #main-menu > li > a {padding:0 35px; text-transform: uppercase; }
-    .top-menu a {padding-left: 10px; font-size: 26px}
+    .top-menu a {padding:0 0 10px 10px; font-size: 26px}
 
     /* =====dropdown menu===== */
-    .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.9);  }
-    .sub-menu-wrap{ display:flex;  width:1000px; height:300px; margin:0 auto; background:rgba(20, 30, 65,0.7); }
-    .sub-menu-title{display:flex; justify-content: center; align-items:center; width:300px; height:100%;font-size:58px;  background:rgba(0,0,0, 0.4);}
-    .sub-menu-info-wrap{ display:flex; justify-content: center; width:700px; height:300px;  background: rgb(13, 22, 54,0.3);box-shadow:0 0 30px rgba(0,0,0, 0.3) inset;}
-    .sub-menu-info{width:33%; padding:55px 0px;  text-align:center; line-height:60px; }
+    .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.85); }
+    .sub-menu-wrap{ display:flex;  width:1000px; height:300px; margin:0 auto; background:rgba(17, 26, 68, 0.75); }
 
-    .sub-menu-info >li > a {transition: all 0.3s ease-in;}
+    .sub-menu-title{ position:relative;  width:300px; font-size:58px;  background:rgba(0,0,0, 0.4);}
+    .sub-menu-title > .sub-menu-bg::before{content:""; position:absolute; left:0; top:0;width:100%; height:100%; background:rgb(0, 0, 0,0.5)} 
+    .sub-menu-title > h6{position:absolute;  left:10px;  top:40%; width:280px; text-align:center;}
+
+    .sub-menu-info-wrap{display:flex; justify-content: center; width:700px; height:300px;  background: rgb(13, 22, 54,0.3); box-shadow:0 0 30px rgba(0,0,0, 0.4) inset;}
+    .sub-menu-info{width:33%; padding:55px 0px;  text-align:center; line-height:60px; }
+    .sub-menu-info >li > a {position:relative; transition: all 0.3s ease-in;}
     #main-menu > li > a:hover {color: #6389ff;}
     .sub-menu-info > li > a:hover{color: #6389ff; border-radius:10px; box-shadow:0 0 0 30px rgba(22, 40, 94, 0.3) inset;}
+  
     /* ====================== */
     .banner { height:600px;}
     .banner p { font-size: 22px; }
@@ -167,7 +175,7 @@
         width:0; height:100vh;
          padding-top:150px; 
          text-align:center; 
-         background:rgba(15, 24, 54); opacity:0;
+         background:rgba(15, 24, 54,0.98); opacity:0;
         transition: all 0.4s ease-in; z-index:95;
         }
     #main-menu > li > a { padding:20px; font-size:24px;  pointer-events: none; }
@@ -179,12 +187,12 @@
     #main-menu.tabmenu{ right:0; width:80%; opacity:1; }     
     .top-menu.tabmenu{right:67%;  opacity: 1;}
 
-    .sub-menu{ display:none;  background:rgba(11, 20, 49, 0.9);box-shadow:0 0 20px rgba(0,0,0,0.3)inset; }
-    .sub-menu-info-wrap{display:flex; justify-content:center; width:100%;  padding:30px;  }
+    .sub-menu{ display:none;  background:rgba(11, 20, 49, 0.8); box-shadow:0 0 20px rgba(0,0,0,0.3)inset; }
+    .sub-menu-info-wrap{display:flex; justify-content:center;  padding:40px 0;  }
     .sub-menu-title{display:none;}
-    .sub-menu-info a{padding:15px 40px;font-size:18px;  text-align:center; transition:all 0.3s }
+    .sub-menu-info a{padding:20px 40px;font-size:18px;  text-align:center; transition:all 0.3s }
 
-    .top-menu {display: flex;  position:absolute; right:-50%; top:3px; opacity:0; transition:all 0.4s ease-in; z-index:99;}
+    .top-menu {display: flex;  position:absolute; right:-50%; top:5px; opacity:0; transition:all 0.4s ease-in; z-index:99;}
     .top-menu a{ padding-left:15px; font-size:30px; }
     
     .banner { height:650px;}
@@ -226,7 +234,7 @@
     h3 { font-size:30px; font-weight:500; }
     h4 { font-size:22px; }
     nav{width:100%; height:100%;  z-index:9; }
-    .logo {position:absolute; left:50%; top:15px;  transform:translate(-50%, 0); z-index: 2;}
+    .logo {position:absolute; left:50%; top:18px;  transform:translate(-50%, 0); }
     #trigger {
         position:absolute; left:30px; top:18px;
         width:30px; height:20px;
@@ -257,18 +265,14 @@
     #trigger.tabmenu span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
     #main-menu.tabmenu{left:0;  width:100%; opacity:1;}     
      .top-menu.tabmenu{right:30px; opacity:1;}
-     .sub-menu{ 
-        display:none;
-        height:260px; padding:10px 0;
-        background:rgba(11, 20, 49, 0.4);
-        box-shadow:0 0 20px rgba(0,0,0,0.3)inset;
-    }
+
+     .sub-menu{ display:none; padding:40px 0;background:rgba(11, 20, 49, 0.4);box-shadow:0 0 20px rgba(0,0,0,0.3)inset;}
     .sub-menu-info-wrap{display:flex;  justify-content:center; flex-wrap: wrap;}
     .sub-menu-info:last-child{display: flex;}
     .sub-menu-title{display:none;}
     .sub-menu-info a{width:175px; padding:20px 35px; font-size:18px;  text-align:center;  transition:all 0.3s }
 
-    .top-menu {display: flex;  position:absolute; right:0; top:0; opacity:0; z-index:99; transition:all 0.3s ease-in;}
+    .top-menu {display: flex;  position:absolute; right:0; top:2px; opacity:0; z-index:99; transition:all 0.3s ease-in;}
     .top-menu a{ padding-left:15px; font-size:30px; }
 
     .banner { display: flex; justify-content: center; align-items: center; height:100vh;}

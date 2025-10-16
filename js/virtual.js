@@ -1,3 +1,4 @@
+// 배너와 첫번째 동영상 일시중지/재개
 $(function(){
     $(window).scroll(function(){
         var value=$(window).scrollTop();
@@ -11,6 +12,7 @@ $(function(){
     });
 });
 
+// hd에서 never 줄바꿈
 const h2 = document.querySelector('h2')
 function ne_splitter() {
     if (!h2.innerHTML.includes('ne<br>') && window.innerWidth <= 1049 && window.innerWidth >= 750) h2.innerHTML = h2.innerHTML.replace('ne', 'ne<br>');
@@ -19,6 +21,16 @@ function ne_splitter() {
 window.addEventListener('load', ne_splitter);
 window.addEventListener('resize', ne_splitter);
 
+
+// // 모바일 영역 article 순서 반전
+// const articles = document.querySelectorAll('article')
+// articles.forEach(article => {
+//     const [first, second] = article.children;
+//     article.insertBefore(second, first);
+// })
+
+
+//------------------------기초 캐러셀------------------------
 const wrap  = document.querySelector('.vr-carousel-wrap')
 const track = document.querySelector('.vr-carousel-track')
 
@@ -61,3 +73,4 @@ wrap.addEventListener('mouseleave', () => {
     wrap.style.cursor = 'grab'
     pressed = false
 })
+//------------------------기초 캐러셀------------------------
