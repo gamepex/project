@@ -21,15 +21,6 @@ function ne_splitter() {
 window.addEventListener('load', ne_splitter);
 window.addEventListener('resize', ne_splitter);
 
-
-// // 모바일 영역 article 순서 반전
-// const articles = document.querySelectorAll('article')
-// articles.forEach(article => {
-//     const [first, second] = article.children;
-//     article.insertBefore(second, first);
-// })
-
-
 //------------------------기초 캐러셀------------------------
 const wrap  = document.querySelector('.vr-carousel-wrap')
 const track = document.querySelector('.vr-carousel-track')

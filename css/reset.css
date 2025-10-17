@@ -35,8 +35,8 @@ sub-title title
 위와 같이 title 이름만 추가해주세요-한별
 */
 h1, h2, h3, h4, h5, h6, .title p, a { text-transform:uppercase; }
-/* h1 {font-family: "Shrikhand", serif;
-  font-weight: 400;} */
+ h1 {font-family: "Shrikhand", serif;
+    font-size:32px;  font-weight: 400;} 
 h2 { font-family: "Tektur", sans-serif; color: #f9f9f9; }
 h4 { font-family: "Gowun Dodum", sans-serif; font-size:34px; font-weight:400; line-height:42px; } /* 본문 제목 */
 h5 { font-family: 'JalnanGothic'; font-weight: 400;} /* 팝업 제목 등 더 작은? 제목용 */

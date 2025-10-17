@@ -1,20 +1,28 @@
 @charset "utf-8";
 
-    header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; transition:all 0.2s ease-in; }
-    header.dark{background:rgba(3, 8, 37, 0.97);} 
-    header:hover{background:rgba(3, 8, 37, 0.97);}
+header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; transition:all 0.2s ease-in; }
+header.dark{background:rgba(3, 8, 37, 0.97);} 
+header:hover{background:rgba(3, 8, 37, 0.97);}
 
-    .banner {position:relative; overflow:hidden; color:#f6f6f6; text-align:center;}
-    .content {
-    position:absolute; top:0; left:0;
-    width:100%; height:100%;
-    object-fit:cover; z-index:-999;
-    }
-    .bbox30 {position:absolute; left:0; top:0;
-    background:#000; opacity:30%; z-index:-1;}
-    .sub-menu-ps-bg{ position:relative;  width:100%; height: 100%; border-radius:10px; background:url("../img/ps/ps5-console-bg2.jpg")no-repeat right center; background-size: cover;}
-   .sub-menu-ns-bg{ position:relative;  width:100%; height: 100%; border-radius:10px; background:url("../img/common/ns-hero_pic_oled.png")no-repeat right center; background-size: cover;}
-   
+.banner {position:relative; overflow:hidden; color:#f6f6f6; text-align:center;}
+.content {
+position:absolute; top:0; left:0;
+width:100%; height:100%;
+object-fit:cover; z-index:-999;
+}
+.bbox30 {position:absolute; left:0; top:0;
+background:#000; opacity:30%; z-index:-1;}
+
+.sub-menu-title > div {position:relative;  width:100%; height: 100%; border-radius:10px; }
+.sub-menu-title > div::before{content:""; position:absolute; left:0; top:0;width:100%; height:100%; background:rgb(0, 0, 0,0.6)}
+.sub-menu-ps-bg{background:url("../img/common/submenu-ps.jpg")no-repeat 50%; background-size:cover;}
+.sub-menu-xb-bg{background:url("../img/common/xb/xb-sub-menu6.jpg")no-repeat 83%; background-size:310%;}
+/* 1x 2x 3:8%-90px/240% 4x 5x 6 83%/300% 7x 8x 9x*/
+.sub-menu-ns-bg{background:url("../img/common/ns-hero_pic_oled.png")no-repeat right center; background-size:cover;}
+.sub-menu-vr-bg{background:url("../img/common/submenu-vr.webp") no-repeat center center; background-size: contain; }
+.sub-menu-sd-bg{background:url("../img/common/submenu-sd.jpg") no-repeat center center; background-size: cover; }
+
+
 @media screen and (min-width:1400px) {
     #trigger {display: none;}
     nav {   
@@ -23,14 +31,12 @@
     }
     #main-menu, .top-menu {display: flex;}
     #main-menu > li > a {padding:18px 45px; text-transform: uppercase; }
-    .top-menu a {padding-left:10px; font-size: 26px}
+
     /* =====dropdown menu===== */
-   
     .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.85); }
-    .sub-menu-wrap{ display:flex;  width:1300px; height:300px; margin:0 auto; background:rgba(17, 26, 68, 0.75); }
+    .sub-menu-wrap{ display:flex;  width:1300px;  margin:0 auto; background:rgba(17, 26, 68, 0.75); }
 
     .sub-menu-title{position:relative;  width:350px; font-size:62px;  border-radius:10px; background:rgba(0,0,0, 0.4);}
-    .sub-menu-title > div::before{content:""; position:absolute; left:0; top:0;width:100%; height:100%; background:rgb(0, 0, 0,0.5)}
     .sub-menu-title > h6{position:absolute;  left:40px;  top:40%; width:280px; text-align:center;}
 
     .sub-menu-info-wrap{
@@ -45,6 +51,8 @@
     #main-menu > li > a:hover {color: #6389ff;}
     .sub-menu-info > li > a:hover{ color: #6389ff;  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.75); border-radius:10px;}
     /* ========================== */
+     .top-menu a {padding:0 0 10px 10px; font-size: 26px}
+     
     .banner {height:600px;}
 
     .b-box1 { width:100%; height:600px;}
@@ -99,23 +107,21 @@
     }
     #main-menu, .top-menu {display: flex; }
     #main-menu > li > a {padding:0 35px; text-transform: uppercase; }
-    .top-menu a {padding:0 0 10px 10px; font-size: 26px}
-
     /* =====dropdown menu===== */
     .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.85); }
-    .sub-menu-wrap{ display:flex;  width:1000px; height:300px; margin:0 auto; background:rgba(17, 26, 68, 0.75); }
+    .sub-menu-wrap{ display:flex;  width:1000px;  margin:0 auto; background:rgba(17, 26, 68, 0.75); }
 
     .sub-menu-title{ position:relative;  width:300px; font-size:58px;  background:rgba(0,0,0, 0.4);}
-    .sub-menu-title > .sub-menu-bg::before{content:""; position:absolute; left:0; top:0;width:100%; height:100%; background:rgb(0, 0, 0,0.5)} 
     .sub-menu-title > h6{position:absolute;  left:10px;  top:40%; width:280px; text-align:center;}
 
     .sub-menu-info-wrap{display:flex; justify-content: center; width:700px; height:300px;  background: rgb(13, 22, 54,0.3); box-shadow:0 0 30px rgba(0,0,0, 0.4) inset;}
     .sub-menu-info{width:33%; padding:55px 0px;  text-align:center; line-height:60px; }
     .sub-menu-info >li > a {position:relative; transition: all 0.3s ease-in;}
     #main-menu > li > a:hover {color: #6389ff;}
-    .sub-menu-info > li > a:hover{color: #6389ff; border-radius:10px; box-shadow:0 0 0 30px rgba(22, 40, 94, 0.3) inset;}
-  
+    .sub-menu-info > li > a:hover{ color: #6389ff;  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.75); border-radius:10px;}
     /* ====================== */
+    .top-menu a {padding:0 0 10px 10px; font-size: 26px}
+
     .banner { height:600px;}
     .banner p { font-size: 22px; }
 
@@ -154,7 +160,7 @@
     h3 { font-size:36px; }
     h4{ font-size:28px; }
     nav{ height:100%;}
-    .logo {position:absolute; left:30px; top:18px;  }
+    .logo {position:absolute; left:45%; top:6px;  }
      
     #trigger {
         position:absolute; right:30px; top:18px;
@@ -185,15 +191,14 @@
     #trigger.tabmenu span:nth-child(2) { opacity:0; }
     #trigger.tabmenu span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
     #main-menu.tabmenu{ right:0; width:80%; opacity:1; }     
-    .top-menu.tabmenu{right:67%;  opacity: 1;}
 
     .sub-menu{ display:none;  background:rgba(11, 20, 49, 0.8); box-shadow:0 0 20px rgba(0,0,0,0.3)inset; }
     .sub-menu-info-wrap{display:flex; justify-content:center;  padding:40px 0;  }
     .sub-menu-title{display:none;}
-    .sub-menu-info a{padding:20px 40px;font-size:18px;  text-align:center; transition:all 0.3s }
+    .sub-menu-info a{padding:20px 40px; font-size:18px;  text-align:center; transition:all 0.3s }
 
-    .top-menu {display: flex;  position:absolute; right:-50%; top:5px; opacity:0; transition:all 0.4s ease-in; z-index:99;}
-    .top-menu a{ padding-left:15px; font-size:30px; }
+    .top-menu {display: flex;  position:absolute; left:20px; top:3px;}
+    .top-menu a{padding-left:10px; font-size:30px; }
     
     .banner { height:650px;}
     .banner p {font-size: 18px;}
@@ -234,7 +239,7 @@
     h3 { font-size:30px; font-weight:500; }
     h4 { font-size:22px; }
     nav{width:100%; height:100%;  z-index:9; }
-    .logo {position:absolute; left:50%; top:18px;  transform:translate(-50%, 0); }
+    .logo {position:absolute; left:50%; top:5px;  transform:translate(-50%, 0); }
     #trigger {
         position:absolute; left:30px; top:18px;
         width:30px; height:20px;
@@ -264,16 +269,16 @@
     #trigger.tabmenu span:nth-child(2) { opacity:0; }
     #trigger.tabmenu span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
     #main-menu.tabmenu{left:0;  width:100%; opacity:1;}     
-     .top-menu.tabmenu{right:30px; opacity:1;}
 
      .sub-menu{ display:none; padding:40px 0;background:rgba(11, 20, 49, 0.4);box-shadow:0 0 20px rgba(0,0,0,0.3)inset;}
-    .sub-menu-info-wrap{display:flex;  justify-content:center; flex-wrap: wrap;}
+    .sub-menu-info-wrap{display:flex;  justify-content:center; width: 350px; flex-wrap: wrap; margin: 0 auto; }
     .sub-menu-info:last-child{display: flex;}
     .sub-menu-title{display:none;}
-    .sub-menu-info a{width:175px; padding:20px 35px; font-size:18px;  text-align:center;  transition:all 0.3s }
 
-    .top-menu {display: flex;  position:absolute; right:0; top:2px; opacity:0; z-index:99; transition:all 0.3s ease-in;}
-    .top-menu a{ padding-left:15px; font-size:30px; }
+    .sub-menu-info a{width:175px; font-size:18px; padding:20px  0; text-align:center; }
+
+    .top-menu {display: flex;  position:absolute; right:25px; top:3px}
+    .top-menu a{ padding-left:10px; font-size:28px; }
 
     .banner { display: flex; justify-content: center; align-items: center; height:100vh;}
     h2 { font-size: 54px; line-height:50px; }

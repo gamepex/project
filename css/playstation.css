@@ -1,15 +1,13 @@
-  .ps-slide { display:flex; justify-content:center; height:660px; flex-wrap: wrap; overflow:hidden;}  /*슬라이드*/
-	.ps-slide li {width:350px; height:660px; margin:0 15px; padding:20px; border-radius:10px; background:#324274; }
-    .ps-slide-bg{width:310px; height:320px;  margin:0 auto;}
-    .ps-slide li > div:nth-child(2) {width:295px;margin:20px auto; text-align:center;}
-    .ps-slide-info p{padding:30px 0 60px;}
-	.ps-slide li:nth-child(1) >.ps-slide-bg { border-radius:10px; background:url('../img/ps/s5.jpeg') no-repeat center center; background-size:cover;}
-	.ps-slide li:nth-child(2) > .ps-slide-bg{border-radius:10px; background:url('../img/ps/s4.jpeg') no-repeat center center; background-size:cover;}
-	.ps-slide li:nth-child(3) > .ps-slide-bg{border-radius:10px; background:url('../img/ps/s3.jpeg') no-repeat center center; background-size:cover;  }
-	.ps-slide li:nth-child(4)> .ps-slide-bg {border-radius:10px; background:url('../img/ps/s2.jpeg') no-repeat center center; background-size:cover;}
-	.ps-slide li:nth-child(5)> .ps-slide-bg{border-radius:10px; background:url('../img/ps/s1.jpg') no-repeat center center; background-size:cover; }
-
-     
+.ps-slide { display:flex; justify-content:center; height:660px; flex-wrap: wrap; overflow:hidden;}  /*슬라이드*/
+.ps-slide li {width:350px; height:660px; margin:0 15px; padding:20px; border-radius:10px; background:#324274; }
+.ps-slide-bg{width:310px; height:320px;  margin:0 auto;border-radius:10px;}
+.ps-slide li > div:nth-child(2) {width:295px;margin:20px auto; text-align:center;}
+.ps-slide-info p{padding:30px 0 60px;}
+.ps-slide li:nth-child(1) > .ps-slide-bg {background:url('../img/ps/s5.jpeg') no-repeat center center; background-size:cover;}
+.ps-slide li:nth-child(2) > .ps-slide-bg{background:url('../img/ps/s4.jpeg') no-repeat center center; background-size:cover;}
+.ps-slide li:nth-child(3) > .ps-slide-bg{background:url('../img/ps/s3.jpeg') no-repeat center center; background-size:cover;  }
+.ps-slide li:nth-child(4)>  .ps-slide-bg {background:url('../img/ps/s2.jpeg') no-repeat center center; background-size:cover;}
+.ps-slide li:nth-child(5)>  .ps-slide-bg{background:url('../img/ps/s1.jpg') no-repeat center center; background-size:cover; }
 @media screen and (min-width:1400px){  
 .ps-slide{margin-top:50px;}
 h5 {font-size:24px; text-transform:uppercase;}
