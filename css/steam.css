@@ -236,14 +236,15 @@
     .st-pg-wrap input { display:none; }
     .st-pg-wrap label {
         position:absolute; bottom:60px;
-        width:33.333333333%;
+        width:33.333333333%; height:50px;
         color:#f1f1e6;
-        text-align:center; line-height:50px;
+        text-align:center;
         text-transform:uppercase;
         background:rgba(0,0,0,0.3);
         border-radius:0 0 10px 10px;
         cursor:pointer;
     }
+    .tab2 { line-height:50px; }
     .st-pg-wrap .more-btn {
         position:absolute; bottom:0; left:50%;
         transform:translateX(-50%)

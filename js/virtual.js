@@ -12,7 +12,7 @@ $(function(){
     });
 });
 
-// hd에서 never 줄바꿈
+// tablet에서 never 줄바꿈
 const h2 = document.querySelector('h2')
 function ne_splitter() {
     if (!h2.innerHTML.includes('ne<br>') && window.innerWidth <= 1049 && window.innerWidth >= 750) h2.innerHTML = h2.innerHTML.replace('ne', 'ne<br>');
@@ -22,8 +22,8 @@ window.addEventListener('load', ne_splitter);
 window.addEventListener('resize', ne_splitter);
 
 //------------------------기초 캐러셀------------------------
-const wrap  = document.querySelector('.vr-carousel-wrap')
-const track = document.querySelector('.vr-carousel-track')
+const wrap  = document.querySelector('.vr-faq-wrap')
+const track = document.querySelector('.vr-faq-track')
 
 /* 초기 가운데 정렬 */
 track.style.left = wrap.clientWidth / 2 - track.scrollWidth / 2 + 'px'
