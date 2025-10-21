@@ -16,8 +16,7 @@ background:#000; opacity:30%; z-index:-1;}
 .sub-menu-title > div {position:relative;  width:100%; height: 100%; border-radius:10px; }
 .sub-menu-title > div::before{content:""; position:absolute; left:0; top:0;width:100%; height:100%; background:rgb(0, 0, 0,0.6)}
 .sub-menu-ps-bg{background:url("../img/common/submenu-ps.jpg")no-repeat 50%; background-size:cover;}
-.sub-menu-xb-bg{background:url("../img/common/xb/xb-sub-menu6.jpg")no-repeat 83%; background-size:310%;}
-/* 1x 2x 3:8%-90px/240% 4x 5x 6 83%/300% 7x 8x 9x*/
+.sub-menu-xb-bg{background:url("../img/common/xb-sub-menu.jpg")no-repeat 83%; background-size:310%;}
 .sub-menu-ns-bg{background:url("../img/common/ns-hero_pic_oled.png")no-repeat right center; background-size:cover;}
 .sub-menu-vr-bg{background:url("../img/common/submenu-vr.webp") no-repeat center center; background-size: contain; }
 .sub-menu-sd-bg{background:url("../img/common/submenu-sd.jpg") no-repeat center center; background-size: cover; }
