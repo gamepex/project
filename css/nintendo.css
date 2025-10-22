@@ -133,8 +133,16 @@
 
 
 
-/* 슬라이더부분 CSS 추가하기 */
+/* 슬라이더부분 CSS 추가하기 
+.js-slider {
+    display: flex;
+    position: relative;
+    animation: loop var(--speed) linear infinite;
+    margin-top: 20px;
+    min-height: 300px;
+}
 
+*/
 
 @media screen and (min-width:1050px) and (max-width: 1399px) {
 

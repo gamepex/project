@@ -17,9 +17,10 @@
 }
 
 @media screen and (min-width:1400px) {
-    .vr-why-wrap { display: flex; justify-content:space-between; align-items: center; }
-    .vr-why-video { width: 900px; height:600px; overflow:hidden; }
-    .vr-why-contents { width:495px; height:500px; padding: 100px; }
+    /* FAQ 부분 버튼 오른쪽으로 바꾸기*/
+    .vr-why-wrap { display: flex; justify-content:space-between; align-items: center; background-color: red;}
+    .vr-why-video { width: 900px; height: 467px; overflow: hidden; }
+    .vr-why-contents { width:495px; height:500px; padding: 55px; }
     .vr-why-contents h4 + p { margin-top: 20px; }
     .vr-why-contents .more-btn { margin-top: 40px; }
 	.vr-why-bar { width:5px; height:300px; background:#caca64; }
@@ -33,7 +34,6 @@
     .vr-vrchat-contents, .vr-beat-contents { width:695px; height: 250px; padding: 60px; text-align: center; }
     .vr-vrchat-contents p, .vr-beat-contents p { margin-top: 20px; }
     .vr-game-bar { width:5px; height:180px; background:#6389ff; }
-    .vr-img-long_bar { width: 240px; height: 2px; margin: 50px auto 0; background: url(../img/vr/vr-img-long_bar-fhd.jpg) no-repeat center center;  background-size: cover;}
     .vr-etc {
         display: flex; align-items: center;
         width: 1050px; height: 80px; background: #737892;
@@ -69,7 +69,6 @@
     .vr-vrchat-contents, .vr-beat-contents { width: 520px; height: 250px; padding: 65px 45px; text-align: center; }
     .vr-games p { margin-top: 20px; }
     .vr-game-bar { width:5px; height:180px; background:#6389ff; }
-    .vr-img-long_bar { width: 240px; height: 2px; margin: 50px auto 0; background: url(../img/vr/vr-img-long_bar-fhd.jpg) no-repeat center center;  background-size: cover;}
     .vr-etc {
         display: flex; align-items: center;
         width: 1000px; height: 80px; background: #737892;

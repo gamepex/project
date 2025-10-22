@@ -1,9 +1,0 @@
-동영상
-
-https://youtu.be/SfIG-CCQrLg?t=10
-
-
-https://youtu.be/SfIG-CCQrLg
-
-
-<iframe width="1197" height="674" src="https://www.youtube.com/embed/SfIG-CCQrLg" title="슈퍼 마리오 갤럭시 + 슈퍼 마리오 갤럭시 2 소개영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
