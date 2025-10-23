@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/xbox.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <script src="js/jquery_1.12.4.min.js"></script>
     <script src="./js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -215,15 +217,23 @@
         <h3>try <span class="hg-blue">d</span>iverse <span class="hg-ygrn">a</span>cc</h3>
         <p>지금 다양한 xbox 컨트롤러를 체험하고, 게임의 수준을 한 단계 끌어올리세요</p>
     </div>
-    <div class="xb-acc-container">
-        <ul class="xb-acc-slide">
-            <li><a href="#">controllers</a></li>
-            <li><a href="#">console wraps</a></li>
-            <li><a href="#">stands & charging</a></li>
-            <li><a href="#">headsets</a></li>
-            <li><a href="#">storage</a></li>
+    <div class="xb-acc-container swiper">
+        <ul class="xb-acc-slide swiper-wrapper">
+            <li><a href="#" class="swiper-slide">controllers</a></li>
+            <li><a href="#" class="swiper-slide">console wraps</a></li>
+            <li><a href="#" class="swiper-slide">stands & charging</a></li>
+            <li><a href="#" class="swiper-slide">headsets</a></li>
+            <li><a href="#" class="swiper-slide">storage</a></li>
         </ul>
     </div>
+    <script>
+        const swiperEl = document.querySelector('swiper-container');
+        const buttonEl = document.querySelector('button');
+
+        buttonEl.addEventListener('click', () => {
+            swiperEl.swiper.slideNext();
+        });
+    </script>
 
     <!-- 서브 3 -->
     <div class="sub-title">

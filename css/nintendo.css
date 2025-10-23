@@ -133,7 +133,20 @@
 
 
 
-/* 슬라이더부분 CSS 추가하기 
+/* 슬라이더부분 CSS 추가하기  */
+style attribute {
+    --sliderWidth: -3960px;
+    --speed: 50s;
+}
+
+.local-amiibo__visualText {
+    text-align: center;
+    margin: 28px auto 35px;
+    /* font-size: 24px;
+    font-weight: bold; */
+    /* line-height: 1.4; */
+}
+
 .js-slider {
     display: flex;
     position: relative;
@@ -142,7 +155,7 @@
     min-height: 300px;
 }
 
-*/
+
 
 @media screen and (min-width:1050px) and (max-width: 1399px) {
 
