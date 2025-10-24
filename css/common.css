@@ -4,14 +4,15 @@ header {position:fixed; left:0; top:0; width:100%; height:60px; z-index:9; trans
 header.dark{background:rgba(3, 8, 37, 0.97);} 
 header:hover{background:rgba(3, 8, 37, 0.97);}
 
-.banner {position:relative; overflow:hidden; color:#f6f6f6; text-align:center;}
+.banner { position:relative; overflow:hidden; color:#f6f6f6; text-align:center;}
 .content {
-position:absolute; top:0; left:0;
-width:100%; height:100%;
-object-fit:cover; z-index:-999;
+	position:absolute; left:50%; top:50%;
+	min-width:100%; min-height:100%; transform:translate(-50%, -50%); z-index:-9;
 }
-.bbox30 {position:absolute; left:0; top:0;
-background:#000; opacity:30%; z-index:-1;}
+.bbox30 {
+	position:absolute; left:0; top:0;
+	background:#000; opacity:30%; z-index:-1;
+}
 
 .sub-menu-title > div {position:relative;  width:100%; height: 100%; border-radius:10px; }
 .sub-menu-title > div::before{content:""; position:absolute; left:0; top:0;width:100%; height:100%; background:rgb(0, 0, 0,0.6)}
@@ -50,7 +51,7 @@ background:#000; opacity:30%; z-index:-1;}
     #main-menu > li > a:hover {color: #6389ff;}
     .sub-menu-info > li > a:hover{ color: #6389ff;  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.75); border-radius:10px;}
     /* ========================== */
-     .top-menu a {padding:0 0 10px 10px; font-size: 26px}
+     .top-menu a {padding:0 0 10px 10px; font-size: 30px}
      
     .banner {height:600px;}
 
@@ -159,10 +160,10 @@ background:#000; opacity:30%; z-index:-1;}
     h3 { font-size:36px; }
     h4{ font-size:28px; }
     nav{ height:100%;}
-    .logo {position:absolute; left:45%; top:6px;  }
+    .logo {position:absolute; left:45%; top:5px;  }
      
     #trigger {
-        position:absolute; right:30px; top:18px;
+        position:absolute; right:30px; top:19px;
         width:30px; height:20px;
         z-index:99;
     }
@@ -196,7 +197,7 @@ background:#000; opacity:30%; z-index:-1;}
     .sub-menu-title{display:none;}
     .sub-menu-info a{padding:20px 40px; font-size:18px;  text-align:center; transition:all 0.3s }
 
-    .top-menu {display: flex;  position:absolute; left:20px; top:3px;}
+    .top-menu {display: flex;  position:absolute; left:20px; top:5px;}
     .top-menu a{padding-left:10px; font-size:30px; }
     
     .banner { height:650px;}
@@ -276,7 +277,7 @@ background:#000; opacity:30%; z-index:-1;}
 
     .sub-menu-info a{width:175px; font-size:18px; padding:20px  0; text-align:center; }
 
-    .top-menu {display: flex;  position:absolute; right:25px; top:3px}
+    .top-menu {display: flex;  position:absolute; right:25px; top:5px}
     .top-menu a{ padding-left:10px; font-size:28px; }
 
     .banner { display: flex; justify-content: center; align-items: center; height:100vh;}

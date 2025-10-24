@@ -72,28 +72,29 @@ footer {margin-top:0;}
     background:#a1a1a1 url(../img/xbox/imgs/dt/xb-cs-dt-bg1.jpg) no-repeat right center;
     border-radius:0 0 100px 0;
 }
+
 .xb-cs-back-b {
-    position:absolute; left:64%; top:0;
+    position:absolute; left:64%; top:5%;
     width:410px; height:425px;
     border-radius:30px;
     background:#6389ff;
 }
 .xb-cs-front-b {
-    position:absolute; left:62.6%; top:5%;
+    position:absolute; left:62%; top:12%;
     width:410px; height:425px;
     text-align:center;
     border-radius:30px;
     background:rgba(0, 0, 0, 0.65);
 }
+
 .xb-cs-front-b h4 {
-    position:absolute; left:32%; top:9%; width:150px; 
+    padding-top:50px;
 }
-.xb-con-ygrn-bar1 {position:absolute; left:38%; top:36%;}
+.xb-con-ygrn-bar1 { margin:40px auto; }
 .xb-cs-front-b h5 {
-    position:absolute; left:0; top:48%;
-    width:100%; text-transform:capitalize;
+    width:100%; padding-top:10px; text-transform:capitalize;
 }
-.xb-cs-front-b a {position:absolute; left:32%; top:68%;}
+.xb-cs-front-b a {margin:60px auto 0; }
 
 .xb-cs-front-b p {
     position:absolute; left:0; top:85%;
@@ -167,17 +168,18 @@ footer {margin-top:0;}
 
 /* ===== 서브3 DTD 박스===== */
 .xb-rent-container {
-    display:flex; justify-content:flex-end; text-align:center;
+    display:flex; justify-content:flex-start; flex-direction:row-reverse;
     width:85%; padding:50px 25px;
+	text-align:center;
     background:rgba(99, 137, 255, 0.5);
     border-radius:0 0 100px 0;
 }
-.xb-rent-wrap {display:flex; justify-content:flex-end;}
-.xb-rent-wrap-specipic {display:flex; justify-content:flex-end; position:relative; padding-right:186px;}
-.xb-arti-wrap-specipic{position:absolute; right:0;}
+/*
+.xb-rent-wrap {display:flex; flex-direction:row-reverse; justify-content:flex-end;}
+.xb-rent-wrap-specipic {display:flex; justify-content:flex-end; position:relative; padding-right:0;}
+*/
 
-.xb-rent-arti h4 {flex-wrap:wrap; width:186px; margin:25px auto 0; line-height:36px;
-}
+.xb-rent-arti h4 {flex-wrap:wrap; width:186px; margin:25px auto 0; line-height:36px; }
 .xb-rent-arti h5 {margin:25px auto;}
 .xb-rent-ygrn-bar1, .xb-rent-ygrn-bar2 {margin:0 auto 25px;}
 .xb-rent-bg {margin:0 25px;}
@@ -725,7 +727,7 @@ h5 {font-size:16px; text-transform:uppercase;}
 .xb-rent-container2{background:rgba(211, 211, 105, 0.5); border-radius:100px 0 0 0;}
 .xb-deli-art1 {margin-top:25px;}
 .xb-dtd-art2 p:nth-child(4), .xb-deli-art2 p:nth-child(4) {margin-top:30px;}
-
+.xb-rent-bg6 {margin-bottom:120px;}
 
 /* ===== 서브 4 =====*/
 .xb-loca-container {position:relative; height:255px; margin:50px auto 25px;}

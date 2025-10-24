@@ -9,19 +9,20 @@
 .ps-slide li:nth-child(4)>  .ps-slide-bg {background:url('../img/ps/s2.jpeg') no-repeat center center; background-size:cover;}
 .ps-slide li:nth-child(5)>  .ps-slide-bg{background:url('../img/ps/s1.jpg') no-repeat center center; background-size:cover; }
 
-.ps-console-slide{display:flex; justify-content:center; height:570px; margin-top:65px;flex-wrap:wrap;  overflow:hidden;  }
-.ps-console-slide > li { position:relative;  height:550px; margin:10px; box-shadow:2px 2px 4px #0b1125; transition:all 0.3s ease-in;}
-.ps-console-bg{width:350px; height:400px;}
-.ps-console-slide  > li > .more-btn{position:absolute; left:100px; bottom:10%;} 
 
-.ps-console-slide li:nth-child(1) .ps-console-bg{background:url("../img/ps/ps5-console-slide.png")no-repeat 50%; background-size: 110%;}
-.ps-console-slide li:nth-child(2) .ps-console-bg{background:url("../img/ps/ps5-conosle-slide2.png")no-repeat 50%; background-size: 110%;}
-.ps-console-slide li:nth-child(3) .ps-console-bg{background:url("../img/ps/ps5-console-slide3.png")no-repeat 50%; background-size: 110%;}
-.ps-console-slide li:nth-child(4) .ps-console-bg{background:url("../img/ps/ps5-console-slide4.png")no-repeat 50%; background-size: 110%;}
-.ps-console-slide li:nth-child(5) .ps-console-bg{background:url("../img/ps/ps5-console-slide5.png")no-repeat 50%; background-size: 110%;}
+.ps-console-slide{display:flex; justify-content:center; height:550px; margin-top:65px; flex-wrap:wrap;  overflow:hidden;  }
+.ps-console-bg{width:350px; height:550px; }
+.ps-console-slide  > li > .more-btn{position:absolute; bottom:150px; right:150px ;} 
 
-.ps-console-slide li:hover{box-shadow:4px 4px 8px #080d1d;}
+.ps-console-slide li:nth-child(1) .ps-console-bg{background:url("../img/ps/ps5-console-slide.png")no-repeat  50%;background-size: cover;} 
+.ps-console-slide li:nth-child(2) .ps-console-bg{background:url("../img/ps/ps5-conosle-slide2.png")no-repeat 50%; background-size:cover;}
+.ps-console-slide li:nth-child(3) .ps-console-bg{background:url("../img/ps/ps5-console-slide3.png")no-repeat 10%; background-size: cover;}
+.ps-console-slide li:nth-child(4) .ps-console-bg{background:url("../img/ps/ps5-console-slide4.png")no-repeat 10%; background-size: cover;}
+.ps-console-slide li:nth-child(5) .ps-console-bg{background:url("../img/ps/ps5-console-slide5.png")no-repeat 10%; background-size: cover;}
+
+.ps-console-slide  > li  > h5 {position:absolute; right:40px; top:100px; width:300px; text-align: center;}
 @media screen and (min-width:1400px){  
+ .ps-console-slide > li { position:relative; width:750px;  height:550px; margin-left:25px; background:#202d52; border-radius:10px;  transition:all 0.3s ease-in;}
 .ps-slide{margin-top:50px;}
 h5 {font-size:24px; text-transform:uppercase;}
 .ps-duel-tabs-wrap {position:relative; height:510px;}
@@ -43,24 +44,22 @@ input:checked +label{ background:#324274;}
 .ps-duel-tab-contents .more-btn{position: absolute; }
 .ps-duel-tab-contents{position: relative; top: 60px; height:450px;background:#324274; border-radius:5px; overflow:hidden;}
 
-.ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{ position:absolute; ; top:0; width:735px; height:410px; margin:20px; transition:all 0.4s ease-in;}
-.ps-duel-img-bg1{ background:url('../img/ps/Adaptive.jpg')no-repeat center center; background-size:cover;}
-.ps-duel-img-bg2{ background:url('../img/ps/Haptic.png')no-repeat center center; background-size:cover;}
-.ps-duel-img-bg3{background:url('../img/ps/3Daudio.png')no-repeat center center; background-size:cover; }
+.ps-video {position:absolute;  width:700px; height:400px;}
+.ps-duel-video1,.ps-duel-video2,.ps-duel-video3{position:absolute; top:25px; width:100%; height:100%; transition:all 0.4s ease-in;}
 
-.ps-duel-text1, .ps-duel-text2, .ps-duel-text3{position:absolute; top:40px;width:450px;line-height:25px; transition:all 0.4s ease-in;}
-.ps-duel-tab-contents  p{padding:60px 0 120px;}
+.ps-duel-text1, .ps-duel-text2, .ps-duel-text3{position:absolute; top:70px;width:450px;line-height:25px; transition:all 0.4s ease-in;}
+.ps-duel-tab-contents  p{padding:35px 0 70px;}
 
-.ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{left:-760px;}
+.ps-duel-video1, .ps-duel-video2, .ps-duel-video3{left:-760px;}
 .ps-duel-text1, .ps-duel-text2,  .ps-duel-text3{right:-700px;}
 
 #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
 #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-text2,
 #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-text3{right:40px;} /*텍스트*/
 
-#tab1:checked ~ .ps-duel-tab-contents .ps-duel-img-bg1,
-#tab2:checked ~ .ps-duel-tab-contents .ps-duel-img-bg2,
-#tab3:checked ~ .ps-duel-tab-contents .ps-duel-img-bg3{left:0;} /*이미지*/
+#tab1:checked ~ .ps-duel-tab-contents .ps-duel-video1,
+#tab2:checked ~ .ps-duel-tab-contents .ps-duel-video2,
+#tab3:checked ~ .ps-duel-tab-contents .ps-duel-video3{left:25px;} /*이미지*/
 
 
  
@@ -96,6 +95,7 @@ input:checked +label{ background:#324274;}
 
 
 @media screen and (min-width:1050px) and (max-width:1399px){
+    .ps-console-slide > li { position:relative; width:750px;  height:550px; margin:10px 25px; box-shadow:4px 4px  8px #0b1020; transition:all 0.3s ease-in;}
     .ps-slide{margin-top:40px;}
     .ps-duel-tabs-wrap {position:relative; height:510px;}
      .ps-duel-tabs-wrap input {display:none;}
@@ -115,23 +115,21 @@ input:checked +label{ background:#324274;}
 
     .ps-duel-tab-contents{position: relative; top: 60px;  height:450px; background:#324274; border-radius:5px; overflow:hidden;}
     .ps-duel-tab-contents  p{padding:40px 0 80px;}
-    .ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{position:absolute;  top:20px; width:560px; height:410px; transition:all 0.3s ease-in;}
-    .ps-duel-img-bg1{ background:url('../img/ps/Adaptive.jpg')no-repeat center center; background-size:cover;}
-    .ps-duel-img-bg2{ background:url('../img/ps/Haptic.png')no-repeat center center; background-size:cover;}
-    .ps-duel-img-bg3{background:url('../img/ps/3Daudio.png')no-repeat center center; background-size:cover; }
+    .ps-video {position:absolute;  width:560px; height:410px;}
+    .ps-duel-video1,.ps-duel-video2,.ps-duel-video3{position:absolute; top:20px; width:100%; height:100%; transition:all 0.4s ease-in; object-fit:cover;}
 
     .ps-duel-text1, .ps-duel-text2, .ps-duel-text3{position:absolute; top:60px; width:340px; text-align:center; line-height:25px; transition:all 0.3s ease-in;}
     
-    .ps-duel-img-bg1,  .ps-duel-img-bg2,   .ps-duel-img-bg3{left:-1050px;}
+    .ps-duel-video1,  .ps-duel-video2,  .ps-duel-video3{left:-1050px;}
     .ps-duel-text1, .ps-duel-text2,  .ps-duel-text3{right:-1050px;}
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
     #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-text2,
     #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-text3{right:35px;} /*텍스트*/
 
-    #tab1:checked ~ .ps-duel-tab-contents .ps-duel-img-bg1,
-    #tab2:checked ~ .ps-duel-tab-contents .ps-duel-img-bg2,
-    #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-img-bg3{left:20px;} /*이미지*/
+    #tab1:checked ~ .ps-duel-tab-contents  .ps-duel-video1,
+    #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-video2,
+    #tab3:checked ~ .ps-duel-tab-contents   .ps-duel-video3{left:20px;} /*이미지*/
 
 
     /*===============section2==================*/
@@ -168,9 +166,9 @@ input:checked +label{ background:#324274;}
 
 
 @media screen and (min-width:750px) and (max-width:1049px){
+    .ps-console-slide > li { position:relative; width:750px;  height:550px; margin:10px 25px 0; background:#1a2758;  transition:all 0.3s ease-in;}
     .ps-slide{margin-top:35px;}
-
-    .ps-duel-tabs-wrap {position:relative; height:710px; }
+    .ps-duel-tabs-wrap {position:relative; height:750px; }
     .ps-duel-tabs-wrap input {display:none;}
     .ps-duel-tabs-wrap label{
         position:absolute; 
@@ -187,27 +185,24 @@ input:checked +label{ background:#324274;}
     .ps-duel-tabs-wrap .tab3{left:340px;}
     input:checked +label{ background:#324274;}
 
-    .ps-duel-tab-contents{position: relative; top: 60px; height:710px; background:#324274; border-radius:5px 5px 0 0; overflow:hidden;}
+    .ps-duel-tab-contents{position: relative; top: 60px; height:750px; background:#324274; border-radius:5px 5px 0 0; overflow:hidden;}
      .ps-duel-tab-contents  p{padding:30px 0 60px;}
 
-    .ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{position:absolute; top:25px;width:700px; height:380px;transition:all 0.4s ease-in;}
+    .ps-video {position:absolute;  width:700px; height:380px;}
+    .ps-duel-video1,.ps-duel-video2,.ps-duel-video3{position:absolute; top:20px; width:100%; height:100%; transition:all 0.4s ease-in; object-fit:cover;}
 
-    .ps-duel-img-bg1{ background:url('../img/ps/Adaptive.jpg')no-repeat center center; background-size:cover;}
-    .ps-duel-img-bg2{ background:url('../img/ps/Haptic.png')no-repeat center center; background-size:cover;}
-    .ps-duel-img-bg3{background:url('../img/ps/3Daudio.png')no-repeat center center; background-size:cover; }
+    .ps-duel-text1, .ps-duel-text2, .ps-duel-text3{position:absolute;  bottom:40px; width:480px; text-align:center;  line-height:25px;  transition:all 0.4s ease-in;}
 
-    .ps-duel-text1, .ps-duel-text2, .ps-duel-text3{position:absolute;  bottom:30px;width:570px; text-align:center;  line-height:25px;  transition:all 0.4s ease-in;}
-
-    .ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{left:-1050px;}
+    .ps-duel-video1,.ps-duel-video2,.ps-duel-video3{left:-1050px;}
     .ps-duel-text1, .ps-duel-text2,  .ps-duel-text3{right:-1050px;}
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
     #tab2:checked ~ .ps-duel-tab-contents .ps-duel-text2,
-    #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{right:85px;} /*텍스트*/
+    #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{right:120px;} /*텍스트*/
 
-    #tab1:checked ~ .ps-duel-tab-contents .ps-duel-img-bg1,
-    #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-img-bg2,
-    #tab3:checked ~ .ps-duel-tab-contents   .ps-duel-img-bg3{left:25px;} /*이미지*/
+    #tab1:checked ~ .ps-duel-tab-contents  .ps-duel-video1,
+    #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-video2,
+    #tab3:checked ~ .ps-duel-tab-contents   .ps-duel-video3{left:25px;} /*이미지*/
 
 
     /*===============section2==================*/
@@ -249,44 +244,40 @@ input:checked +label{ background:#324274;}
     .ps-slide{margin-top:20px;}
 
     h2{width:210px; margin:0 auto; line-height:50px; text-align:center;}
-    .ps-duel-tabs-wrap { position:relative; height:720px;}
+    .ps-duel-tabs-wrap { position:relative; height:800px;}
     .ps-duel-tabs-wrap input {display:none;}
     .ps-duel-tabs-wrap label{
         position:absolute; 
-        width:100px; height:50px;
+        width:33%; height:50px;
         color:#f1f1e6;
         text-align:center;  line-height:50px;
         background:#202d52;
         border-radius:5px;
         border-radius:10px 10px 0 0;
     }
-    .ps-duel-tabs-wrap .tab1{left:15px;}
-    .ps-duel-tabs-wrap .tab2{left:125px;}
-    .ps-duel-tabs-wrap .tab3{left:235px;}
+    .ps-duel-tabs-wrap .tab1{left:0}
+    .ps-duel-tabs-wrap .tab2{left:117px;}
+    .ps-duel-tabs-wrap .tab3{left:234px;}
     input:checked +label{ background:#324274;}
 
-    .ps-duel-tab-contents{position: relative; top: 50px;  height:720px; background:#324274; border-radius:5px; overflow:hidden;}
+    .ps-duel-tab-contents{position: relative; top:50px;  height:800px; background:#324274; border-radius:0 0 5px 5px; overflow:hidden;}
      .ps-duel-tab-contents  p{padding:30px 0 60px;}
 
-    .ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{position:absolute; top:15px; width:320px; height:350px;transition:all 0.4s ease-in;}
+    .ps-video {position:absolute;  width:320px; height:380px;}
+    .ps-duel-video1,.ps-duel-video2,.ps-duel-video3{position:absolute; top:20px; width:100%; height:100%; transition:all 0.4s ease-in; object-fit:cover;}
 
+    .ps-duel-text1, .ps-duel-text2, .ps-duel-text3{position:absolute; left:0; bottom:50px;width: 260px;text-align:center; line-height:25px; transition:all 0.4s ease-in;}
 
-    .ps-duel-img-bg1{ background:url('../img/ps/Adaptive.jpg')no-repeat center center; background-size:cover;}
-    .ps-duel-img-bg2{ background:url('../img/ps/Haptic.png')no-repeat center center; background-size:cover;}
-    .ps-duel-img-bg3{background:url('../img/ps/3Daudio.png')no-repeat center center; background-size:cover; }
-
-    .ps-duel-text1, .ps-duel-text2, .ps-duel-text3{position:absolute; left:0; bottom:30px;width: 260px;text-align:center; line-height:25px; transition:all 0.4s ease-in;}
-
-    .ps-duel-img-bg1, .ps-duel-img-bg2, .ps-duel-img-bg3{left:-1050px;}
+     .ps-duel-video1,.ps-duel-video2,.ps-duel-video3{left:-1050px;}
     .ps-duel-text1, .ps-duel-text2,  .ps-duel-text3{left:-1050px;}
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
     #tab2:checked ~ .ps-duel-tab-contents .ps-duel-text2,
     #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{left:45px;} /*텍스트*/
 
-    #tab1:checked ~ .ps-duel-tab-contents .ps-duel-img-bg1,
-    #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-img-bg2,
-    #tab3:checked ~ .ps-duel-tab-contents   .ps-duel-img-bg3{left:15px;} /*이미지*/
+    #tab1:checked ~ .ps-duel-tab-contents .ps-duel-video1,
+    #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-video2,
+    #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-video3{left:15px;} /*이미지*/
 
 
     /*===============section2==================*/

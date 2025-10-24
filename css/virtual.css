@@ -17,10 +17,9 @@
 }
 
 @media screen and (min-width:1400px) {
-    /* FAQ 부분 버튼 오른쪽으로 바꾸기*/
-    .vr-why-wrap { display: flex; justify-content:space-between; align-items: center; background-color: red;}
-    .vr-why-video { width: 900px; height: 467px; overflow: hidden; }
-    .vr-why-contents { width:495px; height:500px; padding: 55px; }
+    .vr-why-wrap { height: 467px; display: flex; justify-content:space-between; align-items: center; }
+    .vr-why-video { width: 900px; height: 100%; overflow: hidden; }
+    .vr-why-contents { width:495px; height:500px; padding: 100px; }
     .vr-why-contents h4 + p { margin-top: 20px; }
     .vr-why-contents .more-btn { margin-top: 40px; }
 	.vr-why-bar { width:5px; height:300px; background:#caca64; }
@@ -46,7 +45,8 @@
     .vr-glasses-bg{ background: url(../img/vr/vr-img-glasses-fhd.jpg); }
     .vr-hardware-bg { background: url(../img/vr/vr-img-hardware-fhd.jpg); }
     .vr-games-bg { background: url(../img/vr/vr-img-games-fhd.jpg); }
-    .vr-faq-contents { padding: 0 250px; }
+    .vr-faq-contents { position: relative; padding: 0 250px; }
+    .vr-faq-track .more-btn { position: absolute; top: 400px; }
     .vr-faq-contents h4 { margin-top: 30px; }
     .vr-faq-contents p:first-of-type { margin-top: 20px; }
     .vr-faq-contents .more-btn { margin-top: 40px; }
