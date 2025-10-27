@@ -5,10 +5,12 @@ header.dark{background:rgba(3, 8, 37, 0.97);}
 header:hover{background:rgba(3, 8, 37, 0.97);}
 
 .banner { position:relative; overflow:hidden; color:#f6f6f6; text-align:center;}
-.content {
+.banner video {
 	position:absolute; left:50%; top:50%;
 	min-width:100%; min-height:100%; transform:translate(-50%, -50%); z-index:-9;
 }
+/* left:50%; top:50%; 와 transform:translate(-50%, -50%);는 중앙 정렬 하기 위해 사용했습니다.
+ min-width:100%; min-height:100%;은 화면크기에 맞추기 위해 사용했습니다. */
 .bbox30 {
 	position:absolute; left:0; top:0;
 	background:#000; opacity:30%; z-index:-1;

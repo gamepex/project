@@ -45,11 +45,11 @@
     .vr-glasses-bg{ background: url(../img/vr/vr-img-glasses-fhd.jpg); }
     .vr-hardware-bg { background: url(../img/vr/vr-img-hardware-fhd.jpg); }
     .vr-games-bg { background: url(../img/vr/vr-img-games-fhd.jpg); }
-    .vr-faq-contents { position: relative; padding: 0 250px; }
-    .vr-faq-track .more-btn { position: absolute; top: 400px; }
+    .vr-faq-contents { padding: 0 240px; }
     .vr-faq-contents h4 { margin-top: 30px; }
     .vr-faq-contents p:first-of-type { margin-top: 20px; }
-    .vr-faq-contents .more-btn { margin-top: 40px; }
+    .vr-faq-track article { position: relative; }  
+    .vr-faq-track article .more-btn { position: absolute; top: 400px; right: 50px; }
 }
 
 @media screen and (min-width:1050px) and (max-width:1399px) {
@@ -84,7 +84,8 @@
     .vr-faq-contents { padding: 0 250px; }
     .vr-faq-contents h4 { margin-top: 30px; }
     .vr-faq-contents p:first-of-type { margin-top: 20px; }
-    .vr-faq-contents .more-btn { margin-top: 40px; }
+    .vr-faq-track article { position: relative; }  
+    .vr-faq-track article .more-btn { position: absolute; top: 400px; right: 50px; }
 }
 
 @media screen and (min-width:750px) and (max-width:1049px){
