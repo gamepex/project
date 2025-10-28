@@ -1,27 +1,11 @@
 @charset "utf-8";
 
-.banner {
-    position: relative;
-    overflow: hidden;
-}
-
 .Scheduler {
     position: relative;
     overflow: hidden;
 }
 
 @media screen and (min-width:1400px) {
-
-    /*========== banner ==========*/
-    .ns-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -999;
-    }
 
 
     /*========== Who we are !!! ==========*/
@@ -320,13 +304,11 @@
 
     .js-slider {
         display: flex;
-        /* position: relative; */
+        position: relative;
         animation: loop var(--speed) linear infinite;
         margin-top: 20px;
         min-height: 300px;
     }
-
-
 
     .js-slider attribute {
         --sliderWidth: 100%;
@@ -353,17 +335,6 @@
     /*========== banner ==========*/
     .bn-ns-bg {
         /* background: url('../img/ns/bn-ns-dt-bg.jpg') no-repeat center center; */
-        background-size: cover;
-    }
-
-    .ns-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -999;
         background-size: cover;
     }
 
@@ -646,17 +617,6 @@
     /*========== banner ==========*/
     .bn-ns-bg {
         /* background: url('../img/ns/bn-ns-tb-bg.jpg') no-repeat center center; */
-        background-size: cover;
-    }
-
-    .ns-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -999;
         background-size: cover;
     }
 
@@ -956,17 +916,6 @@
         background-size: cover;
     }
 
-    .ns-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -999;
-        background-size: cover;
-    }
-
     h2 {
         width: 270px;
         margin: 0 auto;
@@ -1241,5 +1190,4 @@
         background-size: cover;
     }
 
-}
 }

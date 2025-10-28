@@ -10,19 +10,25 @@
 .ps-slide li:nth-child(5)>  .ps-slide-bg{background:url('../img/ps/s1.jpg') no-repeat center center; background-size:cover; }
 
 
-.ps-console-slide{display:flex; justify-content:center; height:550px; margin-top:65px; flex-wrap:wrap;  overflow:hidden;  }
-.ps-console-bg{width:350px; height:550px; }
-.ps-console-slide  > li > .more-btn{position:absolute; bottom:150px; right:150px ;} 
 
-.ps-console-slide li:nth-child(1) .ps-console-bg{background:url("../img/ps/ps5-console-slide.png")no-repeat  50%;background-size: cover;} 
-.ps-console-slide li:nth-child(2) .ps-console-bg{background:url("../img/ps/ps5-conosle-slide2.png")no-repeat 50%; background-size:cover;}
-.ps-console-slide li:nth-child(3) .ps-console-bg{background:url("../img/ps/ps5-console-slide3.png")no-repeat 10%; background-size: cover;}
-.ps-console-slide li:nth-child(4) .ps-console-bg{background:url("../img/ps/ps5-console-slide4.png")no-repeat 10%; background-size: cover;}
-.ps-console-slide li:nth-child(5) .ps-console-bg{background:url("../img/ps/ps5-console-slide5.png")no-repeat 10%; background-size: cover;}
+.ps-console-slide{display:flex; justify-content:center; height:450px; flex-wrap:wrap;  overflow:hidden;  }
 
-.ps-console-slide  > li  > h5 {position:absolute; right:40px; top:100px; width:300px; text-align: center;}
+.ps-console-bg{width:340px; height:450px; }
+.ps-console-slide li:nth-child(1) .ps-console-bg{background:url("../img/ps/ps5-console-slide.png")no-repeat  50% 10%;background-size:120%;} 
+.ps-console-slide li:nth-child(2) .ps-console-bg{background:url("../img/ps/ps5-conosle-slide2.png")no-repeat 50% 10%;background-size:120%;}
+.ps-console-slide li:nth-child(3) .ps-console-bg{background:url("../img/ps/ps5-console-slide3.png")no-repeat 50% 10%;background-size:120%;;}
+.ps-console-slide li:nth-child(4) .ps-console-bg{background:url("../img/ps/ps5-console-slide4.png")no-repeat 50% 10%;background-size:120%;}
+.ps-console-slide li:nth-child(5) .ps-console-bg{background:url("../img/ps/ps5-console-slide5.png")no-repeat 50% 10%;background-size:120%;}
+
+.ps-console-wrap{width:340px; padding:80px 0; text-align:center;}
+.ps-console-wrap h4{margin-bottom:50px;}
+.ps-console-slide > li {
+    display:flex; justify-content:center; 
+    width:750px;   margin:50px 50px 0;  padding:0 35px;
+    background:#202d52; border-radius:10px;  transition:all 0.3s ease-in;
+}
 @media screen and (min-width:1400px){  
- .ps-console-slide > li { position:relative; width:750px;  height:550px; margin-left:25px; background:#202d52; border-radius:10px;  transition:all 0.3s ease-in;}
+
 .ps-slide{margin-top:50px;}
 h5 {font-size:24px; text-transform:uppercase;}
 .ps-duel-tabs-wrap {position:relative; height:510px;}
@@ -35,7 +41,7 @@ h5 {font-size:24px; text-transform:uppercase;}
         text-transform:uppercase;
         background:#202d52;
         border-radius:10px 10px 0 0;
-    }
+}
 .ps-duel-tabs-wrap .tab1{left:20px;}
 .ps-duel-tabs-wrap .tab2{left:180px;}
 .ps-duel-tabs-wrap .tab3{left:340px;}
@@ -95,7 +101,7 @@ input:checked +label{ background:#324274;}
 
 
 @media screen and (min-width:1050px) and (max-width:1399px){
-    .ps-console-slide > li { position:relative; width:750px;  height:550px; margin:10px 25px; box-shadow:4px 4px  8px #0b1020; transition:all 0.3s ease-in;}
+
     .ps-slide{margin-top:40px;}
     .ps-duel-tabs-wrap {position:relative; height:510px;}
      .ps-duel-tabs-wrap input {display:none;}
@@ -166,7 +172,7 @@ input:checked +label{ background:#324274;}
 
 
 @media screen and (min-width:750px) and (max-width:1049px){
-    .ps-console-slide > li { position:relative; width:750px;  height:550px; margin:10px 25px 0; background:#1a2758;  transition:all 0.3s ease-in;}
+
     .ps-slide{margin-top:35px;}
     .ps-duel-tabs-wrap {position:relative; height:750px; }
     .ps-duel-tabs-wrap input {display:none;}
@@ -198,7 +204,7 @@ input:checked +label{ background:#324274;}
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
     #tab2:checked ~ .ps-duel-tab-contents .ps-duel-text2,
-    #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{right:120px;} /*텍스트*/
+    #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{right:135px;} /*텍스트*/
 
     #tab1:checked ~ .ps-duel-tab-contents  .ps-duel-video1,
     #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-video2,
