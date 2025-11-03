@@ -11,7 +11,7 @@
 
 
 
-.ps-console-wrap{display:flex; justify-content:center; height:350px; margin-top:30px; flex-wrap:wrap;  overflow:hidden;  }
+/* .ps-console-wrap{display:flex; justify-content:center; height:350px; margin-top:30px; flex-wrap:wrap;  overflow:hidden;  }
 
 .ps-console-bg{width:340px; height:350px; }
 .ps-console-wrap li:nth-child(1) .ps-console-bg{background:url("../img/ps/ps5-console-slide.png")no-repeat  50% 10%;background-size:90%;} 
@@ -26,7 +26,7 @@
     width:350px;   margin:0 30px;  padding:0 35px;
     background:#202d52; border-radius:50%;  transition:all 0.3s ease-in;
 }
-.ps-console-wrap .more-btn{position:absolute; bottom:20px;}
+.ps-console-wrap .more-btn{position:absolute; bottom:20px;} */
 @media screen and (min-width:1400px){  
 
 .ps-slide{margin-top:50px;}
