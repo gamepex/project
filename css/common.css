@@ -68,16 +68,15 @@ header:hover{background:rgba(3, 8, 37, 0.97);}
     h4  {font-size:34px; }
 
     /* .banner p { margin-top:20px; font-size: 22px; } */
-    .sub-title { padding:100px 0 50px; text-align: center; } /*sub-title 로 수정 */
+    .sub-title { padding:100px 0 50px; text-align: center; } 
     
-    /* ======자세히 보기 버튼==== 한별 추가 */
-    .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
+    .more-btn {   
         width:150px; height:60px;
         font-size:16px; color:#6389ff; text-align:center; line-height:60px;
         background:#fff; border-radius:30px;
         transition:all 0.4s;
     }
-    .more-btn:hover{ /*버튼 하버*/
+    .more-btn:hover{ 
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }
@@ -132,17 +131,16 @@ header:hover{background:rgba(3, 8, 37, 0.97);}
     .b-box3 {left:-10px; top:-15px; width:1950px; height:700px; transform:rotate(-35.5deg);}
     .b-box4 {left:75px; top:-35px; width:1930px; height:450px; transform:rotate(-58deg);}
 
-    .sub-title { padding:80px 0 40px; text-align: center; } /*sub-title 로 수정 */
+    .sub-title { padding:80px 0 40px; text-align: center; }
     section { width:1000px; margin:0 auto; }
 
-    /* ======자세히 보기 버튼==== 한별 추가 */
-    .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
+    .more-btn { 
         width:150px; height:60px;
         font-size:16px; color:#6389ff; text-align:center; line-height:60px;
         background:#fff; border-radius:30px;
         transition:all 0.4s;
     }
-    .more-btn:hover{ /*버튼 하버*/
+    .more-btn:hover{ 
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }
@@ -295,14 +293,14 @@ header:hover{background:rgba(3, 8, 37, 0.97);}
     section { width:350px; margin:0 auto; }
 
     .sub-title { padding:50px 0 25px; text-align: center; } /*sub-title 로 수정 */
-    /* ======자세히 보기 버튼==== 한별 추가 */
-    .more-btn {  /*수정사항: widt 150 변경 font-size 16px 변경 박스 그림자 추가  참고사항: 스마트폰 크기 :width100 height 50*/ 
+
+    .more-btn { 
         width:100px; height:50px;
         font-size:16px; color:#6389ff; text-align:center; line-height:50px;
         background:#fff; border-radius:30px;
         transition:all 0.4s;
     }
-    .more-btn:hover{ /*버튼 하버*/
+    .more-btn:hover{
         box-shadow:inset 0 0 0 30px rgb(0,0,0,0.3);
         background:#6389ff; color:#f1f1e6;
     }

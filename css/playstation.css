@@ -11,27 +11,29 @@
 
 
 
-/* .ps-console-wrap{display:flex; justify-content:center; height:350px; margin-top:30px; flex-wrap:wrap;  overflow:hidden;  }
+.ps-console-wrap{display:flex; justify-content:center;  height:250px;  margin-top:40px; flex-wrap:wrap; overflow:hidden; }
 
-.ps-console-bg{width:340px; height:350px; }
-.ps-console-wrap li:nth-child(1) .ps-console-bg{background:url("../img/ps/ps5-console-slide.png")no-repeat  50% 10%;background-size:90%;} 
-.ps-console-wrap li:nth-child(2) .ps-console-bg{background:url("../img/ps/ps5-conosle-slide2.png")no-repeat 50% 10%;background-size:100%;}
-.ps-console-wrap li:nth-child(3) .ps-console-bg{background:url("../img/ps/ps5-console-slide3.png")no-repeat 50% 10%;background-size:120%;;}
-.ps-console-wrap li:nth-child(4) .ps-console-bg{background:url("../img/ps/ps5-console-slide4.png")no-repeat 50% 10%;background-size:120%;}
-.ps-console-wrap li:nth-child(5) .ps-console-bg{background:url("../img/ps/ps5-console-slide5.png")no-repeat 50% 10%;background-size:120%;}
+.ps-console-bg{width:250px; height:250px; }
+.ps-console-wrap li:nth-child(1) .ps-console-bg{background:url("../img/ps/ps5-console-slide.png")no-repeat  50% 10%;background-size:95%;} 
+.ps-console-wrap li:nth-child(2) .ps-console-bg{background:url("../img/ps/ps5-conosle-slide2.png")no-repeat 50% 10%;background-size:95%;}
+.ps-console-wrap li:nth-child(3) .ps-console-bg{background:url("../img/ps/ps5-console-slide3.png")no-repeat 50% 10%;background-size:95%;;}
+.ps-console-wrap li:nth-child(4) .ps-console-bg{background:url("../img/ps/ps5-console-slide4.png")no-repeat 50% 10%;background-size:95%;}
+.ps-console-wrap li:nth-child(5) .ps-console-bg{background:url("../img/ps/ps5-console-slide5.png")no-repeat 50% 10%;background-size:95%;}
 
 .ps-console-wrap > li {
-    display:flex; justify-content:center; 
-    position:relative;
-    width:350px;   margin:0 30px;  padding:0 35px;
-    background:#202d52; border-radius:50%;  transition:all 0.3s ease-in;
-}
-.ps-console-wrap .more-btn{position:absolute; bottom:20px;} */
+     display:flex; justify-content:center;  
+     position:relative; 
+     width:250px;   margin:0 50px;
+      background:rgb(50, 66, 116,0.5); border-radius:50%;  transition:all 0.3s ease-in;
+    }
+.ps-console-wrap .more-btn{position:absolute; bottom:20px;} 
+
+.ps-duel-tabs-wrap input {display:none;}
+
 @media screen and (min-width:1400px){  
 
 .ps-slide{margin-top:50px;}
 .ps-duel-tabs-wrap {position:relative; height:510px;}
-.ps-duel-tabs-wrap input {display:none;}
 .ps-duel-tabs-wrap label{
         position:absolute; 
         width:150px; height:60px;
@@ -102,7 +104,6 @@ input:checked +label{ background:#324274;}
 
     .ps-slide{margin-top:40px;}
     .ps-duel-tabs-wrap {position:relative; height:510px;}
-     .ps-duel-tabs-wrap input {display:none;}
      .ps-duel-tabs-wrap label{
         position:absolute; 
         width:150px; height:60px;
@@ -163,7 +164,7 @@ input:checked +label{ background:#324274;}
     article:first-child {left:25px; background:url('../img/ps/scaling.jpg')no-repeat  -200px; background-size:cover;}
     article:nth-child(2){right:25px;background:url('../img/ps/mance.jpg')no-repeat  -200px; background-size:cover; }
     article:last-child{bottom:0; left:275px; background:url('../img/ps/tracing.jpg')no-repeat; background-size:cover;}
-    .ps-effect-info{position:absolute; left:70px;  top:180px; width:310px;} /*텍스트 내용*/
+    .ps-effect-info{position:absolute; left:70px;  top:180px; width:310px;} 
 
     .ps-effect-dark-bg{position:absolute; ; left: 0; margin-top:50px;width: 100% ; height:1150px;background:rgb(0, 0, 0,0.5);}
 }
@@ -173,7 +174,6 @@ input:checked +label{ background:#324274;}
 
     .ps-slide{margin-top:35px;}
     .ps-duel-tabs-wrap {position:relative;  height:810px; }
-    .ps-duel-tabs-wrap input {display:none;}
     .ps-duel-tabs-wrap label{
         position:absolute; 
         width:150px; height:60px;
@@ -201,14 +201,13 @@ input:checked +label{ background:#324274;}
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
     #tab2:checked ~ .ps-duel-tab-contents .ps-duel-text2,
-    #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{right:135px;} /*텍스트*/
+    #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{right:135px;} 
 
     #tab1:checked ~ .ps-duel-tab-contents  .ps-duel-video1,
     #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-video2,
-    #tab3:checked ~ .ps-duel-tab-contents   .ps-duel-video3{left:25px;} /*이미지*/
+    #tab3:checked ~ .ps-duel-tab-contents   .ps-duel-video3{left:25px;}
 
 
-    /*===============section2==================*/
     .ps-exclu-contents{position:relative;  height:770px;}
     .ps-exclu-img-wrap{ display:flex; }
     .ps-exclu-text-wrap{position: absolute;left:100px; top:185px;width:330px; z-index:8;}
@@ -224,7 +223,6 @@ input:checked +label{ background:#324274;}
     .ps-exclu-img-3{position:absolute; left:50px;left:0; bottom:0; width:550px; height:220px;background:url('../img/ps/ps-eg-td-bg3.jpg')no-repeat center center;background-size:cover;}
 
 
-    /* -==============section3================== */
     .ps-effect-contents{ position:relative; height:1250px;}
     article{  position:absolute;width:350px; height:600px;text-align:center;border-radius:20px; transition:all 0.3s ease-in;}
     .ps-effect-shadow{height:600px;border-radius:20px; background: rgb(0, 0, 0,0.7);transition:all 0.3s ease-in;}
@@ -248,7 +246,6 @@ input:checked +label{ background:#324274;}
 
     h2{width:210px; margin:0 auto; line-height:50px; text-align:center;}
     .ps-duel-tabs-wrap { position:relative; height:850px;}
-    .ps-duel-tabs-wrap input {display:none;}
     .ps-duel-tabs-wrap label{
         position:absolute; 
         width:33%; height:50px;
@@ -276,14 +273,14 @@ input:checked +label{ background:#324274;}
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-text1,
     #tab2:checked ~ .ps-duel-tab-contents .ps-duel-text2,
-    #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{left:45px;} /*텍스트*/
+    #tab3:checked ~ .ps-duel-tab-contents .ps-duel-text3{left:45px;} 
 
     #tab1:checked ~ .ps-duel-tab-contents .ps-duel-video1,
     #tab2:checked ~ .ps-duel-tab-contents  .ps-duel-video2,
-    #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-video3{left:15px;} /*이미지*/
+    #tab3:checked ~ .ps-duel-tab-contents  .ps-duel-video3{left:15px;} 
 
 
-    /*===============section2==================*/
+
     .ps-exclu-contents{position:relative;   height:860px;}
     .ps-exclu-img-wrap{ display:flex;}
     .ps-exclu-text-wrap{position: absolute;right:15px; top:145px;height:395px;text-align:left;text-orientation:sideways; writing-mode: vertical-rl; z-index:8;}
@@ -295,7 +292,9 @@ input:checked +label{ background:#324274;}
     .ps-exclu-img-2{position:absolute; right:0; top:105px;width:100%; height:640px;background:url('../img/ps/ps-sm-bg2.jpg')no-repeat center center;background-size:cover;}
     .ps-exclu-img-3{position:absolute;left:50px;left:0; bottom:0;width:330px; height:220px; background:url('../img/ps/ps-sm-bg3.jpg')no-repeat center center;background-size:cover;}
 
-    /* -==============section3================== */
+
+
+
     .ps-effect-contents{height:1450px;}
     article{position:relative;  width:350px; height:450px; margin:0 auto; text-align:center;border-radius:20px; transition:all 0.3s ease-in;}
     .ps-effect-shadow{width:350px; height:450px; border-radius:20px; background: rgb(0, 0, 0,0.7); transition:all 0.3s ease-in;}
