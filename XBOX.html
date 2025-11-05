@@ -8,10 +8,19 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/xbox.css">
-    <script src="js/jquery_1.12.4.min.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="flexslider/jquery.flexslider.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/trigger.js"></script>
+    <script src="js/scroll.js"></script>
+    <script>
+        $(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                pauseOnHover: true
+            });
+        });
+    </script>
 </head>
 
 
@@ -245,10 +254,31 @@
 
     <!-- 서브 3 -->
     <div class="sub-title">
-        <h3><span class="hg-blue">h</span>ow to<span class="hg-ygrn"> r</span>ental</h3>
-        <p>온·오프라인 대여방법</p>
+        <h3><span class="hg-blue">r</span>ecommended<span class="hg-ygrn"> g</span>ames</h3>
+        <p>Xbox Series X|S 최적화 추천 게임</p>
     </div>
-    <!-- DTD 박스 -->
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <div class="fs-bg fs-bg-1"></div>
+                <div class="fs-text">
+                    <h2>START SPACE TRAVEL</h2>
+                    <p>밀키북과 함께 우주의 신비한 곳으로 여행해요. 우주의 새로운 매력에 매료 될겁니다.</p>
+                    <a href="#" class="slide-btn">자세히 보기</a>
+                </div>
+            </li>
+            <li>
+                <div class="fs-bg fs-bg-2"></div>
+                <div class="fs-text">
+                    <h2>BYEOLMARO OBSERVATORY</h2>
+                    <p class="bg-text-2">영월, 별마로천문대는. 봉래산 해발 799.8m에 자리하고 있다. 관측실 천정이 자동으로 열리자 캄캄한 밤하늘에 아름다운 별들의 모습이 보인다.</p>
+                    <a href="#" class="slide-btn">자세히 보기</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- DTD 박스
     <div class="xb-rent-container">
             <div class="xb-rent-arti-wrap xb-arti-wrap-specipic">
                 <div class="xb-rent-arti xb-dtd-art1">
@@ -277,11 +307,11 @@
                 <a href="#" class="more-btn xb-rent-btn">more</a>
             </div>
         
-    </div>
+    </div> -->
 
 
         <!-- 서브 4 -->
-    <div class="xb-loca-container">
+    <!-- <div class="xb-loca-container">
         <div class="xb-loca-bg">
             <div class="xb-loca-sm-ellip xb-loca-sm1"><a href="#">성남모란역점</a></div>
             <div class="xb-loca-sm-ellip xb-loca-sm2"><a href="#">분당미금역점</a></div>
@@ -291,11 +321,11 @@
             <h3><span class="hg-blue">s</span>tore <span class="hg-ygrn">l</span>ocation</h3>
             <p>찾아오시는 길</p>
         </div>
-    </div>
+    </div> -->
 
 
    <!-- DELI 박스 -->
-    <div class="xb-rent-container2">
+    <!-- <div class="xb-rent-container2">
         <div class="xb-rent-wrap">
             <div class="xb-rent-arti-wrap">
                 <div class="xb-rent-arti xb-deli-art1">
@@ -324,7 +354,7 @@
                 <a href="#" class="more-btn xb-rent-btn">more</a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <footer>
         <div class="ft-wrap">
