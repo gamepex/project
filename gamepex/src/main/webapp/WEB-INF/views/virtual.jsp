@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -5,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR - Gamepex</title>
     <link rel="shortcut icon" href="img/common/favicon_apex.png">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/common.css">
     <script src="js/jquery_1.12.4.min.js"></script>
 </head>
 <body>
@@ -101,7 +103,7 @@
                     </div>
                 </li>
                 <li>
-                      <a href="./virtual.html">vr</a>
+                      <a href="virtual">vr</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">
@@ -161,7 +163,7 @@
         </nav>
     </header>
 
-    <link rel="stylesheet" href="css/virtual.css">
+    <link rel="stylesheet" href="/resources/css/virtual.css">
 
     <div class="banner">
         <div class="b-box1 bbox30"></div>

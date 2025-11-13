@@ -27,8 +27,8 @@
     .vr-vrchat-wrap, .vr-beat-wrap { display:flex; justify-content:space-between; align-items: center; }
     .vr-beat-wrap { flex-direction: row-reverse; margin-top: 50px; }
     .vr-vrchat-bg, .vr-beat-bg { width: 50%; height: 250px; border-radius:15px; overflow:hidden; }
-	.vr-vrchat-bg { background: url(../img/vr/vr-img-vrchat-fhd.jpg) no-repeat center center; }
-    .vr-beat-bg { background: url(../img/vr/vr-img-beat-fhd.jpg) no-repeat center center; }
+	.vr-vrchat-bg { background: url(/resources/img/vr/vr-img-vrchat-fhd.jpg) no-repeat center center; }
+    .vr-beat-bg { background: url(/resources/img/vr/vr-img-beat-fhd.jpg) no-repeat center center; }
 	
     .vr-vrchat-contents, .vr-beat-contents { width:695px; height: 250px; padding: 60px; text-align: center; }
     .vr-vrchat-contents p, .vr-beat-contents p { margin-top: 20px; }
@@ -42,9 +42,9 @@
     .vr-faq-wrap { height: 600px; }
     .vr-faq-track article { width: 1000px; text-align: center; }
     .vr-faq-track article div:first-child { width: 100%; height: 300px; margin: 0 auto; border-radius: 15px; }
-    .vr-glasses-bg{ background: url(../img/vr/vr-img-glasses-fhd.jpg); }
-    .vr-hardware-bg { background: url(../img/vr/vr-img-hardware-fhd.jpg); }
-    .vr-games-bg { background: url(../img/vr/vr-img-games-fhd.jpg); }
+    .vr-glasses-bg{ background: url(/resources/img/vr/vr-img-glasses-fhd.jpg); }
+    .vr-hardware-bg { background: url(/resources/img/vr/vr-img-hardware-fhd.jpg); }
+    .vr-games-bg { background: url(/resources/img/vr/vr-img-games-fhd.jpg); }
     .vr-faq-contents { padding: 0 240px; }
     .vr-faq-contents h4 { margin-top: 30px; }
     .vr-faq-contents p:first-of-type { margin-top: 20px; }
@@ -63,8 +63,8 @@
     .vr-vrchat-wrap, .vr-beat-wrap { display:flex; justify-content:space-between; align-items: center; }
     .vr-beat-wrap { flex-direction: row-reverse; margin-top: 50px; }
     .vr-vrchat-bg, .vr-beat-bg { width: 50%; height: 250px; border-radius: 15px; overflow: hidden; }
-    .vr-vrchat-bg { background: url(../img/vr/vr-img-vrchat-fhd.jpg) no-repeat center center; }
-    .vr-beat-bg { background: url(../img/vr/vr-img-beat-fhd.jpg) no-repeat center center; }
+    .vr-vrchat-bg { background: url(/resources/img/vr/vr-img-vrchat-fhd.jpg) no-repeat center center; }
+    .vr-beat-bg { background: url(resources/img/vr/vr-img-beat-fhd.jpg) no-repeat center center; }
 
     .vr-vrchat-contents, .vr-beat-contents { width: 520px; height: 250px; padding: 65px 45px; text-align: center; }
     .vr-games p { margin-top: 20px; }
@@ -78,9 +78,9 @@
     .vr-faq-wrap { height: 600px; }
     .vr-faq-track article { width: 1000px; text-align: center;}
     .vr-faq-track article div:first-child { width: 100%; height: 300px; margin: 0 auto; border-radius: 15px; }
-    .vr-glasses-bg { background: url(../img/vr/vr-img-glasses-fhd.jpg); }
-    .vr-hardware-bg { background: url(../img/vr/vr-img-hardware-fhd.jpg); }
-    .vr-games-bg { background: url(../img/vr/vr-img-games-fhd.jpg); }
+    .vr-glasses-bg { background: url(/resources/img/vr/vr-img-glasses-fhd.jpg); }
+    .vr-hardware-bg { background: url(/resources/img/vr/vr-img-hardware-fhd.jpg); }
+    .vr-games-bg { background: url(/resources/img/vr/vr-img-games-fhd.jpg); }
     .vr-faq-contents { padding: 0 250px; }
     .vr-faq-contents h4 { margin-top: 30px; }
     .vr-faq-contents p:first-of-type { margin-top: 20px; }
@@ -96,8 +96,8 @@
     .vr-games { display: flex; justify-content: space-between; text-align: center; }
     .vr-vrchat-wrap, .vr-beat-wrap { width: 350px; }
     .vr-vrchat-bg, .vr-beat-bg { height: 400px; border-radius: 15px; overflow: hidden; }
-    .vr-vrchat-bg { background: url(../img/vr/vr-img-vrchat-mob.jpg) no-repeat center center; }
-    .vr-beat-bg { background: url(../img/vr/vr-img-beat-mob.jpg) no-repeat center center; }
+    .vr-vrchat-bg { background: url(resources/img/vr/vr-img-vrchat-mob.jpg) no-repeat center center; }
+    .vr-beat-bg { background: url(resources/img/vr/vr-img-beat-mob.jpg) no-repeat center center; }
 
     .vr-vrchat-contents, .vr-beat-contents { margin-top: 25px; }
     .vr-games p { margin-top: 10px; }
@@ -108,9 +108,9 @@
     .vr-faq-contents { width: 100%; padding-top: 15px; }
     .vr-faq-contents h4 { font-size: 20px; text-align: center; }
     .vr-faq-track div:first-child { width: 100%; height: 400px; margin-top: 10px; border-radius: 15px; }
-    .vr-glasses-bg { background: url(../img/vr/vr-img-glasses-mob.jpg); }
-    .vr-hardware-bg { background: url(../img/vr/vr-img-hardware-mob.jpg); }
-    .vr-games-bg { background: url(../img/vr/vr-img-games-mob.jpg); }
+    .vr-glasses-bg { background: url(resources/img/vr/vr-img-glasses-mob.jpg); }
+    .vr-hardware-bg { background: url(resources/img/vr/vr-img-hardware-mob.jpg); }
+    .vr-games-bg { background: url(resources/img/vr/vr-img-games-mob.jpg); }
     .vr-faq-wrap p { display: none; }
     .vr-faq-contents .more-btn { margin-top: 30px; }
 }
@@ -126,8 +126,8 @@
 
     .titles-must { width: 190px; margin: auto; }
     .vr-vrchat-bg, .vr-beat-bg { height: 400px; border-radius: 15px; overflow: hidden; }
-    .vr-vrchat-bg { background: url(../img/vr/vr-img-vrchat-mob.jpg) no-repeat center center; }
-    .vr-beat-bg { background: url(../img/vr/vr-img-beat-mob.jpg) no-repeat center center; }
+    .vr-vrchat-bg { background: url(resources/img/vr/vr-img-vrchat-mob.jpg) no-repeat center center; }
+    .vr-beat-bg { background: url(resources/img/vr/vr-img-beat-mob.jpg) no-repeat center center; }
     
     .vr-vrchat-contents, .vr-beat-contents { padding: 10px 5px 25px; background: rgba(13, 18, 48, 0.92); border-radius: 15px; }
     .vr-games p { margin-top: 10px; }
@@ -139,9 +139,9 @@
     .vr-faq-contents { width: 100%; padding-top: 15px; }
     .vr-faq-contents h4 { font-size: 20px; text-align: center; }
     .vr-faq-track div:first-child { width: 100%; height: 400px; margin-top: 10px; border-radius: 15px; }
-    .vr-glasses-bg{ background: url(../img/vr/vr-img-glasses-mob.jpg); }
-    .vr-hardware-bg{ background: url(../img/vr/vr-img-hardware-mob.jpg); }
-    .vr-games-bg{ background: url(../img/vr/vr-img-games-mob.jpg); }
+    .vr-glasses-bg{ background: url(resources/img/vr/vr-img-glasses-mob.jpg); }
+    .vr-hardware-bg{ background: url(resources/img/vr/vr-img-hardware-mob.jpg); }
+    .vr-games-bg{ background: url(resources/img/vr/vr-img-games-mob.jpg); }
     .vr-faq-wrap p { display: none; }
     .vr-faq-contents .more-btn { margin-top: 30px; }
 }

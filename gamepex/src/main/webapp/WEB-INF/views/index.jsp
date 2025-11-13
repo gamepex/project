@@ -1,17 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamepex</title>
-</head>
-<body>
-    <h1>Gamepex</h1>
-</body>
-</html>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>	
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -43,7 +30,7 @@
             
             <ul id="main-menu">
                 <li>
-                    <a href="./playstation.html">ps5</a>
+                    <a href="playstation">ps5</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">
@@ -70,7 +57,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="./xbox.html">xbox</a>
+                    <a href=xbox">xbox</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">
@@ -124,7 +111,7 @@
                     </div>
                 </li>
                 <li>
-                        <a href="./virtual.html">vr</a>
+                        <a href="virtual">vr</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">
@@ -210,3 +197,4 @@
 
 
 
+</html>

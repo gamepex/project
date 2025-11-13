@@ -6,5 +6,6 @@
     "js/jquery_1.12.4.min.js": true
     "**/~$*": true
     "**/*.xlsx": true
+    "**/*.pptx": true
   }
 }
