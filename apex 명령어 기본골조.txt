@@ -1,0 +1,77 @@
+<공통 사용>
+▦org.gamepex.controller - index
+	-
+▦org.gamepex.share
+	- ProductVO
+	- MemberVO
+	- AddressDTO
+	- RentalVO
+	- RentalDTO
+▦
+▦
+▦
+▦
+▦
+▦
+▦
+▦
+▦
+▦
+
+
+[관리자 명령 규칙]
+접두사: admin, staff
+adm
+staff (ex. stf_id, stf_pw etc.)
+
+<css>
+- adm-common
+- staff.css
+
+[사용자 명령어 규칙]
+접두사: user, member
+user
+mb (ex. mb_id, mb_pw etc.)
+
+mb-input-wrap / mb-wrap(입력폼 전체 감싸는 박스의 이름, 미확정)
+
+</views/folder>
+- static(정적 홈페이지)
+	index.jsp
+	ps5.jsp, xbox.jsp, nintendo.jsp, vr.jsp, steamdeck.jsp
+	(header&footer 각 페이지별로 붙여넣고, 해당 페이지 스타일 시트도 따로 붙여넣기)
+
+- include : header / footer (주석 제거 후 복붙)
+
+
+ 
+<css>
+- user-common.css
+- mb-index.css
+- member.css
+- 
+
+
+
+[게임기(자산) 명령어 규칙]
+접두사: product
+pd (ex. pd_no, pd_pw etc.)
+
+<css>
+- adm-common
+- staff.css
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- 

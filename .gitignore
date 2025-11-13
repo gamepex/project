@@ -2,6 +2,9 @@
 Thumbs.db
 ~$*
 
+/.metadata/
+Servers/
+
 .settings/
 target/
 .classpath
