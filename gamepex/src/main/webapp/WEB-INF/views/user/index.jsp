@@ -20,7 +20,7 @@
 <body>
     <header>
         <nav>
-            <a href="/index.html" class="logo"><h1>g<span class="hg-blue"><span class="hg-blue">:</span></span>p<span class="hg-ygrn">ex</span></h1> </a>
+            <a href="/" class="logo"><h1>g<span class="hg-blue"><span class="hg-blue">:</span></span>p<span class="hg-ygrn">ex</span></h1> </a>
             
             <a href="#" id="trigger">
                 <span></span>
@@ -111,7 +111,7 @@
                     </div>
                 </li>
                 <li>
-                        <a href="virtual">vr</a>
+                    <a href="/user/virtual">vr</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">

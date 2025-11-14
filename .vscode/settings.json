@@ -7,5 +7,12 @@
     "**/~$*": true
     "**/*.xlsx": true
     "**/*.pptx": true
+    "**/*.hwp": true
+    "**/*.metadata": true
+    "**/*.settings": true
+    "**/target": true
+    "**/.classpath": true
+    "**/.project": true
+    "**/Servers": true
   }
 }

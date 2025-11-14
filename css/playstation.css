@@ -216,7 +216,7 @@ input:checked +label{ background:#324274;}
 @media screen and (max-width:749px){
     .ps-slide{margin-top:20px;}
 
-    h2{width:210px; margin:0 auto; line-height:50px; text-align:center;}
+    h2{width:210px; margin:0 auto;}
     .ps-duel-tabs-wrap { position:relative; height:850px;}
     .ps-duel-tabs-wrap label{
         position:absolute; 
