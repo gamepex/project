@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="img/common/favicon_apex.png">
     <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="/resources/css/common.css">
-    <script src="js/jquery_1.12.4.min.js"></script>
+    <script src="/resources/js/jquery_1.12.4.min.js"></script>
 </head>
 <body>
     <header>
@@ -174,7 +174,7 @@
             <h2><span class="hg-blue">r</span>eality <span class="hg-ygrn">never </span><span class="hg-blue">b</span>efore</h2>
             <p><span class="hg-blue">지금</span>까지 없던 <span class="hg-ygrn">현실</span>을 만나보세요</p>
         </div>
-        <video src="video/vr/vr-banner.mp4" autoplay loop muted preload playsinline></video>
+        <video src="/resources/video/vr/vr-banner.mp4" autoplay loop muted preload playsinline></video>
     </div>
     
     <main>
@@ -186,7 +186,7 @@
 			
             <div class="vr-why-wrap">
                 <div class="vr-why-video">
-                    <video src="video/vr/video-quest3.mp4" loop muted playsinline></video>
+                    <video src="/resources/video/vr/video-quest3.mp4" loop muted playsinline></video>
                 </div>
                 <div class="vr-why-contents">
                     <h4>메타 퀘스트3는 현세대 최고기입니다</h4>
@@ -301,6 +301,6 @@
         </div>
     </footer>
 </body>
-<script src="js/common.js"></script>
-<script src="js/virtual.js"></script>
+<script src="/resources/js/common.js"></script>
+<script src="/resources/js/virtual.js"></script>
 </html>

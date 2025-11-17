@@ -3,16 +3,15 @@
     "**/.gitignore": true,
     "**/README.md": true,
     "**/.vscode": true,
-    "js/jquery_1.12.4.min.js": true
+    "**/jquery_1.12.4.min.js": true
     "**/~$*": true
     "**/*.xlsx": true
     "**/*.pptx": true
     "**/*.hwp": true
-    "**/*.metadata": true
     "**/*.settings": true
     "**/target": true
-    "**/.classpath": true
     "**/.project": true
-    "**/Servers": true
+    "**/.classpath": true
+    "**/.factorypath": true
   }
 }

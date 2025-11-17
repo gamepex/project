@@ -1,12 +1,4 @@
 .DS_Store
 Thumbs.db
 ~$*
-
-/.metadata/
-Servers/
-
-.settings/
 target/
-.classpath
-.project
-.springBeans
