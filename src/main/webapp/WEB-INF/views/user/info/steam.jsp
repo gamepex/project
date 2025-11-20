@@ -1,20 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>steamdeck</title>
-    <link rel="shortcut icon" href="img/common/favicon_apex.png">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <script src="js/jquery_1.12.4.min.js"></script>
-    <script src="./js/common.js"></script>
-    <script src="js/nintendo.js"></script>
+    <link rel="shortcut icon" href="/resources/img/common/favicon_apex.png">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/common.css">
+    <script src="/resources/js/jquery_1.12.4.min.js"></script>
+    <script src="/resources/js/common.js"></script>
+    <script src="/resources/js/nintendo.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <a href="/index.html" class="logo"><img src="./img/common/logo.png" alt="게임펙스 로고"></a>
+            <a href="/index.html" class="logo"><img src="/resources/img/common/logo.png" alt="게임펙스 로고"></a>
             <a href="#" id="trigger">
                 <span></span>
                 <span></span>
@@ -158,14 +160,14 @@
             </ul>
         </nav>
     </header>
-    <link rel="stylesheet" href="css/steam.css">
+    <link rel="stylesheet" href="/resources/css/steam.css">
 
     <div class="banner st-bn-bg">
         <div class="b-box1 bbox30"></div>
         <div class="b-box2 bbox30"></div>
         <div class="b-box3 bbox30"></div>
         <div class="b-box4 bbox30"></div>
-        <video src="video/sd/st-bn-dt-video.mp4" autoplay loop muted preload></video>
+        <video src="/resources/video/sd/st-bn-dt-video.mp4" autoplay loop muted preload></video>
         <div class="main-title">
             <h2><span class="hg-blue">s</span>team <span class="hg-ygrn">deck</span> <span class="hg-blue">e</span>verywhere</h2>
             <p>언제 <span class="hg-blue">어디서나</span> 열리는 <span class="hg-ygrn">스팀</span>의 세계</p>
@@ -230,13 +232,13 @@
 
             <div class="st-pg-contents">
                 <div class="st-pg-vd1">
-                    <video src="video/sd/st-pg-video1.mp4" loop controls preload muted></video>
+                    <video src="/resources/video/sd/st-pg-video1.mp4" loop controls preload muted></video>
                 </div>
                 <div class="st-pg-vd2">
-                    <video src="video/sd/st-pg-video2.mp4" loop controls preload muted></video>
+                    <video src="/resources/video/sd/st-pg-video2.mp4" loop controls preload muted></video>
                 </div>
                 <div class="st-pg-vd3">
-                    <video src="video/sd/st-pg-video3.mp4" loop controls preload muted></video>
+                    <video src="/resources/video/sd/st-pg-video3.mp4" loop controls preload muted></video>
                 </div>
             </div>
         </div>

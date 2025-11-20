@@ -193,6 +193,8 @@
 </dependencies>
 
 <build>
+	<!-- 협업 충돌 방지용 target 개별 디렉토리 설정 -->
+	<directory>${project.basedir}/target-${user.name}</directory>
 	<plugins>
 		<plugin>
 			<artifactId>maven-eclipse-plugin</artifactId>

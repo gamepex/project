@@ -103,7 +103,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="/user/virtual">vr</a>
+                    <a href="/user/info/virtual">vr</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">
@@ -163,7 +163,7 @@
         </nav>
     </header>
 
-    <link rel="stylesheet" href="/resources/css/intro/virtual.css">
+    <link rel="stylesheet" href="/resources/css/virtual.css">
 
     <div class="banner">
         <div class="b-box1 bbox30"></div>

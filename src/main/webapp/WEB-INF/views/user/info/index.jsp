@@ -57,7 +57,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href=xbox">xbox</a>
+                    <a href="xbox">xbox</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">
@@ -111,7 +111,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="/user/virtual">vr</a>
+                    <a href="/user/info/virtual">vr</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">

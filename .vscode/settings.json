@@ -9,9 +9,10 @@
     "**/*.pptx": true
     "**/*.hwp": true
     "*.settings": true
-    "target": true
+    "target*": true
     ".project": true
     ".classpath": true
+    ".factorypath": true
     "gamepex임포트*": true
     "*.png": true
   }

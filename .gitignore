@@ -3,7 +3,8 @@ Thumbs.db
 ~$*
 
 .settings/
-target/
+target*/
 .classpath
+.factorypath
 .project
 gamepex임포트*
