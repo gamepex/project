@@ -12,4 +12,7 @@ public class UserInfoController {
 	
 	@GetMapping("/virtual")
 	public String virtual() { return "user/info/virtual"; }
+	
+	@GetMapping("/steam")
+	public String steam() { return "user/info/steam"; }
 }

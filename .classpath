@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="target-pc07-00/classes" path="src/main/java">
+	<classpathentry kind="src" output="build/target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry excluding="**" kind="src" output="target-pc07-00/classes" path="src/main/resources">
+	<classpathentry excluding="**" kind="src" output="build/target/classes" path="src/main/resources">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target-pc07-00/test-classes" path="src/test/java">
+	<classpathentry kind="src" output="build/target/test-classes" path="src/test/java">
 		<attributes>
 			<attribute name="test" value="true"/>
 			<attribute name="optional" value="true"/>
@@ -30,16 +30,10 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" output="target-pc07-00/test-classes" path="target-pc07-00/generated-test-sources/test-annotations">
-		<attributes>
-			<attribute name="optional" value="true"/>
-			<attribute name="test" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" path="target-pc07-00/generated-sources/annotations">
+	<classpathentry kind="src" path="build/target/generated-sources/annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="output" path="target-pc07-00/classes"/>
+	<classpathentry kind="output" path="build/target/classes"/>
 </classpath>

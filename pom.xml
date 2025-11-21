@@ -2,8 +2,8 @@
 <modelVersion>4.0.0</modelVersion>
 <groupId>com.gamepex</groupId>
 <artifactId>gamepex</artifactId>
-<version>0.0.1-SNAPSHOT</version>
-<packaging>war</packaging>
+<version>0.0.1-SNAPSHOT</version><packaging>war</packaging>
+
 
 <properties>
 	<java-version>11</java-version>
@@ -193,8 +193,8 @@
 </dependencies>
 
 <build>
-	<!-- 협업 충돌 방지용 target 개별 디렉토리 설정 -->
-	<directory>${project.basedir}/target-${user.name}</directory>
+	<!-- 협업 충돌 방지용 target 디렉토리 설정 -->
+	<directory>build/target</directory>
 	<plugins>
 		<plugin>
 			<artifactId>maven-eclipse-plugin</artifactId>

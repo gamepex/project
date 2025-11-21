@@ -138,7 +138,7 @@
                     </div>
                 </li>
                 <li>
-                        <a href="./steam.html">steamdeck</a>
+                        <a href="/user/info/steam">steamdeck</a>
                     <div class="sub-menu">
                         <div class="sub-menu-wrap">
                             <div class="sub-menu-title">
@@ -167,13 +167,13 @@
             </ul>
             
             <ul class="top-menu">
-                <li><a href="#"><i class="bi bi-person-plus-fill"></i></a></li>
+                <li><a href="/user/member/register"><i class="bi bi-person-plus-fill"></i></a></li>
                 <li><a href="#"><i class="bi bi-person-dash-fill"></i></a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <video src="resources/video/index/index.webm" autoplay loop muted preload="auto" playsinline></video>
+        <video src="/resources/video/index/index.webm" autoplay loop muted preload="auto" playsinline></video>
         <h2>
             <span class="hg-blue">Challenge</span>
             <span class="space">your</span>

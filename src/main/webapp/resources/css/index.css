@@ -41,7 +41,7 @@ h2 .hg-blue, h2 .hg-ygrn { text-transform: capitalize; }
 
   .index-contents h4 { font-size: 24px; }
   .index-contents a {
-    width: 200px; height: 50px; margin: 50px auto 180px;
+    width: 200px; height: 50px; margin: 0px auto 180px; /* top 50px였음. 향후 수정 */
     font-size: 26px; line-height: 42px;
   }
 }

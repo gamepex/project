@@ -3,18 +3,18 @@
     ".gitignore": true,
     "README.md": true,
     ".vscode": true,
-    "**/jquery_1.12.4.min.js": true
-    "**/~$*": true
-    "**/*.xlsx": true
-    "**/*.pptx": true
-    "**/*.hwp": true
-    "*.settings": true
-    "target*": true
-    ".project": true
-    ".classpath": true
-    ".factorypath": true
-    "gamepex임포트*": true
+    "**/jquery_1.12.4.min.js": true,
+    "**/~$*": true,
+    "**/*.xlsx": true,
+    "**/*.pptx": true,
+    "**/*.hwp": true,
+    "*.settings": true,
+    "target*": true,
+    ".project": true,
+    ".classpath": true,
+    ".factorypath": true,
+    "gamepex임포트*": true,
     "*.png": true
-  }
+  },
    "java.compile.nullAnalysis.mode": "disabled"
 }

@@ -3,10 +3,10 @@ $(function(){
     $(window).scroll(function(){
         var value=$(window).scrollTop();
         if(value >=350){
-            document.querySelector('.content').pause();
+            document.querySelector('.banner video').pause();
             document.querySelector(".vr-why-video video").play();
         }else{
-            document.querySelector('.content').play();
+            document.querySelector('.banner video').play();
             document.querySelector(".vr-why-video video").pause();
         }
     });
