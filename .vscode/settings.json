@@ -13,7 +13,7 @@
     ".project": true,
     ".classpath": true,
     ".factorypath": true,
-    "gamepex임포트*": true,
+    ".springBeans": true,
     "*.png": true
   },
    "java.compile.nullAnalysis.mode": "disabled"

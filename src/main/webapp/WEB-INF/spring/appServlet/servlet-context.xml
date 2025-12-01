@@ -12,20 +12,25 @@
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
+	<!-- 정적 서비스 자원(static resources: js, css, imgs 등)은 webapp/resources directory에서 관리한다. -->
 	<resources mapping="/resources/**" location="/resources/" />
 
 	
+	<!-- Controller에서 응답 JSP 파일을 선택할 때 사용하는 경로(/WEB-INF/views directory)와 파일 확장자명(.jsp)을 설정 -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" />
-		<beans:property name="suffix" value=".jsp" />
+		<beans:property name="prefix" value="/WEB-INF/views/" /><!-- jsp 파일이 저장된 경로를 설정 -->
+		<beans:property name="suffix" value=".jsp" /><!-- 파일의 확장자명을 설정 -->
 	</beans:bean>
 	
-	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<beans:property name="maxUploadSize" value="104857600" />
-		<beans:property name="defaultEncoding" value="utf-8" />
-	</beans:bean>
 	
+	<!-- org.member.controller 패키지 내부에 있는 클래스를 스프링빈으로 등록한다. -->
 	<context:component-scan base-package="com.gamepex" />
+	<context:component-scan base-package="com.gamepex.controller" />
+	<context:component-scan base-package="com.gamepex.user" />
+	<context:component-scan base-package="com.gamepex.user.device" />
+	
+	
+	
 </beans:beans>
 
 

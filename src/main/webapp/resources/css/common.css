@@ -18,11 +18,11 @@ header:hover{background:rgba(3, 8, 37, 0.97);}
 
 .sub-menu-title > div {position:relative;  width:100%; height: 100%; border-radius:10px; }
 .sub-menu-title > div::before{content:""; position:absolute; left:0; top:0;width:100%; height:100%; border-radius:10px;  background:rgb(0, 0, 0,0.6)}
-.sub-menu-ps-bg{background:url("../img/common/submenu-ps.jpg")no-repeat 50%; background-size:cover;}
-.sub-menu-xb-bg{background:url("../img/common/xb-sub-menu.jpg")no-repeat 83%; background-size:310%;}
-.sub-menu-ns-bg{background:url("../img/common/ns-hero_pic_oled.png")no-repeat right center; background-size:cover;}
-.sub-menu-vr-bg{background:url("../img/common/submenu-vr.webp") no-repeat center center; background-size: contain; }
-.sub-menu-sd-bg{background:url("../img/common/submenu-sd.jpg") no-repeat center center; background-size: cover; }
+.sub-menu-ps-bg{background:url("/resources/img/common/submenu-ps.jpg")no-repeat 50%; background-size:cover;}
+.sub-menu-xb-bg{background:url("/resources/img/common/xb-sub-menu.jpg")no-repeat 83%; background-size:310%;}
+.sub-menu-ns-bg{background:url("/resources/img/common/ns-hero_pic_oled.png")no-repeat right center; background-size:cover;}
+.sub-menu-vr-bg{background:url("/resources/img/common/submenu-vr.webp") no-repeat center center; background-size: contain; }
+.sub-menu-sd-bg{background:url("/resources/img/common/submenu-sd.jpg") no-repeat center center; background-size: cover; }
 
 
 @media screen and (min-width:1400px) {
@@ -35,23 +35,20 @@ header:hover{background:rgba(3, 8, 37, 0.97);}
     #main-menu > li > a {padding:18px 45px; text-transform: uppercase; }
 
     /* =====dropdown menu===== */
-    .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.85); }
-    .sub-menu-wrap{ display:flex;  width:1300px;  margin:0 auto; background:rgba(17, 26, 68, 0.75); }
+    .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.95); }
+    .sub-menu-wrap{ display:flex;  width:1100px; margin:0 auto; }
 
-    .sub-menu-title{position:relative;  width:350px; font-size:62px;  border-radius:10px; background:rgba(0,0,0, 0.4);}
-    .sub-menu-title > h6{position:absolute;  left:40px;  top:40%; width:280px; text-align:center;}
+    .sub-menu-title{position:relative;  width:500px; font-size:62px;  border-radius:10px; }
+    .sub-menu-title > h6{position:absolute;  left:125px;  top:40%; width:250px; text-align:center;}
 
     .sub-menu-info-wrap{
          display:flex; justify-content: center; 
-        width:950px; height:300px; 
-        background: rgb(13, 22, 54,0.3);
-        box-shadow:0 0 30px rgba(0,0,0, 0.4) inset;
-    }
-    .sub-menu-info{ padding:55px 60px;  text-align:center; line-height:60px; }
-    .sub-menu-info >li > a {width:190px; transition: all 0.3s ease-in;}
+         height:300px;}
+    .sub-menu-info{margin-left:100px;padding-top:30px; line-height:80px; }
+    .sub-menu-info >li > a {text-align:left; transition: all 0.3s ease-in;}
 
     #main-menu > li > a:hover {color: #6389ff;}
-    .sub-menu-info > li > a:hover{ color: #6389ff;  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.75); border-radius:10px;}
+    .sub-menu-info > li > a:hover{ color: #6389ff; }
     /* ========================== */
      .top-menu a {padding:0 0 10px 10px; font-size: 30px}
      
@@ -109,17 +106,20 @@ header:hover{background:rgba(3, 8, 37, 0.97);}
     #main-menu, .top-menu {display: flex; }
     #main-menu > li > a {padding:0 35px; text-transform: uppercase; }
     /* =====dropdown menu===== */
-    .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.85); }
-    .sub-menu-wrap{ display:flex;  width:1000px;  margin:0 auto; background:rgba(17, 26, 68, 0.75); }
+     .sub-menu{ display:none; position:fixed;  left:0; top:60px; width:100%;  height:300px; background:rgba(5, 12, 51, 0.95); }
+    .sub-menu-wrap{ display:flex;  width:1000px;  margin:0 auto; }
 
-    .sub-menu-title{ position:relative;  width:300px; font-size:58px;  background:rgba(0,0,0, 0.4);}
-    .sub-menu-title > h6{position:absolute;  left:10px;  top:40%; width:280px; text-align:center;}
+    .sub-menu-title{position:relative;  width:400px; font-size:62px;  border-radius:10px; }
+    .sub-menu-title > h6{position:absolute;  left:65px;  top:40%; width:280px; text-align:center;}
 
-    .sub-menu-info-wrap{display:flex; justify-content: center; width:700px; height:300px;  background: rgb(13, 22, 54,0.3); box-shadow:0 0 30px rgba(0,0,0, 0.4) inset;}
-    .sub-menu-info{width:33%; padding:55px 0px;  text-align:center; line-height:60px; }
-    .sub-menu-info >li > a {position:relative; transition: all 0.3s ease-in;}
+    .sub-menu-info-wrap{
+         display:flex; justify-content: center; 
+         height:300px;}
+    .sub-menu-info{margin-left:100px;padding-top:30px; line-height:80px; }
+    .sub-menu-info >li > a {text-align:left; transition: all 0.3s ease-in;}
+
     #main-menu > li > a:hover {color: #6389ff;}
-    .sub-menu-info > li > a:hover{ color: #6389ff;  box-shadow:2px 2px 4px rgba(0, 0, 0, 0.75); border-radius:10px;}
+    .sub-menu-info > li > a:hover{ color: #6389ff; }
     /* ====================== */
     .top-menu a {padding:0 0 10px 10px; font-size: 30px}
 
@@ -193,9 +193,9 @@ header:hover{background:rgba(3, 8, 37, 0.97);}
     #main-menu.tabmenu{ right:0; width:80%; opacity:1; }     
 
     .sub-menu{ display:none;  background:rgba(11, 20, 49, 0.8); box-shadow:0 0 20px rgba(0,0,0,0.3)inset; }
-    .sub-menu-info-wrap{display:flex; justify-content:center;  padding:40px 0;  }
+    .sub-menu-info-wrap{display:flex; justify-content:center;  padding:30px;  }
     .sub-menu-title{display:none;}
-    .sub-menu-info a{padding:20px 40px; font-size:18px;  text-align:center; transition:all 0.3s }
+    .sub-menu-info a{margin:0 30px; line-height:80px; font-size:18px;  text-align:center; transition:all 0.3s }
 
     .top-menu {display: flex;  position:absolute; left:20px; top:5px;}
     .top-menu a{padding-left:10px; font-size:30px; }
@@ -272,10 +272,9 @@ header:hover{background:rgba(3, 8, 37, 0.97);}
 
      .sub-menu{ display:none; padding:40px 0;background:rgba(11, 20, 49, 0.4);box-shadow:0 0 20px rgba(0,0,0,0.3)inset;}
     .sub-menu-info-wrap{display:flex;  justify-content:center; width: 350px; flex-wrap: wrap; margin: 0 auto; }
-    .sub-menu-info:last-child{display: flex;}
     .sub-menu-title{display:none;}
 
-    .sub-menu-info a{width:175px; font-size:18px; padding:20px  0; text-align:center; }
+    .sub-menu-info a{width:175px; font-size:18px; padding:30px  0; text-align:center; }
 
     .top-menu {display: flex;  position:absolute; right:25px; top:5px}
     .top-menu a{ padding-left:10px; font-size:28px; }

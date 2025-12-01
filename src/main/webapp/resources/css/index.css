@@ -19,8 +19,8 @@ h2 span { display: block; }
 h2 .hg-blue, h2 .hg-ygrn { text-transform: capitalize; }
 
 .index-buttons { position: absolute; z-index: 2; }
-.index-chat { width: 100px; height: 100px;  background: url(../img/index/index-chat.png) no-repeat center center; }
-.index-quick { width: 100px; height: 100px;  background: url(../img/index/index-quick.png) no-repeat center center; }
+.index-chat { width: 100px; height: 100px;  background: url(/resources/img/index/index-chat.png) no-repeat center center; }
+.index-quick { width: 100px; height: 100px;  background: url(/resources/img/index/index-quick.png) no-repeat center center; }
 
 .index-contents {
   position: absolute; left: 50%; top: 60%; transform: translate(-50%, 0);
@@ -41,7 +41,7 @@ h2 .hg-blue, h2 .hg-ygrn { text-transform: capitalize; }
 
   .index-contents h4 { font-size: 24px; }
   .index-contents a {
-    width: 200px; height: 50px; margin: 0px auto 180px; /* top 50px였음. 향후 수정 */
+    width: 200px; height: 50px; margin: 50px auto 180px;
     font-size: 26px; line-height: 42px;
   }
 }

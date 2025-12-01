@@ -17,7 +17,7 @@
     .ns-wwa-bg1 {
         width: 900px;
         height: 500px;
-        background: url('../img/ns/ns-wwa-bg1.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg1.png') no-repeat center center;
         background-size: cover;
     }
 
@@ -38,7 +38,7 @@
         width: 350px;
         height: 500px;
         margin-top: 25px;
-        background: url('../img/ns/ns-wwa-bg2.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg2.png') no-repeat center center;
         background-size: cover;
     }
 
@@ -46,7 +46,7 @@
         width: 900px;
         height: 500px;
         margin-top: 25px;
-        background: url('../img/ns/ns-wwa-bg3.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg3.png') no-repeat center center;
         background-size: cover;
     }
 
@@ -77,40 +77,40 @@
 
     .ns-lp-bg1 {
         width: 220px;
-        background: url('../img/ns/ns-lp-bg1.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg1.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg2 {
         width: 600px;
-        background: url('../img/ns/ns-lp-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg2.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg3 {
         width: 460px;
-        background: url('../img/ns/ns-lp-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg3.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg4 {
         width: 460px;
         margin-top: 5px;
-        background: url('../img/ns/ns-lp-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg4.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg5 {
         width: 600px;
         margin-top: 5px;
-        background: url('../img/ns/ns-lp-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg5.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg6 {
         width: 220px;
         margin-top: 5px;
-        background: url('../img/ns/ns-lp-bg6.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg6.jpg') no-repeat center center;
         background-size: cover;
     }
 
@@ -125,27 +125,27 @@
     }
 
     .ns-lp-bg1:hover {
-        background: url('../img/ns/ns-lp-bg1-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg1-1.jpg') no-repeat;
     }
 
     .ns-lp-bg2:hover {
-        background: url('../img/ns/ns-lp-bg2-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg2-1.jpg') no-repeat;
     }
 
     .ns-lp-bg3:hover {
-        background: url('../img/ns/ns-lp-bg3-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg3-1.jpg') no-repeat;
     }
 
     .ns-lp-bg4:hover {
-        background: url('../img/ns/ns-lp-bg4-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg4-1.jpg') no-repeat;
     }
 
     .ns-lp-bg5:hover {
-        background: url('../img/ns/ns-lp-bg5-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg5-1.jpg') no-repeat;
     }
 
     .ns-lp-bg6:hover {
-        background: url('../img/ns/ns-lp-bg6-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg6-1.jpg') no-repeat;
     }
 
 
@@ -162,27 +162,27 @@
     }
 
     .ns-ch-bg1 {
-        background: url('../img/ns/ns-ch-bg1.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg1.jpg') no-repeat center center;
     }
 
     .ns-ch-bg2 {
-        background: url('../img/ns/ns-ch-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg2.jpg') no-repeat center center;
     }
 
     .ns-ch-bg3 {
-        background: url('../img/ns/ns-ch-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg3.jpg') no-repeat center center;
     }
 
     .ns-ch-bg4 {
-        background: url('../img/ns/ns-ch-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg4.jpg') no-repeat center center;
     }
 
     .ns-ch-bg5 {
-        background: url('../img/ns/ns-ch-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg5.jpg') no-repeat center center;
     }
 
     .ns-ch-bg6 {
-        background: url('../img/ns/ns-ch-bg6.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg6.jpg') no-repeat center center;
     }
 
     .ns-ch-bg h4 {
@@ -268,27 +268,27 @@
     }
 
     .ns-ch-more-bg1 {
-        background: url('../img/ns/ns-ch-more-bg1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-ch-more-bg1.jpg') no-repeat;
     }
 
     .ns-ch-more-bg2 {
-        background: url('../img/ns/ns-ch-more-bg2.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-ch-more-bg2.jpg') no-repeat;
     }
 
     .ns-ch-more-bg3 {
-        background: url('../img/ns/ns-ch-more-bg3.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-ch-more-bg3.jpg') no-repeat;
     }
 
     .ns-ch-more-bg4 {
-        background: url('../img/ns/ns-ch-more-bg4.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-ch-more-bg4.jpg') no-repeat;
     }
 
     .ns-ch-more-bg5 {
-        background: url('../img/ns/ns-ch-more-bg5.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-ch-more-bg5.jpg') no-repeat;
     }
 
     .ns-ch-more-bg6 {
-        background: url('../img/ns/ns-ch-more-bg6.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-ch-more-bg6.jpg') no-repeat;
     }
 
     /* shift-슬라이드 */
@@ -330,7 +330,7 @@
 
     /*========== banner ==========*/
     .bn-ns-bg {
-        /* background: url('../img/ns/bn-ns-dt-bg.jpg') no-repeat center center; */
+        /* background: url('/resources/img/ns/bn-ns-dt-bg.jpg') no-repeat center center; */
         background-size: cover;
     }
 
@@ -343,7 +343,7 @@
     .ns-wwa-bg1 {
         width: 620px;
         height: 400px;
-        background: url('../img/ns/ns-wwa-bg1.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg1.png') no-repeat center center;
         background-size: cover;
         border-radius: 20px;
     }
@@ -365,7 +365,7 @@
         width: 350px;
         height: 400px;
         margin-top: 25px;
-        background: url('../img/ns/ns-wwa-bg2.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg2.png') no-repeat center center;
         background-size: cover;
         border-radius: 20px;
     }
@@ -374,7 +374,7 @@
         width: 620px;
         height: 400px;
         margin-top: 25px;
-        background: url('../img/ns/ns-wwa-bg3.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg3.png') no-repeat center center;
         background-size: cover;
         border-radius: 20px;
     }
@@ -405,25 +405,25 @@
 
     .ns-lp-bg2 {
         width: 550px;
-        background: url('../img/ns/ns-lp-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg2.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg3 {
         width: 450px;
-        background: url('../img/ns/ns-lp-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg3.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg4 {
         width: 450px;
-        background: url('../img/ns/ns-lp-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg4.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg5 {
         width: 550px;
-        background: url('../img/ns/ns-lp-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg5.jpg') no-repeat center center;
         background-size: cover;
     }
 
@@ -438,27 +438,27 @@
     }
 
     .ns-lp-bg1:hover {
-        background: url('../img/ns/ns-lp-bg1-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg1-1.jpg') no-repeat;
     }
 
     .ns-lp-bg2:hover {
-        background: url('../img/ns/ns-lp-bg2-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg2-1.jpg') no-repeat;
     }
 
     .ns-lp-bg3:hover {
-        background: url('../img/ns/ns-lp-bg3-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg3-1.jpg') no-repeat;
     }
 
     .ns-lp-bg4:hover {
-        background: url('../img/ns/ns-lp-bg4-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg4-1.jpg') no-repeat;
     }
 
     .ns-lp-bg5:hover {
-        background: url('../img/ns/ns-lp-bg5-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg5-1.jpg') no-repeat;
     }
 
     .ns-lp-bg6:hover {
-        background: url('../img/ns/ns-lp-bg6-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg6-1.jpg') no-repeat;
     }
 
 
@@ -475,27 +475,27 @@
     }
 
     .ns-ch-bg1 {
-        background: url('../img/ns/ns-ch-bg1.jpg') no-repeat left center;
+        background: url('/resources/img/ns/ns-ch-bg1.jpg') no-repeat left center;
     }
 
     .ns-ch-bg2 {
-        background: url('../img/ns/ns-ch-bg2.jpg') no-repeat right center;
+        background: url('/resources/img/ns/ns-ch-bg2.jpg') no-repeat right center;
     }
 
     .ns-ch-bg3 {
-        background: url('../img/ns/ns-ch-bg3.jpg') no-repeat left center;
+        background: url('/resources/img/ns/ns-ch-bg3.jpg') no-repeat left center;
     }
 
     .ns-ch-bg4 {
-        background: url('../img/ns/ns-ch-bg4.jpg') no-repeat right center;
+        background: url('/resources/img/ns/ns-ch-bg4.jpg') no-repeat right center;
     }
 
     .ns-ch-bg5 {
-        background: url('../img/ns/ns-ch-bg5.jpg') no-repeat left center;
+        background: url('/resources/img/ns/ns-ch-bg5.jpg') no-repeat left center;
     }
 
     .ns-ch-bg6 {
-        background: url('../img/ns/ns-ch-bg6.jpg') no-repeat right center;
+        background: url('/resources/img/ns/ns-ch-bg6.jpg') no-repeat right center;
     }
 
     .ns-ch-bg {
@@ -581,27 +581,27 @@
     }
 
     .ns-ch-more-bg1 {
-        background: url('../img/ns/ns-ch-more-bg1.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg1.jpg') no-repeat center center;
     }
 
     .ns-ch-more-bg2 {
-        background: url('../img/ns/ns-ch-more-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg2.jpg') no-repeat center center;
     }
 
     .ns-ch-more-bg3 {
-        background: url('../img/ns/ns-ch-more-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg3.jpg') no-repeat center center;
     }
 
     .ns-ch-more-bg4 {
-        background: url('../img/ns/ns-ch-more-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg4.jpg') no-repeat center center;
     }
 
     .ns-ch-more-bg5 {
-        background: url('../img/ns/ns-ch-more-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg5.jpg') no-repeat center center;
     }
 
     .ns-ch-more-bg6 {
-        background: url('../img/ns/ns-ch-more-bg6.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg6.jpg') no-repeat center center;
     }
 
 }
@@ -612,7 +612,7 @@
 
     /*========== banner ==========*/
     .bn-ns-bg {
-        /* background: url('../img/ns/bn-ns-tb-bg.jpg') no-repeat center center; */
+        /* background: url('/resources/img/ns/bn-ns-tb-bg.jpg') no-repeat center center; */
         background-size: cover;
     }
 
@@ -625,7 +625,7 @@
     .ns-wwa-bg1 {
         width: 470px;
         height: 300px;
-        background: url('../img/ns/ns-wwa-bg1.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg1.png') no-repeat center center;
         background-size: cover;
         border-radius: 20px;
     }
@@ -647,7 +647,7 @@
         width: 250px;
         height: 300px;
         margin-top: 15px;
-        background: url('../img/ns/ns-wwa-bg2.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg2.png') no-repeat center center;
         background-size: cover;
         border-radius: 20px;
     }
@@ -656,7 +656,7 @@
         width: 470px;
         height: 300px;
         margin-top: 15px;
-        background: url('../img/ns/ns-wwa-bg3.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg3.png') no-repeat center center;
         background-size: cover;
         border-radius: 20px;
     }
@@ -689,25 +689,25 @@
 
     .ns-lp-bg2 {
         width: 65%;
-        background: url('../img/ns/ns-lp-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg2.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg3 {
         width: 35%;
-        background: url('../img/ns/ns-lp-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg3.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg4 {
         width: 35%;
-        background: url('../img/ns/ns-lp-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg4.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg5 {
         width: 65%;
-        background: url('../img/ns/ns-lp-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg5.jpg') no-repeat center center;
         background-size: cover;
     }
 
@@ -722,27 +722,27 @@
     }
 
     .ns-lp-bg1:hover {
-        background: url('../img/ns/ns-lp-bg1-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg1-1.jpg') no-repeat;
     }
 
     .ns-lp-bg2:hover {
-        background: url('../img/ns/ns-lp-bg2-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg2-1.jpg') no-repeat;
     }
 
     .ns-lp-bg3:hover {
-        background: url('../img/ns/ns-lp-bg3-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg3-1.jpg') no-repeat;
     }
 
     .ns-lp-bg4:hover {
-        background: url('../img/ns/ns-lp-bg4-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg4-1.jpg') no-repeat;
     }
 
     .ns-lp-bg5:hover {
-        background: url('../img/ns/ns-lp-bg5-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg5-1.jpg') no-repeat;
     }
 
     .ns-lp-bg6:hover {
-        background: url('../img/ns/ns-lp-bg6-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg6-1.jpg') no-repeat;
     }
 
 
@@ -759,32 +759,32 @@
     }
 
     .ns-ch-bg1 {
-        background: url('../img/ns/ns-ch-bg1.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg1.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg2 {
-        background: url('../img/ns/ns-ch-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg2.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg3 {
-        background: url('../img/ns/ns-ch-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg3.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg4 {
-        background: url('../img/ns/ns-ch-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg4.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg5 {
-        background: url('../img/ns/ns-ch-bg5.jpg') no-repeat center center;
+        background: url('/resources/img//resources/ns-ch-bg5.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg6 {
-        background: url('../img/ns/ns-ch-bg6.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg6.jpg') no-repeat center center;
         background-size: cover;
     }
 
@@ -871,32 +871,32 @@
     }
 
     .ns-ch-more-bg1 {
-        background: url('../img/ns/ns-ch-more-bg1.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg1.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg2 {
-        background: url('../img/ns/ns-ch-more-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg2.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg3 {
-        background: url('../img/ns/ns-ch-more-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg3.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg4 {
-        background: url('../img/ns/ns-ch-more-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg4.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg5 {
-        background: url('../img/ns/ns-ch-more-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg5.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg6 {
-        background: url('../img/ns/ns-ch-more-bg6.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg6.jpg') no-repeat center center;
         background-size: cover;
     }
 
@@ -908,7 +908,7 @@
 
     /*========== banner ==========*/
     .bn-ns-bg {
-        /* background: url('../img/ns/bn-ns-sm-bg.jpg') no-repeat center center; */
+        /* background: url('/resources/img/ns/bn-ns-sm-bg.jpg') no-repeat center center; */
         background-size: cover;
     }
 
@@ -922,7 +922,7 @@
     /*========== Who we are !!! ==========*/
     .ns-wwa-bg1 {
         height: 300px;
-        background: url('../img/ns/ns-wwa-bg1.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg1.png') no-repeat center center;
         background-size: cover;
         border-radius: 10px;
     }
@@ -947,7 +947,7 @@
     .ns-wwa-bg3 {
         height: 300px;
         margin-top: 15px;
-        background: url('../img/ns/ns-wwa-bg3.png') no-repeat center center;
+        background: url('/resources/img/ns/ns-wwa-bg3.png') no-repeat center center;
         background-size: cover;
         border-radius: 10px;
     }
@@ -974,22 +974,23 @@
     }
 
     .ns-lp-bg2 {
-        background: url('../img/ns/ns-lp-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg2.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg3 {
-        background: url('../img/ns/ns-lp-bg3.jpg') no-repeat center center;
-        background-size: cover;
+        background: url('/resources/img/ns/ns-lp-bg3.jpg') no-repeat center center;
+        background-size: cov
+        er;
     }
 
     .ns-lp-bg4 {
-        background: url('../img/ns/ns-lp-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg4.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-lp-bg5 {
-        background: url('../img/ns/ns-lp-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-lp-bg5.jpg') no-repeat center center;
         background-size: cover;
     }
 
@@ -1004,27 +1005,27 @@
     }
 
     .ns-lp-bg1:hover {
-        background: url('../img/ns/ns-lp-bg1-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg1-1.jpg') no-repeat;
     }
 
     .ns-lp-bg2:hover {
-        background: url('../img/ns/ns-lp-bg2-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg2-1.jpg') no-repeat;
     }
 
     .ns-lp-bg3:hover {
-        background: url('../img/ns/ns-lp-bg3-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg3-1.jpg') no-repeat;
     }
 
     .ns-lp-bg4:hover {
-        background: url('../img/ns/ns-lp-bg4-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg4-1.jpg') no-repeat;
     }
 
     .ns-lp-bg5:hover {
-        background: url('../img/ns/ns-lp-bg5-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg5-1.jpg') no-repeat;
     }
 
     .ns-lp-bg6:hover {
-        background: url('../img/ns/ns-lp-bg6-1.jpg') no-repeat;
+        background: url('/resources/img/ns/ns-lp-bg6-1.jpg') no-repeat;
     }
 
 
@@ -1041,32 +1042,32 @@
     }
 
     .ns-ch-bg1 {
-        background: url('../img/ns/ns-ch-bg1.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg1.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg2 {
-        background: url('../img/ns/ns-ch-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg2.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg3 {
-        background: url('../img/ns/ns-ch-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg3.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg4 {
-        background: url('../img/ns/ns-ch-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg4.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg5 {
-        background: url('../img/ns/ns-ch-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg5.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-bg6 {
-        background: url('../img/ns/ns-ch-bg6.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-bg6.jpg') no-repeat center center;
         background-size: cover;
     }
 
@@ -1157,32 +1158,32 @@
     }
 
     .ns-ch-more-bg1 {
-        background: url('../img/ns/ns-ch-more-bg1.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg1.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg2 {
-        background: url('../img/ns/ns-ch-more-bg2.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg2.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg3 {
-        background: url('../img/ns/ns-ch-more-bg3.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg3.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg4 {
-        background: url('../img/ns/ns-ch-more-bg4.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg4.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg5 {
-        background: url('../img/ns/ns-ch-more-bg5.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg5.jpg') no-repeat center center;
         background-size: cover;
     }
 
     .ns-ch-more-bg6 {
-        background: url('../img/ns/ns-ch-more-bg6.jpg') no-repeat center center;
+        background: url('/resources/img/ns/ns-ch-more-bg6.jpg') no-repeat center center;
         background-size: cover;
     }
 

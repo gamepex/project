@@ -68,7 +68,7 @@
     .st-ds-btn { margin:20px auto 0; }
     .st-ds-bg {
         width:850px; height:550px;
-        background:url(/resources/img/sd/st-ds-bg1.jpg) no-repeat center center;
+        background:url(../img/sd/st-ds-bg1.jpg) no-repeat center center;
         background-size:cover;
         border-radius:20px;
     }

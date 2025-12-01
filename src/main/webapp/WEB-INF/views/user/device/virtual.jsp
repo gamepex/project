@@ -1,0 +1,122 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../include/header.jsp" %>
+
+    <link rel="stylesheet" href="/resources/css/virtual.css">
+
+    <div class="banner">
+        <div class="b-box1 bbox30"></div>
+        <div class="b-box2 bbox30"></div>
+        <div class="b-box3 bbox30"></div>
+        <div class="b-box4 bbox30"></div>
+        <div class="main-title">
+            <h2><span class="hg-blue">r</span>eality <span class="hg-ygrn">never </span><span class="hg-blue">b</span>efore</h2>
+            <p><span class="hg-blue">지금</span>까지 없던 <span class="hg-ygrn">현실</span>을 만나보세요</p>
+        </div>
+        <video src="/resources/video/vr/vr-banner.mp4" autoplay loop muted preload playsinline></video>
+    </div>
+    
+    <main>
+        <section>
+            <div class="sub-title">
+                <h3><span class="hg-blue">w</span>hy <span class="hg-ygrn">q</span>uest?</h3>
+                <p>퀘스트3를 선택해야 하는 이유</p>
+            </div>
+			
+            <div class="vr-why-wrap">
+                <div class="vr-why-video">
+                    <video src="/resources/video/vr/video-quest3.mp4" loop muted playsinline></video>
+                </div>
+                <div class="vr-why-contents">
+                    <h4>메타 퀘스트3는 현세대 최고기입니다</h4>
+                    <p>PC가 필요없는 독립형VR 중에서
+                    Meta Quest 3의 성능, 그리고 범용성을
+                    따라오는 기기는 없습니다. 고민을 멈추세요.
+					그저 최고의 몰입 경험을 받아들이세요.</p>
+                    <a class="more-btn" href="#">more</a>
+                </div>
+				<div class="vr-why-bar"></div>
+            </div>
+
+            <div class="sub-title titles-must">
+                <h3><span class="hg-ygrn">t</span>itles <span class="hg-blue">y</span>ou <span class="hg-ygrn">m</span>ust <span class="hg-blue">p</span>lay</h3>
+                <p>필수 타이틀</p>
+            </div>
+            
+            <div class="vr-games">
+                <div class="vr-vrchat-wrap">
+                    <div class="vr-vrchat-bg"></div>
+                    <div class="vr-vrchat-contents">
+                        <h4>VRChat, 무한한 가능성</h4>
+                        <p>
+                            전 세계 사람들과 아바타로 소통하는 가상현실 플랫폼!
+                            나만의 월드와 캐릭터를 만들어 상상력을 현실로!
+                            지금 VRChat에서 새로운 친구들과 모험을 시작하세요!
+                        </p>
+                    </div>
+                    <div class="vr-game-bar"></div>
+                </div>
+                    
+                <div class="vr-beat-wrap">
+                    <div class="vr-beat-bg"></div>
+                    <div class="vr-beat-contents">
+                        <h4>당신의 무대, Beat Saber</h4>
+                        <p>
+                            검을 드세요. 리듬에 몸을 맡기세요.
+                            눈앞으로 날아오는 블록들을 베어 넘기세요.
+                            당신은 이제, 검으로 연주하는 음악가입니다.
+                        </p>
+                    </div>      
+                    <div class="vr-game-bar"></div>          
+                </div>
+            </div>
+            
+            <div class="vr-etc">
+                <p>메타퀘스트3로 영화관 그 이상의 몰입을 경험하세요. 초대형 가상 스크린에서 생생한 영화 감상, Virtual Desktop으로  현실 같은 PC 환경까지 그대로. 180°/360° VR 영상으로 아름다운 여행지와 팝 아티스트의 공연을 바로 눈앞에서 즐기세요 — 가장 가까운 거리에서, 가장 생생하게.</p>
+            </div>
+
+
+            <div  class="sub-title">
+                <h3><span class="hg-blue">f</span>requently <span class="hg-ygrn">a</span>sked</h3>
+                <p>자주 묻는 질문</p>
+            </div>
+        
+        </section>
+
+        <div class="vr-faq-wrap">
+            <div class="vr-faq-track">
+                <article>
+                    <div class="vr-glasses-bg"></div>
+                    <div class="vr-faq-contents">
+                        <h4>안경 착용시에도 사용이 가능한가요?</h4>
+                        <p>네, 메타퀘스트3는 안경 착용자도 편안하게 사용할 수 있도록 설계되어 있습니다.
+                        기본 구성품에 포함된 렌즈 가이드를 장착하면, 안경과 기기 렌즈 사이에 충분한 공간이 생겨 긁힘 없이 안전하게 사용할 수 있습니다.</p>
+                    </div>
+                    <a class="more-btn" href="#">more</a>
+                </article>
+                <article>
+                    <div class="vr-hardware-bg"></div>
+                    <div class="vr-faq-contents">
+                        <h4>구성품은 어떻게 제공되나요?</h4>
+                        <p>메타퀘스트3 본체와 Touch Plus 컨트롤러, 유선 연결을 위한 케이블과 전용 충전기가 제공됩니다.
+                        그리고 안경 착용자를 위한 렌즈 가이드가 기본 제공됩니다. 추가로 필요한 액세서리는 대여 가능합니다.</p>
+                    </div>
+                    <a class="more-btn" href="#">more</a>
+                </article>
+                <article>
+                    <div class="vr-games-bg"></div>
+                    <div class="vr-faq-contents">
+                        <h4>VR 게임에는 어떤 것들이 있나요?</h4>
+                        <p>VR 독점 컨텐츠들에서부터, 유명한 AAA 대작들이 메타퀘스트 스토어에 준비되어 있습니다.
+                        레지던트 이블 4 VR, 어쌔신 크리드 넥서스 VR 같은 인기 게임들을 비롯해, 다양한 장르의 게임을 만나보실 수 있습니다.</p>
+                    </div>
+                    <a class="more-btn" href="#">more</a>
+                </article>
+            </div>
+        </div>
+    </main>
+    <script src="/resources/js/common.js"></script>
+	<script src="/resources/js/virtual.js"></script>
+
+<%@ include file="../include/footer.jsp" %>
+    
