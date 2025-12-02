@@ -25,9 +25,6 @@
 	
 	<!-- org.member.controller 패키지 내부에 있는 클래스를 스프링빈으로 등록한다. -->
 	<context:component-scan base-package="com.gamepex" />
-	<context:component-scan base-package="com.gamepex.controller" />
-	<context:component-scan base-package="com.gamepex.user" />
-	<context:component-scan base-package="com.gamepex.user.device" />
 	
 	
 	

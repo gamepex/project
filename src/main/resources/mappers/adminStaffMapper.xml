@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.bookrental.mappers.admin.staff">
+
+	<!-- 아이디 중복 확인 -->
+	<select id="idcheck" parameterType="String" resultType="com.gamepex.mappers.admin.staff.AdminStaffVO">
+		select * from tbl_staff
+		where staff_id = #{staff_id}
+	</select>
+
+	<!-- 직원 등록 -->
+	<insert id="register" parameterType="com.gamepex.admin.staff.AdminStaffVO">
+		insert into tbl_staff
+		(
+			staff_no
+		    , staff_id
+		    , staff_pw
+		    , staff_name
+		    , staff_gender
+		    , staff_birth
+		    , staff_part
+		    , staff_position
+		    , staff_phone
+		    , staff_mail
+		    , staff_state
+		    , staff_regdate
+		    , staff_moddate
+		)
+		values
+		(
+			#{staff_no
+		    , #{staff_id}
+		    , #{staff_pw}
+		    , #{staff_name}
+		    , #{staff_gender}
+		    , #{staff_birth}
+		    , #{staff_part}
+		    , #{staff_position}
+		    , #{staff_phone}
+		    , #{staff_mail}
+		    , #{staff_state}
+		    , #{staff_regdate}
+		    , #{staff_moddate}
+		    
+
+		)
+	</insert>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+

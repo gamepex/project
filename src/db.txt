@@ -1,0 +1,17 @@
+create database gamepex;
+
+CREATE TABLE tbl_staff (
+    staff_no INT AUTO_INCREMENT PRIMARY KEY,
+    staff_id VARCHAR(20) NOT NULL UNIQUE,
+    staff_pw CHAR(60) NOT NULL,
+    staff_name VARCHAR(30) NOT NULL,
+    staff_gender CHAR(1),
+    staff_birth DATE,
+    staff_part VARCHAR(10),
+    staff_position VARCHAR(10),
+    staff_phone CHAR(13) NOT NULL,
+    staff_mail VARCHAR(50) NOT NULL UNIQUE,
+    staff_state INT NOT NULL DEFAULT 0,
+    staff_regdate DATETIME,
+    staff_moddate DATETIME
+)
