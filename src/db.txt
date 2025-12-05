@@ -15,3 +15,43 @@ CREATE TABLE tbl_staff (
     staff_regdate DATETIME,
     staff_moddate DATETIME
 )
+
+create table tbl_rental (
+	rt_no		int		not null		auto-increment		comment '렌탈번호',
+	mb_id			varchar(20)		not null		comment '회원 아이디',
+	rt_days		int		not null		comment '대여일수(최소값:3 (check 제약조건)',
+	rt_shipfee		int		not null		comment '배송비',	
+	rt_amount		int		not null		comment '결제총액(상품 1일 대여료 총합 X 대여일수 + 배송비)',
+	rt_regdate		datetime		comment '주문날짜	',
+	rt_payment		int		comment '결제방식 (0:카드 1:현금 2:무통장입금 3:그 외)',
+	rt_invoice		varchar(20)		comment '송장번호',	
+	rt_state		int		default'0'		comment '주문상태	(0:pending 1:shipped 2:cancelled 3:rejected)',
+	rt_name		varchar(30)		not null		comment '받는분성함',	
+	rt_zipcode		char(5)		not null		comment '우편번호',	
+	rt_addr		varchar(200)		not null		comment '받는분주소',
+	rt_addrdet		varchar(100)		not null		comment'상세주소',
+	rt_tel		char(13)		not null		comment'받는분전화번호',
+	rt_req		varchar(100)			comment'배송요청사항',
+	rt_startdate		date		not null		comment '시작일',
+	rt_enddate		date		not null		comment '종료일	',
+	rt_rtndate		date			comment'반납일(관리자 권한)',
+	rt_moddate		datetime		comment'수정일',
+	primary key (rt_no),
+	foreign key (mb_id) references tbl_member (mb_id)
+) comment '렌탈 테이블';  
+
+
+create table tbl_rentdetail (
+	rd_no		int		not null		auto-increment		comment '상세번호',
+	rt_no		int		not null		comment '렌탈 번호',
+	con_serial		varchar(30)		not null		comment '콘솔 일련번호',
+	ttl_number		int		not null		comment '타이틀 일련번호',
+	rd_type		varchar(30)		not null		comment '분류(게임기/타이틀)',
+	rd_name		varchar(50)		not null		comment'상품명',	
+	rd_price		int		not null		comment '가격',	
+	rd_quantity		int		not null		comment '수량',
+	primary key (rd_no),
+	foreign key (rt_no) references tbl_rental (rt_no),
+	foreign key (con_serial) references tbl_console (con_serial),
+	foreign key (ttl_number) references tbl_title (ttl_number),
+) comment '렌탈 상세 테이블';  

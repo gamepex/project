@@ -1,8 +1,9 @@
-package com.gamepex.dto;
+package com.gamepex.admin.staff;
 
-import lombok.Data;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+
+import lombok.Data;
 
 @Data
 public class AdminStaffVO {

@@ -1,41 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans:beans xmlns="http://www.springframework.org/schema/mvc"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
-		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<beans:beans
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans   https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc     https://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
-	<!-- Enables the Spring MVC @Controller programming model -->
-	<annotation-driven />
+    <mvc:annotation-driven conversion-service="conversionService">
+        <mvc:message-converters register-defaults="true">
+            <beans:bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <beans:property name="defaultCharset" value="UTF-8" />
+            </beans:bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
-	<!-- 정적 서비스 자원(static resources: js, css, imgs 등)은 webapp/resources directory에서 관리한다. -->
-	<resources mapping="/resources/**" location="/resources/" />
+    <mvc:resources mapping="/resources/**" location="/resources/" />
 
-	
-	<!-- Controller에서 응답 JSP 파일을 선택할 때 사용하는 경로(/WEB-INF/views directory)와 파일 확장자명(.jsp)을 설정 -->
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" /><!-- jsp 파일이 저장된 경로를 설정 -->
-		<beans:property name="suffix" value=".jsp" /><!-- 파일의 확장자명을 설정 -->
-	</beans:bean>
-	
-	
-	<!-- org.member.controller 패키지 내부에 있는 클래스를 스프링빈으로 등록한다. -->
-	<context:component-scan base-package="com.gamepex" />
-	
-	
-	
+    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <beans:property name="prefix" value="/WEB-INF/views/" />
+        <beans:property name="suffix" value=".jsp" />
+    </beans:bean>
+
+    <beans:bean id="multipartResolver"
+                class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <beans:property name="maxUploadSize" value="104857600" />
+        <beans:property name="defaultEncoding" value="UTF-8" />
+    </beans:bean>
+
+    <beans:bean id="conversionService"
+                class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <beans:property name="formatterRegistrars">
+            <beans:list>
+                <beans:bean class="org.springframework.format.datetime.standard.DateTimeFormatterRegistrar">
+                    <beans:property name="useIsoFormat" value="true" />
+                </beans:bean>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <context:component-scan base-package="com.gamepex" />
+
 </beans:beans>
-
-
-
-
-
-
-
-
-
-

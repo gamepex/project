@@ -25,15 +25,20 @@
                 <label for="female" class="btn btn-secondary btn-blank">여성</label>
             </li>
             <li>
-                <label for="birth">생년월일</label>
-                <input type="date" id="birth" name="birth">
+                <label for="staff_birth">생년월일</label>
+                <input type="date" id="staff_birth" name="staff_birth">
             </li>
             <li><input type="tel" id="staff_phone" name="staff_phone" placeholder="전화번호 입력"></li>
             <li><input type="email" id="staff_mail" name="staff_mail" placeholder="이메일 입력"></li>
-            <li><button id="reg-btn" type="button" onclick="checkData()" class="btn btn-dark btn-lg" disabled="disabled">직원 가입</button></li>
+            <li><button id="reg-btn" type="button" onclick="checkData()" class="btn btn-dark btn-lg">직원 가입</button></li>
         </ul>
     </form>
 </section>
 
+<script>
+	function checkData() { // 입력폼에 입력된 값에 대한 유효성 검증 함수
+		document.reg_frm.submit(); // 유효성 검증이 완료되면 서브밋을 수행한다.
+	}    	
+</script>
 
 <%@ include file="/WEB-INF/views/user/include/footer.jsp" %>
