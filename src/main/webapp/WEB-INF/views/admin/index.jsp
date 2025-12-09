@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/user/include/header.jsp" %>
+
 <link rel="stylesheet" href="/resources/css/staff.css">
 
 <div class="adm-bnr">
@@ -13,10 +14,15 @@
 	    <form action="/admin/staff/login" method="post">
 	    	<ul class="staff-login-frm">
 	    		<li><input type="text" name="staff_id" placeholder="아이디 입력" autofocus required></li>
-	    		<li><input type="password" name="staff_pw" placeholder="비밀번호 입력" required"></li>
+	    		<li><input type="password" name="staff_pw" placeholder="비밀번호 입력" required></li>
 	    		<li>
 	    			<button type="submit" class="btn btn-dark btn-lg" >로그인</button>
 	    			<a href="/admin/staff/register" class="btn btn-primary btn-lg">직원 가입</a>
+	    			
+	    			<!-- 로그인 에러 메시지 -->
+	    			<p id="login_msg" class="login-msg d-inline-block alert alert-danger ${empty loginError ? 'd-none' : ''}">
+        				<c:out value="${loginError}" />
+    				</p>
 	    		</li>
 	    	</ul>
 	    </form>

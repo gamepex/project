@@ -1,5 +1,7 @@
 package com.gamepex.admin.staff;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -17,19 +19,30 @@ public class AdminStaffServiceImpl implements AdminStaffService {
     // 직원 아이디 중복 확인
     @Override
     public boolean idCheck(String staff_id) {
-        return adminStaffDAO.idCheck(staff_id) > 0;
+        return adminStaffDAO.idCheck(staff_id) > 0; // 중복이면 true가 return됨.
     }
 
     // 직원 등록
     @Override
-    public boolean register(AdminStaffVO adminStaffVO) {
+    public AdminStaffVO register(AdminStaffVO adminStaffVO) {
+    	
+    	//비밀번호 암호화
     	String rawPw = adminStaffVO.getStaff_pw();
         String encPw = bCryptPasswordEncoder.encode(rawPw);
         adminStaffVO.setStaff_pw(encPw);
-        return adminStaffDAO.register(adminStaffVO) != 0;
+        
+        // 등록 실패시 null 리턴.
+        int result = adminStaffDAO.register(adminStaffVO);
+        if (result == 0) {
+            return null;
+        }
+        
+        adminStaffVO.setStaff_pw(null);
+        return adminStaffVO;
     }
     
     
+    //로그인
     @Override
     public AdminStaffVO login(AdminStaffVO adminStaffVO) {
         AdminStaffVO dbStaffVO = adminStaffDAO.login(adminStaffVO.getStaff_id());
@@ -46,9 +59,18 @@ public class AdminStaffServiceImpl implements AdminStaffService {
         dbStaffVO.setStaff_pw(null);
         return dbStaffVO;
     }
+    
+    // 전체 직원 목록
+    @Override
+ 	public List<AdminStaffVO> getStaffList() {
+ 		return adminStaffDAO.getStaffList();
+ 	}
 	
 }
 
+
+
+//로그인 실패 메시지 클래스
 class LoginException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
     public LoginException(String message) {

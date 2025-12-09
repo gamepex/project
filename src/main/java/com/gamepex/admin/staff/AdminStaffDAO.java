@@ -1,6 +1,8 @@
 package com.gamepex.admin.staff;
 
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -23,7 +25,14 @@ public class AdminStaffDAO {
 		return sqlSession.insert(namespace+".register", adminStaffVO);
 	}
 	
+	
+	// 로그인
 	public AdminStaffVO login(String staff_id) {
 		return sqlSession.selectOne(namespace+".login", staff_id);
+	}
+	
+	// 전체 직원 목록
+	public List<AdminStaffVO> getStaffList() {
+		return sqlSession.selectList(namespace + ".getStaffList");
 	}
 }

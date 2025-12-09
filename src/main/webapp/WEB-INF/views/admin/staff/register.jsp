@@ -14,7 +14,7 @@
                 <input type="text" id="staff_id" name="staff_id" placeholder="아이디 입력" autofocus>
                 <button type="button" id="staff_id_check" class="btn btn-secondary">중복 확인</button>
             </li>
-            <li><p id="idCheckMsg" class="idcheck-msg"></p></li>
+            <li><p id="idcheck_msg" class="idcheck-msg d-none d-inline-block alert alert-danger"></p></li>
             <li><input type="password" name="staff_pw" placeholder="비밀번호 입력"></li>
             <li><input type="password" name="staff_repw" placeholder="비밀번호 확인"></li>
             <li><input type="text" id="staff_name" name="staff_name" placeholder="이름 입력"></li>
@@ -38,11 +38,12 @@
 
 
 <script>
-	document.querySelector("#staff_id_check").addEventListener("click", () => {
+    document.querySelector("#staff_id_check").addEventListener("click", () => {
         const staffId = document.querySelector("#staff_id").value.trim();
-        const msg = document.querySelector("#idCheckMsg");
+        const msg = document.querySelector("#idcheck_msg");
 
         if (!staffId) {
+        	msg.classList.remove('d-none');
             msg.textContent = "아이디를 입력하세요.";
             return;
         }
@@ -54,16 +55,16 @@
         })
         .then(res => res.text())
         .then(text => {
-        	
-            msg.textContent = text === "true" ? "중복된 아이디입니다." : "사용 가능한 아이디입니다.";
+        	msg.classList.remove('d-none');
+            msg.textContent = (text === "true") ? "중복된 아이디입니다." : "사용 가능한 아이디입니다.";
         });
     });
 
 
 
-	function checkData() { // 입력폼에 입력된 값에 대한 유효성 검증 함수
-		document.reg_frm.submit(); // 유효성 검증이 완료되면 서브밋을 수행한다.
-	}    	
+    function checkData() {
+		document.reg_frm.submit();
+	}
 </script>
 
 <%@ include file="/WEB-INF/views/user/include/footer.jsp" %>
