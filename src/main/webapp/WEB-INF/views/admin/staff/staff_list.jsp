@@ -24,7 +24,12 @@
                 <p>직급 : ${svo.staff_position}</p>
                 <p>메일 : ${svo.staff_mail}</p>
                 <p>전화 : ${svo.staff_phone}</p>
-                <p>상태 : ${svo.staff_state == 0 ? '미승인' : (svo.staff_state == 1 ? '재직' : (svo.staff_state == 2 ? '휴직' : '퇴사'))}</p>
+                <div class="d-flex justify-content-center">
+	                <p class="staff-state">상태 : ${svo.staff_state == 0 ? '미승인' : (svo.staff_state == 1 ? '재직' : (svo.staff_state == 2 ? '휴직' : '퇴사'))}</p>
+	                <c:if test="${sessionScope.staff.staff_id eq 'admin' and svo.staff_state == 0}">
+	                	<button type="button" class="btn btn-primary btn-lg approve" data-staff-id="${svo.staff_id}">승인</button>
+	                </c:if>
+                </div>
                 <p>등록일 : ${svo.staff_regdate}</p>
                 <p>수정일 : ${svo.staff_moddate}</p>
 
@@ -38,5 +43,27 @@
         </c:forEach>
     </ul>
 </section>
+
+<script>
+	document.addEventListener('click', async e => {
+		
+		//클릭된 승인 버튼 찾기 
+		const btn = e.target.closest('.approve');
+		if (!btn) return;
+		
+		const staff_id = btn.dataset.staffId;
+		
+		const res = await fetch('/admin/staff/approval/' + staff_id, {
+		  method: 'POST'
+		});
+		
+		const result = await res.text();
+		if (result !== 'ok') return;
+		
+		const staff_state = btn.closest('li').querySelector('.staff-state');
+		staff_state.textContent = '상태 : 재직';
+		btn.remove();
+	});
+</script>
 
 <%@ include file="/WEB-INF/views/user/include/footer.jsp" %>

@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.gamepex.mappers.adminStaff">
+<mapper namespace="com.gamepex.admin.staff.AdminStaffDAO">
 
 	<!-- 아이디 중복 확인 -->
 	<select id="idCheck" parameterType="String" resultType="int">
@@ -46,6 +46,13 @@
 	<select id="getStaffList" resultType="com.gamepex.admin.staff.AdminStaffVO">
 		select * from tbl_staff
 	</select>
+	
+	<!-- 직원 승인 -->
+	<update id="setApproval" parameterType="String">
+	    update tbl_staff
+	    set staff_state = 1
+	    where staff_id = #{value}
+	</update>
 
 </mapper>
 

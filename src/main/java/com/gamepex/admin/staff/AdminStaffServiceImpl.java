@@ -2,18 +2,17 @@ package com.gamepex.admin.staff;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AdminStaffServiceImpl implements AdminStaffService {
 	
-    @Inject
+    @Autowired
     private AdminStaffDAO adminStaffDAO;
     
-    @Inject
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
     // 직원 아이디 중복 확인
@@ -64,6 +63,12 @@ public class AdminStaffServiceImpl implements AdminStaffService {
     @Override
  	public List<AdminStaffVO> getStaffList() {
  		return adminStaffDAO.getStaffList();
+ 	}
+    
+    // 직원 승인
+    @Override
+ 	public int setApproval(String staff_id) {
+ 		return adminStaffDAO.setApproval(staff_id);
  	}
 	
 }
