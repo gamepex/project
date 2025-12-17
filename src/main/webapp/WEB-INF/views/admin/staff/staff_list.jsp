@@ -7,6 +7,12 @@
     <h2><span>Staff</span> LIST</h2>
 </div>
 
+<c:if test="${not empty resultMsg}">
+  <p class="alert alert-${alertType} text-center">
+    ${resultMsg}
+  </p>
+</c:if>
+
 <section>
     <div class="search-wrap">
         <input type="search" id="staff_search" placeholder="검색어 입력" class="form-control">
@@ -22,21 +28,28 @@
                 <p>생년월일 : ${svo.staff_birth}</p>
                 <p>부서 : ${svo.staff_part}</p>
                 <p>직급 : ${svo.staff_position}</p>
-                <p>메일 : ${svo.staff_mail}</p>
                 <p>전화 : ${svo.staff_phone}</p>
+                <p>메일 : ${svo.staff_mail}</p>
+                
                 <div class="d-flex justify-content-center">
 	                <p class="staff-state">상태 : ${svo.staff_state == 0 ? '미승인' : (svo.staff_state == 1 ? '재직' : (svo.staff_state == 2 ? '휴직' : '퇴사'))}</p>
 	                <c:if test="${sessionScope.staff.staff_id eq 'admin' and svo.staff_state == 0}">
 	                	<button type="button" class="btn btn-primary btn-lg approve" data-staff-id="${svo.staff_id}">승인</button>
 	                </c:if>
                 </div>
+                       
                 <p>등록일 : ${svo.staff_regdate}</p>
                 <p>수정일 : ${svo.staff_moddate}</p>
 
                 <c:if test="${sessionScope.staff.staff_id eq 'admin'}">
                     <div class="staff-group-btn">
                         <a href="/admin/staff/modify?staff_id=${svo.staff_id}" class="btn btn-success btn-lg">수정</a>
-                        <a href="/admin/staff/delete?staff_id=${svo.staff_id}" class="btn btn-danger btn-lg">삭제</a>
+                        
+                        <!-- POST 방식의 보안성을 위해 form 제출 형태로 만듦 -->
+                        <form action="/admin/staff/deleteStaff" method="post" class="d-inline">
+						  <input type="hidden" name="staff_id" value="${svo.staff_id}">
+						  <button type="submit" class="btn btn-danger btn-lg">삭제</button>
+						</form>
                     </div>
                 </c:if>
             </li>

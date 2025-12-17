@@ -70,6 +70,26 @@ public class AdminStaffServiceImpl implements AdminStaffService {
  	public int setApproval(String staff_id) {
  		return adminStaffDAO.setApproval(staff_id);
  	}
+    
+    // 직원 삭제
+    @Override
+ 	public int deleteStaff(String staff_id) {
+ 		return adminStaffDAO.deleteStaff(staff_id);
+ 	}
+    
+    // 직원 정보 수집
+    @Override
+    public AdminStaffVO getStaff(String staff_id) {
+        AdminStaffVO adminStaffVO = adminStaffDAO.getStaff(staff_id);
+        if (adminStaffVO != null) adminStaffVO.setStaff_pw(null);
+        return adminStaffVO;
+    }
+    
+    // 직원 수정 처리
+    @Override
+   	public int modifyStaff(AdminStaffVO adminStaffVO) {
+    	return adminStaffDAO.modifyStaff(adminStaffVO);
+    }
 	
 }
 

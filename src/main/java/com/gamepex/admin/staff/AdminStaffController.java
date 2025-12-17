@@ -83,11 +83,56 @@ public class AdminStaffController {
 	}
 	
 	// 직원 승인
-	@PostMapping("/approval/{staffId}")
+	@PostMapping("/approval/{staff_id}")
 	@ResponseBody
-	public String setApproval(@PathVariable("staffId") String staffId) {
-	    adminStaffService.setApproval(staffId);
-	    return "ok";
+	public String setApproval(@PathVariable("staff_id") String staff_id) {
+		int result = adminStaffService.setApproval(staff_id);
+	    return (result == 1) ? "ok" : "fail";
+	}
+	
+	// 직원 삭제
+	@PostMapping("/deleteStaff")
+	public String deleteStaff(@RequestParam("staff_id") String staff_id, RedirectAttributes rttr) {
+
+	    int result = adminStaffService.deleteStaff(staff_id);
+
+	    if (result == 1) {
+	        rttr.addFlashAttribute("alertType", "success");
+	        rttr.addFlashAttribute("resultMsg", "직원 삭제에 성공했습니다.");
+	    } else {
+	        rttr.addFlashAttribute("alertType", "danger");
+	        rttr.addFlashAttribute("resultMsg", "직원 삭제에 실패했습니다.");
+	    }
+
+	    return "redirect:/admin/staff/staff_list";
+	}
+	
+	// 직원 수정 접속
+	@GetMapping("/modify")
+	public String modify(@RequestParam("staff_id") String staff_id, Model model) {
+		
+		// 직원 정보 수집
+	    AdminStaffVO adminStaffVO = adminStaffService.getStaff(staff_id);
+	    model.addAttribute("svo", adminStaffVO);
+	    return "admin/staff/modify";
+	}
+	
+	// 직원 수정 처리
+	@PostMapping("/modify")
+	public String modify(AdminStaffVO adminStaffVO, RedirectAttributes rttr) {
+
+	    int result = adminStaffService.modifyStaff(adminStaffVO);
+
+	    if (result == 1) {
+	        rttr.addFlashAttribute("alertType", "success");
+	        rttr.addFlashAttribute("resultMsg", "직원 수정에 성공했습니다.");
+	        return "redirect:/admin/staff/staff_list";
+	    } else {
+		    rttr.addFlashAttribute("alertType", "danger");
+		    rttr.addFlashAttribute("resultMsg", "직원 수정에 실패했습니다.");
+		    rttr.addAttribute("staff_id", adminStaffVO.getStaff_id());
+		    return "redirect:/admin/staff/modify";
+	    }
 	}
 
 }
