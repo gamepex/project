@@ -2,8 +2,6 @@ package com.gamepex.admin.staff;
 
 import java.util.List;
 
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 public interface AdminStaffService {
 
     // 직원 아이디 중복 확인

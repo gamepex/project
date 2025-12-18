@@ -1,2 +1,22 @@
 @charset "UTF-8";
-.adm-bnr, section { text-align: center; }
+.btn-10{margin-top:10px;}
+.btn-30{margin-top:30px;}
+.btn-50{margin-top:50px;}
+.search-wrap{margin-top:30px;
+}
+h3{display:flex; justify-content:center; padding-top:50px; font-size:32px;}
+.staff-reg-wrap{width:300px;margin:20px auto; padding:20px; }
+.staff-reg-wrap li{margin:5px auto 0;}
+
+.staff-login-frm{width:350px; margin:20px auto; padding:20px;}
+.staff-login-frm li{margin:5px auto 0;}
+.staff-login-frm  .btn{width:300px; margin-top:30px; text-align:center;}
+.login-btn-group{display:flex;}
+.login-btn-group a{margin:0 auto; padding:0 10px;}
+/*------List------*/
+.staff-info-wrap{display:flex; width:100%; margin-top:50px;}
+.staff-info-wrap li{width:300px;margin:0 20px; padding:50px; border:1px solid#6495ED; border-radius:10px;}
+
+
+.msg-wrap{width:300px; margin:0 auto;}
+

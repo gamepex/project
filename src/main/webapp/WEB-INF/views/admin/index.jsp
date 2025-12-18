@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="/WEB-INF/views/user/include/header.jsp" %>
+<%@ include file="/WEB-INF/views/admin/include/header.jsp" %>
 
 <link rel="stylesheet" href="/resources/css/staff.css">
 
@@ -38,4 +38,4 @@
 	</c:otherwise>
 </c:choose>
 </section>
-<%@ include file="/WEB-INF/views/user/include/footer.jsp" %>
+<%@ include file="/WEB-INF/views/admin/include/footer.jsp" %>

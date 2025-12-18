@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.btn30{margin-top:30px;}
+.btn10{margin-top:10px;}
+.reg-info-wrap{width:320px; margin:150px auto; text-align:center;}
+.reg-info-wrap li{margin-top:5px;}
+.reg-info-wrap li:nth-child(13){display:flex; width:300px;}
+.reg-info-wrap .btn{width:290px;}
+.login-btn-group{display:flex;}
+.login-btn-group a {padding:0 5px;}
+
+
+.rental-info-wrap {display:flex; margin-top:100px;}
+.rental-info-wrap > li{width:300px; margin:0 10px; }
+.rental-info-wrap a > img{width:100%;}
+.qtyBtn{font-size:16px; color:f6f6f6;}
+
+.console-view-wrap{display:flex;  margin-top:150px;}
+.console-view-wrap img{width:50%;}
+.con-info-wrap{position:relative; width:500px; margin:0 auto;}
+.console-container{margin:100px auto 0; text-align:center;}
+.view-btn{position:absolute; right:0; bottom:50px; width:200px; height:60px;font-size:26px;}
+.platform{padding-top:30px;}
+.price{font-size:20px;}

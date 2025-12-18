@@ -1,16 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-
+<%@	taglib uri= "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix ="fmt" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAMEPEX</title>
+    <title>PLAYSTATION</title>
     <link rel="shortcut icon" href="/resources/img/common/favicon_apex.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="/resources/css/common.css">
     <script src="/resources/js/jquery_1.12.4.min.js"></script>
@@ -20,7 +19,7 @@
 <body>
     <header>
         <nav>
-            <a href="/user/index" id="title-bn" class="logo" ><h1>g<span class="hg-blue"><span class="hg-blue">:</span></span>p<span class="hg-ygrn">ex</span></h1> </a>
+            <a href="/user" id="title-bn" class="logo" ><h1>g<span class="hg-blue"><span class="hg-blue">:</span></span>p<span class="hg-ygrn">ex</span></h1> </a>
             <a href="#" id="trigger">
                 <span></span>
                 <span></span>
@@ -51,10 +50,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#">콘솔 게임기 대여</a>
+                    <a href="/user/rental/con_list">콘솔 게임기 대여</a>
                 </li>
                 <li>
-                    <a href="#">게임 대여</a>
+                    <a href="/user/rental/title_list">게임 대여</a>
                 </li>
                 <li>
                     <a href="#">커뮤니티</a>
@@ -81,10 +80,9 @@
                 </li>
             </ul>
             <ul class="top-menu">
-            	<!-- admin 버튼은 개발용 임시 -->
             	<li><a style="font-size: 20px; margin-top: 8px;" href="/admin">admin</a></li>
-                <li><a href="#"><i class="bi bi-person-plus-fill"></i></a></li>
-                <li><a href="#"><i class="bi bi-person-dash-fill"></i></a></li>
+                <li><a href="/user/member/login"><i class="bi bi-person-plus-fill"></i></a></li>
+                <li><a href="/user/member/register"><i class="bi bi-person-dash-fill"></i></a></li>
             </ul>
         </nav>
     </header>

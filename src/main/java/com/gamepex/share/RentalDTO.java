@@ -1,7 +1,6 @@
 package com.gamepex.share;
 
 import java.time.LocalDateTime;
-import java.util.Date; // LocalDate import해서 맞추는 게 좋을 거 같아요. -조장
 
 import lombok.Data;
 
@@ -18,13 +17,12 @@ public class RentalDTO {
 	private String rt_name;
 	private String rt_zipcode;
 	private String rt_addr;
-	private String rt_addrdet;
 	private String rt_tel;
 	private String rt_req;
 	private String rt_startdate;
 	private String rt_enddate;
 	private String rt_rtndate;
-	private Date rt_moddate;
+	private LocalDateTime rt_moddate;
 	
 	private String mb_id;
 	private String mb_name;
@@ -34,5 +32,28 @@ public class RentalDTO {
 	private String mb_phone;
 	private String mb_zipcode;
 	private String mb_addr;
-
+	private int mb_grade;
+	private int mb_state;
+	
+	private int rd_no;	
+	private String rd_type;
+	private String rd_serial;
+	private int rd_price;
+	private int rd_quantity;
+	
+	private String con_serial;
+	private String con_name;
+	private String con_platform;
+	private int con_price;
+	private String con_thumbnail;
+	private int con_stock;
+	private int con_state;
+	
+	private String ttl_serial;
+	private String ttl_name;
+	private String ttl_genre;
+	private int ttl_price;
+	private String ttl_thumbnail;
+	private int ttl_stock;
+	private int ttl_state;
 }

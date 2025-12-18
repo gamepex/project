@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.gamepex.mappers.user.rental">
+ 
+ 	<insert id="register" parameterType="com.gamepex.share.RentalVO"  useGeneratedKeys="true" keyProperty="rt_no">
+ 		insert into tbl_rental (
+			mb_id
+			, rt_days
+			, rt_shipfee
+			, rt_amount
+			, rt_regdate
+			, rt_payment
+			, rt_state
+			, rt_name
+			, rt_zipcode
+			, rt_addr
+			, rt_tel
+			, rt_req
+			, rt_startdate
+			, rt_enddate
+			, rt_rtndate
+			, rt_moddates
+ 		) values (
+			#{mb_id}
+			, #{rt_days}
+			, #{rt_shipfee}
+			, #{rt_amount}
+			, #{rt_regdate}
+			, #{rt_payment}
+			, 0
+			, #{rt_name}
+			, #{rt_zipcode}
+			, #{rt_addr}
+			, #{rt_tel}
+			, #{rt_req}
+			, #{rt_startdate}
+			, #{rt_enddate}
+			, null
+			, now()
+ 		)
+ 	</insert>
+ 	
+ 	<insert id="registerDetail" parameterType="java.util.List" >
+ 		insert into tbl_rentdetail (
+	 		rt_no
+	 		, rd_type
+			, rd_serial
+			, rd_price
+			, rd_quantity
+ 		) values
+ 			<foreach collection="list" item="item" separator=",">
+ 			 (#{item.rt_no}
+	 			, #{item.rd_type}
+				, #{item.rd_serial}
+				, #{item.rd_price}
+				, #{item.rd_quantity})
+ 			</foreach>
+ 	</insert>
+ 	
+ 	
+ 
+ 	<select id="getRentalList" resultType="com.gamepex.share.RentalDTO">
+ 		select * from tbl_console
+ 		where con_state = 0 or con_state = 1
+ 		order by con_moddate desc
+	</select>
+
+
+ 
+ </mapper>

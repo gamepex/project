@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gamepex.mappers.admin.console">
+
+	<insert id ="register"  parameterType ="com.gamepex.share.ConsoleVO">
+		insert into tbl_console
+		(
+		staff_id
+		,con_serial
+		,con_name
+		,con_platform
+		,con_price
+		,con_thumbnail
+		,con_content
+		,con_stock
+		,con_state
+		,con_regdate
+		,con_moddate
+		
+		)
+		values
+		(
+		#{staff_id}
+		,#{con_serial}
+		,#{con_name}
+		,#{con_platform}
+		,#{con_price}
+		,#{con_thumbnail}
+		,#{con_content}
+		,#{con_stock}
+		,#{con_state}
+		,now()
+		,now()
+		)
+	</insert>
+	
+	<select id="getConsoleList" resultType ="com.gamepex.share.ConsoleVO">
+		select * from tbl_console
+		where con_state = 0 or con_state = 1 or con_stock > 0
+		order by con_moddate desc
+	</select>
+	
+	<select id="getUnableList" resultType ="com.gamepex.share.ConsoleVO">
+		select * from tbl_console
+		where con_stock = 0 and con_state = 2
+		order by con_moddate desc
+	</select>
+	
+	<select id ="getConsoleOne" parameterType ="String" resultType ="com.gamepex.share.ConsoleVO">
+		select * from tbl_console
+		where con_serial = #{con_serial}
+	</select>
+	
+	<update id = "modify" parameterType = "com.gamepex.share.ConsoleVO">
+		update tbl_console set
+			staff_id = #{staff_id}
+			,con_serial = #{con_serial}
+			,con_name = #{con_name}
+			,con_platform = #{con_platform}
+			,con_price = #{con_price}
+			,con_thumbnail = #{con_thumbnail}
+			,con_content = #{con_content}
+			,con_stock = #{con_stock}
+			,con_state = #{con_state}
+			,con_moddate = now()
+		where con_serial = #{con_serial}
+	</update>
+	
+	<update id ="setState" parameterType ="com.gamepex.share.ConsoleVO">
+		update tbl_console set
+		con_state = 0
+		where con_stock> 0
+	</update>
+	<update id ="unable_Rental" parameterType ="com.gamepex.share.ConsoleVO">
+		update tbl_console set
+		con_state = 2
+		where con_stock = 0
+	</update>
+	<delete id ="delete" parameterType ="String">
+		delete from tbl_console
+		where con_serial = #{con_serial}
+	</delete>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+

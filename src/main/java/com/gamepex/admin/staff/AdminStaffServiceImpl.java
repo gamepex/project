@@ -25,10 +25,14 @@ public class AdminStaffServiceImpl implements AdminStaffService {
     @Override
     public AdminStaffVO register(AdminStaffVO adminStaffVO) {
     	
-    	//비밀번호 암호화
+    	// 비밀번호 암호화
     	String rawPw = adminStaffVO.getStaff_pw();
         String encPw = bCryptPasswordEncoder.encode(rawPw);
         adminStaffVO.setStaff_pw(encPw);
+
+        // 전화번호 하이픈 제거
+        String phone = adminStaffVO.getStaff_phone().replaceAll("-", "");
+        adminStaffVO.setStaff_phone(phone);
         
         // 등록 실패시 null 리턴.
         int result = adminStaffDAO.register(adminStaffVO);

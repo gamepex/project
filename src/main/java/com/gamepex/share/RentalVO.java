@@ -1,7 +1,6 @@
 package com.gamepex.share;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import lombok.Data;
 
@@ -19,11 +18,10 @@ public class RentalVO {
 	private String rt_name;
 	private String rt_zipcode;
 	private String rt_addr;
-	private String rt_addrdet;
 	private String rt_tel;
 	private String rt_req;
 	private String rt_startdate;
 	private String rt_enddate;
 	private String rt_rtndate;
-	private Date rt_moddate;
+	private LocalDateTime rt_moddate;
 }

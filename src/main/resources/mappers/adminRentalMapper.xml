@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.gamepex.mappers.admin.rental">
+  
+  <!-- 대여 내역 -->
+  <select id="getRentalList" resultType="com.gamepex.share.RentalDTO">
+  	select
+		rt.rt_no
+		, rt.rt_days
+		, rt.rt_shipfee
+		, rt.rt_amount
+		, rt.rt_regdate
+		, rt.rt_payment
+		, rt.rt_invoice
+		, rt.rt_state <!-- 0: pending 1: confirmed 2:cancelled 3:out_for_delivery 4:rented 5:return_requested 6:returned-->
+		, rt.rt_name
+		, rt.rt_zipcode
+		, rt.rt_addr
+		, rt.rt_tel
+		, rt.rt_req
+		, rt.rt_startdate
+		, rt.rt_enddate
+		, rt.rt_rtndate
+		, rt.rt_moddate
+		
+		, rt.mb_id
+		, m.mb_name
+		, m.mb_nickname
+		, m.mb_gender
+		, m.mb_mail
+		, m.mb_phone
+		, m.mb_zipcode
+		, m.mb_addr
+		, m.mb_grade
+		, m.mb_state
+		
+		, rd.rd_no
+		, rd.rd_type
+		, rd.rd_serial
+		, rd.rd_price
+		, rd.rd_quantity
+				
+		, c.con_serial
+		, c.con_name
+		, c.con_platform
+		, c.con_price
+		, c.con_thumbnail
+		, c.con_stock
+		, c.con_state
+		
+		, t.ttl_serial
+		, t.ttl_name
+		, t.ttl_genre
+		, t.ttl_price
+		, t.ttl_thumbnail
+		, t.ttl_stock
+		, t.ttl_state
+		
+  	from tbl_rental as rt
+  	
+  		join tbl_member as m on rt.mb_id = m.mb_id
+  		
+	  	join tbl_rentdetail as rd on rd.rt_no = rt.rt_no
+  		
+  		left join tbl_console as c on rd.rd_serial = c.con_serial
+  		
+  		left join tbl_title as t on rd.rd_serial = t.ttl_serial
+  		
+  	<where>
+  		<if test="rt_state != null and rt_state != ' ' ">
+  			rt.rt_state = #{rt_state}
+  			<if test="rt_state == '1' or rt_state == '2' or rt_state == '3' or rt_state == '4' or rt_state == '5' "> and rt.rt_rtndate is null
+  			</if>
+  			<if test = "rt_state == '6' "> and DATE(rt.rt_rtndate) = CURDATE()
+  			</if>
+  		</if>
+  	</where>
+  	order by rt.rt_regdate desc
+  </select>
+  
+  
+  <!-- 대여 내역 상세 -->
+  <select id="getRentalDetail" resultType="com.gamepex.share.RentalDTO">
+  	select
+  		rt.rt_no
+		, rt.rt_days
+		, rt.rt_shipfee
+		, rt.rt_amount
+		, rt.rt_regdate
+		, rt.rt_payment
+		, rt.rt_invoice
+		, rt.rt_state <!-- 0: pending 1: confirmed 2:cancelled 3:out_for_delivery 4:rented 5:return_requested 6:returned-->
+		, rt.rt_name
+		, rt.rt_zipcode
+		, rt.rt_addr
+		, rt.rt_tel
+		, rt.rt_req
+		, rt.rt_startdate
+		, rt.rt_enddate
+		, rt.rt_rtndate
+		, rt.rt_moddate
+		
+		, rt.mb_id
+		, m.mb_name
+		, m.mb_nickname
+		, m.mb_gender
+		, m.mb_mail
+		, m.mb_phone
+		, m.mb_zipcode
+		, m.mb_addr
+		, m.mb_grade
+		, m.mb_state
+		
+		, rd.rd_no
+		, rd.rd_type
+		, rd.rd_serial
+		, rd.rd_price
+		, rd.rd_quantity
+				
+		, c.con_serial
+		, c.con_name
+		, c.con_platform
+		, c.con_price
+		, c.con_thumbnail
+		, c.con_stock
+		, c.con_state
+		
+		, t.ttl_serial
+		, t.ttl_name
+		, t.ttl_genre
+		, t.ttl_price
+		, t.ttl_thumbnail
+		, t.ttl_stock
+		, t.ttl_state
+		
+  	from tbl_rental as rt
+  	
+  		join tbl_member as m on rt.mb_id = m.mb_id
+  		
+	  	join tbl_rentdetail as rd on rd.rt_no = rt.rt_no
+  		
+  		left join tbl_console as c on rd.rd_serial = c.con_serial
+  		
+  		left join tbl_title as t on rd.rd_serial = t.ttl_serial
+  		
+  	where rd.rt_no = #{rt.rt_no}
+  	order by rd.rd_no desc
+  </select>
+  
+  <!-- 대여 현황 조회 -->
+  <select id="getRentalState" parameterType="String" resultType="int">
+  	select
+  		rt.rt_state
+  		
+  	from tbl_rental as rt
+  		join tbl_rentdetail as rd
+  		on rd.rt_no = rt.rt_no
+ 	where rd.rd_serial =#{rd_serial} limit 1
+  </select>
+  
+  <!-- 대여 현황 수정 -->
+  <update id="setRentalState"  parameterType="int" >
+  	update tbl_rental set 
+  		rt_state = #{rt_state}
+  	where rt_no = #{rt_no}
+  </update>
+  
+  <!-- 콘솔 대여 현황 수정 -->
+  <update id="setConsoleState"  parameterType="Map">
+  	update tbl_console set 
+  		con_state = #{currentState}
+  	where con_serial = #{rd_serial}
+  </update>
+		
+  <!-- 타이틀 대여 현황 수정-->
+  <update id="setTitleState"  parameterType="Map">
+  	update tbl_title set 
+  		ttl_state = #{currentState}
+  	where ttl_no = #{rd_serial}
+  </update>
+  
+
+
+
+  </mapper>

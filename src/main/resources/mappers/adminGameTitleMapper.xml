@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gamepex.mappers.admin.gametitle">
+
+	<insert id ="register"  parameterType ="com.gamepex.share.GameTitleVO">
+		insert into tbl_title
+		(
+		staff_id
+		,ttl_serial
+		,ttl_name
+		,ttl_platform
+		,ttl_genre
+		,ttl_stock
+		,ttl_price
+		,ttl_thumbnail
+		,ttl_content
+		,ttl_state
+		,ttl_regdate
+		,ttl_moddate
+		
+		)
+		values
+		(
+		#{staff_id}
+		,#{ttl_serial}
+		,#{ttl_name}
+		,#{ttl_platform}
+		,#{ttl_genre}
+		,#{ttl_stock}
+		,#{ttl_price}
+		,#{ttl_thumbnail}
+		,#{ttl_content}
+		,#{ttl_state}
+		,now()
+		,now()
+		)
+	</insert>	
+	<select id="getGameTitleList" resultType ="com.gamepex.share.GameTitleVO">
+		select * from tbl_title
+		where ttl_state = 0 or ttl_state = 1
+		order by ttl_moddate desc
+	</select>
+	
+		<select id="getUnableList" resultType ="com.gamepex.share.GameTitleVO">
+		select * from tbl_title
+		where ttl_stock = 0 and ttl_state = 2
+		order by ttl_moddate desc
+	</select>
+	
+	<select id ="getGameTitleOne" parameterType ="String" resultType ="com.gamepex.share.GameTitleVO">
+		select * from tbl_title
+		where ttl_serial = #{ttl_serial}
+	</select>
+	
+	<update id = "modify" parameterType = "com.gamepex.share.GameTitleVO">
+		update tbl_title set
+			staff_id = #{staff_id}
+			,ttl_serial = #{ttl_serial}
+			,ttl_name = #{ttl_name}
+			,ttl_platform = #{ttl_platform}
+			,ttl_genre = #{ttl_genre}
+			,ttl_stock = #{ttl_stock}
+			,ttl_price = #{ttl_price}
+			,ttl_thumbnail = #{ttl_thumbnail}
+			,ttl_state = #{ttl_state}
+			,ttl_moddate = now()
+		where ttl_serial = #{ttl_serial}
+	</update>
+	<update id ="setState" parameterType ="com.gamepex.share.GameTitleVO">
+		update tbl_title set
+		ttl_state = 0
+		where ttl_stock> 0
+	</update>
+	<update id ="unable_Rental" parameterType ="com.gamepex.share.GameTitleVO">
+		update tbl_title set
+		ttl_state = 2
+		where ttl_stock = 0
+	</update>
+	<delete id ="delete" parameterType ="String">
+		delete from tbl_title
+		where ttl_serial = #{ttl_serial}
+	</delete>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
