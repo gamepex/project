@@ -72,13 +72,13 @@
 <section>
 	<form name="reg_frm"  action ="/user/member/register" method ="post">
 		<ul class ="reg-info-wrap">
-			<li><input id="mb-id" type ="text" name ="mb_id" placeholder ="아이디 입력" autofocus class ="form-control"></li>
+			<li><input id="mb-id" type ="text" name ="mb_id" placeholder ="아이디 입력" autofocus required class="form-control"></li>
 			<li><p id ="id-check-msg"></p></li>
-			<li><input type ="password" name ="mb_pw" placeholder ="비밀번호 입력"  class ="form-control"></li>
+			<li><input type ="password" name ="mb_pw" placeholder ="비밀번호 입력" required class ="form-control"></li>
 			<li><p id ="pw-check-msg"></p></li>
-			<li><input type="password" name="mb_repw" placeholder="비밀번호 확인" class="form-control"></li>
+			<li><input type="password" name="mb_repw" placeholder="비밀번호 확인" required class="form-control"></li>
 			<li><p id ="repw-check-msg"></p></li>
-			<li><input type ="text" name ="mb_name" placeholder ="이름 입력"  class ="form-control"></li>
+			<li><input type ="text" name ="mb_name" placeholder ="이름 입력" required class ="form-control"></li>
 			<li><input id ="mb-nickname" type ="text" name ="mb_nickname" placeholder ="닉네임 입력" class ="form-control"></li>
 			<li><p id ="nick-check-msg"></p></li>
 			<li>
@@ -90,8 +90,10 @@
 			<li><p>생년월일 :</p><input type ="date" name ="mb_birth"  class ="form-control"></li>
 			<li><input type ="tel" name ="mb_phone" placeholder ="전화번호 입력"  class ="form-control"></li>
 			<li>
-				<input type ="text" name ="mb_zipcode"  readonly class ="form-contorl">
-				<button type ="button" onclick ="getZipcode()" class="btn btn-primary" >우편번호 찾기</button>
+				<input type="text" id="postcode" name="mb_zipcode"placeholder="우편번호">
+				<input type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br>
+				<input type="text" id="address" name="mb_addr"placeholder="주소">
+				<input type="text" id="detailAddress" name="mb_addrdet"placeholder="상세주소">
 			</li>
 			<li>
 				<button id= "reg-btn" type ="button" onclick ="checkData()"class="btn btn-primary" disabled ="disabled">회원가입</button>
@@ -101,93 +103,25 @@
 	</form>
 </section>
 
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
-function getZipcode(){
-	window.open('/user/member/get_zipcode','Get Zipcode', 'width=350', 'height=450','scrollbars =yes');
-}
-function checkData() {
+	function execDaumPostcode() {
+	    new daum.Postcode({
+	        oncomplete: function(data) {
 	
-	if(document.reg_frm.mb_id.value=="") { 
-		alert("아이디 입력폼에 아이디를 입력하세요.");
-		document.reg_frm.mb_id.focus(); 
-		return; 
+	            var addr = '';
+	
+	            if (data.userSelectedType === 'R') { 
+	                addr = data.roadAddress;
+	            } else { 
+	                addr = data.jibunAddress;
+	            }
+	            
+	            document.getElementById('postcode').value = data.zonecode;
+	            document.getElementById("address").value = addr;
+	            document.getElementById("detailAddress").focus();
+	        }
+	    }).open();
 	}
-	
-	if(document.reg_frm.mb_pw.value=="") { 
-		alert("비밀번호 입력폼에 비밀번호를 입력하세요.");
-		document.reg_frm.mb_pw.focus(); 
-		return;
-	}
-	
-	if(document.reg_frm.mb_repw.value=="") {
-		alert("비밀번호 확인 입력폼에 비밀번호를 입력하세요.");
-		document.reg_frm.mb_repw.focus(); 
-		return;
-	}
-	
-	if(document.reg_frm.mb_pw.value != document.reg_frm.mb_repw.value) {
-		alert("비밀번호가 일치하지 않습니다.");
-		document.reg_frm.mb_repw.value="";
-		document.reg_frm.mb_repw.focus();
-		return;
-	}
-	
-	if(document.reg_frm.mb_name.value=="") {
-		alert("이름 입력폼에 이름을 입력해 주세요.");
-		document.reg_frm.mb_name.focus(); 
-		return;
-	}
-	
-	if(document.reg_frm.mb_mail.value=="") {
-		alert("메일 입력폼에 이메일을 입력해 주세요.");
-		document.reg_frm.mb_mail.focus(); 
-		return;
-	}
-	
-    var str=document.reg_frm.mb_mail.value; 
-    var atPos = str.indexOf('@'); 
-    var atLastPos = str.lastIndexOf('@');
-    var dotPos = str.indexOf('.'); 
-    var spacePos = str.indexOf(' ');
-    var commaPos = str.indexOf(','); 
-    var eMailSize = str.length; 
-
-    if (atPos > 1 && atPos == atLastPos && 
-	   dotPos > 3 && spacePos == -1 && commaPos == -1 
-	   && atPos + 1 < dotPos && dotPos + 1 < eMailSize);
-    else {
-          alert('이메일 형식이 잘못되었습니다.\n다시 입력해 주세요!');
-	      document.reg_frm.mb_mail.focus();
-		  return;
-    }
-    
-	if(document.reg_frm.mb_phone.value=="") { 
-		alert("전화번호 입력폼에 전화번호를 입력하세요.");
-		document.reg_frm.mb_phone.focus(); 
-		return;
-	}
-	
-	document.reg_frm.submit(); 
-	
-}
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <%@ include file="../include/footer.jsp"%>
-
-
-
-
-
-
