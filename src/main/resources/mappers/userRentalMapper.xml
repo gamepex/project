@@ -7,9 +7,12 @@
  
  	<insert id="register" parameterType="com.gamepex.share.RentalVO"  useGeneratedKeys="true" keyProperty="rt_no">
  		insert into tbl_rental (
-			mb_id
+			con_serial
+			, ttl_serial
+			, mb_id
 			, rt_days
 			, rt_shipfee
+			, rt_quantities
 			, rt_amount
 			, rt_regdate
 			, rt_payment
@@ -17,49 +20,37 @@
 			, rt_name
 			, rt_zipcode
 			, rt_addr
+			, rt_addrdet
 			, rt_tel
 			, rt_req
 			, rt_startdate
 			, rt_enddate
 			, rt_rtndate
-			, rt_moddates
+			, rt_moddate
  		) values (
-			#{mb_id}
+			#{con_serial}
+			, #{ttl_serial}
+			, #{mb_id}
 			, #{rt_days}
 			, #{rt_shipfee}
+			, #{rt_quantities}
 			, #{rt_amount}
-			, #{rt_regdate}
+			, now()
 			, #{rt_payment}
 			, 0
 			, #{rt_name}
 			, #{rt_zipcode}
 			, #{rt_addr}
+			, #{rt_addrdet}
 			, #{rt_tel}
 			, #{rt_req}
 			, #{rt_startdate}
-			, #{rt_enddate}
+			, DATE_ADD(#{rt_startdate}, INTERVAL #{rt_days} DAY)
 			, null
 			, now()
  		)
  	</insert>
- 	
- 	<insert id="registerDetail" parameterType="java.util.List" >
- 		insert into tbl_rentdetail (
-	 		rt_no
-	 		, rd_type
-			, rd_serial
-			, rd_price
-			, rd_quantity
- 		) values
- 			<foreach collection="list" item="item" separator=",">
- 			 (#{item.rt_no}
-	 			, #{item.rd_type}
-				, #{item.rd_serial}
-				, #{item.rd_price}
-				, #{item.rd_quantity})
- 			</foreach>
- 	</insert>
- 	
+
  	
  
  	<select id="getRentalList" resultType="com.gamepex.share.RentalDTO">
