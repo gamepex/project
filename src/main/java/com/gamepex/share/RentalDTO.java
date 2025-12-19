@@ -17,6 +17,7 @@ public class RentalDTO {
 	private String rt_name;
 	private String rt_zipcode;
 	private String rt_addr;
+	private String rt_addrdet;
 	private String rt_tel;
 	private String rt_req;
 	private String rt_startdate;
@@ -32,14 +33,9 @@ public class RentalDTO {
 	private String mb_phone;
 	private String mb_zipcode;
 	private String mb_addr;
+	private String mb_addrdet;
 	private int mb_grade;
 	private int mb_state;
-	
-	private int rd_no;	
-	private String rd_type;
-	private String rd_serial;
-	private int rd_price;
-	private int rd_quantity;
 	
 	private String con_serial;
 	private String con_name;
