@@ -9,6 +9,7 @@ public class RentalDTO {
 	private int rt_no;
 	private int rt_days;
 	private int rt_shipfee;
+	private int rt_quantities;
 	private int rt_amount;
 	private LocalDateTime rt_regdate;
 	private int rt_payment;
