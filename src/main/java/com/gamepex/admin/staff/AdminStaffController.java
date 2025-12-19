@@ -1,7 +1,7 @@
 package com.gamepex.admin.staff;
 
 import java.util.List;
-
+import java.util.Collections;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,15 +38,20 @@ public class AdminStaffController {
 	
 	// 직원 가입
 	@PostMapping("/register")
-	public String register(AdminStaffVO adminStaffVO, HttpSession session) {
-		AdminStaffVO sessionStaffVO = adminStaffService.register(adminStaffVO);
+	public String register(AdminStaffVO adminStaffVO, HttpSession session, Model model) {
+		try {
+			AdminStaffVO sessionStaffVO = adminStaffService.register(adminStaffVO);
 
-	    if (sessionStaffVO != null) {
-	        session.setAttribute("staff", sessionStaffVO); // 성공시 로그인
-	        return "redirect:/admin";
-	    }
+			if (sessionStaffVO != null) {
+				session.setAttribute("staff", sessionStaffVO); // 성공시 로그인
+				return "redirect:/admin";
+			}
+			return "admin/staff/register"; // 실패시 페이지 유지
 
-	    return "admin/staff/register"; // 실패시 페이지 유지
+		} catch (IllegalArgumentException e) {
+			model.addAttribute("resultMsg", e.getMessage());
+			return "admin/staff/register";
+		}
 	}
 	
 	
@@ -76,10 +81,19 @@ public class AdminStaffController {
 	
 	// 전체 직원 목록
 	@GetMapping("/staff_list")
-	public String getStaffList(Model model) {
-	    List<AdminStaffVO> staffList = adminStaffService.getStaffList();
-	    model.addAttribute("staffList", staffList);
-	    return "admin/staff/staff_list";
+	public String getStaffList(Model model, HttpSession session) {
+		AdminStaffVO svo = (AdminStaffVO) session.getAttribute("staff");
+		List<AdminStaffVO> staffList;
+
+		if ("인사".equals(svo.getStaff_part())) {
+			staffList = adminStaffService.getStaffList(); // 전체
+		} else {
+			AdminStaffVO me = adminStaffService.getStaff(svo.getStaff_id()); // 본인
+			staffList = Collections.singletonList(me);
+		}
+
+		model.addAttribute("staffList", staffList);
+		return "admin/staff/staff_list";
 	}
 	
 	// 직원 승인

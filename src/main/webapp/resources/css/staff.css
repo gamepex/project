@@ -2,14 +2,17 @@
 .btn-10{margin-top:10px;}
 .btn-30{margin-top:30px;}
 .btn-50{margin-top:50px;}
+
+.adm-bnr { text-align: center; }
+
 .search-wrap{margin-top:30px;
 }
 h3{display:flex; justify-content:center; padding-top:50px; font-size:32px;}
-.staff-reg-wrap{width:300px;margin:20px auto; padding:20px; }
-.staff-reg-wrap li{margin:5px auto 0;}
+.staff-reg-frm{width:300px;margin:20px auto; padding:20px; }
+.staff-reg-frm li{margin:5px auto 0;}
 
 .staff-login-frm{width:350px; margin:20px auto; padding:20px;}
-.staff-login-frm li{margin:5px auto 0;}
+.staff-login-frm li{margin:5px auto 0;} */
 .staff-login-frm  .btn{width:300px; margin-top:30px; text-align:center;}
 .login-btn-group{display:flex;}
 .login-btn-group a{margin:0 auto; padding:0 10px;}

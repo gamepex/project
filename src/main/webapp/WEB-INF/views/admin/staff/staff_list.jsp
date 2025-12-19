@@ -33,7 +33,7 @@
                 
                 <div class="d-flex justify-content-center">
 	                <p class="staff-state">상태 : ${svo.staff_state == 0 ? '미승인' : (svo.staff_state == 1 ? '재직' : (svo.staff_state == 2 ? '휴직' : '퇴사'))}</p>
-	                <c:if test="${sessionScope.staff.staff_id eq 'admin' and svo.staff_state == 0}">
+	                <c:if test="${svo.staff_state == 0}">
 	                	<button type="button" class="btn btn-primary btn-lg approve" data-staff-id="${svo.staff_id}">승인</button>
 	                </c:if>
                 </div>
@@ -41,7 +41,6 @@
                 <p>등록일 : ${svo.staff_regdate}</p>
                 <p>수정일 : ${svo.staff_moddate}</p>
 
-                <c:if test="${sessionScope.staff.staff_id eq 'admin'}">
                     <div class="staff-group-btn">
                         <a href="/admin/staff/modify?staff_id=${svo.staff_id}" class="btn btn-success btn-lg">수정</a>
                         
@@ -51,7 +50,6 @@
 						  <button type="submit" class="btn btn-danger btn-lg">삭제</button>
 						</form>
                     </div>
-                </c:if>
             </li>
         </c:forEach>
     </ul>

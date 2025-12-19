@@ -29,9 +29,13 @@ document.querySelector("#staff_id_check").addEventListener("click", () => {
     .then(text => {
         idMsg.classList.remove("d-none");
         if (text === "true") {
+        	idOk.classList.remove("alert-danger");
+        	idOk.classList.add("alert-success");
             idOk = false;
             idMsg.textContent = "중복된 아이디입니다.";
         } else {
+        	idOk.classList.remove("alert-success");
+        	idOk.classList.add("alert-danger");
             idOk = true;
             idMsg.textContent = "사용 가능한 아이디입니다.";
         }
@@ -65,6 +69,7 @@ if (pw === repw) {
         pwOk = false;
         pwMsg.textContent = "비밀번호가 일치하지 않습니다.";
     }
+    // 향후 해당부분 함수화하기
 }
 
 staffPw.addEventListener("input", pwCheck);

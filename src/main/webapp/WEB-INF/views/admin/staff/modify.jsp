@@ -37,22 +37,39 @@
 	            <label for="staff_birth">생년월일 : </label>
 	            <input type="date" id="staff_birth" name="staff_birth" value="${svo.staff_birth}">
 	       	</li>
-	       	<li>
-				<p class="d-inline-block">부서 : </p>
-				<select name="staff_part" class="form-select d-inline-block w-auto">
-					<c:forEach var="part" items="${fn:split('인사,총무,영업,개발,운영', ',')}">
-						<option value="${part}" ${part eq svo.staff_part ? 'selected' : ''}>${part}</option>
-					</c:forEach>
-				</select>
-			</li>
-	       	<li>
-				<p class="d-inline-block">직급 : </p>
-				<select name="staff_position" class="form-select d-inline-block w-auto">
-					<c:forEach var="pos" items="${fn:split('사원,주임,대리,과장,차장,부장', ',')}">
-						<option value="${pos}" ${pos eq svo.staff_position ? 'selected' : ''}>${pos}</option>
-					</c:forEach>
-				</select>
-			</li>
+
+			<c:choose>
+				<c:when test="${sessionScope.staff.staff_part eq '인사'}">
+					<li>
+						<p class="d-inline-block">부서 : </p>
+						<select name="staff_part" class="form-select d-inline-block w-auto">
+							<c:forEach var="part" items="${fn:split('인사,총무,영업,개발,운영', ',')}">
+							<option value="${part}" ${part eq svo.staff_part ? 'selected' : ''}>${part}</option>
+						</c:forEach>
+					</select>
+					</li>
+					<li>
+						<p class="d-inline-block">직급 : </p>
+						<select name="staff_position" class="form-select d-inline-block w-auto">
+							<c:forEach var="pos" items="${fn:split('사원,주임,대리,과장,차장,부장', ',')}">
+								<option value="${pos}" ${pos eq svo.staff_position ? 'selected' : ''}>${pos}</option>
+							</c:forEach>
+						</select>
+					</li>
+				</c:when>
+				<c:otherwise>
+					<li>
+						<p class="d-inline-block">부서 : </p>
+						<input type="text" name="staff_part" value="${svo.staff_part}" readonly>
+					</li>
+					<li>
+						<p class="d-inline-block">직급 : </p>
+						<input type="text" name="staff_position" value="${svo.staff_position}" readonly>
+					</li>
+				</c:otherwise>
+			</c:choose>
+
+
 			<li>
 				<p class="d-inline-block">전화 : </p>
 				<input type="tel" id="staff_phone" name="staff_phone" value="${svo.staff_phone}">

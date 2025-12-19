@@ -1,5 +1,6 @@
 package com.gamepex.admin.staff;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AdminStaffServiceImpl implements AdminStaffService {
-	
+
     @Autowired
     private AdminStaffDAO adminStaffDAO;
     
@@ -24,26 +25,71 @@ public class AdminStaffServiceImpl implements AdminStaffService {
     // 직원 등록
     @Override
     public AdminStaffVO register(AdminStaffVO adminStaffVO) {
+
+        validateRegister(adminStaffVO);
     	
     	// 비밀번호 암호화
     	String rawPw = adminStaffVO.getStaff_pw();
         String encPw = bCryptPasswordEncoder.encode(rawPw);
         adminStaffVO.setStaff_pw(encPw);
-
-        // 전화번호 하이픈 제거
-        String phone = adminStaffVO.getStaff_phone().replaceAll("-", "");
-        adminStaffVO.setStaff_phone(phone);
+        
+    
+        int result = adminStaffDAO.register(adminStaffVO);
         
         // 등록 실패시 null 리턴.
-        int result = adminStaffDAO.register(adminStaffVO);
-        if (result == 0) {
-            return null;
-        }
+        if (result == 0) return null;
         
         adminStaffVO.setStaff_pw(null);
         return adminStaffVO;
     }
-    
+
+    //유효성 검증 및 정규화
+    private void validateRegister(AdminStaffVO svo) {
+
+        // 1) 아이디
+        String id = secureTrim(svo.getStaff_id(), "아이디를 입력하세요.");
+        if (id.length() < 4 || id.length() > 20) throw new IllegalArgumentException("아이디는 4~20자여야 합니다.");
+        if (!id.matches("^[a-z0-9]+$")) throw new IllegalArgumentException("아이디는 영문 소문자/숫자만 가능합니다.");
+        if (adminStaffDAO.idCheck(id) > 0) throw new IllegalArgumentException("이미 사용 중인 아이디입니다.");
+        svo.setStaff_id(id);
+
+        // 2) 비밀번호
+        String pw = svo.getStaff_pw();
+        if (pw == null || pw.isEmpty()) throw new IllegalArgumentException("비밀번호를 입력하세요.");
+        if (pw.length() < 4 || pw.length() > 20) throw new IllegalArgumentException("비밀번호는 4~20자여야 합니다.");
+
+        // 3) 이름
+        String name = secureTrim(svo.getStaff_name(), "이름을 입력하세요.");
+        if (name.length() > 20) throw new IllegalArgumentException("이름은 20자 이하여야 합니다.");
+        svo.setStaff_name(name);
+
+        // 4) 성별
+        String gender = svo.getStaff_gender();
+        if (!(gender.equals("m") || gender.equals("f"))) throw new IllegalArgumentException("성별을 선택하세요.");
+
+        // 5) 생년월일
+        LocalDate birth = svo.getStaff_birth();
+        if (birth == null) throw new IllegalArgumentException("생년월일을 입력하세요.");
+
+        // 6) 전화번호
+        String phone = secureTrim(svo.getStaff_phone(), "전화번호를 입력하세요.");
+        String digits = phone.replaceAll("-", ""); // 전화번호 하이픈 제거
+        if (digits.length() < 9) throw new IllegalArgumentException("전화번호 형식이 올바르지 않습니다.");
+        svo.setStaff_phone(digits);
+
+        // 7) 이메일
+        String email = secureTrim(svo.getStaff_mail(), "이메일을 입력하세요.");
+        // 이메일 검증 라이브러리 추가하기
+    }
+
+    // 공백 제거용
+    private String secureTrim(String str, String msg) {
+        if (str == null) throw new IllegalArgumentException(msg);
+        str = str.trim();
+        if (str.isEmpty()) throw new IllegalArgumentException(msg);
+        return str;
+    }
+
     
     //로그인
     @Override
@@ -102,7 +148,7 @@ public class AdminStaffServiceImpl implements AdminStaffService {
 //로그인 실패 메시지 클래스
 class LoginException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
-    public LoginException(String message) {
-        super(message);
+    public LoginException(String msg) {
+        super(msg);
     }
 }
