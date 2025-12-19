@@ -39,19 +39,3 @@ create table tbl_rental (
 	primary key (rt_no),
 	foreign key (mb_id) references tbl_member (mb_id)
 ) comment '렌탈 테이블';  
-
-
-create table tbl_rentdetail (
-	rd_no		int		not null		auto-increment		comment '상세번호',
-	rt_no		int		not null		comment '렌탈 번호',
-	con_serial		varchar(30)		not null		comment '콘솔 일련번호',
-	ttl_number		int		not null		comment '타이틀 일련번호',
-	rd_type		varchar(30)		not null		comment '분류(게임기/타이틀)',
-	rd_name		varchar(50)		not null		comment'상품명',	
-	rd_price		int		not null		comment '가격',	
-	rd_quantity		int		not null		comment '수량',
-	primary key (rd_no),
-	foreign key (rt_no) references tbl_rental (rt_no),
-	foreign key (con_serial) references tbl_console (con_serial),
-	foreign key (ttl_number) references tbl_title (ttl_number),
-) comment '렌탈 상세 테이블';  
