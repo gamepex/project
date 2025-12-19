@@ -26,13 +26,13 @@
 				</li>
 				<li>	
 					<c:if test="${con.con_state == 0 }">
-					<a href = "/user/rental/register?con_serial=${con.con_serial}" class ="btn btn-success view-btn">대여하기</a>
+					<a href = "/user/rental/con_rental?con_serial=${con.con_serial}" class ="btn btn-success view-btn">대여하기</a>
 					</c:if>
 					<c:if test="${con.con_state == 1}">
-					<a href = "/user/rental/register?con_serial=${con.con_serial}">대여중</a>
+					<a href = "/user/rental/con_rental?con_serial=${con.con_serial}">대여중</a>
 					</c:if>
 					<c:if test="${con.con_state == 2 }">
-					<a href = "/user/rental/register?con_serial=${con.con_serial}" class ="btn btn-danger">대여 불가</a>
+					<a href = "/user/rental/con_rental?con_serial=${con.con_serial}" class ="btn btn-danger">대여 불가</a>
 					</c:if>
 				</li>
 			</ul>
