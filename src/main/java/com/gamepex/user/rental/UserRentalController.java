@@ -10,21 +10,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.gamepex.admin.console.AdminConsoleService;
 import com.gamepex.admin.gametitle.AdminGameTitleService;
 import com.gamepex.admin.rental.AdminRentalService;
-import com.gamepex.share.AddressDTO;
 import com.gamepex.share.ConsoleVO;
 import com.gamepex.share.GameTitleVO;
 import com.gamepex.share.MemberVO;
-import com.gamepex.share.RentDetailVO;
 import com.gamepex.share.RentalDTO;
-import com.gamepex.share.RentalRequestDTO;
 import com.gamepex.share.RentalVO;
 import com.gamepex.user.member.UserMemberService;
 
@@ -81,40 +76,47 @@ public class UserRentalController {
 	}
 
 	@GetMapping("/register")
-	public String register(@RequestParam("con_serial") String con_serial, HttpSession session, Model model) throws Exception {
+	public String register(@RequestParam(value="con_serial", required=false)String con_serial, @RequestParam(value="ttl_serial", required=false)String ttl_serial,
+	@RequestParam(value="fromCart", required=false, defaultValue="false") boolean fromCart
+	, HttpSession session, Model model) throws Exception {
 		MemberVO memberVO = (MemberVO) session.getAttribute("m");
-		ConsoleVO consoleVO = adminConsoleService.getConsoleOne(con_serial);
-		//if(memberVO != null) {
-			model.addAttribute("c",consoleVO);
-			return "/user/rental/register";
-	//	} else {
-	//		return "/user/member/login";
-		//}
-	}
-	
-	// 대여 신청 데이터 
-	@PostMapping("/register")
-	@ResponseBody
-	public String register(@RequestBody RentalRequestDTO rrdto, HttpSession session, Model model) throws Exception {
-		MemberVO memberVO = (MemberVO) session.getAttribute("m");
-		System.out.println(rrdto);
-		if (memberVO != null) {
-			userRentalService.register(rrdto.getRentalInfo(), rrdto.getDetailList());
-			return "success";
+		
+		if(memberVO != null) {
+			model.addAttribute("m",memberVO);
+			//if(fromCart){
+			//	model.addAttribute("itemList", userCartService.getCartList(memberVO.getMb_id()));
+			//	model.addAttribute("viewType", "cart");
+			//	return "/user/rental/register";
+			//}
+			if(con_serial != null && !con_serial.isEmpty()) {
+				model.addAttribute("item", adminConsoleService.getConsoleOne(con_serial));
+				//지금 화면에 보여줄 데이터가 콘솔인지, 게임 타이틀인지 알려주는 역할(if,when-otherwise,form-hidden)
+				return "/user/rental/con_rental";
+			} else if (ttl_serial != null && !ttl_serial.isEmpty()) {
+				model.addAttribute("item", adminGameTitleService.getGameTitleOne(ttl_serial));
+				return "/user/rental/ttl_rental";
+			}	
 		} else {
-			return "login-required";
+			return "redirect:/user/member/login";
 		}
+		return "/user/include/error";
 	}
 	
-	@GetMapping("/get_zipcode")
-	public void getZipcode() throws Exception {}
-	
-	@PostMapping("/get_zipcode")
-	public void getZipcode(AddressDTO addressDTO, Model model) throws Exception {
-		List<AddressDTO> addrList = userMemberService.getZipcode(addressDTO);
-		model.addAttribute("addrList", addrList);
+	@PostMapping("/register")
+	public String register(RentalVO rentalVO, HttpSession session) throws Exception {
+		MemberVO memberVO = (MemberVO)session.getAttribute("m");
+
+		if (memberVO != null) {
+			rentalVO.setMb_id(memberVO.getMb_id());
+			userRentalService.register(rentalVO);
+			System.out.println("생성된 주문번호: " + rentalVO.getRt_no()); 
+			return "redirect:/user/rental/register_ok";
+		} 
+		return "redirect:/user/member/login";
 	}
 
+	@GetMapping("/register_ok")
+	public void completeReg(){}
 	
 	
 	
