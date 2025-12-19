@@ -7,7 +7,6 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.gamepex.share.RentDetailVO;
 import com.gamepex.share.RentalVO;
 
 @Repository
@@ -18,12 +17,10 @@ public class UserRentalDAO {
 	@Inject
 	private static String namespace="com.gamepex.mappers.user.rental";
 	
-	public int register(RentalVO rentalInfo) throws Exception {
-		return sqlSession.insert(namespace+".register",rentalInfo);
+	public void register(RentalVO rentalVO) throws Exception {
+		sqlSession.insert(namespace+".register",rentalVO);
 	}
-	public void registerDetail(List<RentDetailVO> detailList) throws Exception {
-		sqlSession.insert(namespace+".registerDetail", detailList);
-	}
+
 	//private void setRentalState(String con_serial) throws Exception {
 	//	sqlSession.update(namespace+".setRentalState", con_serial);
 	//}
