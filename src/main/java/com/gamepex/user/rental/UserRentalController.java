@@ -36,8 +36,6 @@ public class UserRentalController {
 	@Inject
 	private UserMemberService userMemberService;
 	
-	String alert = null;
-	
 	@GetMapping("/con_list")
 	public String getConsoleList (Model model) throws Exception {
 		List<ConsoleVO> consoleList= adminConsoleService.getConsoleList();
@@ -76,21 +74,22 @@ public class UserRentalController {
 	}
 
 	@GetMapping("/register")
-	public String register(@RequestParam(value="con_serial", required=false)String con_serial, @RequestParam(value="ttl_serial", required=false)String ttl_serial,
-	@RequestParam(value="fromCart", required=false, defaultValue="false") boolean fromCart
+	public String register(@RequestParam(value="con_serial",required=false)String con_serial, @RequestParam(value="ttl_serial",required=false)String ttl_serial,
+	@RequestParam(value="fromCart",required=false, defaultValue="false")boolean fromCart
 	, HttpSession session, Model model) throws Exception {
-		MemberVO memberVO = (MemberVO) session.getAttribute("m");
+
+		MemberVO memberVO = (MemberVO)session.getAttribute("m");
 		
 		if(memberVO != null) {
 			model.addAttribute("m",memberVO);
 			//if(fromCart){
 			//	model.addAttribute("itemList", userCartService.getCartList(memberVO.getMb_id()));
 			//	model.addAttribute("viewType", "cart");
+			// 지금 화면에 보여줄 데이터가 어디로부터 왔는지 알려주는 역할(if,when-otherwise,form-hidden 쓰임)
 			//	return "/user/rental/register";
 			//}
 			if(con_serial != null && !con_serial.isEmpty()) {
 				model.addAttribute("item", adminConsoleService.getConsoleOne(con_serial));
-				//지금 화면에 보여줄 데이터가 콘솔인지, 게임 타이틀인지 알려주는 역할(if,when-otherwise,form-hidden)
 				return "/user/rental/con_rental";
 			} else if (ttl_serial != null && !ttl_serial.isEmpty()) {
 				model.addAttribute("item", adminGameTitleService.getGameTitleOne(ttl_serial));
@@ -101,12 +100,12 @@ public class UserRentalController {
 		}
 		return "/user/include/error";
 	}
-	
+
 	@PostMapping("/register")
-	public String register(RentalVO rentalVO, HttpSession session) throws Exception {
+	public String register(RentalVO rentalVO, HttpSession session)throws Exception{
 		MemberVO memberVO = (MemberVO)session.getAttribute("m");
 
-		if (memberVO != null) {
+		if(memberVO != null) {
 			rentalVO.setMb_id(memberVO.getMb_id());
 			userRentalService.register(rentalVO);
 			System.out.println("생성된 주문번호: " + rentalVO.getRt_no()); 
@@ -116,7 +115,15 @@ public class UserRentalController {
 	}
 
 	@GetMapping("/register_ok")
-	public void completeReg(){}
+	public void completeReg(@RequestParam("rt_no")int rt_no, HttpSession session, Model model)throws Exception{
+		MemberVO memberVO = (MemberVO)session.getAttribute("m");
+
+		if(memberVO != null) {
+			model.addAttribute("rentalDTO",adminRentalService.getRentalOne(rt_no));
+		}
+	}
+	
+
 	
 	
 	
