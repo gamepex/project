@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.gamepex.share.AddressDTO;
+// import com.gamepex.share.AddressDTO;
 import com.gamepex.share.MemberVO;
 
 @Repository
@@ -21,9 +21,9 @@ public class UserMemberDAO {
 	public int register(MemberVO memberVO) throws Exception{
 		return sqlSession.insert(namespace + ".register",memberVO);
 	}
-	public List<AddressDTO> getZipcode(AddressDTO addressDTO) throws Exception{
+	/*public List<AddressDTO> getZipcode(AddressDTO addressDTO) throws Exception{
 		return sqlSession.selectList(namespace +".getZipcode",addressDTO);
-	}
+	}*/
 	public MemberVO login(MemberVO memberVO) throws Exception {
 		return sqlSession.selectOne(namespace+".login", memberVO);
 	}

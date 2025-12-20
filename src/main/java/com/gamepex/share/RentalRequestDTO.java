@@ -8,5 +8,5 @@ import lombok.Data;
 public class RentalRequestDTO {
 	
 	private RentalVO rentalInfo;
-	private List<RentDetailVO> detailList;
+	// private List<RentDetailVO> detailList;
 }

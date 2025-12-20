@@ -46,10 +46,10 @@
 		where staff_name = #{staff_name} and staff_mail = #{staff_mail} and staff_phone = #{staff_phone}
 	</select>
 	
-	<select id ="getZipcode" resultType = "com.gamepex.share.AddressDTO">
+	<!--<select id ="getZipcode" resultType = "com.gamepex.share.AddressDTO">
 		select * from tbl_address
 		where area3 like concat('%',#{area3},'%')
-	</select>
+	</select>-->
 	
 	<update id="resetPwd" parameterType="com.gamepex.share.MemberVO">
 		update tbl_member set

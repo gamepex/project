@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.gamepex.admin.staff.AdminStaffVO;
-import com.gamepex.share.AddressDTO;
+// import com.gamepex.share.AddressDTO;
 import com.gamepex.share.MemberVO;
 
 @Controller
@@ -56,10 +56,10 @@ public class UserMemberController {
 	public void getZipcode() throws Exception {}
 	
 	@PostMapping("/get_zipcode")
-	public void getZipcode(AddressDTO addressDTO, Model model) throws Exception {
+	/*public void getZipcode(AddressDTO addressDTO, Model model) throws Exception {
 		List<AddressDTO> addrList = userMemberService.getZipcode(addressDTO);
 		model.addAttribute("addrList", addrList);
-	}
+	}*/
 	
 	
 	@GetMapping("/login")
