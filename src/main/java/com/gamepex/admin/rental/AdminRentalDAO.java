@@ -21,13 +21,14 @@ public class AdminRentalDAO {
 	private static String namespace="com.gamepex.mappers.admin.rental";
 	
 	
-	// 대여 내역
 	public List<RentalDTO> getRentalList() throws Exception {
 		return sqlSession.selectList(namespace+".getRentalList");
 	}
 	
+	public RentalDTO getRentalOne(int rt_no)throws Exception{
+		return sqlSession.selectOne(namespace+".getRentalOne",rt_no);
+	}
 
-	// 대여 현황 수정
 	public void setRentalState(int rt_no, int rt_state) throws Exception {
 		Map<String, Object> params = new HashMap<>();
 		params.put("rt_no", rt_no);

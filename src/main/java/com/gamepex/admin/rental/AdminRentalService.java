@@ -17,13 +17,15 @@ public class AdminRentalService {
 	@Inject
 	private AdminRentalDAO adminRentalDAO;
 	
-	// 대여 내역
-	public List<RentalDTO> getRentalList() throws Exception {
+	public List<RentalDTO> getRentalList()throws Exception{
 		return adminRentalDAO.getRentalList();
 	}
+
+	public RentalDTO getRentalOne(int rt_no)throws Exception{
+		return adminRentalDAO.getRentalOne(rt_no);
+	}
 	
-	// 대여 현황 수정
-	public void setRentalState(int rt_no, int rt_state) throws Exception {
+	public void setRentalState(int rt_no, int rt_state)throws Exception{
 		adminRentalDAO.setRentalState(rt_no, rt_state);
 	}
 

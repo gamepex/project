@@ -21,18 +21,20 @@ public class AdminRentalController {
 	@Inject
 	private AdminRentalService adminRentalService;
 	
-
-	// 대여 내역 조회
 	@GetMapping("/list")
-	public void getRentalList(Model model) throws Exception { 
+	public void getRentalList(Model model)throws Exception{ 
 		List<RentalDTO> rentalList = adminRentalService.getRentalList();
 		model.addAttribute("rentalList", rentalList);
 	}
-
 	
-	// 대여 현황 수정
+	@GetMapping("/list_view")
+	public void getRentalOne(@RequestParam("rt_no")int rt_no, Model model)throws Exception{
+		RentalDTO rentalDTO = adminRentalService.getRentalOne(rt_no);
+		model.addAttribute("rdto",rentalDTO);
+	}
+	
 	@PostMapping("/rtstate")
-	public String setRentalState(@RequestParam("rt_no") int rt_no, @RequestParam("rt_state") int rt_state, RedirectAttributes rttr) throws Exception {
+	public String setRentalState(@RequestParam("rt_no") int rt_no, @RequestParam("rt_state") int rt_state, RedirectAttributes rttr) throws Exception{
 		adminRentalService.setRentalState(rt_no, rt_state);
 		rttr.addAttribute("rt_no", rt_no);
 		
