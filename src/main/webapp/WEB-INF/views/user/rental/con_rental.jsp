@@ -3,11 +3,10 @@
 <%@ include file="/WEB-INF/views/user/include/header.jsp" %>
 
 	<div class="banner">
-		<h2><span>Console Rental </span>REGISTER</h2>
+		<h2><span class="txt-blue">C</span>onsole <span class="txt-ygrn">R</span>ental <span class="txt-blue">R</span>EGISTER</h2>
 	</div>
 
 	<link rel="stylesheet" href="/resources/css/rental.css">
-	
 	<script>
 		$(function(){
 			$('#rt_quantities, #rt_days').on('input', function(){
@@ -62,7 +61,6 @@
 				} return true;
 			});
 		});
-		
 	</script>
 	
 	<section>
@@ -70,7 +68,7 @@
 			<input type="hidden" name="con_serial" value="${item.con_serial}">
 			<input type="hidden" name="mb_id" value="${m.mb_id}">
 		
-			<ul class="rt_show_con">
+			<ul class="rt_show_item">
 				<li>
 					<img src="/attach/${item.con_thumbnail}">
 				</li>
@@ -79,12 +77,10 @@
 					<p>제조사 : ${item.con_platform}</p>
 					<p>가격 : <fmt:formatNumber value="${item.con_price}" pattern="#,###,###"/>원</p>
 					<input type="hidden" id="per_price" value="${item.con_price}">
-					
 					<label>수량 : </label>
 					<input id="rt_quantities" type="number" name="rt_quantities" value="1" min="1" class="form-control">
 				</li>
 			</ul>
-			
 			<ul class="rt-info-deli">
 				<li><label>주문자명 : </label><input type="text" id="mb_name" value="${m.mb_name}"readonly class="form-control"></li>
 				<li><label>주문자 번호 : </label><input type="text" id="mb_phone" value="${m.mb_phone}"readonly class="form-control"></li>
@@ -105,27 +101,25 @@
 				</li>
 				<li><label>배송 요청 메세지 : </label><input type="text" name="rt_req" class="form-control"></li>
 			</ul>
-			
-			<ul class="rt-frm-wrap">
-					<li><input id="rt_days" type="number" name="rt_days" placeholder="대여일수" min="3" required class="form-control"></li>
-					<li><label>배송비 : </label><input id="rt_shipfee" type="number" name="rt_shipfee" readonly class="form-control"></li>
-					<li><label>결제총액 : </label><input id="rt_amount" type="number" name="rt_amount" readonly class="form-control"></li>
-					<li>
-						<label>결제수단 : </label>
-						<input id="c" type="radio" name="rt_payment" value="0" checked><label for="c" class="more-btn">카드</label>
-						<input id="b" type="radio" name="rt_payment" value="1"><label for="b" class="more-btn">현금</label>
-						<input id="t" type="radio" name="rt_payment" value="2"><label for="t" class="more-btn">계좌이체 (무통장입금)</label>
-						<input id="e" type="radio" name="rt_payment" value="3"><label for="e" class="more-btn">그 외</label>
-					</li>
-					<li><label>대여 시작일 : </label><input id="rt_startdate" type="date" name="rt_startdate" required class="form-control"></li>
-					<li><label>대여 종료일 : </label><input id="rt_enddate" type="date" readonly placeholder="시작일 선택 시 자동 계산" class="form-control"></li>
-					<li>
-						<button type="submit"  class="more-btn">대여 하기</button>
-					</li>
+			<ul class="rt-info-rent">
+				<li><input id="rt_days" type="number" name="rt_days" placeholder="대여일수" min="3" required class="form-control"></li>
+				<li><label>배송비 : </label><input id="rt_shipfee" type="number" name="rt_shipfee" readonly class="form-control"></li>
+				<li><label>결제총액 : </label><input id="rt_amount" type="number" name="rt_amount" readonly class="form-control"></li>
+				<li>
+					<label>결제수단 : </label>
+					<input id="c" type="radio" name="rt_payment" value="0" checked><label for="c" class="more-btn">카드</label>
+					<input id="b" type="radio" name="rt_payment" value="1"><label for="b" class="more-btn">현금</label>
+					<input id="t" type="radio" name="rt_payment" value="2"><label for="t" class="more-btn">계좌이체 (무통장입금)</label>
+					<input id="e" type="radio" name="rt_payment" value="3"><label for="e" class="more-btn">그 외</label>
+				</li>
+				<li><label>대여 시작일 : </label><input id="rt_startdate" type="date" name="rt_startdate" required class="form-control"></li>
+				<li><label>대여 종료일 : </label><input id="rt_enddate" type="date" readonly placeholder="시작일 선택 시 자동 계산" class="form-control"></li>
+				<li>
+					<button type="submit"  class="more-btn">대여 하기</button>
+				</li>
 			</ul>
 		</form>
 	</section>
-	
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 	function execDaumPostcode() {
@@ -139,7 +133,6 @@
 	            } else { 
 	                addr = data.jibunAddress;
 	            }
-	            
 	            document.getElementById('postcode').value = data.zonecode;
 	            document.getElementById("address").value = addr;
 	            document.getElementById("detailAddress").focus();
@@ -147,6 +140,4 @@
 	    }).open();
 	}
 </script>
-
-	
-	<%@ include file="/WEB-INF/views/user/include/footer.jsp" %>
+<%@ include file="/WEB-INF/views/user/include/footer.jsp" %>

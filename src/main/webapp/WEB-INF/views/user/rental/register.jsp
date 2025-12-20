@@ -3,7 +3,7 @@
 <%@ include file="/WEB-INF/views/user/include/header.jsp" %>
 
 	<div class="banner">
-		<h2><span>Item Rental </span>REGISTER</h2>
+		<h2><span class="txt-blue">I</span>tem <span class="txt-ygrn">R</span>ental <span class="txt-blue">R</span>EGISTER</h2>
 	</div>
 
 	<link rel="stylesheet" href="/resources/css/rental.css">
@@ -109,6 +109,4 @@
 	    }).open();
 	}
 </script>
-
-	
-	<%@ include file="/WEB-INF/views/user/include/footer.jsp" %>
+<%@ include file="/WEB-INF/views/user/include/footer.jsp" %>

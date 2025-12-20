@@ -3,11 +3,9 @@
 <%@ include file="/WEB-INF/views/user/include/header.jsp" %>
 
 	<div class="banner">
-		<h2><span>Item Rental </span>LIST</h2>
+		<h2><span class="txt-blue">R</span>ental <span class="txt-ygrn">L</span>IST</h2>
 	</div>
-
 	<link rel="stylesheet" href="/resources/css/rental.css">
-
 	<script>
 		$(function() {
 			$('#search-wrap').keyup(function(){
@@ -39,13 +37,13 @@
 			<ul>
 				<li>
 					<p class="show-rt-state">
-					<c:if test="${rt_state == '0' }">대여 요청 확인 중	</c:if>
-					<c:if test="${rt_state == '1' }">배송 준비 중</c:if>
-					<c:if test="${rt_state == '2' }">대여 취소</c:if>
-					<c:if test="${rt_state == '3' }">배송 중</c:if>
-					<c:if test="${rt_state == '4' }">배송 완료(대여 중)</c:if>
-					<c:if test="${rt_state == '5' }">반납 요청</c:if>
-					<c:if test="${rt_state == '6' }">반납 완료</c:if>
+					<c:if test="${rt_state == '0'}">대여 요청 확인 중</c:if>
+					<c:if test="${rt_state == '1'}">배송 준비 중</c:if>
+					<c:if test="${rt_state == '2'}">대여 취소</c:if>
+					<c:if test="${rt_state == '3'}">배송 중</c:if>
+					<c:if test="${rt_state == '4'}">배송 완료(대여 중)</c:if>
+					<c:if test="${rt_state == '5'}">반납 요청</c:if>
+					<c:if test="${rt_state == '6'}">반납 완료</c:if>
 					</p>
 				</li>
 				<!--<c:forEach var="rtdto" items="${itemDetail}"></c:forEach>-->
@@ -66,6 +64,4 @@
 			<!--{itemList} foreach 닫을 자리  -->
 		</div>
 	</section>
-
-
 <%@ include file="/WEB-INF/views/user/include/footer.jsp" %>
