@@ -89,7 +89,7 @@
 			</li>
 		</ul>
 		<div class="d-flex justify-content-center">
-			<a href="/admin/staff/staff_list" class="btn btn-secondary btn-lg">취소</a>
+			<a href="/admin/staff/list" class="btn btn-secondary btn-lg">취소</a>
 			<button type="submit" class="btn btn-primary btn-lg">저장</button>
 		</div>
 	</form>

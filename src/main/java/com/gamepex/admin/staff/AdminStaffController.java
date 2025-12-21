@@ -80,7 +80,7 @@ public class AdminStaffController {
 	
 	
 	// 전체 직원 목록
-	@GetMapping("/staff_list")
+	@GetMapping("/list")
 	public String getStaffList(Model model, HttpSession session) {
 		AdminStaffVO svo = (AdminStaffVO) session.getAttribute("staff");
 		List<AdminStaffVO> staffList;
@@ -93,7 +93,7 @@ public class AdminStaffController {
 		}
 
 		model.addAttribute("staffList", staffList);
-		return "admin/staff/staff_list";
+		return "admin/staff/list";
 	}
 	
 	// 직원 승인
@@ -118,7 +118,7 @@ public class AdminStaffController {
 	        rttr.addFlashAttribute("resultMsg", "직원 삭제에 실패했습니다.");
 	    }
 
-	    return "redirect:/admin/staff/staff_list";
+	    return "redirect:/admin/staff/list";
 	}
 	
 	// 직원 수정 접속
@@ -140,7 +140,7 @@ public class AdminStaffController {
 	    if (result == 1) {
 	        rttr.addFlashAttribute("alertType", "success");
 	        rttr.addFlashAttribute("resultMsg", "직원 수정에 성공했습니다.");
-	        return "redirect:/admin/staff/staff_list";
+	        return "redirect:/admin/staff/list";
 	    } else {
 		    rttr.addFlashAttribute("alertType", "danger");
 		    rttr.addFlashAttribute("resultMsg", "직원 수정에 실패했습니다.");

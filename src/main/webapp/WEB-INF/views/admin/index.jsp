@@ -32,7 +32,7 @@
 		<h3 style="color: red">${sessionScope.staff.staff_name}님 안녕하세요.</h3>
 		<div class="temp" style="display: flex; justify-content: center; gap: 10px;">
 			<a href="/admin/staff/logout" class="btn btn-primary">로그아웃</a>
-			<a href="/admin/staff/staff_list" class="btn btn-primary">직원 목록</a>
+			<a href="/admin/staff/list" class="btn btn-primary">직원 목록</a>
 			<a href="#" class="btn btn-primary">메뉴3</a>
 			<a href="#" class="btn btn-primary">메뉴4</a>
 			<a href="#" class="btn btn-primary">메뉴5</a>
