@@ -67,7 +67,7 @@
                                     <ul class="sub-menu-info">
                                     <li><a href="#">공지사항</a></li>
                                         <li><a href="#">FAQ</a></li>
-                                        <li><a href="#">문의 게시판</a></li>
+                                        <li><a href="/user/inquiry/list">문의 게시판</a></li>
                                     </ul> 
                                     <ul class="sub-menu-info">
                                         <li><a href="#">매장 안내</a></li>

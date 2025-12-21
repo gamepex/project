@@ -8,7 +8,12 @@ public class HomeController {
 	
 	@GetMapping("/")
 	public String home() { 
-		return "index";
+		return "user/index";
 	}
+
+    @GetMapping("/user")
+    public String userHome() {
+        return "user/index";
+    }
 	
 }
