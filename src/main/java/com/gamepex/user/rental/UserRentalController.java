@@ -115,11 +115,14 @@ public class UserRentalController {
 	}
 
 	@GetMapping("/register_ok")
-	public void completeReg(@RequestParam("rt_no")int rt_no, HttpSession session, Model model)throws Exception{
+	public String completeReg(@RequestParam("rt_no")int rt_no, HttpSession session, Model model)throws Exception{
 		MemberVO memberVO = (MemberVO)session.getAttribute("m");
 
 		if(memberVO != null) {
 			model.addAttribute("rentalDTO",adminRentalService.getRentalOne(rt_no));
+			return "/user/rental/register_ok";
+		} else {
+			return "/user/member/login";
 		}
 	}
 	
