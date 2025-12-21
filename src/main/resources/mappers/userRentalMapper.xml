@@ -5,7 +5,7 @@
   
  <mapper namespace="com.gamepex.mappers.user.rental">
  
- 	<insert id="register" parameterType="com.gamepex.share.RentalVO"  useGeneratedKeys="true" keyProperty="rt_no">
+ 	<insert id="register" parameterType="com.gamepex.share.RentalVO" useGeneratedKeys="true" keyProperty="rt_no">
  		insert into tbl_rental (
 			con_serial
 			, ttl_serial
