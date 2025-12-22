@@ -30,6 +30,8 @@
         toolbar: 'undo redo | image',
         automatic_uploads: true,
         images_upload_url: '/user/inquiry/upload',
+        image_description: false,
+        image_dimensions: false
     });
 </script>
 

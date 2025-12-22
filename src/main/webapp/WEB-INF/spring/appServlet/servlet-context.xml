@@ -11,6 +11,7 @@
 
     <mvc:annotation-driven conversion-service="conversionService">
         <mvc:message-converters register-defaults="true">
+        	<beans:bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
             <beans:bean class="org.springframework.http.converter.StringHttpMessageConverter">
                 <beans:property name="defaultCharset" value="UTF-8" />
             </beans:bean>
