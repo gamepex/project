@@ -2,16 +2,19 @@ let idOk = false;
 let pwOk = false;
 
 
-const staffIdInput = document.querySelector("#staff_id");
-const idMsg = document.querySelector("#idcheck_msg");
+const staffIdInput = document.getElementById("#staff_id");
+const idMsg = document.getElementById("#idcheck_msg");
 
 // 아이디 입력 시 중복확인 초기화
 staffIdInput.addEventListener("input", () => {
+    idMsg.classList.remove("alert-success");
+    idMsg.classList.add("alert-danger");
     idOk = false;
+    idMsg.textContent = "아이디 중복확인을 해주세요.";
 });
 
 // 아이디 중복확인
-document.querySelector("#staff_id_check").addEventListener("click", () => {
+document.getElementById("#staff_id_check").addEventListener("click", () => {
     const staffId = staffIdInput.value.trim();
 
     if (!staffId) {
@@ -29,13 +32,13 @@ document.querySelector("#staff_id_check").addEventListener("click", () => {
     .then(text => {
         idMsg.classList.remove("d-none");
         if (text === "true") {
-        	idOk.classList.remove("alert-danger");
-        	idOk.classList.add("alert-success");
+            idMsg.classList.remove("alert-success");
+        	idMsg.classList.add("alert-danger");
             idOk = false;
             idMsg.textContent = "중복된 아이디입니다.";
         } else {
-        	idOk.classList.remove("alert-success");
-        	idOk.classList.add("alert-danger");
+        	idMsg.classList.remove("alert-danger");
+        	idMsg.classList.add("alert-success");
             idOk = true;
             idMsg.textContent = "사용 가능한 아이디입니다.";
         }
@@ -45,9 +48,9 @@ document.querySelector("#staff_id_check").addEventListener("click", () => {
 
 
 // 비밀번호 일치 확인
-const staffPw = document.querySelector("#staff_pw");
-const staffRepw = document.querySelector("#staff_repw");
-const pwMsg = document.querySelector("#pwcheck_msg");
+const staffPw = document.getElementById("#staff_pw");
+const staffRepw = document.getElementById("#staff_repw");
+const pwMsg = document.getElementById("#pwcheck_msg");
 
 function pwCheck() {
     const pw = staffPw.value;
@@ -76,7 +79,7 @@ staffPw.addEventListener("input", pwCheck);
 staffRepw.addEventListener("input", pwCheck);
 
 // 회원가입 폼 제출
-const form = document.querySelector("#reg_frm");
+const form = document.getElementById("#reg_frm");
 form.addEventListener("submit", (e) => {
     if (!idOk) {
         e.preventDefault();
