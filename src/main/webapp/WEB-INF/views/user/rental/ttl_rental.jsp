@@ -61,7 +61,7 @@
 				$('#rt_tel').val($('#mb_phone').val());
 				$('#postcode').val($('#mb_zipcode').val());
 				$('#address').val($('#mb_addr').val());
-				$('#detailAddress').val($('#mb_addrdet').val());
+				$('#detailAddress').val($('#mb_addr_detail').val());
 				
 				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').prop('readonly',true).css('background-color', '#e9ecef');;
 				$('#searchZip').prop('disabled',true);
@@ -114,7 +114,7 @@
 				<li><label>주문자 번호 : </label><input type="text" id="mb_phone" value="${m.mb_phone}"readonly class="form-control"></li>
 				<li><label>우편번호 : </label><input type="text" id="mb_zipcode" value="${m.mb_zipcode}"readonly class="form-control"></li>
 				<li><label>주소 : </label><input type="text" id="mb_addr" value="${m.mb_addr}"readonly class="form-control"></li>
-				<li><label>상세주소 : </label><input type="text" id="mb_addrdet" value="${m.mb_addrdet}"readonly class="form-control"></li>
+				<li><label>상세주소 : </label><input type="text" id="mb_addr_detail" value="${m.mb_addr_detail}"readonly class="form-control"></li>
 				<li>
 					<button id="insertMbInfo" type="button" class="">주문자 정보와 동일</button>
 					<button id="modiInfo" type="button" class="" disabled>정보 수정</button>					
@@ -141,7 +141,7 @@
 					<input id="e" type="radio" name="rt_payment" value="3"><label for="e" class="more-btn">그 외</label>
 				</li>
 				<li><label>대여 시작일 : </label><input id="rt_startdate" type="date" name="rt_startdate" required class="form-control"></li>
-				<li><label>대여 종료일 : </label><input id="rt_enddate" type="date" readonly placeholder="시작일 선택 시 자동 계산" class="form-control"></li>
+				<li><label>대여 종료일 : </label><input id="rt_enddate" type="date" readonly class="form-control"></li>
 				<li>
 					<button type="submit" class="more-btn">대여 하기</button>
 				</li>

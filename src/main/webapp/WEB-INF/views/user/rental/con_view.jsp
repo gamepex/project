@@ -12,27 +12,17 @@
 					<h4>${con.con_name}</h4>
 					<p class ="platform">플랫폼 : ${con.con_platform}</p>
 					<p class="price">상품 금액 : <fmt:formatNumber value="${con.con_price}" pattern="#,###,### 원" /></p>
-					<p>
-					<c:if test="${con.con_state == 0}">
-						상태 여부 : 대여가능
-					</c:if>
-						<c:if test="${con.con_state == 1}">
-						상태 여부 : 대여중
-					</c:if>
-						<c:if test="${con.con_state == 2}">
-						상태 여부 : 입고대기
-					</c:if>
-					 </p>
+					<p >수량 : <input id="item-quantity" type="number" min=1 value=1 class="form-control"></p>
 				</li>
 				<li>	
 					<c:if test="${con.con_state == 0 }">
 					<a href = "/user/rental/con_rental?con_serial=${con.con_serial}" class ="btn btn-success view-btn">대여하기</a>
 					</c:if>
 					<c:if test="${con.con_state == 1}">
-					<a href = "/user/rental/con_rental?con_serial=${con.con_serial}">대여중</a>
+					<button type="button" class= "btn btn-danger" disabled>대여 불가</button>
 					</c:if>
 					<c:if test="${con.con_state == 2 }">
-					<a href = "/user/rental/con_rental?con_serial=${con.con_serial}" class ="btn btn-danger">대여 불가</a>
+					<button type="button" class= "btn btn-secondary" disabled>입고 대기</button>
 					</c:if>
 				</li>
 			</ul>

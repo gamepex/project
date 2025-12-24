@@ -31,10 +31,6 @@ public class UserRentalController {
 	private AdminConsoleService adminConsoleService;
 	@Inject
 	private AdminGameTitleService adminGameTitleService;
-	@Inject
-	private UserMemberService userMemberService;
-	@Inject
-	private AdminRentalService adminRentalService;
 	
 	@GetMapping("/con_list")
 	public String getConsoleList (Model model) throws Exception {

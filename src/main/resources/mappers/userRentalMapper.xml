@@ -80,7 +80,7 @@
 			, m.mb_phone
 			, m.mb_zipcode
 			, m.mb_addr
-			, m.mb_addrdet
+			, m.mb_addr_detail
 			, m.mb_grade
 			, m.mb_state
 			, rt.con_serial

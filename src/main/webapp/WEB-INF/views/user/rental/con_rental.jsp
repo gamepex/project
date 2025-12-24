@@ -7,8 +7,47 @@
 	</div>
 
 	<link rel="stylesheet" href="/resources/css/user.css">
+	<style>
+		*{margin:0; padding:0; box-sizing:border-box;}
+		label {width:145px;}
+		.rt_show_item li:nth-child(3) {display:flex;}
+		.rt_show_item li:nth-child(3) label {width:50px;}
+		#rt_quantities {width:50px;}
+		.form-control-plaintext{color:white;}
+		.rt-info-deli li, .rt-info-deli ~ ul > li{display:flex;}
+		.rt-info-deli li label, .rt-info-deli ~ ul > li label {padding:auto; background:blue;}
+		.rt-info-deli li input {background:green;}
+		.rt-info-deli li:nth-child(6) {justify-content:space-between;}
+		.rt-info-deli li:nth-child(6) div {display:flex; justify-content:space-between;}
+		#postcode {width:250px;}
+
+		rt-info-rent li:first-child{display:inline;}
+		.form-text { background:yellow;margin-left:130px; font-size:11px; color:darkred;text-align:center; line-height:99%; }
+		.rt-info-rent li:nth-child(6) {justify-content:space-evenly;}
+		.rt-info-rent li:nth-child(6) input {display:none;}
+		.rt-info-rent li:nth-child(6) label {width:100px;}
+		
+		.rt-info-rent li:last-child button {margin:0 auto;}
+		#rtBtn{ position:relative; overflow:hidden; transition: all 0.3s;}
+		#rtBtn::before, #rtBtn::after { display:inline-block; opacity:0; transition:all 0.3s ease-in 0.1s; point-events:none; }
+		#rtBtn::before{ content:'['; margin-right:15px; transform:translateX(20px); }
+		#rtBtn::after{ content:']'; margin-left:15px; transform:translateX(-20px); }
+		#rtBtn.btn-active::before, #rtBtn.btn-active::after { opacity:1; color:#caca64; transform:translateX(0px) scale(1.5) ;}
+
+	
+	</style>
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script>
+	$(function(){
+		$('#rtBtn').mouseenter(function(){
+			$(this).removeClass('btn-success').addClass('btn-active');
+			});
+	
+		$('#rtBtn').mouseleave(function(){
+			$(this).removeClass('btn-active').addClass('btn-success');
+			});
+	});
+	
 		function execDaumPostcode() {
 		    new daum.Postcode({
 		        oncomplete: function(data) {
@@ -72,7 +111,7 @@
 				$('#rt_tel').val($('#mb_phone').val());
 				$('#postcode').val($('#mb_zipcode').val());
 				$('#address').val($('#mb_addr').val());
-				$('#detailAddress').val($('#mb_addrdet').val());
+				$('#detailAddress').val($('#mb_addr_detail').val());
 				
 				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').prop('readonly',true).css('background-color', '#e9ecef');;
 				$('#searchZip').prop('disabled',true);
@@ -103,58 +142,110 @@
 		});
 	</script>
 	<section>
+	<c:set var="m" value="${m }"></c:set>
+	<p>${m}</p>
 		<form id="rt_reg_frm"name="rt_reg_frm" action="/user/rental/register" method="post">
 			<input type="hidden" name="con_serial" value="${item.con_serial}">
 			<input type="hidden" name="mb_id" value="${m.mb_id}">
-		
-			<ul class="rt_show_item">
-				<li>
-					<img src="/attach/${item.con_thumbnail}">
-				</li>
-				<li>
-					<h4>${item.con_name}</h4>
-					<p>제조사 : ${item.con_platform}</p>
-					<p>가격 : <fmt:formatNumber value="${item.con_price}" pattern="#,###,###"/>원</p>
-					<input type="hidden" id="per_price" value="${item.con_price}">
-					<label>수량 : </label>
-					<input id="rt_quantities" type="number" name="rt_quantities" value="1" min="1" class="form-control">
-				</li>
-			</ul>
-			<ul class="rt-info-deli">
-				<li><label>주문자명 : </label><input type="text" id="mb_name" value="${m.mb_name}"readonly class="form-control"></li>
-				<li><label>주문자 번호 : </label><input type="text" id="mb_phone" value="${m.mb_phone}"readonly class="form-control"></li>
-				<li><label>우편번호 : </label><input type="text" id="mb_zipcode" value="${m.mb_zipcode}"readonly class="form-control"></li>
-				<li><label>주소 : </label><input type="text" id="mb_addr" value="${m.mb_addr}"readonly class="form-control"></li>
-				<li><label>상세주소 : </label><input type="text" id="mb_addrdet" value="${m.mb_addrdet}"readonly class="form-control"></li>
-				<li>
-					<button id="insertMbInfo"type="button" class="">주문자 정보와 동일</button>
-					<button id="modiInfo"type="button" class="" disabled>정보 수정</button>					
-				</li>
-				<li><label>받는 분 성함 : </label><input id="rt_name" type="text" name="rt_name" placeholder="받는 분 성함" required class="form-control"></li>
-				<li><label>받는 분 번호 : </label><input id="rt_tel" type="tel" name="rt_tel" placeholder="받는 분 번호" required class="form-control"></li>
-				<li>
-					<input type="text" id="postcode" name="rt_zipcode" placeholder="우편번호" class="form-control">
-					<input id="searchZip" type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br>
-					<input type="text" id="address" name="rt_addr" placeholder="주소" class="form-control">
-					<input type="text" id="detailAddress" name="rt_addrdet" placeholder="상세주소" class="form-control">
-				</li>
-				<li><label>배송 요청 메세지 : </label><input type="text" name="rt_req" class="form-control"></li>
-			</ul>
+		 <div class=rt_left_wrap>
+		 	<div class="rt-item-info">
+		 		<h5>대여 상품 정보</h5>
+		 		<ul class="rt_show_item">
+					<li>
+						<img src="/attach/${item.con_thumbnail}">
+					</li>
+					<li>
+						<p>${item.con_name}</p>
+						<p>제조사 : ${item.con_platform}</p>
+						<h6>가격 : <fmt:formatNumber value="${item.con_price}" pattern="#,###,###"/>원</h6>
+						<input type="hidden" id="per_price" value="${item.con_price}">
+					</li>
+					<li>
+						<label>수량 : </label>
+						<input id="rt_quantities" type="number" name="rt_quantities" value="1" min="1" class="form-control">
+						<!-- 플러스 마이너스 버튼 만들기 // 장바구니에서 기능 만들면서 같이 추가-->
+					</li>
+				</ul>
+		 	</div>
+		 	<div class="rt-user-info">
+		 		<h5>주문/배송 정보</h5>
+		 		<ul class="rt-user-deli">
+					<li>
+						<h6>주문자</h6>
+						<div>
+							<input type="text" id="mb_name" value="${m.mb_name}"readonly class="form-control-plaintext">
+							<input type="text" id="mb_phone" value="${m.mb_phone}"readonly class="form-control-plaintext">
+						</div>
+					</li>
+					<li>
+						<input type="text" id="mb_addr" value="${m.mb_addr}"readonly class="form-control-plaintext">
+						<div>
+							<input type="text" id="mb_addr_detail" value="${m.mb_addr_detail}"readonly class="form-control-plaintext">
+							<input type="text" id="mb_zipcode" value="${m.mb_zipcode}"readonly class="form-control-plaintext">
+						</div>
+					</li>
+				</ul>
+				
+				<ul class="rt-info-deli">
+					<li>
+						<h6>배송지 정보</h6>
+						<div>
+							<button id="insertMbInfo"type="button" >주문자 정보와 동일</button>
+							<button id="modiInfo"type="button" disabled>정보 수정</button>					
+						</div>
+					</li>
+					<li>
+						<input id="rt_name" type="text" name="rt_name" placeholder="받는 분 성함" required class="form-control">
+						<input id="rt_tel" type="tel" name="rt_tel" placeholder="받는 분 번호" required class="form-control">
+					</li>
+					<li>
+						<input type="text" id="postcode" name="rt_zipcode" placeholder="우편번호" readonly class="form-control">
+						<input id="searchZip" type="button" onclick="execDaumPostcode()" value="우편번호 찾기">
+					</li>
+					<li>
+						<input type="text" id="address" name="rt_addr" placeholder="주소" readonly class="form-control">
+					</li>
+					<li>
+						<input type="text" id="detailAddress" name="rt_addrdet" placeholder="상세주소" class="form-control">
+					</li>
+				</ul>
+				
+				<ul>
+					<li><h6>배송 메모</h6></li>
+					<li>
+						<select name="rt_req" class="form-select form-select-sm">
+							<option selected>배송메모를 선택해주세요.</option>
+							<option value="배송 전에 미리 연락 바랍니다." >배송 전에 미리 연락 바랍니다.</option>
+							<option value="부재 시 연락주세요." >부재 시 연락주세요.</option>
+							<option value="부재 시 경비실에 맡겨 주세요.">부재 시 경비실에 맡겨 주세요.</option>
+							<option value="부재 시 문 앞에 놓아주세요.">부재 시 문 앞에 놓아주세요.</option>
+							<option value="null">없음</option>
+						</select>
+					</li>
+				</ul>
+
+		 	</div>
+		 </div>
+		 
+		 <div class=rt_right_wrap>
+		 </div>
+	
 			<ul class="rt-info-rent">
-				<li><label>대여 기간(일):</label><input id="rt_days" type="number" name="rt_days" placeholder="대여일수" min="3" required class="form-control"></li>
+				<li><label>대여 기간(일):</label><p id="letusermin" class="form-text">* 대여 기간은 최소 3일입니다.</p></li>
+				<li><input id="rt_days" type="number" name="rt_days" placeholder="대여일수" min="3" required class="form-control"  aria-describedby="letusermin"></li>
 				<li><label>배송비 : </label><input id="rt_shipfee" type="number" name="rt_shipfee" readonly class="form-control"></li>
 				<li><label>결제총액 : </label><input id="rt_amount" type="number" name="rt_amount" readonly class="form-control"></li>
+				<li><label>결제 수단 : </label></li>
 				<li>
-					<label>결제수단 : </label>
-					<input id="c" type="radio" name="rt_payment" value="0" checked><label for="c" class="more-btn">카드</label>
-					<input id="b" type="radio" name="rt_payment" value="1"><label for="b" class="more-btn">계좌이체</label>
-					<input id="t" type="radio" name="rt_payment" value="2"><label for="t" class="more-btn">무통장입금</label>
-					<input id="e" type="radio" name="rt_payment" value="3"><label for="e" class="more-btn">그 외</label>
+					<input id="c" type="radio" name="rt_payment" value="0" checked><label for="c" class="btn btn-secondary">카드</label>
+					<input id="b" type="radio" name="rt_payment" value="1"><label for="b" class="btn btn-secondary">계좌이체</label>
+					<input id="t" type="radio" name="rt_payment" value="2"><label for="t" class="btn btn-secondary">무통장입금</label>
+					<input id="e" type="radio" name="rt_payment" value="3"><label for="e" class="btn btn-secondary">그 외</label>
 				</li>
 				<li><label>대여 시작일 : </label><input id="rt_startdate" type="date" name="rt_startdate" required class="form-control"></li>
-				<li><label>대여 종료일 : </label><input id="rt_enddate" type="date" readonly placeholder="시작일 선택 시 자동 계산" class="form-control"></li>
+				<li><label>대여 종료일 : </label><input id="rt_enddate" type="date" readonly class="form-control"></li>
 				<li>
-					<button type="submit"  class="more-btn">대여 하기</button>
+					<button id="rtBtn" type="submit" class="btn btn-success">대여 하기</button>
 				</li>
 			</ul>
 		</form>

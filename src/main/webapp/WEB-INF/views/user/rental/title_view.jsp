@@ -6,33 +6,23 @@
 
 	<section>
 		<div class ="title-view-wrap">
-			<img src ="/attach/${ttl.ttl_thumbnail}">
+			<img id="item-thumbnail" src ="/attach/${ttl.ttl_thumbnail}">
 			<ul class ="ttl-info-wrap">
 			 	<li>
-					<h4>${ttl.ttl_name}</h4>
-					<p class ="platform">플랫폼 : ${ttl.ttl_platform}</p>
-					<p >가격 : <fmt:formatNumber value="${ttl.ttl_price}" pattern="#,###,### 원" /></p>
-					<p>
-					<c:if test="${ttl.ttl_state == 0}">
-						상태 여부 : 대여가능
-					</c:if>
-						<c:if test="${ttl.ttl_state == 1}">
-						상태 여부 : 대여중
-					</c:if>
-						<c:if test="${ttl.ttl_state == 2}">
-						상태 여부 : 입고대기
-					</c:if>
-					 </p>
+					<h4 id="item-name">${ttl.ttl_name}</h4>
+					<p  id="item-platform" class ="platform">플랫폼 : ${ttl.ttl_platform}</p>
+					<p id="item-price">가격 : <fmt:formatNumber value="${ttl.ttl_price}" pattern="#,###,### 원" /></p>
+					<p >수량 : <input id="item-quantity" type="number" min=1 value=1 class="form-control"></p>
 				</li>
 				<li>
 					<c:if test="${ttl.ttl_state == 0 }">
 					<a href = "/user/rental/ttl_rental?ttl_serial=${ttl.ttl_serial}" class = "btn btn-success view-btn">대여하기</a>
 					</c:if>
 					<c:if test="${ttl.ttl_state == 1}">
-					<a href = "/user/rental/ttl_rental?ttl_serial=${ttl.ttl_serial}">대여중</a>
+					<button type="button" class= "btn btn-danger" disabled>대여 불가</button>
 					</c:if>
 					<c:if test="${ttl.ttl_state == 2 }">
-					<a href = "/user/rental/ttl_rental?ttl_serial=${ttl.ttl_serial}" class = "btn btn-danger">대여 불가</a>
+					<button type="button" class= "btn btn-secondary" disabled>입고 대기</button>
 					</c:if>
 				</li>
 			</ul>
@@ -43,7 +33,9 @@
 			<h3>상품평 작성</h3>
 		</div>
 	</section>
+<script>
 
+</script>
 
 
 
