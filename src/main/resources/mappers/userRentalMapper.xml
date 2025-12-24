@@ -50,13 +50,59 @@
 			, now()
  		)
  	</insert>
-
- 	
- 
- 	<select id="getRentalList" resultType="com.gamepex.share.RentalDTO">
- 		select * from tbl_console
- 		where con_state = 0 or con_state = 1
- 		order by con_moddate desc
+	
+ 	<select id="getLatestRental" parameterType="String" resultType="com.gamepex.share.RentalDTO">
+ 		select
+ 			rt.rt_no
+			, rt.rt_days
+			, rt.rt_shipfee
+			, rt.rt_quantities
+			, rt.rt_amount
+			, rt.rt_regdate
+			, rt.rt_payment
+			, rt.rt_invoice
+			, rt.rt_state
+			, rt.rt_name
+			, rt.rt_zipcode
+			, rt.rt_addr
+			, rt.rt_addrdet
+			, rt.rt_tel
+			, rt.rt_req
+			, rt.rt_startdate
+			, rt.rt_enddate
+			, rt.rt_rtndate
+			, rt.rt_moddate
+			, rt.mb_id
+			, m.mb_name
+			, m.mb_nickname
+			, m.mb_gender
+			, m.mb_mail
+			, m.mb_phone
+			, m.mb_zipcode
+			, m.mb_addr
+			, m.mb_addrdet
+			, m.mb_grade
+			, m.mb_state
+			, rt.con_serial
+			, c.con_name
+			, c.con_platform
+			, c.con_price
+			, c.con_thumbnail
+			, c.con_stock
+			, c.con_state
+			, rt.ttl_serial
+			, t.ttl_name
+			, t.ttl_genre
+			, t.ttl_price
+			, t.ttl_thumbnail
+			, t.ttl_stock
+			, t.ttl_state
+ 		from tbl_rental as rt
+ 			join tbl_member as m on rt.mb_id = m.mb_id
+ 			left join tbl_console as c on rt.con_serial = c.con_serial
+ 			left join tbl_title as t on rt.ttl_serial = t.ttl_serial
+ 		where rt.mb_id = #{mb_id}
+ 		order by rt.rt_regdate desc LIMIT 1
 	</select>
 
 
