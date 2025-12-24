@@ -1,20 +1,47 @@
 create database gamepex;
 
 CREATE TABLE tbl_staff (
-    staff_no INT AUTO_INCREMENT PRIMARY KEY,
-    staff_id VARCHAR(20) NOT NULL UNIQUE,
-    staff_pw CHAR(60) NOT NULL,
-    staff_name VARCHAR(30) NOT NULL,
-    staff_gender CHAR(1),
-    staff_birth DATE,
-    staff_part VARCHAR(10),
-    staff_position VARCHAR(10),
-    staff_phone CHAR(13) NOT NULL,
-    staff_mail VARCHAR(50) NOT NULL UNIQUE,
-    staff_state INT NOT NULL DEFAULT 0,
-    staff_regdate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    staff_moddate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
-)
+ staff_no INT AUTO_INCREMENT COMMENT '사원번호',
+ staff_id VARCHAR(20) NOT NULL COMMENT '아이디',
+ staff_pw CHAR(60) NOT NULL COMMENT '비밀번호',
+ staff_name VARCHAR(30) NOT NULL COMMENT '이름',
+ staff_gender CHAR(1) COMMENT '성별',
+ staff_birth DATE COMMENT '생년월일',
+ staff_mail VARCHAR(50) NOT NULL COMMENT '이메일',
+ staff_phone CHAR(13) NOT NULL COMMENT '연락처',
+ staff_part VARCHAR(10) COMMENT '부서',
+ staff_position VARCHAR(10) COMMENT '직급',
+ staff_state INT NOT NULL DEFAULT 0 COMMENT '상태',
+ staff_regdate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록일',
+ staff_moddate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '수정일',
+ PRIMARY KEY (staff_no),
+ UNIQUE KEY uk_staff_id (staff_id),
+ UNIQUE KEY uk_staff_mail (staff_mail),
+ UNIQUE KEY uk_staff_phone (staff_phone)
+) COMMENT '직원 테이블';
+
+CREATE TABLE tbl_member (
+ mb_id VARCHAR(20) NOT NULL COMMENT '아이디',
+ mb_pw CHAR(60) NOT NULL COMMENT '비밀번호',
+ mb_nickname VARCHAR(30) NOT NULL COMMENT '닉네임',
+ mb_name VARCHAR(30) NOT NULL COMMENT '이름',
+ mb_gender CHAR(1) COMMENT '성별',
+ mb_birth DATE COMMENT '생년월일',
+ mb_mail VARCHAR(50) NOT NULL COMMENT '이메일',
+ mb_phone CHAR(13) NOT NULL COMMENT '연락처',
+ mb_zipcode CHAR(5) NOT NULL COMMENT '우편번호',
+ mb_addr VARCHAR(200) NOT NULL COMMENT '주소',
+ mb_addr_detail VARCHAR(100) NOT NULL COMMENT '상세주소',
+ mb_grade INT NOT NULL DEFAULT 0 COMMENT '등급',
+ mb_state INT NOT NULL DEFAULT 0 COMMENT '상태',
+ mb_regdate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록일',
+ mb_moddate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '수정일',
+ PRIMARY KEY (mb_id),
+ UNIQUE KEY uk_member_nickname (mb_nickname),
+ UNIQUE KEY uk_member_mail (mb_mail),
+UNIQUE KEY uk_member_phone (mb_phone)
+) COMMENT '회원 테이블';
+
 
 create table tbl_rental (
 	rt_no		int		not null		auto-increment		comment '렌탈번호',

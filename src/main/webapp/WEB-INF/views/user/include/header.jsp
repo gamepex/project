@@ -82,7 +82,7 @@
             <ul class="top-menu">
             	<li><a style="font-size: 20px; margin-top: 8px;" href="/admin">admin</a></li>
                 <li><a href="/user/member/login"><i class="bi bi-person-plus-fill"></i></a></li>
-                <li><a href="/user/member/register"><i class="bi bi-person-dash-fill"></i></a></li>
+                <li><a href="/user/member/mypage"><i class="bi bi-person-dash-fill"></i></a></li>
             </ul>
         </nav>
     </header>

@@ -1,10 +1,10 @@
 package com.gamepex.user.member;
 
 import java.util.List;
-
-import javax.inject.Inject;
+import java.util.Collections;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,18 +13,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.gamepex.admin.staff.AdminStaffVO;
-// import com.gamepex.share.AddressDTO;
 import com.gamepex.share.MemberVO;
 
 @Controller
-@RequestMapping("/user/member/*")
+@RequestMapping("/user/member")
 public class UserMemberController {
 
-	@Inject
+	@Autowired
 	private UserMemberService userMemberService;
 	
-	@Inject
+	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
 	
@@ -55,15 +53,30 @@ public class UserMemberController {
 	@GetMapping("/get_zipcode")
 	public void getZipcode() throws Exception {}
 	
-	@PostMapping("/get_zipcode")
-	/*public void getZipcode(AddressDTO addressDTO, Model model) throws Exception {
+	/* @PostMapping("/get_zipcode")
+	public void getZipcode(AddressDTO addressDTO, Model model) throws Exception {
 		List<AddressDTO> addrList = userMemberService.getZipcode(addressDTO);
 		model.addAttribute("addrList", addrList);
 	}*/
+
+	@GetMapping("/mypage")
+	public String mypage(Model model, HttpSession session)  {
+		MemberVO svo = (MemberVO) session.getAttribute("member");
+		List<MemberVO> memberInfo;
+		MemberVO me = userMemberService.getMember(svo.getMb_id());
+		memberInfo = Collections.singletonList(me);
+
+		model.addAttribute("memberInfo", memberInfo);
+		return "user/member/mypage";
+	}
+
+
 	
 	
 	@GetMapping("/login")
-	public void login() throws Exception {}
+	public String login() {
+		return "user/member/login";
+	}
 	
 	@PostMapping("/login")
 	public String login(MemberVO memberVO, HttpSession session, Model model) throws Exception {

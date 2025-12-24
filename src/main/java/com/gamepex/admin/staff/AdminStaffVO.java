@@ -13,10 +13,10 @@ public class AdminStaffVO {
     private String staff_name;
     private String staff_gender;
     private LocalDate staff_birth;
+    private String staff_mail;
+    private String staff_phone;
     private String staff_part;
     private String staff_position;
-    private String staff_phone;
-    private String staff_mail;
     private int staff_state;
     private LocalDateTime staff_regdate;
     private LocalDateTime staff_moddate;
