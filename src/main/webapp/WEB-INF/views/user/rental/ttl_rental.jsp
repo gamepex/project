@@ -1,59 +1,89 @@
-<%@ page language="java" ttltentType="text/html; charset=UTF-8"
+<%@ page language="java" 	contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/user/include/header.jsp" %>
 
 	<div class="banner">
 		<h2><span class="txt-blue">T</span>itle <span class="txt-ygrn">R</span>ental <span class="txt-blue">R</span>EGISTER</h2>
 	</div>
-	<link rel="stylesheet" href="/resources/css/rental.css">
+	<link rel="stylesheet" href="/resources/css/user.css">
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script>
+		function execDaumPostcode() {
+		    new daum.Postcode({
+		        oncomplete: function(data) {
+		
+		            var addr = '';
+		
+		            if (data.userSelectedType === 'R') { 
+		                addr = data.roadAddress;
+		            } else { 
+		                addr = data.jibunAddress;
+		            }
+		            document.getElementById('postcode').value = data.zonecode;
+		            document.getElementById("address").value = addr;
+		            document.getElementById("detailAddress").focus();
+		        }
+		    }).open();
+		}
+		
 		$(function(){
-			$('#rt_quantities, #rt_days').on('input', function(){
-				var price = Number($('#per_price').val());
-				var qty = Number($('#rt_quantities').val());
-				var days = Number($('#rt_days').val());
-				var setAmount = price*qty*days;
-				var shipfee = 0;
+			let today = new Date().toISOString().split('T')[0];
+			$('#rt_startdate').attr('min', today);
+			
+			$('#rt_quantities, #rt_days, #rt_startdate').off('input').on('input', function(){
+				calculateTotal();
+			});
+			function calculateTotal() {
+				const price = Number($('#per_price').val());
+				const qty = Number($('#rt_quantities').val());
+				const days = parseInt($('#rt_days').val());
+				const startDateVal = $('#rt_startdate').val();
 				
-				if(setAmount > 0 && setAmount < 30000) {
-					shipfee = 3000;
-				} else {
-					shipfee = 0;
-				}
+				const setAmount = price*qty*days;
+				let shipfee = (setAmount > 0 && setAmount < 70000)?5000:0;
 				$('#rt_shipfee').val(shipfee);
 				$('#rt_amount').val(setAmount+shipfee);
-			});
-			
+				
+				if (startDateVal && !isNaN(days) && days >= 3){
+					const startDate = new Date(startDateVal);
+					startDate.setDate(startDate.getDate()+days);
+					
+					const year = startDate.getFullYear();
+					const month = String(startDate.getMonth()+1).padStart(2,'0');
+					const day = String(startDate.getDate()).padStart(2,'0');
+
+					$('#rt_enddate').val(year+"-"+month+"-"+day);
+				} else {$('#rt_enddate').val('');}
+			}
+
 			$('#insertMbInfo').click(function(){
-				var name = $('#mb_name').val();
-				var phone = $('#mb_phone').val();
-				var zipcode = $('#mb_zipcode').val();
-				var addr = $('#mb_addr').val();
-				var addrdet = $('#mb_addrdet').val();
+				$('#rt_name').val($('#mb_name').val());
+				$('#rt_tel').val($('#mb_phone').val());
+				$('#postcode').val($('#mb_zipcode').val());
+				$('#address').val($('#mb_addr').val());
+				$('#detailAddress').val($('#mb_addrdet').val());
 				
-				$('#rt_name').val(name);
-				$('#rt_tel').val(phone);
-				$('#postcode').val(zipcode);
-				$('#address').val(addr);
-				$('#detailAddress').val(addrdet);
-				
-				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').prop('readonly',true);
+				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').prop('readonly',true).css('background-color', '#e9ecef');;
 				$('#searchZip').prop('disabled',true);
 				$('#modiInfo').prop('disabled',false);
-				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').css('background-color', '#e9ecef');
 			});
 			
 			$('#modiInfo').click(function(){
-				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').prop('readonly',false);
-				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').val('');
+				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').prop('readonly',false).val('').css('background-color', '#fff');
 				$('#searchZip').prop('disabled',false);
 				$(this).prop('disabled',true);
-				$('#rt_name, #rt_tel, #postcode, #address, #detailAddress').css('background-color', '#fff');
 				$('#rt_name').focus();
 			});
 			
 			$('#rt_reg_frm').on('submit', function(){
-				var amount = Number($('#rt_amount').val());
+				const amount = Number($('#rt_amount').val());
+				const days = Number($('#rt_days').val());
+				
+				if (!days) { return false;
+				} else if (days < 3){
+					alert("최소 대여 기간은 3일입니다.");
+					return false;
+				}
 				if(!amount || amount === 0){
 					alert("대여 정보(수량, 일수)를 정확히 입력해주세요.");
 					return false;
@@ -61,7 +91,6 @@
 			});
 		});
 	</script>
-
 	<section>
 		<form id="rt_reg_frm" name="rt_reg_frm" action="/user/rental/register" method="post">
 			<input type="hidden" name="ttl_serial" value="${item.ttl_serial}">
@@ -107,8 +136,8 @@
 				<li>
 					<label>결제수단 : </label>
 					<input id="c" type="radio" name="rt_payment" value="0" checked><label for="c" class="more-btn">카드</label>
-					<input id="b" type="radio" name="rt_payment" value="1"><label for="b" class="more-btn">현금</label>
-					<input id="t" type="radio" name="rt_payment" value="2"><label for="t" class="more-btn">계좌이체 (무통장입금)</label>
+					<input id="b" type="radio" name="rt_payment" value="1"><label for="b" class="more-btn">계좌이체</label>
+					<input id="t" type="radio" name="rt_payment" value="2"><label for="t" class="more-btn">무통장입금</label>
 					<input id="e" type="radio" name="rt_payment" value="3"><label for="e" class="more-btn">그 외</label>
 				</li>
 				<li><label>대여 시작일 : </label><input id="rt_startdate" type="date" name="rt_startdate" required class="form-control"></li>
@@ -119,24 +148,4 @@
 			</ul>
 		</form>
 	</section>
-<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script>
-	function execDaumPostcode() {
-	    new daum.Postcode({
-	        oncomplete: function(data) {
-	
-	            var addr = '';
-	
-	            if (data.userSelectedType === 'R') { 
-	                addr = data.roadAddress;
-	            } else { 
-	                addr = data.jibunAddress;
-	            }
-	            document.getElementById('postcode').value = data.zonecode;
-	            document.getElementById("address").value = addr;
-	            document.getElementById("detailAddress").focus();
-	        }
-	    }).open();
-	}
-</script>
 <%@ include file="/WEB-INF/views/user/include/footer.jsp" %>

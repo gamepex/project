@@ -24,7 +24,7 @@
 		<c:forEach var ="ttl"  items ="${titleList}" >
 			<li>
 				<a href ="/user/rental/title_view?ttl_serial=${ttl.ttl_serial}"><img src = "/attach/${ttl.ttl_thumbnail}"></a>
-				<h4>${ttl.con_name}</h4>
+				<h4>${ttl.ttl_name}</h4>
 				<p>가격 : <fmt:formatNumber value="${ttl.ttl_price}" pattern="#,###,### 원" /></p>
 				<p>
 				<c:if test="${ttl.ttl_state == 0}">

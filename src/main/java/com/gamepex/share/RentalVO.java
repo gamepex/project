@@ -28,4 +28,5 @@ public class RentalVO {
 	private String rt_enddate;
 	private String rt_rtndate;
 	private LocalDateTime rt_moddate;
+	
 }
