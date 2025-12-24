@@ -5,12 +5,13 @@ import java.util.Collections;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.gamepex.share.MemberVO;
@@ -22,43 +23,65 @@ public class UserMemberController {
 	@Autowired
 	private UserMemberService userMemberService;
 	
-	@Autowired
-	private BCryptPasswordEncoder bCryptPasswordEncoder;
-	
-	
-	
 	@GetMapping("/register")
-	public void register() {}
-	
+	public String register() {
+		return "user/member/register";
+	}
+
+	// 회원 아이디 중복 확인
+	@PostMapping("/idcheck")
+	@ResponseBody
+	public String idCheck(@RequestParam("mb_id") String mb_id) {
+		return userMemberService.idCheck(mb_id) ? "true" : "false"; // 중복일 시 true.
+	}
+
+	// 회원 가입
 	@PostMapping("/register")
-	public String register(MemberVO memberVO) throws Exception {
-		
-		int result = 0;
-		String url =null;
-		
-		String mb_pw = memberVO.getMb_pw();
-		String mb_enc_pw = bCryptPasswordEncoder.encode(mb_pw);
-		memberVO.setMb_pw(mb_enc_pw);
-		
-		result = userMemberService.register(memberVO);
-		
-		if(result != 0) {
-			url = "/admin/index";
-		}else {
-			url = "/admin/console/register";
+	public String register(MemberVO memberVO, HttpSession session, Model model) {
+		try {
+			MemberVO sessionMemberVO = userMemberService.register(memberVO);
+			if (sessionMemberVO != null) {
+				session.setAttribute("member", sessionMemberVO); // 성공시 로그인
+				return "redirect:/user/member/mypage";
+			}
+			return "user/member/register"; // 실패시 페이지 유지
+
+		} catch (IllegalArgumentException e) {
+			model.addAttribute("resultMsg", e.getMessage());
+			return "user/member/register";
 		}
-		return url;
+	}
+
+	// 회원 로그인 페이지
+	@GetMapping("/login")
+	public String login() {
+		return "user/member/login";
+	}
+
+	// 회원 로그인
+	@PostMapping("/login")
+	public String login(MemberVO memberVO, HttpSession session, RedirectAttributes rttr) {
+
+		try { // 로그인 성공	
+			MemberVO dbMemberVO = userMemberService.login(memberVO);
+			session.setAttribute("member", dbMemberVO);
+			return "redirect:/user/member/mypage";
+		} catch (LoginException e) { // 로그인 실패
+			session.setAttribute("member", null);
+	        rttr.addFlashAttribute("loginError", e.getMessage());
+	        return "redirect:/user/member/login";
+		}
+
+	}
+
+	// 로그아웃
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/user";
 	}
 	
-	@GetMapping("/get_zipcode")
-	public void getZipcode() throws Exception {}
-	
-	/* @PostMapping("/get_zipcode")
-	public void getZipcode(AddressDTO addressDTO, Model model) throws Exception {
-		List<AddressDTO> addrList = userMemberService.getZipcode(addressDTO);
-		model.addAttribute("addrList", addrList);
-	}*/
-
+	// 마이페이지
 	@GetMapping("/mypage")
 	public String mypage(Model model, HttpSession session)  {
 		MemberVO svo = (MemberVO) session.getAttribute("member");
@@ -69,88 +92,54 @@ public class UserMemberController {
 		model.addAttribute("memberInfo", memberInfo);
 		return "user/member/mypage";
 	}
+	
+
+	// 회원 삭제
+	@PostMapping("/deleteMember")
+	public String deleteMember(@RequestParam("mb_id") String mb_id, RedirectAttributes rttr) {
+
+	    int result = userMemberService.deleteMember(mb_id);
+
+	    if (result == 1) {
+			// 로그아웃
+			
+
+			return "redirect:/user";
+	    } else {
+	        rttr.addFlashAttribute("alertType", "danger");
+	        rttr.addFlashAttribute("resultMsg", "회원 삭제에 실패했습니다.");
+			return "redirect:/user/member/mypage";
+	    }
+
+	    
+	}
+	
+	// 회원 수정 페이지
+	@GetMapping("/modify")
+	public String modify(@RequestParam("mb_id") String mb_id, Model model) {
+
+		// 회원 정보 수집
+	    MemberVO memberVO = userMemberService.getMember(mb_id);
+	    model.addAttribute("svo", memberVO);
+	    return "user/member/modify";
+	}
+
+	// 회원 수정 처리
+	@PostMapping("/modify")
+	public String modify(MemberVO memberVO, RedirectAttributes rttr) {
+
+	    int result = userMemberService.modifyMember(memberVO);
+	    if (result == 1) {
+	        rttr.addFlashAttribute("alertType", "success");
+	        rttr.addFlashAttribute("resultMsg", "회원 수정에 성공했습니다.");
+	        return "redirect:/user/member/mypage";
+	    } else {
+		    rttr.addFlashAttribute("alertType", "danger");
+		    rttr.addFlashAttribute("resultMsg", "회원 수정에 실패했습니다.");
+		    rttr.addAttribute("mb_id", memberVO.getMb_id());
+		    return "redirect:/user/member/modify";
+	    }
+	}
 
 
-	
-	
-	@GetMapping("/login")
-	public String login() {
-		return "user/member/login";
-	}
-	
-	@PostMapping("/login")
-	public String login(MemberVO memberVO, HttpSession session, Model model) throws Exception {
-		MemberVO dbMvo = userMemberService.login(memberVO);
-		String url = null;
-		
-		if (dbMvo != null) {
-			if (dbMvo.getMb_state() != 0) {
-				boolean result = bCryptPasswordEncoder.matches(memberVO.getMb_pw(), dbMvo.getMb_pw());
-				
-				if (result) { 
-					session.setAttribute("member", dbMvo);
-					url = "/user/index";
-				} else {
-					session.setAttribute("member", null);
-					model.addAttribute("mb_pw", false);
-					url = "/user/member/login_ng";
-				}
-			} else { 
-				session.setAttribute("member", null);
-				model.addAttribute("mb_state", false);
-				url = "/user/member/login_ng";
-			}
-		} else { 
-			session.setAttribute("member", null);
-			model.addAttribute("mb_id", false);
-			url = "/user/member/login_ng";
-		}
-		
-		return url;
-	}
-	
-	
-	@GetMapping("/resetpwd")
-	public void resetPwd() throws Exception {}
-	
-	@PostMapping("/resetpwd")
-	public String resetPwd(MemberVO memberVO, RedirectAttributes rttr) throws Exception {
-		String mb_pw = memberVO.getMb_pw();
-		String enc_pw = bCryptPasswordEncoder.encode(mb_pw);
-		memberVO.setMb_pw(enc_pw);
-		String url = null;
-		
-		int result = userMemberService.resetPwd(memberVO);
-		
-		if (result != 0) {
-			rttr.addFlashAttribute("reset_pwd", true);
-			url = "redirect:/user/member/login";
-		} else { 
-			rttr.addFlashAttribute("reset_pwd", false);
-			url = "redirect:/user/member/resetpwd";
-		}
-		
-		return url;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

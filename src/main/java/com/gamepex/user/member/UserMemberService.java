@@ -1,26 +1,25 @@
 package com.gamepex.user.member;
 
-import javax.inject.Inject;
-
-import org.springframework.stereotype.Service;
 import com.gamepex.share.MemberVO;
 
-@Service
-public class UserMemberService {
-	
-	@Inject
-	private UserMemberDAO userMemberDAO; 
+public interface UserMemberService {
 
-	public MemberVO getMember(String mb_id) {
-		return userMemberDAO.getMember(mb_id);
-	}
-	public int register(MemberVO memberVO) throws Exception{
-		return userMemberDAO.register(memberVO);
-	}
-	public MemberVO login(MemberVO memberVO) throws Exception {
-		return userMemberDAO.login(memberVO);
-	}
-	public int resetPwd(MemberVO memberVO) throws Exception {
-		return userMemberDAO.resetPwd(memberVO);
-	}
+    // 회원 아이디 중복 확인
+    boolean idCheck(String mb_id);
+
+    // 회원 가입
+    MemberVO register(MemberVO memberVO);
+    
+    // 회원 로그인
+    MemberVO login(MemberVO memberVO);
+
+    // 회원 정보 수집
+  	MemberVO getMember(String mb_id);
+
+  	// 회원 수정 처리
+  	int modifyMember(MemberVO memberVO);
+
+    // 회원 삭제
+  	int deleteMember(String mb_id);
+    
 }

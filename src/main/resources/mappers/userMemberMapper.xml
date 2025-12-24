@@ -3,107 +3,64 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.gamepex.mappers.user.member">
+<mapper namespace="com.gamepex.user.member.UserMemberDAO">
 
-	<select id ="getMember" parameterType="String" resultType="com.gamepex.share.MemberVO">
-		select * from tbl_member
-		where mb_id = #{mb_id}
+	<!-- 회원 아이디 중복 확인 -->
+	<select id="idCheck" parameterType="String" resultType="int">
+		select count(*)
+		from tbl_member
+		where mb_id = #{value}
 	</select>
 
+	<!-- 회원 가입 -->
 	<insert id="register" parameterType="com.gamepex.share.MemberVO">
-		insert into tbl_staff
+		insert into tbl_member
 		(
 		    mb_id
-		    ,mb_pw
-		    ,mb_name
-		    ,mb_gender
-		    ,mb_birth
-		    ,mb_nickname
-		    ,mb_phone
-		    ,mb_zipcode
-		    ,mb_addr
-		    ,mb_grade
-		    ,mb_state
-		    ,mb_regdate
-		    ,mb_moddate
+		    , mb_pw
+		    , mb_name
+		    , mb_gender
+		    , mb_birth
+		    , mb_phone
+		    , mb_mail
 		)
 		values
 		(
-			#{mb_id}
+		    #{mb_id}
 		    , #{mb_pw}
 		    , #{mb_name}
 		    , #{mb_gender}
 		    , #{mb_birth}
-		    , #{mb_nickname}
 		    , #{mb_phone}
-		    , #{mb_zipcode}
-		    , #{mb_addr}
-		    , #{mb_grade}
-		    , #{mb_state}
-		    , #{mb_regdate}
-		    , #{mb_moddate}
+		    , #{mb_mail}
 		)
 	</insert>
 	
-	<select id ="idFind" parameterType="com.gamepex.admin.staff.AdminStaffVO" resultType="com.gamepex.admin.staff.AdminStaffVO">
-		select * from tbl_staff
-		where staff_name = #{staff_name} and staff_mail = #{staff_mail} and staff_phone = #{staff_phone}
-	</select>
-	
-	<!--<select id ="getZipcode" resultType = "com.gamepex.share.AddressDTO">
-		select * from tbl_address
-		where area3 like concat('%',#{area3},'%')
-	</select>-->
-	
-	<update id="resetPwd" parameterType="com.gamepex.share.MemberVO">
-		update tbl_member set
-			mb_pw = #{mb_pw}
-		where mb_name = #{mb_name} and mb_id = #{mb_id} and mb_phone = #{mb_phone}
-	</update>
-	
-	<select id = "getStaffList" resultType ="com.gamepex.admin.staff.AdminStaffVO">
-		select * from tbl_staff
-		where staff_state = 1
-	</select>
-	
-	<select id ="unapprovedList" resultType ="com.gamepex.admin.staff.AdminStaffVO">
-		select * from tbl_staff
-		where staff_state = 0
-	</select>
-	
-	<select id ="getStaffOne" parameterType = "String" resultType ="com.gamepex.admin.staff.AdminStaffVO" >
-	 select * from tbl_staff
-	 where staff_id = #{staff_id}
-	</select>
-	
-	<update id ="modify" parameterType = "com.gamepex.admin.staff.AdminStaffVO" >
-	update tbl_staff set
-	staff_name =#{staff_name}
-	,staff_gender =#{staff_gender}
-	,staff_birth =#{staff_birth}
-	,staff_part =#{staff_part}
-	,staff_position= #{staff_position}
-	,staff_phone =#{staff_phone}
-	,staff_mail = #{staff_mail}
-	,staff_moddate= now()
-	where staff_id = #{staff_id}
-	</update>
-	
-	<update id ="setApproval" parameterType ="String">
-		update tbl_staff set
-		staff_state = 1
-		where staff_id = #{staff_id}
-	</update>
-	
-	<delete id ="delete" parameterType="String">
-		delete tbl_staff 
-		where staff_id = #{staff_id}
-	</delete>
-	
-	<select id="login" resultType="com.gamepex.share.MemberVO">
+	<!-- 회원 정보 수집 -->
+	<select id="getMember" parameterType="String" resultType="com.gamepex.share.MemberVO">
 		select * from tbl_member
-		where mb_id = #{mb_id}
+		where mb_id = #{value}
 	</select>
+	
+	<!-- 회원 수정 처리 -->
+	<update id="modifyMember" parameterType="com.gamepex.share.MemberVO">
+		update tbl_member
+		set
+			mb_name     = #{mb_name}
+			, mb_no       = #{mb_no}
+			, mb_gender   = #{mb_gender}
+			, mb_birth    = #{mb_birth}
+			, mb_phone    = #{mb_phone}
+			, mb_mail     = #{mb_mail}
+			, mb_state    = #{mb_state}
+		where mb_id = #{mb_id}
+	</update>
+
+	<!-- 회원 삭제 -->
+	<delete id="deleteMember" parameterType="String">
+		delete from tbl_member
+		where mb_id = #{value}
+	</delete>
 	
 </mapper>
 

@@ -1,29 +1,24 @@
 package com.gamepex.user.member;
 
-import javax.inject.Inject;
-
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 import com.gamepex.share.MemberVO;
 
-@Repository
-public class UserMemberDAO {
-	
-	@Inject
-	private SqlSession sqlSession;
-	static String namespace = "com.gamepex.mappers.user.member";
-	
-	public MemberVO getMember(String mb_id) {
-		return sqlSession.selectOne(namespace + ".getMember", mb_id);
-	}
-	public int register(MemberVO memberVO) throws Exception{
-		return sqlSession.insert(namespace + ".register",memberVO);
-	}
-	public MemberVO login(MemberVO memberVO) throws Exception {
-		return sqlSession.selectOne(namespace+".login", memberVO);
-	}
-	public int resetPwd(MemberVO memberVO) throws Exception {
-		return sqlSession.update(namespace+".resetPwd", memberVO);
-	}
+@Mapper
+public interface UserMemberDAO {
+    
+    // 회원 아이디 중복 확인
+    int idCheck(String mb_id);
+
+    // 회원 가입
+    int register(MemberVO memberVO);
+    
+    // 회원 정보 수집
+    MemberVO getMember(String mb_id);
+    
+    // 회원 수정 처리
+    int modifyMember(MemberVO memberVO);
+
+    // 회원 삭제
+    int deleteMember(String mb_id);
 }

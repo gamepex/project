@@ -5,7 +5,7 @@
 
 <mapper namespace="com.gamepex.admin.staff.AdminStaffDAO">
 
-	<!-- 아이디 중복 확인 -->
+	<!-- 직원 아이디 중복 확인 -->
 	<select id="idCheck" parameterType="String" resultType="int">
 		select count(*)
 		from tbl_staff
@@ -36,13 +36,13 @@
 		)
 	</insert>
 	
-	<!-- 로그인 -->
-	<select id="login" parameterType="String" resultType="com.gamepex.admin.staff.AdminStaffVO">
+	<!-- 직원 정보 수집 -->
+	<select id="getStaff" parameterType="String" resultType="com.gamepex.admin.staff.AdminStaffVO">
 		select * from tbl_staff
 		where staff_id = #{value}
 	</select>
 	
-	<!-- 전체 직원 목록 -->
+	<!-- 직원 전체 목록 -->
 	<select id="getStaffList" resultType="com.gamepex.admin.staff.AdminStaffVO">
 		select * from tbl_staff
 	</select>
@@ -59,13 +59,7 @@
 		delete from tbl_staff
 		where staff_id = #{value}
 	</delete>
-	
-	<!-- 직원 정보 수집 -->
-	<select id="getStaff" parameterType="String" resultType="com.gamepex.admin.staff.AdminStaffVO">
-		select * from tbl_staff
-		where staff_id = #{value}
-	</select>
-	
+
 	<!-- 직원 수정 처리 -->
 	<update id="modifyStaff" parameterType="com.gamepex.admin.staff.AdminStaffVO">
 		update tbl_staff

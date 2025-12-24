@@ -2,45 +2,47 @@ let idOk = false;
 let pwOk = false;
 
 
-const staffIdInput = document.getElementById("#staff_id");
-const idMsg = document.getElementById("#idcheck_msg");
+const idInput = document.querySelector(".js-id");
+const idMsg = document.getElementById("idcheck_msg");
+
+function setIdMsg(type, text) {
+  idMsg.classList.remove("alert-success", "alert-danger");
+  idMsg.classList.add(type === "success" ? "alert-success" : "alert-danger");
+  idMsg.textContent = text;
+}
 
 // 아이디 입력 시 중복확인 초기화
-staffIdInput.addEventListener("input", () => {
-    idMsg.classList.remove("alert-success");
-    idMsg.classList.add("alert-danger");
+idInput.addEventListener("input", () => {
     idOk = false;
-    idMsg.textContent = "아이디 중복확인을 해주세요.";
+    setIdMsg("danger", "아이디 중복확인을 해주세요.");
 });
 
 // 아이디 중복확인
-document.getElementById("#staff_id_check").addEventListener("click", () => {
-    const staffId = staffIdInput.value.trim();
+document.querySelector(".js-id-check").addEventListener("click", (e) => {
+    const id = idInput.value.trim();
+    const btn = e.currentTarget;
+    const url = btn.dataset.url;
+    const param = btn.dataset.param;
 
-    if (!staffId) {
-        idMsg.classList.remove("d-none");
-        idMsg.textContent = "아이디를 입력하세요.";
+    if (!id) {
+        idOk = false;
+        setIdMsg("danger", "아이디를 입력하세요.");
         return;
     }
 
-    fetch("/admin/staff/idcheck", {
+    fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: "staff_id=" + encodeURIComponent(staffId)
+        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+        body: param + "=" + encodeURIComponent(id)
     })
     .then(res => res.text())
     .then(text => {
-        idMsg.classList.remove("d-none");
         if (text === "true") {
-            idMsg.classList.remove("alert-success");
-        	idMsg.classList.add("alert-danger");
             idOk = false;
-            idMsg.textContent = "중복된 아이디입니다.";
+            setIdMsg("danger", "중복된 아이디입니다.");
         } else {
-        	idMsg.classList.remove("alert-danger");
-        	idMsg.classList.add("alert-success");
-            idOk = true;
-            idMsg.textContent = "사용 가능한 아이디입니다.";
+        	idOk = true;
+            setIdMsg("success", "사용 가능한 아이디입니다.");
         }
     });
 });
@@ -48,38 +50,32 @@ document.getElementById("#staff_id_check").addEventListener("click", () => {
 
 
 // 비밀번호 일치 확인
-const staffPw = document.getElementById("#staff_pw");
-const staffRepw = document.getElementById("#staff_repw");
-const pwMsg = document.getElementById("#pwcheck_msg");
+const pwEl = document.querySelector(".js-pw");
+const repwEl = document.querySelector(".js-repw");
+const pwMsg = document.getElementById("pwcheck_msg");
 
 function pwCheck() {
-    const pw = staffPw.value;
-    const repw = staffRepw.value;
+    const pw = pwEl.value;
+    const repw = repwEl.value;
 
     if (repw.length === 0) {
         pwOk = false;
         return;
     }
 
-if (pw === repw) {
-        pwMsg.classList.remove("alert-danger");
-        pwMsg.classList.add("alert-success");
-        pwOk = true;
-        pwMsg.textContent = "비밀번호가 일치합니다.";
-    } else {
-        pwMsg.classList.remove("alert-success");
-        pwMsg.classList.add("alert-danger");
-        pwOk = false;
-        pwMsg.textContent = "비밀번호가 일치하지 않습니다.";
-    }
-    // 향후 해당부분 함수화하기
+    pwMsg.classList.remove("alert-success", "alert-danger");
+    const result = (pw === repw);
+    pwOk = result;
+    pwMsg.classList.add(result ? "alert-success" : "alert-danger");
+    pwMsg.textContent = result ? "비밀번호가 일치합니다." : "비밀번호가 일치하지 않습니다.";
+
 }
 
-staffPw.addEventListener("input", pwCheck);
-staffRepw.addEventListener("input", pwCheck);
+pwEl.addEventListener("input", pwCheck);
+repwEl.addEventListener("input", pwCheck);
 
 // 회원가입 폼 제출
-const form = document.getElementById("#reg_frm");
+const form = document.getElementById("reg_frm");
 form.addEventListener("submit", (e) => {
     if (!idOk) {
         e.preventDefault();
@@ -91,3 +87,23 @@ form.addEventListener("submit", (e) => {
         return;
     }
 });
+
+// 우편번호 찾기
+function execDaumPostcode() {
+    new daum.Postcode({
+        oncomplete: function (data) {
+
+        let addr = '';
+        
+        if (data.userSelectedType === 'R') {
+            addr = data.roadAddress;
+        } else {
+            addr = data.jibunAddress;
+        }
+
+        document.getElementById('mb_zipcode').value = data.zonecode;
+        document.getElementById('mb_addr').value = addr;
+        document.getElementById('mb_addr_detail').focus();
+    }
+  }).open();
+}

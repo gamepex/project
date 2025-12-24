@@ -20,7 +20,7 @@ public class AdminStaffServiceImpl implements AdminStaffService {
     @Override
     public boolean idCheck(String staff_id) {
         return adminStaffDAO.idCheck(staff_id) > 0; // 중복이면 true가 return됨.
-    }
+    }   
 
     // 직원 등록
     @Override
@@ -91,10 +91,10 @@ public class AdminStaffServiceImpl implements AdminStaffService {
     }
 
     
-    //로그인
+    // 직원 로그인
     @Override
     public AdminStaffVO login(AdminStaffVO adminStaffVO) {
-        AdminStaffVO dbStaffVO = adminStaffDAO.login(adminStaffVO.getStaff_id());
+        AdminStaffVO dbStaffVO = adminStaffDAO.getStaff(adminStaffVO.getStaff_id()); // 직원 정보 수집과 메서드 공유
 
         if (dbStaffVO == null) {
             throw new LoginException("ID가 존재하지 않습니다.");

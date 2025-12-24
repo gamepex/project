@@ -17,14 +17,15 @@
     <form id="reg_frm" name="reg_frm" action="/admin/staff/register" method="post">
         <ul class="staff-reg-frm">
             <li>
-                <input type="text" id="staff_id" name="staff_id" placeholder="아이디 입력" autofocus
+                <input type="text" id="staff_id" name="staff_id" class="js-id" placeholder="아이디 입력" autofocus
                 	required minlength="4" maxlength="20" pattern="[a-z0-9]+" title="아이디는 영문 소문자/숫자 4~20자로 입력하세요.">
-                <button type="button" id="staff_id_check" class="btn btn-secondary ">중복 확인</button>
+                <button type="button" id="staff_id_check" class="btn btn-secondary js-id-check"
+                    data-url="/admin/staff/idcheck" data-param="staff_id">중복 확인</button>
             </li>
-            <li><p id="idcheck_msg" class="d-none d-inline-block alert idcheck-msg"></p></li>
+            <li><p id="idcheck_msg" class="d-inline-block alert idcheck-msg"></p></li>
             
-            <li><input type="password" id="staff_pw" name="staff_pw" placeholder="비밀번호 입력" required></li>
-            <li><input type="password" id="staff_repw" name="staff_repw" placeholder="비밀번호 확인" required></li>
+            <li><input type="password" id="staff_pw" name="staff_pw" class="js-pw" placeholder="비밀번호 입력" required></li>
+            <li><input type="password" id="staff_repw" name="staff_repw" class="js-repw" placeholder="비밀번호 확인" required></li>
             <li><p id="pwcheck_msg" class="d-inline-block alert">비밀번호는 4~20자여야 합니다.</p></li>
             
             <li><input type="text" id="staff_name" name="staff_name" placeholder="이름 입력" required></li>
@@ -38,8 +39,8 @@
                 <label for="staff_birth">생년월일</label>
                 <input type="date" id="staff_birth" name="staff_birth" required>
             </li>
-            <li><input type="tel" id="staff_phone" name="staff_phone" placeholder="전화번호 입력" required></li>
             <li><input type="email" id="staff_mail" name="staff_mail" placeholder="이메일 입력" required></li>
+            <li><input type="tel" id="staff_phone" name="staff_phone" placeholder="전화번호 입력" required></li>
             <li><button id="reg-btn" type="submit" class="btn btn-dark btn-lg">직원 가입</button></li>
         </ul>
     </form>

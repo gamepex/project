@@ -55,7 +55,7 @@ public class AdminStaffController {
 	}
 	
 	
-	// 로그인
+	// 직원 로그인
 	@PostMapping("/login")
 	public String login(AdminStaffVO adminStaffVO, HttpSession session, RedirectAttributes rttr) {
 
@@ -79,7 +79,7 @@ public class AdminStaffController {
 	}
 	
 	
-	// 전체 직원 목록
+	// 직원 전체 목록
 	@GetMapping("/list")
 	public String getStaffList(Model model, HttpSession session) {
 		AdminStaffVO svo = (AdminStaffVO) session.getAttribute("staff");
@@ -121,7 +121,7 @@ public class AdminStaffController {
 	    return "redirect:/admin/staff/list";
 	}
 	
-	// 직원 수정 접속
+	// 직원 수정 페이지
 	@GetMapping("/modify")
 	public String modify(@RequestParam("staff_id") String staff_id, Model model) {
 		

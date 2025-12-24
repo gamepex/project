@@ -27,5 +27,6 @@
 	</bean>
 	
 	<mybatis-spring:scan base-package="com.gamepex.admin.staff" annotation="org.apache.ibatis.annotations.Mapper" />
+	<mybatis-spring:scan base-package="com.gamepex.user.member" annotation="org.apache.ibatis.annotations.Mapper" />
 	
 </beans>
