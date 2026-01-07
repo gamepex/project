@@ -34,15 +34,21 @@
 		</div>
 	</section>
 <script>
+	function getData() {
+		var con_serial = $('#con_serial').val() || '';
+		var ttl_serial = $('#ttl_serial').val() || '';
+
+		var price = Number($('item-price').val());
+		var ct_quantity= parseInt($('item-quantity').val());
+		var ct_days = parseInt($('item-days').val());
+		var ct_amount = price*ct_quantity*ct_days;
+		var shipfee = (ct_amount > 0 && ct_amount < 70000) ? 5000 : 0;
+
+		let today = localDateTime.split('T')[0];
+		var ct_startdate = $('#rt_startdate').val('min',today);
+		var ct_enddate = $('#rt_enddate').val();
+}
+		
 
 </script>
-
-
-
-
-
-
-
-
-
 <%@ include file ="../include/footer.jsp"%>

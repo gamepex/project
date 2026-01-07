@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.gamepex.share.ConsoleVO;
 import com.gamepex.share.GameTitleVO;
 import com.gamepex.util.UploadFileService;
 
